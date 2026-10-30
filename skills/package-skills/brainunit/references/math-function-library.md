@@ -332,7 +332,7 @@ The original worked example, extended to cover all eight choices:
 ```python
 import brainunit as u
 
-x = u.math.asarray([1.0, 2.0, 3.0], unit=u.meter)
+x = u.math.asarray([1.0, 2.0, 3.0]) * u.meter
 
 total = u.math.sum(x)
 # Expected: 6 m.
