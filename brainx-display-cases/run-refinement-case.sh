@@ -1,10 +1,86 @@
 #!/usr/bin/env bash
-set -uo pipefail
+# BrainX skill refinement harness.
+#
+# Portable host supported (macOS, Linux, Windows Git Bash). Host read isolation
+# is provided by a Docker container: only the workspace, the frozen skill
+# snapshot, the MCP server tree, and the prompt file are mounted, so earlier run
+# folders, the repository, and the normal Codex and agents homes are invisible
+# by construction.
+#
+# Run with Git Bash on Windows:  bash run-refinement-case.sh <case> <run>
+# Do not run from PowerShell or zsh: this script relies on Bash PIPESTATUS.
 
-repo="/Users/nijiachen/Downloads/brainx-skill-bundle"
+set -euo pipefail
+
+# Git Bash rewrites arguments that start with `/` into Windows paths before a
+# native docker.exe sees them, which corrupts container-absolute paths such as
+# /workspace and /output/agent-final.md. Disable that conversion on Windows hosts.
+export MSYS_NO_PATHCONV=1
+export MSYS2_ARG_CONV_EXCL='*'
+
+# Optional local configuration file (git-ignored) holding repo paths and the
+# API key. Everything it sets can equally be exported before invocation.
+here=$(cd "$(dirname "$0")" && pwd -P)
+if test -f "$here/brainx-eval.env"; then
+  if test -n "$(LC_ALL=C tr -cd '\r' < "$here/brainx-eval.env")"; then
+    echo "Save $here/brainx-eval.env with LF line endings before running Bash" >&2
+    exit 1
+  fi
+  set -a
+  . "$here/brainx-eval.env"
+  set +a
+fi
+
+# Freeze the launcher and its helper files before any long-running command.
+# Bash reads scripts incrementally; editing the checkout must not change an
+# already-running launcher's archive logic or seccomp policy.
+if test "${BRAINX_FROZEN_HARNESS:-0}" != 1; then
+  freeze_tmp_root="${TMPDIR:-/tmp}"
+  if command -v cygpath >/dev/null 2>&1; then freeze_tmp_root=$(cygpath -u "$freeze_tmp_root"); fi
+  frozen=$(mktemp -d "$freeze_tmp_root/brainx-harness.XXXXXX")
+  cp "$0" "$frozen/run-refinement-case.sh"
+  cp "$here/smoke-test-reviewer.py" "$here/seccomp-reviewer.json" "$frozen/"
+  export BRAINX_FROZEN_HARNESS=1
+  exec bash "$frozen/run-refinement-case.sh" "$@"
+fi
+
+repo=$(cd "${BRAINX_REPO:?set BRAINX_REPO to the skill-bundle checkout, see brainx-eval.env.example}" && pwd -P)
+eval_image="${BRAINX_EVAL_IMAGE:-brainx-eval:latest}"
+venv_in_image="${BRAINX_VENV_IN_IMAGE:-/brainx-venv}"
+normal_codex_home="${NORMAL_CODEX_HOME:-$HOME/.codex}"
+normal_agents_home="${NORMAL_AGENTS_HOME:-$HOME/.agents}"
+cases_dir="$repo/brainx-display-cases"
+
+# Model backend. The evaluator talks to the official OpenAI endpoint and
+# nothing else: minimal-eval-config.toml freezes the request shape (endpoint,
+# wire API, service tier) so a run cannot be silently moved to another host.
+# BRAINX_EVAL_CONFIG / BRAINX_EVAL_MODEL / BRAINX_EVAL_REASONING_EFFORT are
+# escape hatches for a one-off experiment; every compared run leaves them at
+# the defaults below.
+eval_config_file="${BRAINX_EVAL_CONFIG:-$cases_dir/minimal-eval-config.toml}"
+eval_model="${BRAINX_EVAL_MODEL:-gpt-6.1-sol}"
+eval_reasoning_effort="${BRAINX_EVAL_REASONING_EFFORT:-xhigh}"
+test -f "$eval_config_file" || {
+  echo "Evaluator config not found: $eval_config_file" >&2
+  exit 1
+}
+
+# Model credential, injected only into the evaluator container environment.
+# Never printed, never archived, never baked into the image. The variable name
+# is fixed by the provider declared in minimal-eval-config.toml.
+api_key_env="OPENAI_API_KEY"
+api_key=$(printenv "$api_key_env" 2>/dev/null || true)
+test -n "$api_key" || {
+  echo "set $api_key_env, see brainx-eval.env.example" >&2
+  exit 1
+}
+
 case_name="${1:?usage: $0 <case-name> <run-name>}"
 run_name="${2:?usage: $0 <case-name> <run-name>}"
-case_dir=$(find "$repo/brainx-display-cases" \
+case "$run_name" in
+  .|..|*/*|*\\*) echo "Run name must be a single directory name" >&2; exit 1 ;;
+esac
+case_dir=$(find "$cases_dir" \
   -mindepth 2 \
   -maxdepth 2 \
   -type d \
@@ -17,8 +93,6 @@ test -n "$case_dir" || {
 }
 run_dir="$case_dir/$run_name"
 prompt_file="$case_dir/prompt.md"
-brainx_venv="/Users/nijiachen/Downloads/Brainx testing/.venv-brainx"
-eval_model="gpt-5.6-sol"
 
 case "$case_name" in
   04-online-working-memory)
@@ -43,74 +117,224 @@ case "$case_name" in
     ;;
 esac
 
-stage=$(mktemp -d "${TMPDIR:-/tmp}/brainx-skill-eval.XXXXXX")
-stage=$(realpath "$stage")
+# An approved scientific variant must supply its own frozen fingerprint; never
+# edit the original case prompt or silently disable the baseline fingerprint.
+prompt_kind=original
+if test -n "${BRAINX_EVAL_PROMPT:-}"; then
+  prompt_file="$BRAINX_EVAL_PROMPT"
+  expected_prompt_bytes="${BRAINX_EXPECTED_PROMPT_BYTES:?set the approved prompt byte count}"
+  expected_prompt_sha256="${BRAINX_EXPECTED_PROMPT_SHA256:?set the approved prompt SHA-256}"
+  prompt_kind=approved-variant
+fi
+
+command -v docker >/dev/null 2>&1 || {
+  echo "Docker is required for host read isolation" >&2
+  exit 1
+}
+
+eval_image_digest=$(docker image inspect --format '{{.Id}}' "$eval_image")
+eval_platform=$(docker image inspect --format '{{.Os}}/{{.Architecture}}' "$eval_image_digest")
+
+sha256_of() {
+  if command -v sha256sum >/dev/null 2>&1; then
+    sha256sum "$1" | awk '{print $1}'
+  elif command -v shasum >/dev/null 2>&1; then
+    shasum -a 256 "$1" | awk '{print $1}'
+  else
+    echo "No SHA-256 tool available (need sha256sum or shasum)" >&2
+    return 1
+  fi
+}
+
+# Docker Desktop on Windows needs host paths in Windows form.
+docker_path() {
+  if command -v cygpath >/dev/null 2>&1; then
+    cygpath -w "$1"
+  else
+    printf '%s' "$1"
+  fi
+}
+
+tmp_root="${TMPDIR:-/tmp}"
+if command -v cygpath >/dev/null 2>&1; then
+  tmp_root=$(cygpath -u "$tmp_root")
+fi
+stage=$(mktemp -d "$tmp_root/brainx-skill-eval.XXXXXX")
+stage=$(cd "$stage" && pwd -P)
 workspace="$stage/workspace"
 isolated_codex_home="$stage/codex-home"
 minimal_config="$isolated_codex_home/config.toml"
-sandbox_profile="$stage/eval.sb"
+output_dir="$stage/output"
 
 test ! -e "$run_dir" || {
   echo "Refusing to overwrite existing run: $run_dir" >&2
   exit 1
 }
-mkdir -p "$workspace/.agents/skills" "$isolated_codex_home/skills"
+mkdir -p "$workspace" "$isolated_codex_home/skills" "$output_dir"
 cp -R "$repo/skills/." "$isolated_codex_home/skills/"
-cp -R "$repo/skills/." "$workspace/.agents/skills/"
-cp "$repo/brainx-display-cases/minimal-eval-config.toml" "$minimal_config"
+
+# Probe file for the isolation checks, derived from the snapshot itself so a
+# change in the skills layout cannot silently turn the probe into a no-op.
+skill_probe_rel=$(cd "$repo/skills" && find . -name SKILL.md | LC_ALL=C sort | sed -n '1p')
+test -n "$skill_probe_rel" || {
+  echo "Skill snapshot contains no SKILL.md; wrong BRAINX_REPO?" >&2
+  exit 1
+}
+skill_probe_rel="${skill_probe_rel#./}"
+
+# Deterministic hash of the whole skill tree. codex-home is mounted writable
+# (codex writes startup state there), so the frozen-snapshot guarantee is
+# protected by read-only child mounts and checked again after the run.
+skill_tree_sha256() {
+  # codex injects its own built-in skills under skills/.system at startup (49
+  # files in 0.166.0). That is CLI behaviour, not a modification of the frozen
+  # BrainX snapshot, and the pinned image digest makes it identical on every
+  # run, so it is excluded here and reported separately in the metadata.
+  (
+    cd "$1" && find . -type f -not -path "./.system/*" | LC_ALL=C sort | while IFS= read -r f; do
+      printf '%s  %s\n' "$(sha256_of "$f")" "$f"
+    done
+  ) | {
+    if command -v sha256sum >/dev/null 2>&1; then sha256sum; else shasum -a 256; fi
+  } | awk '{print $1}'
+}
+skill_snapshot_sha256=$(skill_tree_sha256 "$isolated_codex_home/skills")
 
 sed \
-  -e "s|__REPO__|$repo|g" \
-  -e "s|__NORMAL_CODEX_HOME__|/Users/nijiachen/.codex|g" \
-  -e "s|__NORMAL_AGENTS_HOME__|/Users/nijiachen/.agents|g" \
-  "$repo/brainx-display-cases/refinement-eval.sb.in" > "$sandbox_profile"
+  -e 's|/[A-Za-z0-9 ./_+-]*/mcp-servers/codex/server\.mjs|/bundle/mcp-servers/codex/server.mjs|g' \
+  "$eval_config_file" > "$minimal_config"
+config_sha256=$(sha256_of "$minimal_config")
+seccomp_sha256=$(sha256_of "$here/seccomp-reviewer.json")
+harness_sha256=$(sha256_of "$0")
 
-find "$(dirname "$stage")" \
-  -maxdepth 1 \
-  -type d \
-  -name 'brainx-skill-*' \
-  ! -path "$stage" \
-  -print > "$stage/prior-stages.txt"
-while IFS= read -r prior_stage; do
-      printf '(deny file-read* (subpath "%s"))\n' "$prior_stage"
-done < "$stage/prior-stages.txt" >> "$sandbox_profile"
+# Inside the container the repository itself is never mounted; only the MCP
+# server tree is, because the evaluated workflow may call the Codex reviewer.
+# Only the output subdirectory is mounted for the final message.
+# codex-home must be writable because codex creates PATH aliases and
+# app-server state inside CODEX_HOME at startup; the skill snapshot stays
+# protected by read-only child mounts and also checked after the run.
+mounts=(
+  "$workspace:/workspace:rw"
+  "$isolated_codex_home:/codex-home:rw"
+  "$prompt_file:/prompt/prompt.md:ro"
+  "$repo/mcp-servers:/bundle/mcp-servers:ro"
+  "$isolated_codex_home/skills:/bundle/skills:ro"
+  "$output_dir:/output:rw"
+  "$here/smoke-test-reviewer.py:/checks/smoke-test-reviewer.py:ro"
+)
+# Overlay each BrainX skill directory read-only; CODEX_HOME and .system remain
+# writable for CLI startup. The reviewer sees the same snapshot at /bundle/skills.
+for skill_dir in "$isolated_codex_home/skills/"*; do
+  test -d "$skill_dir" || continue
+  mounts+=("$skill_dir:/codex-home/skills/${skill_dir##*/}:ro")
+done
 
-(cd "$workspace" && sandbox-exec -f "$sandbox_profile" test -r "$isolated_codex_home/skills/brainmass/SKILL.md") || {
-  echo "Isolated skill snapshot is not readable" >&2
+docker_args=()
+for mount in "${mounts[@]}"; do
+  source_path="${mount%%:*}"
+  remainder="${mount#*:}"
+  docker_args+=(-v "$(docker_path "$source_path"):$remainder")
+done
+
+docker_run_isolated() {
+  # -i keeps stdin open so the prompt file can be piped into `codex exec -`.
+  docker run --rm -i \
+    --security-opt "seccomp=$(docker_path "$here/seccomp-reviewer.json")" \
+    "${docker_args[@]}" \
+    -w /workspace \
+    -e CODEX_HOME=/codex-home \
+    -e BRAINX_CODEX_BIN=codex \
+    -e "PATH=$venv_in_image/bin:/usr/local/bin:/usr/bin:/bin" \
+    -e "$api_key_env" \
+    "$eval_image_digest" \
+    "$@"
+}
+
+# Host-side mount audit: the only host paths reachable from the container are
+# the ones mounted above. Everything else, including earlier run folders, is
+# unreachable by construction.
+assert_not_mounted() {
+  local forbidden="$1"
+  local mount source_path
+  for mount in "${mounts[@]}"; do
+    source_path="${mount%%:*}"
+    if test -f "$source_path" && test ! -d "$source_path"; then
+      # Mounting one file exposes only that file, never its siblings, so it
+      # only violates the rule when it is the forbidden path itself. This is
+      # what lets the prompt file live inside the repository.
+      test "$source_path" = "$forbidden" || continue
+    else
+      # Mounting a directory exposes only its subtree, so it violates the rule
+      # only when it covers the forbidden path. This is what lets
+      # mcp-servers be mounted from inside the repository.
+      case "$forbidden" in
+        "$source_path"|"$source_path"/*) ;;
+        *) continue ;;
+      esac
+    fi
+    echo "Isolation failure: $forbidden is exposed by the container mount $source_path" >&2
+    return 1
+  done
+  case "$forbidden" in
+    "$stage"/*) ;;
+    *) return 0 ;;
+  esac
+  echo "Isolation failure: $forbidden lives under the live stage directory" >&2
+  return 1
+}
+
+docker_run_isolated test -r "/codex-home/skills/$skill_probe_rel" || {
+  echo "Isolated skill snapshot is not readable: $skill_probe_rel" >&2
   exit 1
 }
-if (cd "$workspace" && sandbox-exec -f "$sandbox_profile" test -r "$prompt_file"); then
-  echo "Isolation failure: repository is readable inside evaluator sandbox" >&2
-  exit 1
-fi
-if (cd "$workspace" && sandbox-exec -f "$sandbox_profile" test -r "/Users/nijiachen/.codex/auth.json"); then
-  echo "Isolation failure: normal Codex home is readable inside evaluator sandbox" >&2
-  exit 1
-fi
-if (cd "$workspace" && sandbox-exec -f "$sandbox_profile" test -r "/Users/nijiachen/.agents/skills/brainmass/SKILL.md"); then
-  echo "Isolation failure: normal shared skills are readable inside evaluator sandbox" >&2
-  exit 1
-fi
-while IFS= read -r prior_stage; do
-      if (cd "$workspace" && sandbox-exec -f "$sandbox_profile" test -r "$prior_stage"); then
-        echo "Isolation failure: prior evaluator stage is readable: $prior_stage" >&2
-        exit 1
-      fi
-done < "$stage/prior-stages.txt"
-(cd "$workspace" && sandbox-exec -f "$sandbox_profile" /usr/bin/touch "$workspace/.isolation-write-probe") || {
-  echo "Evaluator workspace is not writable inside host sandbox" >&2
+for forbidden in "$repo" "$normal_codex_home" "$normal_agents_home" "$case_dir"; do
+  assert_not_mounted "$forbidden" || exit 1
+done
+docker_run_isolated test -r "/prompt/prompt.md" || {
+  echo "Prompt file is not readable inside evaluator container" >&2
   exit 1
 }
-rm "$workspace/.isolation-write-probe"
+docker_run_isolated bash -lc \
+  'python -c "import brainmass, brainstate, brainunit, braintools; print(\"Login-shell BrainX imports OK\")"' || {
+  echo "BrainX unavailable in login-shell Python; rebuild the image with build-eval-image.sh" >&2
+  exit 1
+}
+docker_run_isolated touch "/workspace/.isolation-write-probe" || {
+  echo "Evaluator workspace is not writable inside container" >&2
+  exit 1
+}
+rm -f "$workspace/.isolation-write-probe"
 
 if test -d "$case_dir/inputs"; then
   cp -R "$case_dir/inputs/." "$workspace/"
 fi
 
-iconv -f UTF-8 -t UTF-8 "$prompt_file" >/dev/null
+workspace_seed_sha256=none
+if test -n "${BRAINX_EVAL_WORKSPACE_SEED:-}"; then
+  test "$prompt_kind" = approved-variant || {
+    echo "A workspace continuation requires an explicitly approved prompt variant" >&2
+    exit 1
+  }
+  workspace_seed=$(cd "$BRAINX_EVAL_WORKSPACE_SEED" && pwd -P)
+  workspace_seed_sha256=$(skill_tree_sha256 "$workspace_seed")
+  cp -R "$workspace_seed/." "$workspace/"
+  # These are outer-harness records, not scientific project inputs. Preserve
+  # originals in the seed archive and create new records after this run exits.
+  rm -f "$workspace/codex-events.jsonl" "$workspace/codex-stderr.log" \
+    "$workspace/harness-prompt.md" "$workspace/harness-metadata.txt"
+fi
+
+if command -v iconv >/dev/null 2>&1; then
+  iconv -f UTF-8 -t UTF-8 "$prompt_file" >/dev/null
+fi
 prompt_bytes=$(wc -c < "$prompt_file" | tr -d '[:space:]')
-prompt_sha256=$(shasum -a 256 "$prompt_file" | awk '{print $1}')
-codex_version=$(codex --version)
+prompt_sha256=$(sha256_of "$prompt_file")
+eval_provider=$(docker_run_isolated python -c 'import tomllib; print(tomllib.load(open("/codex-home/config.toml", "rb"))["model_provider"])')
+codex_version=$(docker_run_isolated codex --version)
+docker_run_isolated python /checks/smoke-test-reviewer.py || {
+  echo "Reviewer unavailable; rebuild the evaluation image with build-eval-image.sh" >&2
+  exit 1
+}
 test "$prompt_bytes" = "$expected_prompt_bytes" || {
   echo "Prompt byte count changed" >&2
   exit 1
@@ -121,46 +345,66 @@ test "$prompt_sha256" = "$expected_prompt_sha256" || {
 }
 
 set +e
-(
-  cd "$workspace" &&
-  env \
-    PATH="$brainx_venv/bin:$PATH" \
-    CODEX_HOME="$isolated_codex_home" \
-    sandbox-exec -f "$sandbox_profile" codex exec \
-      --ephemeral \
-      --skip-git-repo-check \
-      --ignore-rules \
-      --sandbox danger-full-access \
-      --cd "$workspace" \
-      --model "$eval_model" \
-      --config 'model_reasoning_effort="xhigh"' \
-      --disable apps \
-      --disable memories \
-      --disable remote_plugin \
-      --json \
-      --output-last-message "$stage/agent-final.md" \
-      - \
-      < "$prompt_file" \
-      2> >(tee "$stage/codex-stderr.log" >&2)
-) \
+docker_run_isolated codex exec \
+  --ephemeral \
+  --skip-git-repo-check \
+  --ignore-rules \
+  --sandbox danger-full-access \
+  --cd /workspace \
+  --model "$eval_model" \
+  --config "model_reasoning_effort=\"$eval_reasoning_effort\"" \
+  --disable apps \
+  --disable memories \
+  --disable remote_plugin \
+  --json \
+  --output-last-message /output/agent-final.md \
+  - \
+  < "$prompt_file" \
+  2> >(tee "$stage/codex-stderr.log" >&2) \
   | tee "$stage/codex-events.jsonl"
 agent_status=${PIPESTATUS[0]}
 set -e
 
 mkdir "$run_dir"
 cp -R "$workspace/." "$run_dir/"
+cp "$prompt_file" "$run_dir/harness-prompt.md"
 cp "$stage/codex-events.jsonl" "$run_dir/"
 cp "$stage/codex-stderr.log" "$run_dir/"
-test ! -f "$stage/agent-final.md" || cp "$stage/agent-final.md" "$run_dir/"
+test ! -f "$output_dir/agent-final.md" || cp "$output_dir/agent-final.md" "$run_dir/"
+skill_snapshot_final_sha256=$(skill_tree_sha256 "$isolated_codex_home/skills")
+skill_snapshot_unchanged=false
+test "$skill_snapshot_final_sha256" = "$skill_snapshot_sha256" \
+  && skill_snapshot_unchanged=true
 {
+  printf 'harness_sha256=%s\n' "$harness_sha256"
+  printf 'workspace_seed_sha256=%s\n' "$workspace_seed_sha256"
+  printf 'prompt_kind=%s\n' "$prompt_kind"
   printf 'prompt_bytes=%s\n' "$prompt_bytes"
   printf 'prompt_sha256=%s\n' "$prompt_sha256"
   printf 'model=%s\n' "$eval_model"
-  printf 'reasoning_effort=xhigh\n'
+  printf 'model_provider=%s\n' "$eval_provider"
+  printf 'reasoning_effort=%s\n' "$eval_reasoning_effort"
+  printf 'eval_config=%s\n' "${eval_config_file#$repo/}"
+  printf 'eval_config_sha256=%s\n' "$config_sha256"
   printf 'codex_version=%s\n' "$codex_version"
-  printf 'host_read_isolation=macos-seatbelt\n'
+  printf 'reviewer_transport=app-server-stdio\n'
+  printf 'host_read_isolation=docker\n'
+  printf 'seccomp_profile_sha256=%s\n' "$seccomp_sha256"
+  printf 'auth_mechanism=env\n'
+  printf 'skill_snapshot_sha256=%s\n' "$skill_snapshot_sha256"
+  printf 'skill_snapshot_unchanged=%s\n' "$skill_snapshot_unchanged"
+  printf 'codex_system_skills_injected=%s\n' \
+    "$(find "$isolated_codex_home/skills/.system" -type f 2>/dev/null | wc -l | tr -d '[:space:]')"
+  printf 'eval_image=%s\n' "$eval_image"
+  printf 'eval_image_digest=%s\n' "$eval_image_digest"
+  printf 'eval_platform=%s\n' "$eval_platform"
+  printf 'docker_version=%s\n' "$(docker --version)"
   printf 'exit_code=%s\n' "$agent_status"
 } > "$run_dir/harness-metadata.txt"
 
 printf 'Disposable workspace retained at: %s\n' "$stage"
+if test "$skill_snapshot_unchanged" != true; then
+  echo "Skill snapshot was modified during the run; the archived run is compromised" >&2
+  exit 3
+fi
 exit "$agent_status"

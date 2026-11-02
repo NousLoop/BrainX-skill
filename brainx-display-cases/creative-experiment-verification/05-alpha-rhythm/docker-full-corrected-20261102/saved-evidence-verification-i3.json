@@ -1,0 +1,26 @@
+{
+  "results.npz": {
+    "shape": [
+      120000,
+      4,
+      8
+    ],
+    "component_error_mv": 0.0,
+    "max_abs_eeg_mv": 22.870853963800915,
+    "common_analysis_samples": 4000
+  },
+  "half_step_results.npz": {
+    "shape": [
+      240000,
+      4,
+      8
+    ],
+    "component_error_mv": 0.0,
+    "max_abs_eeg_mv": 22.886830806031046,
+    "common_analysis_samples": 4000
+  },
+  "all_32_convergence_checks": true,
+  "half_step_matches_independent_diagnostic": true,
+  "artifact_hashes_valid": true,
+  "strict_json_valid": true
+}

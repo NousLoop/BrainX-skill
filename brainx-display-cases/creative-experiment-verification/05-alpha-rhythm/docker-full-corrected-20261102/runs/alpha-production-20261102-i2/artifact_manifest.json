@@ -1,0 +1,25 @@
+{
+  "artifacts": [
+    "RUN_SPEC.md",
+    "assessment.json",
+    "claim_evidence.json",
+    "code.diff",
+    "command.txt",
+    "config.json",
+    "convergence.json",
+    "environment.json",
+    "exit_code",
+    "half_step_results.npz",
+    "metrics.json",
+    "monitoring-report.md",
+    "performance.json",
+    "provenance.json",
+    "results.npz",
+    "run.log",
+    "smoke_checks.json",
+    "status.json",
+    "artifact_manifest.json"
+  ],
+  "completed": true,
+  "schema_version": "alpha-rhythm-v1"
+}

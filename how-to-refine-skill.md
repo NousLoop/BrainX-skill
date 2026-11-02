@@ -44,15 +44,47 @@ the refined snapshot is installed in the new agent environment. Preserve any
 accidental same-snapshot rerun under a descriptive non-`runN` folder; it is
 control evidence, not the next refinement checkpoint.
 
-Use this BrainX environment for every run:
+Configure the BrainX environment once through environment variables, then use
+the same values for every run. See `brainx-display-cases/brainx-eval.env.example`.
 
-```text
-/Users/nijiachen/Downloads/Brainx testing/.venv-brainx
-```
+| Variable | Meaning |
+|---|---|
+| `BRAINX_REPO` | Skill-bundle checkout that supplies the frozen skill snapshot |
+| `BRAINX_EVAL_IMAGE` | Container image that runs the agent, with `codex`, `node`, and a Linux virtualenv |
+| `BRAINX_VENV_IN_IMAGE` | Virtualenv path inside that image, default `/brainx-venv` |
+| `BRAINX_EVAL_MODEL` | Evaluation model, identical across every compared run |
 
 The agent's working directory is the disposable workspace; the virtualenv is
 its Python environment. Configure both outside the prompt. Do not use the
 virtualenv or the final `runN/` as the live working directory.
+
+On Windows, run every script through Git Bash (`bash run-refinement-case.sh`),
+never PowerShell: the harness captures the pipeline status with Bash
+`PIPESTATUS`. Always use the Linux virtualenv built into the image; host
+virtualenvs are not portable. Keep shell scripts and the local `.env` file in LF.
+
+Prompt files are byte fingerprints. Keep
+`brainx-display-cases/**/prompt.md` and `inputs/` marked `-text` in
+`.gitattributes` so line-ending conversion never changes the bytes between runs
+or across hosts.
+
+### Build the evaluation image once
+
+The image is part of the frozen execution conditions, so build it once, tag it
+with a date, and reuse that tag for every compared run:
+
+```bash
+BRAINX_RELEASE=2026.7.9 CODEX_VERSION=0.166.0 \
+BRAINX_EVAL_IMAGE=brainx-eval:2026-10-30 \
+  bash brainx-display-cases/build-eval-image.sh
+```
+
+It contains the `codex` CLI, `node` for the Codex MCP reviewer server, and one
+indivisible BrainX release in a Linux virtualenv at `/brainx-venv`. Pin
+`BRAINX_RELEASE` and `CODEX_VERSION` for any run you intend to compare; an
+unpinned build can silently change under you between `runN` and `runN+1`. The
+harness records the tag and its digest in `harness-metadata.txt`, so an
+unintended rebuild is visible after the fact.
 
 ## Rules that must not change between runs
 
@@ -93,120 +125,126 @@ Create a fresh temporary `CODEX_HOME` containing only:
 - no sessions, memories, MCP configuration, plugins, rules, prior logs, or
   repository files.
 
+One unavoidable caveat: codex itself injects its own built-in skills under
+`skills/.system/` at startup (49 files in 0.166.0; the `skip_host_skill_discovery`
+feature flag does not suppress it). The pinned image digest makes this set
+identical on every run, the harness excludes it from the skill-snapshot
+integrity hash, and the file count is recorded in `harness-metadata.txt` as
+`codex_system_skills_injected` so comparisons stay honest.
+
+Mount the MCP server at `/bundle/mcp-servers` and the frozen skill snapshot
+read-only at `/bundle/skills`, preserving the reviewer's relative bundle layout.
+Overlay each snapshot directory read-only in `CODEX_HOME/skills`; leave the
+home and its CLI-managed `.system` directory writable. Mount only a dedicated
+output directory for the final message, never the whole staging tree.
+
+Use CLI 0.166.0 for both evaluation and review. The reviewer exposes the
+existing `codex` and `codex-reply` MCP tools and translates them to the native
+App Server stdio protocol (`thread/start`, `thread/resume`, and `turn/start`).
+The harness verifies a real App Server initialize/tools-list handshake before
+evaluation and records `reviewer_transport=app-server-stdio`. No legacy CLI is
+installed. Rebuild images created with the earlier dual-CLI compatibility setup.
+
 Do not copy the normal Codex home wholesale. Prepare the minimal provider and
 authentication setup once, keep secrets outside the case folder and archived
 artifacts, and reuse the same configuration bytes for every compared run.
+Authentication stays environment-based: the minimal config declares an auth
+command that prints an environment variable (for example `sh -c 'printf %s
+"$OPENAI_API_KEY"'`), and the harness injects the actual value into the
+evaluator container at launch. The key therefore stays out of the repository,
+the archived artifacts, and the container image, and the config bytes remain
+identical across runs, hosts, and key rotations. (codex 0.166.0 has no
+`env_key` support in provider auth, so the command form is required; it also
+refuses to override the reserved built-in provider id `openai`, so the official
+endpoint is declared under a custom provider id to keep `base_url` frozen in
+these bytes.) Historical macOS runs fetched a proxy key from the Keychain via
+`/usr/bin/security`; that binary does not exist inside the Linux container and
+the proxy endpoint is not reachable from the evaluation container, so both are
+superseded by the official endpoint.
+Verify the full credential chain without a live model call by pointing
+`base_url` at a local sink and checking the received `Authorization` header
+(`brainx-display-cases/smoke-test-auth.py` automates this); a dummy key against
+the real endpoint should return `401 invalid_api_key`, which proves the request
+reached the provider with the key attached.
 When the evaluated workflow can call the BrainX Codex reviewer, include its
 local MCP registration in that minimal config:
 
 ```toml
 [mcp_servers.codex]
+env_vars = ["CODEX_HOME", "OPENAI_API_KEY", "BRAINX_CODEX_BIN"]
 command = "node"
 args = ["<absolute-repository-path>/mcp-servers/codex/server.mjs"]
 default_tools_approval_mode = "approve"
 tool_timeout_sec = 1800
 ```
 
+Explicit `env_vars` keeps the nested reviewer on the isolated Codex home and
+provider credential because Codex filters the environment inherited by MCP
+servers. Disabling a nonexistent MCP registration creates an invalid transport;
+the adapter reads the child configuration and disables only existing servers.
+
 The approval setting is required for non-interactive `codex exec`; without it,
 the host cannot present the MCP approval prompt and may surface the denial as
 `user cancelled MCP tool call`. The timeout must exceed the longest complete
 artifact review.
 
-Use this harness, replacing the fixed case, model, minimal-config, prompt-byte,
-and prompt-hash values once before Run 0. Reuse the same harness for every
-later run, changing only `run_name` and the skill snapshot being copied.
-Save it as a script and invoke it explicitly with `/bin/bash`; do not source it
-or paste it into zsh because the captured pipeline status uses Bash
-`PIPESTATUS` semantics.
+Use the maintained Docker harness rather than copying a second implementation.
+Both build and run scripts load `brainx-display-cases/brainx-eval.env` when it
+exists. Copy the example, edit it with LF endings, and keep credentials local.
 
 ```bash
-#!/usr/bin/env bash
-set -uo pipefail
-
-repo="/Users/nijiachen/Downloads/brainx-skill-bundle"
-case_dir="$repo/brainx-display-cases/<category>/<NN>-<case-name>"
-run_name="run0"
-run_dir="$case_dir/$run_name"
-prompt_file="$case_dir/prompt.md"
-brainx_venv="/Users/nijiachen/Downloads/Brainx testing/.venv-brainx"
-eval_model="<fixed-model-id>"
-minimal_config="<absolute-path-to-minimal-eval-config.toml>"
-expected_prompt_bytes="<fixed-byte-count>"
-expected_prompt_sha256="<fixed-sha256>"
-
-stage=$(mktemp -d "${TMPDIR:-/tmp}/brainx-skill-eval.XXXXXX")
-workspace="$stage/workspace"
-isolated_codex_home="$stage/codex-home"
-
-test ! -e "$run_dir" || {
-  echo "Refusing to overwrite existing run: $run_dir" >&2
-  exit 1
-}
-mkdir -p "$workspace" "$isolated_codex_home/skills"
-cp -R "$repo/skills/." "$isolated_codex_home/skills/"
-cp "$minimal_config" "$isolated_codex_home/config.toml"
-
-if test -d "$case_dir/inputs"; then
-  cp -R "$case_dir/inputs/." "$workspace/"
-fi
-
-# Validate and fingerprint the exact bytes before launch.
-iconv -f UTF-8 -t UTF-8 "$prompt_file" >/dev/null
-prompt_bytes=$(wc -c < "$prompt_file" | tr -d '[:space:]')
-prompt_sha256=$(shasum -a 256 "$prompt_file" | awk '{print $1}')
-codex_version=$(codex --version)
-test "$prompt_bytes" = "$expected_prompt_bytes" || {
-  echo "Prompt byte count changed" >&2
-  exit 1
-}
-test "$prompt_sha256" = "$expected_prompt_sha256" || {
-  echo "Prompt SHA-256 changed" >&2
-  exit 1
-}
-
-set +e
-env \
-  PATH="$brainx_venv/bin:$PATH" \
-  CODEX_HOME="$isolated_codex_home" \
-  codex exec \
-    --ephemeral \
-    --skip-git-repo-check \
-    --ignore-rules \
-    --sandbox workspace-write \
-    --cd "$workspace" \
-    --model "$eval_model" \
-    --config 'model_reasoning_effort="xhigh"' \
-    --disable apps \
-    --disable memories \
-    --disable remote_plugin \
-    --json \
-    --output-last-message "$stage/agent-final.md" \
-    - \
-    < "$prompt_file" \
-    2> >(tee "$stage/codex-stderr.log" >&2) \
-  | tee "$stage/codex-events.jsonl"
-agent_status=${PIPESTATUS[0]}
-set -e
-
-# Archive only after exit so the live agent cannot discover prior run folders.
-mkdir "$run_dir"
-cp -R "$workspace/." "$run_dir/"
-cp "$stage/codex-events.jsonl" "$run_dir/"
-cp "$stage/codex-stderr.log" "$run_dir/"
-test ! -f "$stage/agent-final.md" || \
-  cp "$stage/agent-final.md" "$run_dir/"
-{
-  printf 'prompt_bytes=%s\n' "$prompt_bytes"
-  printf 'prompt_sha256=%s\n' "$prompt_sha256"
-  printf 'model=%s\n' "$eval_model"
-  printf 'reasoning_effort=xhigh\n'
-  printf 'codex_version=%s\n' "$codex_version"
-  printf 'exit_code=%s\n' "$agent_status"
-} > "$run_dir/harness-metadata.txt"
-
-printf 'Disposable workspace retained at: %s\n' "$stage"
-exit "$agent_status"
+bash brainx-display-cases/build-eval-image.sh
+bash brainx-display-cases/run-refinement-case.sh 04-online-working-memory run0
 ```
+
+For an explicitly approved scientific variant, keep the original `prompt.md`
+unchanged and save a separate UTF-8 prompt containing the researcher approval.
+Set `BRAINX_EVAL_PROMPT`, `BRAINX_EXPECTED_PROMPT_BYTES`, and
+`BRAINX_EXPECTED_PROMPT_SHA256` together. The harness verifies the new fingerprint,
+archives the exact message as `harness-prompt.md`, and records
+`prompt_kind=approved-variant`. Use a descriptive non-`runN` folder for a
+transport/environment test or an interactive variant; do not compare it as an
+unchanged-prompt refinement checkpoint.
+
+For a researcher-authorized continuation, also set `BRAINX_EVAL_WORKSPACE_SEED`
+to the preserved project archive. This requires an approved prompt variant,
+copies the project into a fresh workspace, records its tree hash, and excludes
+old outer-harness event/receipt files from the new workspace. Label this as a
+continuation, never as a context-independent benchmark run.
+
+The launcher copies itself, the reviewer probe and the seccomp profile to a
+private temporary directory before long-running work; edits to the checkout
+cannot alter the active launcher's archive logic. Its hash is recorded.
+
+Docker's default seccomp policy blocks the nested reviewer sandbox on the
+validated Docker Desktop backend. Use the pinned `seccomp-reviewer.json`
+profile, described in `seccomp-reviewer.md`, without privileged mode or added
+SYS_ADMIN capability. Before any paid run, the reviewer probe must actually
+read a file and reject a write, then complete its MCP handshake. Record the
+profile hash as part of the environment baseline.
+
+Codex uses Bash login shells for commands. The image installs a profile script
+that restores its virtualenv PATH after `/etc/profile` resets it. Build and run
+preflight checks must import BrainX through `bash -lc`, not only through the
+absolute virtualenv interpreter, so a system-Python mismatch fails before a
+paid evaluation.
+
+The harness resolves the image tag to its immutable local image ID before any
+container starts and records that ID. It hashes the effective container config
+and checks the snapshot again after execution. Start a new baseline after
+changing the model, provider, architecture, or moving from historical macOS
+Seatbelt runs; do not attribute those changes to skill refinement.
+
+Run the credential smoke test inside the same image without network access:
+
+```bash
+docker run --rm --network none \
+  --mount "type=bind,source=<absolute-checkout-path>,target=/source,readonly" \
+  "$BRAINX_EVAL_IMAGE" python /source/brainx-display-cases/smoke-test-auth.py
+```
+
+The test uses an isolated temporary configuration, a loopback endpoint and a
+dummy key; a failure returns a nonzero status without printing credentials.
 
 The command deliberately uses `- < "$prompt_file"`. Do not use command
 substitution, `echo`, a shell variable, or an inline prompt argument; those can
@@ -224,13 +262,21 @@ The isolation controls have distinct jobs:
 | Prompt through stdin as `-` | The exact `prompt.md` bytes as the complete user message |
 | Frozen `PATH`, model, effort, config, and CLI version | Execution conditions that must match across runs |
 | `--ephemeral` | Persistence of this session after the process exits |
+| Container mount set | Every host path not explicitly mounted, including earlier run folders, the repository, and the normal Codex and agents homes |
 
 `--cd` and `--sandbox workspace-write` do not by themselves prove that arbitrary
-host paths are unreadable. For adversarial or confidential evaluations, run the
-same harness inside a container or VM, or use a permission profile with explicit
-deny-read rules. The allowed filesystem should contain only the empty workspace,
-current input snapshot, current skill snapshot, and required runtime. See the
-official [Codex `exec` command reference](https://learn.chatgpt.com/docs/developer-commands#codex-exec)
+host paths are unreadable. Run the harness inside a container on every host, so
+the enforced filesystem contains only the mounted empty workspace, current input
+snapshot, current skill snapshot, MCP server tree, and required runtime. macOS,
+Linux, and Windows Git Bash all use the same container mount set, so runs stay comparable across machines.
+Keep the network reachable, because the model endpoint is remote. macOS also has
+`sandbox-exec` with a seatbelt profile, and a historical profile is retained at
+`brainx-display-cases/refinement-eval.sb.in`, but the harness no longer uses it:
+seatbelt is "allow by default, deny explicitly", so it must enumerate every
+blocked path, while the container mount set is "nothing is visible unless it is
+mounted". The harness audits that mount set on the host before launch and records
+`host_read_isolation` in `harness-metadata.txt`. See the official
+[Codex `exec` command reference](https://learn.chatgpt.com/docs/developer-commands#codex-exec)
 for the CLI flag contracts.
 
 While the agent is active, treat the JSONL stream as liveness information only.
@@ -281,10 +327,15 @@ signatures, docstrings, or internals for modeling knowledge.
 ## 3. Inspect and diagnose the generated artifacts
 
 Now read every generated artifact and trace the workflow line by line. Run the
-entry point with:
+entry point in the same image so its interpreter and dependencies match the
+evaluated run. In Git Bash, disable automatic path conversion and supply the
+absolute host path explicitly:
 
-```text
-/Users/nijiachen/Downloads/Brainx testing/.venv-brainx/bin/python
+```bash
+MSYS_NO_PATHCONV=1 MSYS2_ARG_CONV_EXCL='*' docker run --rm \
+  --mount "type=bind,source=<absolute-host-run-path>,target=/workspace" \
+  -w /workspace "$BRAINX_EVAL_IMAGE" \
+  "${BRAINX_VENV_IN_IMAGE:-/brainx-venv}/bin/python" <entry-point>
 ```
 
 Record errors, warnings, runtime behavior, and outputs without repairing the

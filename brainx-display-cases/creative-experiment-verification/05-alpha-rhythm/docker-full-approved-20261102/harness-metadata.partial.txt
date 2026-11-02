@@ -1,0 +1,11 @@
+prompt_kind=approved-variant
+prompt_bytes=1017
+prompt_sha256=f490c95acde6009ff4c143797b14aa9f3aa2bc0fdfb9c4200f6a754955744bbd
+model=codex/gpt-5.6-sol
+model_provider=magpie-local
+reasoning_effort=xhigh
+eval_config=brainx-display-cases/minimal-eval-config.toml
+eval_config_sha256=22b2f1fc920f1b92344e36866d8a1678b3f02a72defd6f22cc14007d6059d608
+codex_version=codex-cli 0.166.0
+reviewer_transport=app-server-stdio
+host_read_isolation=docker

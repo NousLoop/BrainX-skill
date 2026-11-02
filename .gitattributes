@@ -1,1 +1,11 @@
 brainx-display-cases/**/run*/**/*.csv whitespace=cr-at-eol
+# Prompt bytes are the fingerprint of a refinement case. Never let line-ending
+# conversion change them between runs or across hosts.
+brainx-display-cases/**/prompt.md -text
+brainx-display-cases/**/inputs/** -text
+# Shell entry points and sourced configuration must remain executable in Bash.
+*.sh text eol=lf
+brainx-display-cases/*.env.example text eol=lf
+mcp-servers/codex/test/fixtures/*.mjs text eol=lf
+brainx-display-cases/**/approved-prompt-*.md -text
+brainx-display-cases/**/continuation-prompt-*.md -text

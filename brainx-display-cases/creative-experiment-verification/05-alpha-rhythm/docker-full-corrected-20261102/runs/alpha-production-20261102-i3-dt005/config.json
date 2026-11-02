@@ -1,0 +1,53 @@
+{
+  "ai_mv": [
+    22.0,
+    16.5,
+    11.0,
+    5.5
+  ],
+  "analysis_decimation": 20,
+  "analysis_dt_ms": 1.0,
+  "analysis_first_sample": "transient + 1 ms; identical physical sample times at every dt",
+  "baseline_ai_mv": 22.0,
+  "baseline_rms_floor_mv": 0.05,
+  "convergence_grid": "all 4 conditions x all 8 initial states",
+  "dt_ms": 0.05,
+  "duration_s": 6.0,
+  "eeg_abs_bound_mv": 100.0,
+  "external_rate_hz": 220.0,
+  "half_step_dt_ms": 0.025,
+  "initial_m_mv": [
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "integration_method": "exp_euler",
+  "integration_method_reference": "https://brainx.chaobrain.com/brainmass/reference/generated/brainmass.JansenRitStep.html",
+  "mode": "production",
+  "model": "brainmass.JansenRitStep",
+  "model_defaults": "pinned image defaults except explicit Ai and documented exp_euler method",
+  "monitor_phase": "post-update; sample 0 is at one dt",
+  "near_zero_rms_absolute_tolerance_mv": 1e-06,
+  "original_runs": "alpha-production-20261102-i1 and i2 remain invalid",
+  "oscillation_rms_floor_mv": 0.01,
+  "peak_frequency_tolerance_hz": 0.5,
+  "psd_noverlap": 1000,
+  "psd_nperseg": 2000,
+  "retention_fractions": [
+    1.0,
+    0.75,
+    0.5,
+    0.25
+  ],
+  "rms_relative_tolerance": 0.05,
+  "schema_version": "alpha-rhythm-v2",
+  "seed": null,
+  "stochasticity": "none",
+  "transient_s": 2.0,
+  "welch_window": "hann"
+}
