@@ -1,0 +1,45 @@
+{
+  "baseline_alpha_lane_count": 8,
+  "baseline_alpha_pass": true,
+  "baseline_median_alpha_fraction_4_30": 0.9996031925273604,
+  "baseline_median_peak_hz": 11.0,
+  "baseline_median_rms_mv": 1.1491023980230466,
+  "clear_intervention_change": true,
+  "component_identity_error_mv": 0.0,
+  "condition_changes": [
+    {
+      "amplitude_change_clear": true,
+      "condition_index": 1,
+      "frequency_change_clear": false,
+      "median_paired_peak_change_hz": null,
+      "median_paired_rms_change_percent": -99.99959595831928,
+      "peak_direction_count": 0,
+      "rms_direction_count": 8
+    },
+    {
+      "amplitude_change_clear": true,
+      "condition_index": 2,
+      "frequency_change_clear": false,
+      "median_paired_peak_change_hz": null,
+      "median_paired_rms_change_percent": -99.99999980340205,
+      "peak_direction_count": 0,
+      "rms_direction_count": 8
+    },
+    {
+      "amplitude_change_clear": true,
+      "condition_index": 3,
+      "frequency_change_clear": false,
+      "median_paired_peak_change_hz": null,
+      "median_paired_rms_change_percent": -99.99999981478493,
+      "peak_direction_count": 0,
+      "rms_direction_count": 8
+    }
+  ],
+  "finite_checks": {
+    "all_eeg_finite": true,
+    "max_abs_eeg_mv": 22.870853963800915,
+    "within_locked_eeg_bound": true
+  },
+  "scientific_outcome": "supported",
+  "validity_pass": true
+}

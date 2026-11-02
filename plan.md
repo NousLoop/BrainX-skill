@@ -186,7 +186,7 @@ brainx-modeling-loop/references/
 
 Keep experiment-execution and visualization mechanics out of the root skill. Route
 step 4 to `references/run-experiment.md` and then `references/monitor-experiment.md`; keep the review contract only in
-`mcp-servers/codex/system-prompt.md`; the MCP proxy injects it into fresh `codex`
+`mcp-servers/codex/system-prompt.md`; the MCP adapter injects it into fresh and resumed `codex`
 calls. Keep the exact `mcp__codex__codex` invocation and required artifact-path
 packet in the step-5 skill body. Require an explicit MCP tool timeout long enough
 for full artifact review and automatic MCP tool approval in non-interactive
@@ -1491,6 +1491,31 @@ No nested Markdown layer is declared.
 - Malformed frontmatter prevents reliable skill discovery.
 
 ---
+
+## Refinement evaluation
+
+Use `brainx-display-cases/run-refinement-case.sh` as the single Docker harness
+on macOS, Linux, and Windows Git Bash; retain Seatbelt only as historical reference.
+Run Python from the evaluation image and freeze its image ID before launch.
+Mount the current skill snapshot read-only at `/bundle/skills` and in the
+isolated Codex home; mount the reviewer at `/bundle/mcp-servers` to preserve
+its relative bundle layout. Expose only a dedicated output directory, not the
+staging tree. Use one pinned CLI (0.166.0) for evaluation and review. Expose the existing
+`codex`/`codex-reply` MCP tools through an adapter to the native App Server
+stdio protocol; preserve thread IDs, continuation, read-only execution and
+mandatory BrainX instructions. Do not depend on the removed `mcp-server`
+command or install a legacy CLI.
+Require a real reviewer handshake before evaluation. Preserve failed runs,
+record the CLI version, reviewer transport and platform, and use only dummy credentials and a
+local endpoint for authentication smoke tests. Start a new baseline after
+changing provider, model, architecture, or historical isolation environment.
+Freeze the launcher/helpers before execution and record their hashes. Use the
+pinned nested-reviewer seccomp profile and verify actual read-only filesystem
+access before paid execution; do not grant privileged mode or SYS_ADMIN.
+Verify BrainX imports inside Bash login shells before paid execution. Preserve
+original case prompts; approved scientific variants require a separate prompt,
+an explicit byte count and SHA-256, and a descriptive non-checkpoint run name.
+See `how-to-refine-skill.md` for setup and execution.
 
 ## Benchmark Documents
 

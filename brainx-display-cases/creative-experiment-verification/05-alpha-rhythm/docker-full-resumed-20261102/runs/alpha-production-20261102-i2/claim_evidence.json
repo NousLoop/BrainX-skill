@@ -1,0 +1,24 @@
+{
+  "claims": [
+    {
+      "claim": "The baseline is alpha-like under the locked criteria.",
+      "evidence": "assessment.json baseline fields; metrics.json per-lane values",
+      "supported": true
+    },
+    {
+      "claim": "Weakening Ai changes the cortical EEG proxy under the locked criteria.",
+      "evidence": "assessment.json condition_changes; results.npz paired lanes",
+      "supported": true
+    },
+    {
+      "claim": "The result passes numerical and mapping controls.",
+      "evidence": "convergence.json; assessment.json finite/component checks",
+      "supported": false
+    }
+  ],
+  "explicit_non_claims": [
+    "literal scalp-voltage prediction",
+    "unique biological cause of inhibition loss",
+    "universal or clinical cortical behavior"
+  ]
+}

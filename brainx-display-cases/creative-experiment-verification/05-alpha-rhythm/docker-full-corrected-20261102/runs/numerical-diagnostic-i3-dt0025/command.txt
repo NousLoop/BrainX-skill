@@ -1,0 +1,1 @@
+python run_refinement.py --mode diagnostic --dt-ms 0.025 --output-dir runs/numerical-diagnostic-i3-dt0025

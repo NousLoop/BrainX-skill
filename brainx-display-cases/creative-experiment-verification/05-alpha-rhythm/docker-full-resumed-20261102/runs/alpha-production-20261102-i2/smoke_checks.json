@@ -1,0 +1,6 @@
+{
+  "all_eeg_finite": true,
+  "component_identity_error_mv": 0.0,
+  "max_abs_eeg_mv": 0.33010948443058197,
+  "within_locked_eeg_bound": true
+}

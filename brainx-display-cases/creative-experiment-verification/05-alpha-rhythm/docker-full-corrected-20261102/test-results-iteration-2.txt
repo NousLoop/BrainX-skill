@@ -1,0 +1,11 @@
+test_construct_initialize_and_one_step (test_alpha_rhythm.AlphaRhythmTests.test_construct_initialize_and_one_step) ... ok
+test_numeric_artifact_round_trip (test_alpha_rhythm.AlphaRhythmTests.test_numeric_artifact_round_trip) ... ok
+test_short_stateful_vmap_and_component_identity (test_alpha_rhythm.AlphaRhythmTests.test_short_stateful_vmap_and_component_identity) ... ok
+test_spectral_metrics_identify_synthetic_alpha (test_alpha_rhythm.AlphaRhythmTests.test_spectral_metrics_identify_synthetic_alpha) ... ok
+test_unit_boundary_rejects_wrong_ai_dimension (test_alpha_rhythm.AlphaRhythmTests.test_unit_boundary_rejects_wrong_ai_dimension) ... ok
+test_whole_rollout_jit_parity (test_alpha_rhythm.AlphaRhythmTests.test_whole_rollout_jit_parity) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.884s
+
+OK

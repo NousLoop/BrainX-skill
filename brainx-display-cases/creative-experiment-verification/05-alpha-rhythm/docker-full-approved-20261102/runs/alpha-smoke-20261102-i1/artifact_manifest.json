@@ -1,0 +1,17 @@
+{
+  "artifacts": [
+    "RUN_SPEC.md",
+    "code.diff",
+    "command.txt",
+    "config.json",
+    "environment.json",
+    "exit_code",
+    "provenance.json",
+    "run.log",
+    "smoke_checks.json",
+    "status.json",
+    "artifact_manifest.json"
+  ],
+  "completed": true,
+  "schema_version": "alpha-rhythm-v1"
+}

@@ -105,3 +105,10 @@ logs/
 tmp/
 .tmp/
 .cache/
+
+# ---------------------------------------------------------------------------
+# Local evaluation environment (never commit host paths or secrets)
+# ---------------------------------------------------------------------------
+brainx-display-cases/brainx-eval.env
+**/runs/
+**/*.npz

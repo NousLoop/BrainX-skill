@@ -1,0 +1,11 @@
+{
+  "device": "cpu:0",
+  "first_call_compilation_plus_execution_seconds": 0.17117568899993785,
+  "output_bytes_lower_bound": 46080000,
+  "output_shape": [
+    60000,
+    4,
+    8
+  ],
+  "steady_call_seconds": 0.16566369399993164
+}

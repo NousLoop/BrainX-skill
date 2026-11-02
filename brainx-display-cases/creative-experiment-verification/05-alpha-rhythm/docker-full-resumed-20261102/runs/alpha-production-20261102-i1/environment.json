@@ -1,0 +1,16 @@
+{
+  "backend": "cpu",
+  "device": "cpu:0",
+  "interpreter": "/brainx-venv/bin/python",
+  "jax_platforms": "cpu",
+  "precision": "float64 enabled by alpha_rhythm entry-point before array construction",
+  "brainstate_platform": "default CPU, consistent with JAX backend",
+  "preflight": "BrainMass, BrainState, BrainUnit, BrainTools, and JAX imported successfully in a fresh CPU process",
+  "package_version_policy": "Not introspected because the mandatory BrainX general guard permits importability checks but prohibits installed-version/metadata inspection.",
+  "source_sha256": {
+    "/workspace/alpha_rhythm.py": "f6f2683abe9052fe69675f132feac9e1d618d12402ed7462b568c6618344dbed",
+    "/workspace/run_experiment.py": "8f5ecf474d77e6b62dc86de8f2333dfe43740406c7989e58222cacb4785386c9",
+    "/workspace/test_alpha_rhythm.py": "e12c76b91f68f9c8a503f9cd2c17ef873b0976c8a825318e27039bdd73399899",
+    "/workspace/NeuroSpecification.md": "413605df62cd2013c068c9e972ec820cfeb9f59a42eb9b185802a87ba627ce7f"
+  }
+}
