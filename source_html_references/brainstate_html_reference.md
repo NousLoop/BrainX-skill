@@ -57,6 +57,7 @@ Generated class pages are grouped separately from narrative documentation. Start
 - [Mixin System](https://brainx.chaobrain.com/brainstate/how_to/custom_states_and_mixins.html) — Defines custom State types, parameter descriptors, and reusable mixins.
 - [Observe and Intercept State Access with Hooks](https://brainx.chaobrain.com/brainstate/how_to/state_hooks.html) — Registers read, write, restore, and initialization hooks around State access.
 - [Constrain and Regularize Parameters](https://brainx.chaobrain.com/brainstate/how_to/constrain_and_regularize_parameters.html) — Applies parameter transforms and regularization objects to learnable values.
+- [Choose a Parameter Transform](https://brainx.chaobrain.com/brainstate/how_to/choose_parameter_transforms.html) — Catalog of which transform maps onto which constrained domain, how to compose them, and how to choose.
 - [Interoperate with Flax and Equinox](https://brainx.chaobrain.com/brainstate/how_to/interoperate_with_flax_equinox.html) — Converts supported layers and structures between BrainState, Flax, and Equinox.
 - [Migrating Concepts from PyTorch to BrainState](https://brainx.chaobrain.com/brainstate/how_to/migrate_from_pytorch.html) — Maps PyTorch modules, parameters, mutation, training mode, and transforms to BrainState concepts.
 
@@ -86,7 +87,7 @@ Generated class pages are grouped separately from narrative documentation. Start
 - [Core `brainstate` Module](https://brainx.chaobrain.com/brainstate/apis/brainstate.html) — State classes, collections, tracing, hooks, and State-related errors.
 - [`brainstate.graph` Module](https://brainx.chaobrain.com/brainstate/apis/graph.html) — Graph nodes, traversal, split/merge operations, graph definitions, edges, and references.
 - [`brainstate.nn` Module](https://brainx.chaobrain.com/brainstate/apis/nn/index.html) — Modules, parameter containers, regularizers, layers, dynamics, delays, and metrics.
-- [`brainstate.transform` Module](https://brainx.chaobrain.com/brainstate/apis/transform.html) — Gradients, JIT, mapping, control flow, checks, tracing, and IR tooling.
+- [`brainstate.transform` Module](https://brainx.chaobrain.com/brainstate/apis/transform/index.html) — Gradients, JIT, mapping, control flow, checks, tracing, and IR tooling.
 - [`brainstate.interop` Module](https://brainx.chaobrain.com/brainstate/apis/interop.html) — Flax and Equinox conversion APIs and interoperability errors.
 - [`brainstate.random` Module](https://brainx.chaobrain.com/brainstate/apis/random.html) — Random State, key management, sampling, and probability distributions.
 - [`brainstate.util` Module](https://brainx.chaobrain.com/brainstate/apis/util.html) — Mapping, filtering, pretty-printing, dataclass, cache, and dictionary utilities.

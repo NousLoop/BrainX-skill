@@ -1494,7 +1494,14 @@ No nested Markdown layer is declared.
 
 ## Refinement evaluation
 
-Use `brainx-display-cases/run-refinement-case.sh` as the single Docker harness
+Current evaluations and nested reviews use the `magpie-local` provider:
+container requests reach the host shim at `http://host.docker.internal:3426/v1`,
+which forwards to Magpie on host port 3425 and translates the model listing
+to the pinned Codex catalog schema. Keep both services running and inject
+the proxy credential through `OPENAI_API_KEY`. Changing the provider or
+endpoint starts a new baseline.
+
+Use `brainx-display-cases/windows-docker/run-refinement-case.sh` as the single Docker harness
 on macOS, Linux, and Windows Git Bash; retain Seatbelt only as historical reference.
 Run Python from the evaluation image and freeze its image ID before launch.
 Mount the current skill snapshot read-only at `/bundle/skills` and in the

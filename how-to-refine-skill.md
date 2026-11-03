@@ -15,13 +15,22 @@ Group tasks by evaluation purpose. Keep one folder for each task and one
 subfolder for each agent run:
 
 ```text
-brainx-display-cases/<category>/<NN>-<case-name>/
+brainx-display-cases/<environment>/<category>/<NN>-<case-name>/
 |-- prompt.md          # Original natural-language prompt
 |-- inputs/            # Optional original task inputs
 |-- run0/              # Baseline artifacts and diagnosis
 |-- run1/              # First post-refinement artifacts and diagnosis
 `-- runN/              # Further attempts when needed
 ```
+
+`<environment>` is `windows-docker` for active cases or `legacy-macos` for
+archived macOS-era cases. `<category>` is optional for new cases; the runner
+resolves a case by name, searching `windows-docker/` before `legacy-macos/`.
+Runs from different environments are never comparable. The Docker harness
+scripts themselves (`run-refinement-case.sh`, `build-eval-image.sh`,
+`Dockerfile`, the magpie shim, the seccomp profile and
+the smoke tests) live in `brainx-display-cases/windows-docker/`; the archived
+macOS-era seatbelt profile is in `brainx-display-cases/legacy-macos/`.
 
 Do not edit `prompt.md` or the original inputs between runs. Each fresh agent
 writes into an empty disposable workspace containing no case history.
@@ -45,7 +54,8 @@ accidental same-snapshot rerun under a descriptive non-`runN` folder; it is
 control evidence, not the next refinement checkpoint.
 
 Configure the BrainX environment once through environment variables, then use
-the same values for every run. See `brainx-display-cases/brainx-eval.env.example`.
+the same values for every run. See
+`brainx-display-cases/windows-docker/brainx-eval.env.example`.
 
 | Variable | Meaning |
 |---|---|
@@ -76,7 +86,7 @@ with a date, and reuse that tag for every compared run:
 ```bash
 BRAINX_RELEASE=2026.7.9 CODEX_VERSION=0.166.0 \
 BRAINX_EVAL_IMAGE=brainx-eval:2026-10-30 \
-  bash brainx-display-cases/build-eval-image.sh
+  bash brainx-display-cases/windows-docker/build-eval-image.sh
 ```
 
 It contains the `codex` CLI, `node` for the Codex MCP reviewer server, and one
@@ -153,19 +163,25 @@ command that prints an environment variable (for example `sh -c 'printf %s
 "$OPENAI_API_KEY"'`), and the harness injects the actual value into the
 evaluator container at launch. The key therefore stays out of the repository,
 the archived artifacts, and the container image, and the config bytes remain
-identical across runs, hosts, and key rotations. (codex 0.166.0 has no
-`env_key` support in provider auth, so the command form is required; it also
-refuses to override the reserved built-in provider id `openai`, so the official
-endpoint is declared under a custom provider id to keep `base_url` frozen in
-these bytes.) Historical macOS runs fetched a proxy key from the Keychain via
-`/usr/bin/security`; that binary does not exist inside the Linux container and
-the proxy endpoint is not reachable from the evaluation container, so both are
-superseded by the official endpoint.
+identical across runs, hosts, and key rotations.
+
+Current evaluations and nested reviews use the local Magpie proxy through
+the `magpie-local` provider in `minimal-eval-config.toml`. Container requests
+go to `http://host.docker.internal:3426/v1`, where
+`windows-docker/magpie-models-shim.py` forwards them to Magpie on host port
+3425. The shim translates `GET /v1/models` into the pinned Codex catalog
+schema and forwards model requests to Magpie. Keep both Magpie and the shim
+running throughout evaluation. Set `OPENAI_API_KEY` to the credential accepted
+by this proxy. The current configuration does not connect directly to the
+official OpenAI endpoint. Changing the provider or endpoint starts a new
+evaluation baseline.
+
+Historical macOS runs fetched credentials through `/usr/bin/security`;
+the Docker workflow instead injects the credential through the environment.
 Verify the full credential chain without a live model call by pointing
 `base_url` at a local sink and checking the received `Authorization` header
-(`brainx-display-cases/smoke-test-auth.py` automates this); a dummy key against
-the real endpoint should return `401 invalid_api_key`, which proves the request
-reached the provider with the key attached.
+(`brainx-display-cases/windows-docker/smoke-test-auth.py` automates this).
+Use only a dummy key and the local sink for this smoke test.
 When the evaluated workflow can call the BrainX Codex reviewer, include its
 local MCP registration in that minimal config:
 
@@ -189,12 +205,17 @@ the host cannot present the MCP approval prompt and may surface the denial as
 artifact review.
 
 Use the maintained Docker harness rather than copying a second implementation.
-Both build and run scripts load `brainx-display-cases/brainx-eval.env` when it
-exists. Copy the example, edit it with LF endings, and keep credentials local.
+`run-refinement-case.sh` runs its own preflight before the model call: validate
+prompt and paths, Docker/image availability, memory/concurrency warnings,
+container isolation/imports, configured Magpie catalog and reviewer handshake.
+These checks do not establish remaining model quota.
+Both build and run scripts load `brainx-display-cases/windows-docker/brainx-eval.env`
+when it exists. Copy the example, edit it with LF endings, and keep credentials
+local.
 
 ```bash
-bash brainx-display-cases/build-eval-image.sh
-bash brainx-display-cases/run-refinement-case.sh 04-online-working-memory run0
+bash brainx-display-cases/windows-docker/build-eval-image.sh
+bash brainx-display-cases/windows-docker/run-refinement-case.sh 05-alpha-rhythm run0
 ```
 
 For an explicitly approved scientific variant, keep the original `prompt.md`
@@ -240,7 +261,7 @@ Run the credential smoke test inside the same image without network access:
 ```bash
 docker run --rm --network none \
   --mount "type=bind,source=<absolute-checkout-path>,target=/source,readonly" \
-  "$BRAINX_EVAL_IMAGE" python /source/brainx-display-cases/smoke-test-auth.py
+  "$BRAINX_EVAL_IMAGE" python /source/brainx-display-cases/windows-docker/smoke-test-auth.py
 ```
 
 The test uses an isolated temporary configuration, a loopback endpoint and a
@@ -271,7 +292,7 @@ snapshot, current skill snapshot, MCP server tree, and required runtime. macOS,
 Linux, and Windows Git Bash all use the same container mount set, so runs stay comparable across machines.
 Keep the network reachable, because the model endpoint is remote. macOS also has
 `sandbox-exec` with a seatbelt profile, and a historical profile is retained at
-`brainx-display-cases/refinement-eval.sb.in`, but the harness no longer uses it:
+`brainx-display-cases/legacy-macos/refinement-eval.sb.in`, but the harness no longer uses it:
 seatbelt is "allow by default, deny explicitly", so it must enumerate every
 blocked path, while the container mount set is "nothing is visible unless it is
 mounted". The harness audits that mount set on the host before launch and records

@@ -35,6 +35,9 @@ This repository targets BrainX `v2026.7.9`, which bundles BrainTrace `0.2.4`. Us
 - [Algorithm Tutorials](https://brainx.chaobrain.com/braintrace/tutorials/algorithm_tutorials.html) — Introduces the algorithm-learning path and compares parameter-dimensional and input/output-factorized trace estimators on a shared task.
 - [D-RTRL: Diagonal Online Gradient Learning](https://brainx.chaobrain.com/braintrace/tutorials/drtrl.html) — Develops the D-RTRL estimator, sequence workflow, trace reset behavior, memory scaling, and relationship to BPTT.
 - [pp-prop: Input/Output-Factorized Online Gradients](https://brainx.chaobrain.com/braintrace/tutorials/pp_prop.html) — Explains pp-prop factorization, `decay_or_rank`, its sequence workflow, and its memory-versus-approximation tradeoff.
+- [e-prop: Local Eligibility and Learning Signals](https://brainx.chaobrain.com/braintrace/tutorials/eprop.html) — Separates a synapse-local eligibility trace from a readout-broadcast learning signal and shows the e-prop workflow.
+- [OSTL: With-H and Without-H Regimes](https://brainx.chaobrain.com/braintrace/tutorials/ostl.html) — Contrasts recurrent with-H and feedforward without-H OSTL classes and when each regime applies.
+- [SnAp: Sparse n-Step Recurrent Influence](https://brainx.chaobrain.com/braintrace/tutorials/snap.html) — Retains recurrent influence inside an n-step dependency neighborhood, demonstrated on sparse connectivity.
 
 ## Model-Building Tutorials
 
@@ -46,8 +49,7 @@ This repository targets BrainX `v2026.7.9`, which bundles BrainTrace `0.2.4`. Us
 ## Compiler and Runtime Tutorials
 
 - [Compiler & Runtime](https://brainx.chaobrain.com/braintrace/tutorials/compiler_runtime.html) — Routes the workflow for compilation, hidden-group inspection, traced and excluded weights, relation diagnostics, and structural validation.
-- [Graph Compilation](https://brainx.chaobrain.com/braintrace/tutorials/graph_compilation.html) — Shows the high-level `braintrace.compile()` path, lower-level graph compilation, and construction of the `ETraceGraph` relation graph.
-- [Visualization](https://brainx.chaobrain.com/braintrace/tutorials/visualization.html) — Uses learner reports, graphs, and `show_graph()` to inspect hidden groups, traced parameters, exclusions, and diagnostic reasons.
+- [RNN Compiler Walkthrough](https://brainx.chaobrain.com/braintrace/tutorials/rnn_compiler.html) — End-to-end compile path for single- and two-layer RNNs: `braintrace.compile()`, `compile_etrace_graph`, `learner.report` / `CompilationReport`, `ETraceGraph` / `show_graph()` inspection of hidden groups, traced and excluded weights, and diagnostics. Replaces the retired `graph_compilation.html` and `visualization.html` pages.
 
 ## Advanced Guides
 

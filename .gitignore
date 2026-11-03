@@ -109,6 +109,6 @@ tmp/
 # ---------------------------------------------------------------------------
 # Local evaluation environment (never commit host paths or secrets)
 # ---------------------------------------------------------------------------
-brainx-display-cases/brainx-eval.env
+brainx-display-cases/windows-docker/brainx-eval.env
 **/runs/
 **/*.npz

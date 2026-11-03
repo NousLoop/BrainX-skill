@@ -101,6 +101,6 @@ node --test mcp-servers/codex/test/*.test.mjs
 
 The transport is dependency-free and uses JSONL stdio on both sides. MCP
 `initialize` initializes the real App Server before advertising the tools.
-`brainx-display-cases/smoke-test-reviewer.py` checks this handshake without a
+`brainx-display-cases/windows-docker/smoke-test-reviewer.py` checks this handshake without a
 model call. Unit tests use a fake App Server to check policy enforcement,
 continuation, cancellation, early events, timeouts, crashes and failed turns.

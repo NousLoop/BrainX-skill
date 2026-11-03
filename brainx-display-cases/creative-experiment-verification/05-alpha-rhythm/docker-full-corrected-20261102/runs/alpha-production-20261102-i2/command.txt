@@ -1,1 +1,0 @@
-JAX_PLATFORMS=cpu /brainx-venv/bin/python /workspace/run_experiment.py --output-dir /workspace/runs/alpha-production-20261102-i2 --run-level production
