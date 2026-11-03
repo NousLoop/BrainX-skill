@@ -1,0 +1,22 @@
+model_provider = "wangchaoming"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "xhigh"
+disable_response_storage = true
+service_tier = "default"
+
+[model_providers.wangchaoming]
+name = "Wangchaoming API"
+base_url = "https://coding.wangchaoming.com/v1"
+wire_api = "responses"
+
+[model_providers.wangchaoming.auth]
+command = "/usr/bin/security"
+args = ["find-generic-password", "-a", "nijiachen", "-s", "codex-wangchaoming-api-key", "-w"]
+timeout_ms = 5000
+refresh_interval_ms = 0
+
+[mcp_servers.codex]
+command = "node"
+args = ["/Users/nijiachen/Downloads/brainx-skill-bundle/mcp-servers/codex/server.mjs"]
+default_tools_approval_mode = "approve"
+tool_timeout_sec = 1800

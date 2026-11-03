@@ -1,8 +1,3 @@
-; Deprecated: retained for reference only. The refinement harness now enforces
-; host read isolation with a Docker container mount set, which works on macOS,
-; Linux, and Windows alike. No script reads this profile any more.
-; Historical macOS runs used it through `sandbox-exec -f <profile>` with the
-; placeholders below filled in by run-refinement-case.sh.
 (version 1)
 (allow default)
 
