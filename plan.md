@@ -795,8 +795,8 @@ All five required Markdown references are skill-local and already exist. Applica
 #### Script References
 
 - `references/scripts/coba_ei_teaching.py`; local shared teaching example; integrates efficient BrainEvent `BinaryArray` communication over interchangeable fixed-degree, CSR, and dense storage with BrainPy `LIFRef`, `Expon`, and `COBA` dynamics in one compiled BrainState loop.
-- `references/scripts/102_EI_net_1996.py`; [source](https://raw.githubusercontent.com/chaobrain/brainpy.state/main/examples/brainpy_like/102_EI_net_1996.py); high-level E/I network; direct full-script reference.
-- `references/scripts/204_joglekar_2018_propagation.py`; [source](https://raw.githubusercontent.com/chaobrain/brainpy.state/main/examples/brainpy_like/204_joglekar_2018_propagation.py); delayed spikes, JIT connectivity, and area mapping; connectivity-variants branch.
+- `references/scripts/102_EI_net_1996.py`; [source](https://raw.githubusercontent.com/brainpy/BrainPy/main/examples/state/102_EI_net_1996.py); high-level E/I network; direct full-script reference.
+- `references/scripts/204_joglekar_2018_propagation.py`; [source](https://raw.githubusercontent.com/brainpy/BrainPy/main/examples/state/204_joglekar_2018_propagation.py); delayed spikes, JIT connectivity, and area mapping; connectivity-variants branch.
 
 #### Boundaries and Common Failures
 
@@ -1065,23 +1065,23 @@ brainpy-state/references/
 Native scripts:
 
 - `skills/package-skills/brainevent/references/scripts/coba_ei_teaching.py` — local shared teaching example — efficient BrainEvent communication incorporated into a complete BrainPy COBA E/I network; projection branch.
-- `skills/package-skills/brainpy-state/references/scripts/103_COBA_2005.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/brainpy_like/103_COBA_2005.py) — canonical E/I COBA network; projection branch.
-- `skills/package-skills/brainpy-state/references/scripts/106_COBA_HH_2007.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/brainpy_like/106_COBA_HH_2007.py) — custom HH network; custom-model branch.
-- `skills/package-skills/brainpy-state/references/scripts/107_gamma_oscillation_1996.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/brainpy_like/107_gamma_oscillation_1996.py) — custom neuron/synapse; custom-model branch.
-- `skills/package-skills/brainpy-state/references/scripts/109_fast_global_oscillation.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/brainpy_like/109_fast_global_oscillation.py) — `DeltaProj` and delay; projection branch.
+- `skills/package-skills/brainpy-state/references/scripts/103_COBA_2005.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/103_COBA_2005.py) — canonical E/I COBA network; projection branch.
+- `skills/package-skills/brainpy-state/references/scripts/106_COBA_HH_2007.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/106_COBA_HH_2007.py) — custom HH network; custom-model branch.
+- `skills/package-skills/brainpy-state/references/scripts/107_gamma_oscillation_1996.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/107_gamma_oscillation_1996.py) — custom neuron/synapse; custom-model branch.
+- `skills/package-skills/brainpy-state/references/scripts/109_fast_global_oscillation.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/109_fast_global_oscillation.py) — `DeltaProj` and delay; projection branch.
 - `skills/package-skills/brainpy-state/references/scripts/sound_localization.py` — local validated teaching example — mapped integer delay bank, coincidence detection, and BrainEvent fixed fan-out; projection and delay branch.
-- `skills/package-skills/brainpy-state/references/scripts/201_surrogate_grad_lif_fashion_mnist.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/brainpy_like/201_surrogate_grad_lif_fashion_mnist.py) — real-data SNN training; training branch.
+- `skills/package-skills/brainpy-state/references/scripts/201_surrogate_grad_lif_fashion_mnist.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/201_surrogate_grad_lif_fashion_mnist.py) — real-data SNN training; training branch.
 - `skills/package-skills/brainpy-state/references/scripts/training-snn.py` — [source](https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/05_training_an_snn.html) — compact SNN training; training branch.
 
-NEST-compatible external scripts:
+NEST-compatible local scripts (vendored under `references/nest-compatible/scripts/`; upstream `chaobrain/brainpy.state` `examples/nest_like/` retired — catalog: [NEST-compatible example gallery](https://brainx.chaobrain.com/brainpy-state/examples/nest-gallery.html)):
 
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_alpha.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/brunel_alpha.py) — alpha-synapse Brunel network.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_delta.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/brunel_delta.py) — delta-synapse voltage-weight semantics.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brette_et_al_2007.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/brette_et_al_2007.py) — comparative network workflow.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/synapsecollection.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/synapsecollection.py) — synapse inspection/manipulation.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/evaluate_tsodyks2_synapse.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/evaluate_tsodyks2_synapse.py) — short-term plasticity parity.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/clopath_synapse_spike_pairing.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/clopath_synapse_spike_pairing.py) — plasticity protocol.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/spatial_gaussex.py` — [source](https://github.com/chaobrain/brainpy.state/blob/main/examples/nest_like/spatial_gaussex.py) — spatial connectivity.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_alpha.py` — local — alpha-synapse Brunel network.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_delta.py` — local — delta-synapse voltage-weight semantics.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brette_et_al_2007.py` — local — comparative network workflow.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/synapsecollection.py` — local — synapse inspection/manipulation.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/evaluate_tsodyks2_synapse.py` — local — short-term plasticity parity.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/clopath_synapse_spike_pairing.py` — local — plasticity protocol.
+- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/spatial_gaussex.py` — local — spatial connectivity.
 
 Location for all NEST scripts: `references/nest-compatible/nest-workflow.md` full-script branch.
 
