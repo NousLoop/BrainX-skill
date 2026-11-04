@@ -1,0 +1,1 @@
+{"pid": 4428, "command": ["/brainx-venv/bin/python", "/workspace/theta_gamma/runs/production-02/source/experiment.py", "--config", "/workspace/theta_gamma/runs/production-02/config.json"], "cwd": "/workspace/theta_gamma/runs/production-02/source"}

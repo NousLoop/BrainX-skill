@@ -1,0 +1,28 @@
+https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.bandpass.html
+.rst .pdf System Settings Light Dark braintools.analysis.spectral.bandpass Contents bandpass() braintools.analysis.spectral.bandpass # braintools.analysis.spectral. bandpass ( x , dt , band , order = 4 ) # Zero-phase Butterworth band-pass filter along time axis 0. A Butterworth band-pass of order order (an IIR filter of order 2 * order ) is designed on the host as second-order sections with scipy.signal.butter(order, band, btype='band', fs=fs, output='sos') .
+The signal is filtered forward and backward [ 1 ] , which squares the
+magnitude response and cancels the phase, exactly as scipy.signal.sosfiltfilt with its defaults: odd extension of padlen = 3 * (2 * n_sections + 1 - n_zero) samples
+at both ends, where n_zero counts sections with a trivial last
+coefficient; initial states sosfilt_zi(sos) * x[0] for the forward pass and sosfilt_zi(sos) * y[-1] for the backward pass. Parameters : x ( Array | ndarray | bool | number | bool | int | float | complex | Quantity ) – Real signal of shape (T, ...) ; time is axis 0. A brainunit.Quantity is accepted. dt ( float | Quantity ) – Sampling interval (seconds if a plain number). Static. band ( Tuple [ float , float ] ) – Pass band (low, high) in Hz with 0 < low < high < fs / 2 .
+Static. order ( int ) – Butterworth order (number of second-order sections). Static. Returns : y – Filtered signal with the shape, dtype and unit of x . Return type : Array | Quantity Raises : ValueError – If a band edge is <= 0 or >= fs / 2 , order < 1 , or T <= padlen (the signal is too short for the edge padding, the
+    same condition under which SciPy raises). See also analytic_signal Hilbert-transform analytic signal. plv Phase-locking value, optionally after band-passing. Notes Both passes run as a single jax.lax.scan over time that cascades all
+sections at each step (direct form II transposed), so the cost is
+sequential in T . The function is jittable, vmappable and (being linear)
+differentiable with respect to x . In float32, low cut-offs relative to fs lose precision; use float64 for very narrow or very low bands. References [ 1 ] Gustafsson, F. “Determining the initial states in forward-backward
+filtering.” IEEE Transactions on Signal Processing 44.4 (1996):
+988-992. Examples >>> import jax.numpy as jnp >>> from braintools.analysis.spectral import bandpass >>> t = jnp . arange ( 2000 ) * 1e-3 >>> x = jnp . sin ( 2 * jnp . pi * 10 * t ) + jnp . sin ( 2 * jnp . pi * 100 * t ) >>> y = bandpass ( x , dt = 1e-3 , band = ( 5.0 , 20.0 )) >>> y . shape (2000,) >>> bool ( jnp . max ( jnp . abs ( y [ 500 : 1500 ] - jnp . sin ( 2 * jnp . pi * 10 * t [ 500 : 1500 ]))) < 0.05 ) True {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./apis/generated"
+        },
+        predefinedOutput: true
+    } kernelName = 'python3' previous braintools.analysis.spectral.morlet_transform next braintools.analysis.spectral.analytic_signal Contents bandpass() By BrainTools Developers © Copyright 2024, braintools. Last updated on Oct 25, 2026.

@@ -1,0 +1,18 @@
+{
+  "spectral_bandpass": {
+    "success": false,
+    "type": "AttributeError",
+    "message": "module 'braintools' has no attribute 'analysis'"
+  },
+  "spectral_analytic": {
+    "success": false,
+    "type": "AttributeError",
+    "message": "module 'braintools' has no attribute 'analysis'"
+  },
+  "metric_psd": {
+    "success": true
+  },
+  "metric_pac": {
+    "success": true
+  }
+}

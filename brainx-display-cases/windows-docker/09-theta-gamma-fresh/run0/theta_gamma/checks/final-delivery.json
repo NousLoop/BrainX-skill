@@ -1,0 +1,82 @@
+{
+  "review": "PASS",
+  "report_status": "final",
+  "scientific_outcome": "supported",
+  "local_links_valid": true,
+  "final_PNG_PDF_exist": true,
+  "pdf_renderer": "isolated temporary pypdfium2 wheel; no installation or change to BrainX environment",
+  "figure_modes_preserved": [
+    "diagnostic iteration 1",
+    "diagnostic iteration 2",
+    "final iteration 2"
+  ],
+  "renderer_wheel": "pypdfium2-5.14.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+  "renderer_wheel_sha256": "11f281613fa22313d9c7ab89947665e84eccf8ebe40e1198a84a88352305648d",
+  "PDF_renders": [
+    {
+      "source": "figures/final-iteration-2/traces.pdf",
+      "render": "/tmp/theta_gamma_final_pdf_traces.png",
+      "pixels": [
+        1036,
+        682
+      ]
+    },
+    {
+      "source": "figures/final-iteration-2/nesting.pdf",
+      "render": "/tmp/theta_gamma_final_pdf_nesting.png",
+      "pixels": [
+        1287,
+        343
+      ]
+    },
+    {
+      "source": "figures/final-iteration-2/scan.pdf",
+      "render": "/tmp/theta_gamma_final_pdf_scan.png",
+      "pixels": [
+        1368,
+        343
+      ]
+    }
+  ],
+  "PDF_visual_inspection": true,
+  "PDF_visual_inspection_result": "All three PDF exports were independently rasterized and opened; legible, nonblank, no clipping or overlap.",
+  "completed_at_utc": "2026-11-04T00:34:20.711449+00:00",
+  "link_check_scope": [
+    "report.md",
+    "README.md"
+  ],
+  "link_failures": [],
+  "review_hash_valid": true,
+  "final_artifacts": [
+    {
+      "path": "figures/final-iteration-2/nesting.pdf",
+      "bytes": 29102,
+      "sha256": "e964bc21ea2a389b6a48c649088719d17607ff39a3a3891dd2d5b6373b5a07ea"
+    },
+    {
+      "path": "figures/final-iteration-2/nesting.png",
+      "bytes": 290166,
+      "sha256": "4bd9cee69ab68ffbde1ecc07e60c8be6336e2c5471e0ba075b6c46fd22b5e530"
+    },
+    {
+      "path": "figures/final-iteration-2/scan.pdf",
+      "bytes": 29465,
+      "sha256": "fbcce245e7b66a57f8c5521faa3ad350bc0c734e4e1776e319f8eb3a7e057a4b"
+    },
+    {
+      "path": "figures/final-iteration-2/scan.png",
+      "bytes": 138169,
+      "sha256": "f062695823cb0557e2758a4c88a348dcd1ac9765006a8cd135048638e8c3a52e"
+    },
+    {
+      "path": "figures/final-iteration-2/traces.pdf",
+      "bytes": 57219,
+      "sha256": "96cc6ba6df832881380d6b5cdd9c96673ff828e8dfe947af7bc5e57df7d659a0"
+    },
+    {
+      "path": "figures/final-iteration-2/traces.png",
+      "bytes": 684308,
+      "sha256": "5b69288b73cf1c9e8bed424e3a47168b7f47f2f25d7234ae7f679a1b01c28c4e"
+    }
+  ]
+}

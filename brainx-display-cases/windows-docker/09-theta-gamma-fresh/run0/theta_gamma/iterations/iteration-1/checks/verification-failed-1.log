@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/theta_gamma/verify.py", line 94, in <module>
+    verify()
+  File "/workspace/theta_gamma/verify.py", line 69, in verify
+    assert errors[1]<errors[0] and errors[0]<.03
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

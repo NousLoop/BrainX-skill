@@ -1,0 +1,1 @@
+JAX_PLATFORMS=cpu JAX_ENABLE_X64=true /brainx-venv/bin/python /workspace/theta_gamma/runs/smoke-01/source/experiment.py --config /workspace/theta_gamma/runs/smoke-01/config.json

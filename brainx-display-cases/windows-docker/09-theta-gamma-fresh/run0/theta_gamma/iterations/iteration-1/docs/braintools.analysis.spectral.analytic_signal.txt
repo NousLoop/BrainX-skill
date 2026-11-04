@@ -1,0 +1,23 @@
+https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.analytic_signal.html
+.rst .pdf System Settings Light Dark braintools.analysis.spectral.analytic_signal Contents analytic_signal() braintools.analysis.spectral.analytic_signal # braintools.analysis.spectral. analytic_signal ( x , axis = 0 ) # Compute the analytic signal by the FFT Hilbert transform. The analytic signal is \(x_a = x + i\,\mathcal{H}[x]\) [ 1 ] . It is
+obtained by zeroing the negative-frequency half of the spectrum and
+doubling the positive half (DC and, for even length, the Nyquist bin are
+kept as is), exactly as scipy.signal.hilbert . Parameters : x ( Array | ndarray | bool | number | bool | int | float | complex | Quantity ) – Real signal. A brainunit.Quantity is accepted. axis ( int ) – Axis along which to transform (time). Static. Returns : xa – Complex analytic signal of the same shape (and unit) as x ; abs(xa) is the amplitude envelope and angle(xa) the
+instantaneous phase. Return type : Array | Quantity Raises : ValueError – If x is complex or the transform axis has length 0. See also bandpass Zero-phase Butterworth band-pass filter. plv Phase-locking value between two signals. Notes The function is jittable, vmappable and (being linear) differentiable with
+respect to x . References [ 1 ] Marple, S. L. “Computing the discrete-time analytic signal via FFT.”
+IEEE Transactions on Signal Processing 47.9 (1999): 2600-2603. Examples >>> import jax.numpy as jnp >>> from braintools.analysis.spectral import analytic_signal >>> t = jnp . arange ( 1000 ) * 1e-3 >>> z = analytic_signal ( jnp . cos ( 2 * jnp . pi * 10 * t )) >>> bool ( jnp . allclose ( jnp . abs ( z ), 1.0 , atol = 1e-4 )) True {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./apis/generated"
+        },
+        predefinedOutput: true
+    } kernelName = 'python3' previous braintools.analysis.spectral.bandpass next braintools.analysis.spectral.band_power Contents analytic_signal() By BrainTools Developers © Copyright 2024, braintools. Last updated on Oct 25, 2026.

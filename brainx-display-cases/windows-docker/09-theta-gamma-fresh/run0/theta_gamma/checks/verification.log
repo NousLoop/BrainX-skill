@@ -1,0 +1,35 @@
+{
+  "shape": [
+    200,
+    3,
+    2
+  ],
+  "one_step_error": [
+    0.0,
+    0.0
+  ],
+  "reset_replay_exact": true,
+  "same_model_default_reset_exact": true,
+  "batch_scalar_max_error": 0.0,
+  "batch_final_error": 0.0,
+  "jit_unjit_error": 0.0,
+  "input_error": 2.220446049250313e-16,
+  "bounds_finite": true,
+  "independent_solver_max_errors_dt_0p1_0p05_0p025": [
+    0.03441282343790092,
+    0.01722341541007849,
+    0.008610779537651936
+  ],
+  "synthetic_AM": {
+    "R": 0.2999557358446922,
+    "analytic_expected_R": 0.3,
+    "MI": 0.032379534136493006,
+    "native_MI": 0.032389624591052005,
+    "linear_mixture_null_R": 2.4396735797186517e-06,
+    "surrogate_q95": 0.06682782634515037,
+    "p": 0.005,
+    "cycles": 64
+  },
+  "first_jit_end_to_end_s": 0.1346435970000357,
+  "status": "PASS"
+}

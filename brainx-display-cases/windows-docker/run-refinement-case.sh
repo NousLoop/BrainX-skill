@@ -116,6 +116,14 @@ test ! -e "$run_dir" || {
 }
 
 case "$case_name" in
+  00-live-model-probe)
+    expected_prompt_bytes="631"
+    expected_prompt_sha256="fd275a8fb32bb8070afe7187bc12254273bb7089eec58f91faee2e20080697ac"
+    ;;
+  09-theta-gamma-fresh)
+    expected_prompt_bytes="634"
+    expected_prompt_sha256="c3ad8eb63e3c056e581717baf55f8c35f2f6ba690af75767201a57f934b58246"
+    ;;
   04-online-working-memory)
     expected_prompt_bytes="733"
     expected_prompt_sha256="629e6b6f36083f51bf808a1e8c0014a272222b993511097c7068261728e00119"

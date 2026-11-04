@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/theta_gamma/verify.py", line 95, in <module>
+    verify()
+  File "/workspace/theta_gamma/verify.py", line 87, in verify
+    assert abs(R-.3)<.01 and null_R<.005 and abs(MI-float(native_mi))<.02 and p<=.01
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

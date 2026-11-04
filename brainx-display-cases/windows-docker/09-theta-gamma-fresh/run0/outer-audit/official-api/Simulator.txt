@@ -1,0 +1,770 @@
+https://brainx.chaobrain.com/brainmass/reference/generated/brainmass.Simulator.html
+brainmass.Simulator — brainmass
+document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+.pst-js-only { display: none !important; }
+const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"
+DOCUMENTATION_OPTIONS.pagename = 'reference/generated/brainmass.Simulator';
+DOCUMENTATION_OPTIONS.search_as_you_type = false;
+BrainX
+Ecosystem
+Home
+Platform
+Full-Scale Simulation
+AI Compatibility
+Differentiable Optimization
+Powered by JAX
+Ecosystem
+Research
+Papers about BrainX
+Papers using BrainX
+Papers citing BrainX
+Documentation
+brainpy ↗
+brainspike
+braincell
+brainmass
+brainunit
+brainevent
+braintrace
+braintools
+brainstate
+BrainX skill
+Skip to main content
+Back to top
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Get Started
+Installation
+Quickstart
+Key Concepts
+Learning Paths
+Learn
+Tutorials
+Your First Simulation
+Models and Dynamics
+Noise and Stochastic Runs
+Building a Network
+Forward Models
+Fitting with Gradients
+Gradient-Free Fitting
+Training on Tasks
+How-To Guides
+Choose a Model
+Working with Units
+Batch and Accelerate
+Custom Coupling
+Compose a Custom Objective
+Run Parameter Sweeps
+Analyze Results (FC / FCD / spectra)
+Concepts
+What Is a Neural Mass Model?
+Why Differentiable?
+Architecture Overview
+Coupling and Delays
+From Activity to Signals
+Showcase
+Data-Driven Modeling
+Data-Driven Modeling Roadmap
+Gallery
+Hopf Oscillator
+Van der Pol Oscillator
+Stuart-Landau Oscillator
+FitzHugh-Nagumo Model
+Wilson-Cowan Model
+Jansen-Rit Model
+Wong-Wang Decision Model
+Montbrio-Pazo-Roxin Model
+Coombes-Byrne (Next-Generation Neural Mass)
+Larter-Breakspear Model
+Epileptor (Seizure Dynamics)
+Generic 2D Oscillator
+Wong-Wang Excitatory-Inhibitory (Dynamic Mean Field)
+Lorenz System
+Linear Node
+Kuramoto Phase Oscillators
+Harmonic Oscillator Recurrent Network (HORN)
+Resting-State MEG: A Whole-Brain Modeling Pipeline
+Fitting an EEG Model with Gradients
+Seizure Dynamics with the Epileptor
+Perceptual Decision-Making with Wong-Wang
+Training a HORN Network on a Cognitive Task
+Reference
+API Reference
+Neural Mass Models
+XY_Oscillator
+HopfStep
+VanDerPolStep
+StuartLandauStep
+KuramotoNetwork
+FitzHughNagumoStep
+ThresholdLinearStep
+WilsonCowanStep
+JansenRitStep
+JansenRitTR
+WongWangStep
+WilsonCowanNoSaturationStep
+WilsonCowanSymmetricStep
+WilsonCowanSimplifiedStep
+WilsonCowanLinearStep
+WilsonCowanDivisiveStep
+WilsonCowanDivisiveInputStep
+WilsonCowanDelayedStep
+WilsonCowanAdaptiveStep
+WilsonCowanThreePopBase
+WilsonCowanThreePopulationStep
+MontbrioPazoRoxinStep
+CoombesByrneStep
+LarterBreakspearStep
+EpileptorStep
+Generic2dOscillatorStep
+WongWangExcInhStep
+LorenzStep
+LinearStep
+Noise Processes
+Noise
+GaussianNoise
+WhiteNoise
+OUProcess
+BrownianNoise
+ColoredNoise
+PinkNoise
+BlueNoise
+VioletNoise
+Coupling Mechanisms
+DiffusiveCoupling
+AdditiveCoupling
+SigmoidalCoupling
+HyperbolicTangentCoupling
+SigmoidalJansenRitCoupling
+brainmass.diffusive_coupling
+brainmass.additive_coupling
+brainmass.sigmoidal_coupling
+brainmass.hyperbolic_tangent_coupling
+brainmass.sigmoidal_jansen_rit_coupling
+brainmass.laplacian_connectivity
+brainmass.LaplacianConnParam
+Forward Models
+BOLDSignal
+LeadFieldModel
+EEGLeadFieldModel
+MEGLeadFieldModel
+LeadfieldReadout
+Observation Models
+HRFKernel
+FirstOrderVolterraHRFKernel
+GammaHRFKernel
+DoubleExponentialHRFKernel
+MixtureOfGammasHRFKernel
+HRFBold
+TemporalAverage
+HORN Models
+HORNStep
+HORNSeqLayer
+HORNSeqNetwork
+Orchestration
+brainmass.Network
+brainmass.Simulator
+brainmass.Fitter
+brainmass.FitResult
+brainmass.objectives.timeseries_rmse
+brainmass.objectives.fc_corr
+brainmass.objectives.fc_rmse
+brainmass.objectives.cosine_sim
+brainmass.objectives.fcd
+brainmass.objectives.fcd_distribution
+brainmass.objectives.ks_distance
+brainmass.objectives.wasserstein_1d
+brainmass.objectives.fcd_ks
+brainmass.objectives.fcd_wasserstein
+brainmass.objectives.combine
+Datasets
+brainmass.datasets.register_dataset
+brainmass.datasets.list_datasets
+brainmass.datasets.load_dataset
+brainmass.datasets.Connectome
+brainmass.datasets.Signal
+brainmass.datasets.delayed_match_task
+Visualization
+brainmass.viz.plot_timeseries
+brainmass.viz.plot_phase_portrait
+brainmass.viz.plot_connectivity
+brainmass.viz.plot_functional_connectivity
+brainmass.viz.plot_power_spectrum
+Utilities & Types
+brainmass.sys2nd
+brainmass.sigmoid
+brainmass.bounded_input
+brainmass.process_sequence
+brainmass.delay_index
+brainmass.list_models
+brainmass.ModelInfo
+Developer Guide
+Contributing Guide
+Architecture
+Creating Custom Models
+Building a Data-Driven Workflow
+Creating a Coupling
+Creating an Objective
+Extending Noise Processes
+Testing
+Documentation
+Additional Resources
+FAQ and Troubleshooting
+Release Notes
+.rst
+.pdf
+System Settings
+Light
+Dark
+brainmass.Simulator
+Contents
+Simulator
+Simulator.__init__()
+Simulator.__init__()
+Simulator.run()
+brainmass.Simulator
+#
+class
+brainmass.
+Simulator
+(
+model
+,
+dt
+=
+None
+)
+#
+Drive a
+Dynamics
+/
+Module
+and collect monitored trajectories.
+The simulator wraps the standard brainmass run loop – set
+dt
+,
+initialise states, step the model inside
+environ.context(i=,
+t=)
+with
+brainstate.transform.for_loop()
+, and stack the recorded values – in a
+single
+run()
+call. It reimplements none of that machinery; it only
+composes it.
+Parameters
+:
+model
+(
+brainstate.nn.Dynamics
+or
+brainstate.nn.Module
+) – The model to drive. Exposed afterwards as
+model
+. May be a single
+node or a network whose
+update
+reads its own internal coupling.
+dt
+(
+brainunit.Quantity
+,
+optional
+) – Integration time step. If
+None
+(default), the step is read from the
+global environment (
+brainstate.environ.get('dt')
+) at
+run()
+time; if that is also unset,
+run()
+raises
+ValueError
+.
+See also
+brainmass.objectives
+composable loss builders over simulated trajectories.
+Notes
+The result of
+run()
+is a plain
+dict
+(a valid JAX pytree, so it is
+safe to return through
+jit
+/
+grad
+/
+vmap
+) mapping each monitor
+name to its stacked trajectory, plus a
+'ts'
+time axis.
+ts[k]
+is the
+simulation time at the
+end
+of the
+k
+-th recorded step (the recorded
+value is the post-
+update
+state).
+Examples
+>>>
+import
+brainmass
+>>>
+import
+brainunit
+as
+u
+>>>
+node
+=
+brainmass
+.
+HopfStep
+(
+2
+,
+a
+=-
+0.2
+)
+>>>
+sim
+=
+brainmass
+.
+Simulator
+(
+node
+,
+dt
+=
+0.1
+*
+u
+.
+ms
+)
+>>>
+res
+=
+sim
+.
+run
+(
+10.0
+*
+u
+.
+ms
+,
+monitors
+=
+[
+'x'
+])
+>>>
+res
+[
+'x'
+]
+.
+shape
+(100, 2)
+>>>
+res
+[
+'ts'
+]
+.
+shape
+(100,)
+A derived observable (here
+E
+-
+I
+) is monitored with a callable:
+>>>
+jr
+=
+brainmass
+.
+JansenRitStep
+(
+in_size
+=
+1
+)
+>>>
+sim
+=
+brainmass
+.
+Simulator
+(
+jr
+,
+dt
+=
+0.1
+*
+u
+.
+ms
+)
+>>>
+res
+=
+sim
+.
+run
+(
+5.0
+*
+u
+.
+ms
+,
+monitors
+=
+lambda
+m
+:
+m
+.
+eeg
+(),
+transient
+=
+1.0
+*
+u
+.
+ms
+)
+>>>
+res
+[
+'output'
+]
+.
+shape
+(40, 1)
+__init__
+(
+model
+,
+dt
+=
+None
+)
+[source]
+#
+Methods
+__init__
+(model[, dt])
+run
+(duration, *[, inputs, monitors, ...])
+Simulate
+model
+for
+duration
+and return the recorded trajectories.
+__init__
+(
+model
+,
+dt
+=
+None
+)
+[source]
+#
+run
+(
+duration
+,
+*
+,
+inputs
+=
+None
+,
+monitors
+=
+None
+,
+transient
+=
+None
+,
+sample_every
+=
+None
+,
+batch_size
+=
+None
+,
+init_states
+=
+True
+,
+jit
+=
+True
+)
+[source]
+#
+Simulate
+model
+for
+duration
+and return the recorded trajectories.
+Parameters
+:
+duration
+(
+brainunit.Quantity
+) – Total simulated time. The number of integration steps is
+int(duration
+/
+dt)
+; a non-integer multiple is floored with a
+warning.
+inputs
+(
+None
+,
+array-like
+or
+callable
+,
+optional
+) –
+External drive forwarded to
+model.update
+:
+None
+(default): call
+model.update()
+with no arguments.
+array-like of shape
+(n_steps,
+...)
+: row
+i
+is passed as the
+single argument
+model.update(inputs[i])
+.
+callable(i,
+t)
+: its return is splatted –
+model.update(*r)
+if it returns a tuple, else
+model.update(r)
+.
+monitors
+(
+None
+,
+list
+of
+str
+,
+callable
+or
+dict
+,
+optional
+) –
+What to record each step:
+None
+(default): the return value of
+update()
+, under key
+'output'
+.
+list of state-attribute names (e.g.
+['rE']
+): each
+getattr(model,
+name).value
+.
+callable(model)
+->
+value
+: a derived observable, under key
+'output'
+(e.g.
+lambda
+m:
+m.eeg()
+).
+dict mapping output name to a state-attribute name or a
+callable(model)
+.
+transient
+(
+None
+,
+brainunit.Quantity
+or
+int
+,
+optional
+) – Leading transient to discard from the outputs, as a duration or a
+step count. Must be shorter than the run.
+sample_every
+(
+None
+or
+int
+,
+optional
+) – Record every
+k
+-th step (output downsampling; generalises the
+Jansen-Rit TR loop).
+None
+records every step.
+batch_size
+(
+None
+or
+int
+,
+optional
+) – If given, initialise states with this batch size (batched initial
+conditions); outputs gain a leading batch axis.
+init_states
+(
+bool
+,
+default True
+) – Call
+init_all_states
+before running. Set
+False
+to continue
+from the model’s current state.
+jit
+(
+bool
+,
+default True
+) – Compile the run with
+brainstate.transform.jit()
+.
+Returns
+:
+Maps each monitor name (or
+'output'
+) to its stacked trajectory
+and
+'ts'
+to the time axis. Each trajectory has a leading axis of
+length
+(n_steps
+-
+transient)
+//
+sample_every
+.
+Return type
+:
+dict
+Raises
+:
+ValueError
+– If
+dt
+is unset,
+transient
+is not shorter than the run, a
+    monitored name is not a model attribute,
+sample_every
+< 1, or the
+inputs
+length does not match the step count.
+{
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./reference/generated"
+        },
+        predefinedOutput: true
+    }
+kernelName = 'python3'
+previous
+brainmass.Network
+next
+brainmass.Fitter
+Contents
+Simulator
+Simulator.__init__()
+Simulator.__init__()
+Simulator.run()
+By BrainX Ecosystem
+© Copyright 2024-2026, brainmass.
+Last updated on Oct 25, 2026.
+BrainX
+Ecosystem
+An
+open
+,
+differentiable
+ecosystem for brain simulation.
+            We build the
+foundations
+the next decade of computational neuroscience will run on.
+Modeling
+brainpy ↗
+brainspike
+braincell
+brainmass
+Infrastructure
+brainunit
+brainevent
+braintrace
+braintools
+Compilation
+brainstate
+Vibe coding
+BrainX skill
+Research
+Papers about BrainX
+Papers using BrainX
+Papers citing BrainX
+© 2026 BrainX Developers
+How to cite
+Digital Brain Laboratory ↗

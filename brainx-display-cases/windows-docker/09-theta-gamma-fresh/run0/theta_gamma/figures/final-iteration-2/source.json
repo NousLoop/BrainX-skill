@@ -1,0 +1,17 @@
+{
+  "run": "runs/production-02",
+  "manifest": "runs/production-02/manifest.json",
+  "mode": "final",
+  "pair_conditions": [
+    2,
+    17
+  ],
+  "IC": 0,
+  "scan_reduction": "mean of 3 ICs, no CIs",
+  "source": "figures.py",
+  "outputs": [
+    "traces",
+    "nesting",
+    "scan"
+  ]
+}

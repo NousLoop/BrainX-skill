@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/workspace/theta_gamma/model.py", line 42, in run_model
+    result = brainmass.Simulator(model, dt=config["dt_ms"] * u.ms).run(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainmass/simulator.py", line 304, in run
+    rec = brainstate.transform.jit(core)() if jit else core()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainstate/transform/_jit.py", line 131, in jitted_fn
+    state_trace = fun.get_state_trace(*args, **params, compile_if_miss=True)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainstate/transform/_make_jaxpr.py", line 651, in get_state_trace
+    cache_key = self.get_arg_cache_key(*args, **kwargs, compile_if_miss=compile_if_miss)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainstate/transform/_make_jaxpr.py", line 431, in get_arg_cache_key
+    self.make_jaxpr(*args, **kwargs)
+  File "/brainx-venv/lib/python3.11/site-packages/brainstate/transform/_make_jaxpr.py", line 957, in make_jaxpr
+    jaxpr, (out_shapes, state_shapes) = jax.make_jaxpr(
+                                        ^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainmass/simulator.py", line 302, in core
+    return brainstate.transform.for_loop(step_run, np.arange(n_steps))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainmass/simulator.py", line 299, in step_run
+    return measure(r)
+           ^^^^^^^^^^
+  File "/brainx-venv/lib/python3.11/site-packages/brainmass/simulator.py", line 175, in measure
+    out[name] = getattr(model, spec).value if isinstance(spec, str) else spec(model)
+                                                                         ^^^^^^^^^^^
+  File "/workspace/theta_gamma/model.py", line 46, in <lambda>
+    "P": lambda _m: drive(brainstate.environ.get("t"))},
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: "Key 't' not found in environment.\nSet it using:\n  - env.set(t=value) for global setting\n  - env.context(t=value) for temporary setting"
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
