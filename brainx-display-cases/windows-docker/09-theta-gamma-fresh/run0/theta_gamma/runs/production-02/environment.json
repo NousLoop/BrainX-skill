@@ -1,0 +1,165 @@
+{
+  "interpreter": "/brainx-venv/bin/python",
+  "packages": [
+    {
+      "name": "absl-py",
+      "version": "2.5.1"
+    },
+    {
+      "name": "array-api-compat",
+      "version": "1.16.0"
+    },
+    {
+      "name": "braincell",
+      "version": "0.1.0"
+    },
+    {
+      "name": "brainevent",
+      "version": "0.2.1"
+    },
+    {
+      "name": "brainmass",
+      "version": "0.1.1"
+    },
+    {
+      "name": "brainpy",
+      "version": "2.8.2"
+    },
+    {
+      "name": "brainpy_state",
+      "version": "0.1.0"
+    },
+    {
+      "name": "brainstate",
+      "version": "0.5.4"
+    },
+    {
+      "name": "braintools",
+      "version": "0.3.0"
+    },
+    {
+      "name": "braintrace",
+      "version": "0.2.6"
+    },
+    {
+      "name": "brainunit",
+      "version": "0.5.2"
+    },
+    {
+      "name": "BrainX",
+      "version": "2026.8.18"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3"
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.68.0"
+    },
+    {
+      "name": "jax",
+      "version": "0.10.2"
+    },
+    {
+      "name": "jaxlib",
+      "version": "0.10.2"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.50.0"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2"
+    },
+    {
+      "name": "ml_dtypes",
+      "version": "0.6.0"
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.4"
+    },
+    {
+      "name": "numba",
+      "version": "0.68.1"
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.6"
+    },
+    {
+      "name": "opt_einsum",
+      "version": "3.4.0"
+    },
+    {
+      "name": "optax",
+      "version": "0.2.8"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0"
+    },
+    {
+      "name": "pip",
+      "version": "26.2.2"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0"
+    },
+    {
+      "name": "saiunit",
+      "version": "0.5.2"
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1"
+    },
+    {
+      "name": "setuptools",
+      "version": "79.0.1"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6"
+    }
+  ],
+  "device_preflight": "cpu [CpuDevice(id=0)]\n",
+  "platform": "linux",
+  "precision": 64,
+  "JAX_PLATFORMS": "cpu",
+  "JAX_ENABLE_X64": "true",
+  "data": "none; deterministic simulated input",
+  "checkpoint_source": null,
+  "git": "not a git repository; full source snapshots and SHA256 supplied"
+}

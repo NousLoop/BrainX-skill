@@ -1,0 +1,20 @@
+[
+  {
+    "depth": 0,
+    "gain": 1,
+    "rep": 0,
+    "E_dominant_hz": 22.000000000002423,
+    "E_peak_count": 196,
+    "E_mean_peak_rate_hz": 21.760964178105123,
+    "E_interval_median_ms": 45.999999999999815
+  },
+  {
+    "depth": 0.75,
+    "gain": 1,
+    "rep": 0,
+    "E_dominant_hz": 24.000000000002643,
+    "E_peak_count": 161,
+    "E_mean_peak_rate_hz": 17.935209057280574,
+    "E_interval_median_ms": 42.99999999999926
+  }
+]

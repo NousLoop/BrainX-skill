@@ -1,0 +1,829 @@
+https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.sigmoid.html
+brainstate.nn.sigmoid — brainstate
+document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+.pst-js-only { display: none !important; }
+const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"
+window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}
+DOCUMENTATION_OPTIONS.pagename = 'apis/generated/brainstate.nn.sigmoid';
+DOCUMENTATION_OPTIONS.search_as_you_type = false;
+BrainX
+Ecosystem
+Home
+Platform
+Full-Scale Simulation
+AI Compatibility
+Differentiable Optimization
+Powered by JAX
+Ecosystem
+Research
+Papers about BrainX
+Papers using BrainX
+Papers citing BrainX
+Documentation
+brainpy ↗
+brainspike
+braincell
+brainmass
+brainunit
+brainevent
+braintrace
+braintools
+brainstate
+BrainX skill
+Skip to main content
+Back to top
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Getting started
+Installation
+Quickstart
+Thinking in brainstate
+Tutorials
+Core
+State management
+Module
+system protocol
+Basic neural network layers
+Activation functions and normalization
+Parameters, transforms, and regularization
+Transformations, the essentials
+Training and metrics
+Random number generation
+Transformations
+JIT and compilation
+Automatic differentiation
+Vectorization
+Advanced batching and parallelism
+Control flow
+Error handling and runtime checks
+Debugging transformed code
+IR optimization and code generation
+Brain dynamics
+Dynamics and integration
+Delay
+protocol
+Event-driven operators
+Building a spiking neural network
+Training a spiking neural network
+How-to guides
+Save and load checkpoints
+Graph and node system
+Utility toolkit
+Collective operations
+Mixin system
+Observe and intercept state access with hooks
+Choose a parameter transform
+Constrain and regularize parameters
+Interoperate with flax and equinox
+Migrating concepts from pytorch to brainstate
+Concepts
+Why state-based?
+The state model
+The parameter model
+The graph model
+Transformation semantics
+Time and environment
+The typing system
+Examples
+Deep learning
+Image classification with CNNs
+Variational autoencoder (VAE) on MNIST
+Training recurrent neural networks: integrator task
+Brain dynamics
+Hodgkin-Huxley neuron model
+Simulating spiking neural networks
+Training spiking neural networks
+API reference
+Release notes
+brainstate
+module
+State
+ShortTermState
+LongTermState
+ParamState
+BatchState
+DelayState
+HiddenState
+HiddenGroupState
+HiddenTreeState
+FakeState
+TreefyState
+StateDictManager
+StateTraceStack
+brainstate.check_state_value_tree
+brainstate.check_state_jax_tracer
+brainstate.catch_new_states
+brainstate.maybe_state
+BrainStateError
+BatchAxisError
+TraceContextError
+HookContext
+ReadHookContext
+WriteHookContext
+MutableWriteHookContext
+RestoreHookContext
+InitHookContext
+Hook
+HookHandle
+HookManager
+HookConfig
+GlobalHookRegistry
+brainstate.register_state_hook
+brainstate.unregister_state_hook
+brainstate.clear_state_hooks
+brainstate.has_state_hooks
+brainstate.list_state_hooks
+HookError
+HookExecutionError
+HookRegistrationError
+HookCancellationError
+HookWarning
+brainstate.graph
+moduel
+Node
+pop_states
+nodes
+states
+treefy_states
+update_states
+flatten
+unflatten
+treefy_split
+treefy_merge
+iter_leaf
+iter_node
+clone
+graphdef
+brainstate.graph.split_context
+brainstate.graph.merge_context
+graph_to_tree
+tree_to_graph
+NodeStates
+GraphDef
+NodeSpec
+NodeEdge
+StateEdge
+StateLeafEdge
+PytreeEdge
+StaticEdge
+Static
+RefMap
+register_graph_node_type
+brainstate.nn
+module
+Base module classes
+Module
+ElementWiseBlock
+Sequential
+EnvironContext
+Vmap
+Map
+Parameter containers
+Param
+Const
+Transform
+IdentityT
+SoftplusT
+ExpT
+PositiveT
+ReluT
+NegSoftplusT
+NegativeT
+LogT
+SigmoidT
+ScaledSigmoidT
+ClipT
+TanhT
+SoftsignT
+SimplexT
+UnitVectorT
+OrderedT
+AffineT
+PowerT
+ChainT
+MaskedT
+Regularization
+L1Reg
+L2Reg
+ElasticNetReg
+HuberReg
+GroupLassoReg
+TotalVariationReg
+MaxNormReg
+EntropyReg
+OrthogonalReg
+SpectralNormReg
+ChainedReg
+GaussianReg
+StudentTReg
+CauchyReg
+UniformReg
+BetaReg
+LogNormalReg
+ExponentialReg
+GammaReg
+InverseGammaReg
+LogUniformReg
+HorseshoeReg
+SpikeAndSlabReg
+DirichletReg
+Linear layers
+Linear
+ScaledWSLinear
+SignedWLinear
+SparseLinear
+LoRA
+AllToAll
+OneToOne
+Convolutional layers
+Conv1d
+Conv2d
+Conv3d
+ScaledWSConv1d
+ScaledWSConv2d
+ScaledWSConv3d
+ConvTranspose1d
+ConvTranspose2d
+ConvTranspose3d
+Normalization layers
+BatchNorm0d
+BatchNorm1d
+BatchNorm2d
+BatchNorm3d
+LayerNorm
+RMSNorm
+GroupNorm
+weight_standardization
+Pooling and reshaping
+Flatten
+Unflatten
+AvgPool1d
+AvgPool2d
+AvgPool3d
+MaxPool1d
+MaxPool2d
+MaxPool3d
+MaxUnpool1d
+MaxUnpool2d
+MaxUnpool3d
+LPPool1d
+LPPool2d
+LPPool3d
+AdaptiveAvgPool1d
+AdaptiveAvgPool2d
+AdaptiveAvgPool3d
+AdaptiveMaxPool1d
+AdaptiveMaxPool2d
+AdaptiveMaxPool3d
+Padding layers
+ReflectionPad1d
+ReflectionPad2d
+ReflectionPad3d
+ReplicationPad1d
+ReplicationPad2d
+ReplicationPad3d
+ZeroPad1d
+ZeroPad2d
+ZeroPad3d
+ConstantPad1d
+ConstantPad2d
+ConstantPad3d
+CircularPad1d
+CircularPad2d
+CircularPad3d
+Dropout layers
+Dropout
+Dropout1d
+Dropout2d
+Dropout3d
+AlphaDropout
+FeatureAlphaDropout
+DropoutFixed
+Activations
+Threshold
+ReLU
+RReLU
+Hardtanh
+ReLU6
+Sigmoid
+Hardsigmoid
+Tanh
+SiLU
+Mish
+Hardswish
+ELU
+CELU
+SELU
+GLU
+GELU
+Hardshrink
+LeakyReLU
+LogSigmoid
+Softplus
+Softshrink
+PReLU
+Softsign
+Tanhshrink
+Softmin
+Softmax
+Softmax2d
+LogSoftmax
+Identity
+SpikeBitwise
+brainstate.nn.tanh
+brainstate.nn.relu
+brainstate.nn.squareplus
+brainstate.nn.softplus
+brainstate.nn.soft_sign
+brainstate.nn.sigmoid
+brainstate.nn.silu
+brainstate.nn.swish
+brainstate.nn.log_sigmoid
+brainstate.nn.elu
+brainstate.nn.leaky_relu
+brainstate.nn.hard_tanh
+brainstate.nn.celu
+brainstate.nn.selu
+brainstate.nn.gelu
+brainstate.nn.glu
+brainstate.nn.logsumexp
+brainstate.nn.log_softmax
+brainstate.nn.softmax
+brainstate.nn.standardize
+brainstate.nn.one_hot
+brainstate.nn.relu6
+brainstate.nn.hard_sigmoid
+brainstate.nn.hard_silu
+brainstate.nn.hard_swish
+brainstate.nn.hard_shrink
+brainstate.nn.rrelu
+brainstate.nn.mish
+brainstate.nn.soft_shrink
+brainstate.nn.prelu
+brainstate.nn.tanh_shrink
+brainstate.nn.softmin
+brainstate.nn.sparse_plus
+brainstate.nn.sparse_sigmoid
+Embedding
+Embedding
+Event-based connectivity
+FixedNumConn
+EventFixedNumConn
+EventFixedProb
+EventLinear
+Recurrent cells
+RNNCell
+ValinaRNNCell
+GRUCell
+MGUCell
+LSTMCell
+URLSTMCell
+Dynamics and simulation
+Dynamics
+brainstate.nn.receive_update_output
+brainstate.nn.not_receive_update_output
+brainstate.nn.receive_update_input
+brainstate.nn.not_receive_update_input
+Prefetch
+PrefetchDelay
+PrefetchDelayAt
+OutputDelayAt
+brainstate.nn.init_maybe_prefetch
+Delay
+DelayAccess
+StateWithDelay
+InterpolationRegistry
+brainstate.nn.call_order
+brainstate.nn.call_all_fns
+brainstate.nn.vmap_call_all_fns
+brainstate.nn.init_all_states
+brainstate.nn.vmap_init_all_states
+brainstate.nn.reset_all_states
+brainstate.nn.vmap_reset_all_states
+brainstate.nn.assign_state_values
+brainstate.nn.exp_euler_step
+Metrics
+MetricState
+Metric
+AverageMetric
+WelfordMetric
+AccuracyMetric
+MultiMetric
+PrecisionMetric
+RecallMetric
+F1ScoreMetric
+ConfusionMatrix
+Utility functions
+brainstate.nn.count_parameters
+brainstate.nn.clip_grad_norm
+HiData
+brainstate.transform
+module
+Gradient computations
+brainstate.transform.grad
+brainstate.transform.vector_grad
+brainstate.transform.fwd_grad
+brainstate.transform.vjp
+brainstate.transform.jvp
+brainstate.transform.jacrev
+brainstate.transform.jacfwd
+brainstate.transform.jacobian
+brainstate.transform.hessian
+GradientTransform
+JIT compilation
+brainstate.transform.jit
+brainstate.transform.named_scope
+brainstate.transform.named_call
+brainstate.transform.remat
+brainstate.transform.checkpoint
+Mapping and vectorization
+brainstate.transform.vmap
+brainstate.transform.vmap_new_states
+brainstate.transform.vmap2
+brainstate.transform.vmap2_new_states
+brainstate.transform.map
+brainstate.transform.pmap2
+brainstate.transform.pmap2_new_states
+brainstate.transform.shard_map
+StatefulMapping
+brainstate.transform.unvmap
+Control flow
+brainstate.transform.cond
+brainstate.transform.switch
+brainstate.transform.ifelse
+brainstate.transform.scan
+brainstate.transform.checkpointed_scan
+brainstate.transform.for_loop
+brainstate.transform.checkpointed_for_loop
+brainstate.transform.ProgressBar
+brainstate.transform.while_loop
+brainstate.transform.bounded_while_loop
+Debugging and error checking
+brainstate.transform.debug_nan
+brainstate.transform.debug_nan_if
+brainstate.transform.breakpoint_if
+brainstate.transform.jit_error_if
+brainstate.transform.checkify
+brainstate.transform.check
+brainstate.transform.check_error
+brainstate.transform.all_checks
+brainstate.transform.user_checks
+brainstate.transform.nan_checks
+brainstate.transform.div_checks
+brainstate.transform.index_checks
+brainstate.transform.float_checks
+brainstate.transform.automatic_checks
+Core transformation infrastructure
+StatefulFunction
+StateFinder
+brainstate.transform.make_jaxpr
+brainstate.transform.eval_shape
+Intermediate Representation (IR) tooling
+brainstate.transform.constant_fold
+brainstate.transform.dead_code_elimination
+brainstate.transform.common_subexpression_elimination
+brainstate.transform.copy_propagation
+brainstate.transform.algebraic_simplification
+brainstate.transform.optimize_jaxpr
+brainstate.transform.eqns_to_closed_jaxpr
+brainstate.transform.eqns_to_jaxpr
+brainstate.transform.inline_jit
+brainstate.transform.fn_to_python_code
+brainstate.transform.jaxpr_to_python_code
+brainstate.transform.register_prim_handler
+brainstate.transform.draw
+brainstate.transform.view_pydot
+brainstate.transform.draw_dot_graph
+brainstate.interop
+module
+brainstate.interop.from_nnx
+brainstate.interop.to_nnx
+brainstate.interop.from_linen
+brainstate.interop.to_linen
+brainstate.interop.from_equinox
+brainstate.interop.to_equinox
+LayerMapping
+brainstate.interop.register_layer_mapping
+brainstate.interop.supported_layers
+InteropError
+MissingDependencyError
+UnmappedLayerError
+UnsupportedLayerError
+UnsupportedStructureError
+MissingShapeError
+ConversionError
+brainstate.random
+module
+RandomState
+brainstate.random.DEFAULT
+seed
+seed_context
+default_rng
+clone_rng
+set_key
+get_key
+get_key_data
+restore_key
+split_key
+split_keys
+self_assign_multi_keys
+rand
+randn
+random
+random_sample
+ranf
+sample
+randint
+random_integers
+rand_like
+randint_like
+randn_like
+choice
+permutation
+shuffle
+beta
+exponential
+gamma
+gumbel
+laplace
+logistic
+normal
+pareto
+standard_cauchy
+standard_exponential
+standard_gamma
+standard_normal
+standard_t
+uniform
+truncated_normal
+lognormal
+power
+rayleigh
+triangular
+vonmises
+wald
+weibull
+weibull_min
+maxwell
+t
+loggamma
+bernoulli
+binomial
+categorical
+geometric
+hypergeometric
+logseries
+multinomial
+negative_binomial
+poisson
+zipf
+chisquare
+dirichlet
+f
+multivariate_normal
+noncentral_chisquare
+noncentral_f
+orthogonal
+brainstate.util
+module
+flat_mapping
+nest_mapping
+NestedDict
+FlattedDict
+brainstate.util.flatten_dict
+brainstate.util.unflatten_dict
+brainstate.util.merge_dicts
+brainstate.util.freeze
+brainstate.util.unfreeze
+brainstate.util.copy
+brainstate.util.pop
+brainstate.util.is_dataclass
+brainstate.util.to_predicate
+All
+Any
+Not
+Nothing
+Everything
+OfType
+WithTag
+PathContains
+PrettyType
+PrettyAttr
+PrettyRepr
+PrettyMapping
+MappingReprMixin
+PrettyDict
+PrettyList
+PrettyObject
+brainstate.util.pretty_repr
+brainstate.util.yield_unique_pretty_repr_items
+dataclass
+field
+PyTreeNode
+FrozenDict
+clear_buffer_memory
+not_instance_eval
+is_instance_eval
+DictManager
+DotDict
+StateJaxTracer
+BoundedCache
+brainstate.util.get_unique_name
+brainstate.util.split_total
+brainstate.typing
+module
+Array
+ArrayLike
+Shape
+Size
+Axes
+DType
+DTypeLike
+SupportsDType
+PyTree
+Key
+PathParts
+Predicate
+Filter
+FilterLiteral
+SeedOrKey
+K
+_T
+_Annotation
+Missing
+brainstate.mixin
+module
+Mixin
+ParamDesc
+ParamDescriber
+HashableDict
+NoSubclassMeta
+JointTypes
+OneOfTypes
+_JointGenericAlias
+_OneOfGenericAlias
+hashable
+not_implemented
+Mode
+Batching
+Training
+JointMode
+brainstate.environ
+module
+reset
+context
+get
+set
+pop
+all
+EnvironmentState
+get_platform
+set_platform
+get_host_device_count
+set_host_device_count
+get_precision
+set_precision
+dftype
+ditype
+dutype
+dctype
+tolerance
+get_dt
+I
+T
+DT
+PRECISION
+PLATFORM
+HOST_DEVICE_COUNT
+JIT_ERROR_CHECK
+FIT
+DEFAULT_PRECISION
+SUPPORTED_PLATFORMS
+SUPPORTED_PRECISIONS
+register_default_behavior
+unregister_default_behavior
+list_registered_behaviors
+.rst
+.pdf
+System Settings
+Light
+Dark
+brainstate.nn.sigmoid
+Contents
+sigmoid()
+brainstate.nn.sigmoid
+#
+brainstate.nn.
+sigmoid
+(
+x
+)
+[source]
+#
+Sigmoid activation function.
+Computes the element-wise function:
+\[\mathrm{sigmoid}(x) = \frac{1}{1 + e^{-x}}\]
+Parameters
+:
+x
+(
+Array
+|
+ndarray
+|
+bool
+|
+number
+|
+bool
+|
+int
+|
+float
+|
+complex
+|
+Quantity
+) – Input array.
+Returns
+:
+An array with the same shape as the input.
+Return type
+:
+Array
+|
+Quantity
+See also
+log_sigmoid
+Logarithm of the sigmoid function.
+{
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./apis/generated"
+        },
+        predefinedOutput: true
+    }
+kernelName = 'python3'
+previous
+brainstate.nn.soft_sign
+next
+brainstate.nn.silu
+Contents
+sigmoid()
+By BrainState Developers
+© Copyright 2024, brainstate.
+Last updated on Oct 25, 2026.
+BrainX
+Ecosystem
+An
+open
+,
+differentiable
+ecosystem for brain simulation.
+            We build the
+foundations
+the next decade of computational neuroscience will run on.
+Modeling
+brainpy ↗
+brainspike
+braincell
+brainmass
+Infrastructure
+brainunit
+brainevent
+braintrace
+braintools
+Compilation
+brainstate
+Vibe coding
+BrainX skill
+Research
+Papers about BrainX
+Papers using BrainX
+Papers citing BrainX
+© 2026 BrainX Developers
+How to cite
+Digital Brain Laboratory ↗

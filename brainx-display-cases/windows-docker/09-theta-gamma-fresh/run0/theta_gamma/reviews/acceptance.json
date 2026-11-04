@@ -1,0 +1,9 @@
+{
+  "iteration": 2,
+  "verdict": "PASS",
+  "scientific_outcome": "SUPPORTED",
+  "threadId": "01a1a3f1-51c2-7711-ba28-7daa23619485",
+  "review": "reviews/iteration-2.md",
+  "review_sha256": "46e09290de4a18ece4538dce89e5e4eb38a76a2f3e7d226a914f0e00faa034ad",
+  "scope": "Locked illustrative/phenomenological claim only; independent carrier, driven-pair, readout/IC/window, numerical and scan evidence; no biological realism, measured EEG, or unique mechanism claim."
+}

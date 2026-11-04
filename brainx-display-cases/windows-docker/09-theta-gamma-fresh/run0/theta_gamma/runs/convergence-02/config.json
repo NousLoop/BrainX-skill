@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "level": "convergence",
+  "depth_axis": [
+    0,
+    0.75
+  ],
+  "gain_axis": [
+    1.0
+  ],
+  "depths_flat": [
+    0,
+    0.75
+  ],
+  "gains_flat": [
+    1.0,
+    1.0
+  ],
+  "initial_e": [
+    0.1,
+    0.11,
+    0.09
+  ],
+  "initial_i": [
+    0.1,
+    0.09,
+    0.11
+  ],
+  "theta_hz": 6.0,
+  "mean_drive": 1.25,
+  "duration_s": 12.0,
+  "transient_s": 2.0,
+  "dt_ms": 0.025,
+  "sample_every": 40,
+  "tau_e_ms": 1.25,
+  "tau_i_ms": 2.5,
+  "method": "euler",
+  "precision": 64,
+  "backend": "cpu",
+  "edge_trim_s": 0.5,
+  "theta_band_hz": [
+    4,
+    8
+  ],
+  "gamma_band_hz": [
+    25,
+    100
+  ],
+  "n_bins": 18,
+  "nperseg": 2000,
+  "gamma_fraction_floor": 0.1,
+  "amplitude_floor": 0.0001,
+  "surrogate_seed": 20261103,
+  "n_surrogates": 199,
+  "time_windows_s": [
+    [
+      5,
+      10
+    ],
+    [
+      10,
+      11.5
+    ]
+  ],
+  "R_difference_threshold": 0.05,
+  "R_convergence_tolerance": 0.02,
+  "peak_convergence_tolerance_hz": 2.0,
+  "carrier_prominence": 0.2,
+  "carrier_min_distance_s": 0.004,
+  "carrier_min_peaks": 20,
+  "carrier_p2p_floor": 0.05,
+  "carrier_agreement_hz": 2.0,
+  "carrier_cv_max": 0.2,
+  "fast_interval_fraction_floor": 0.5,
+  "iteration": 2
+}

@@ -1,0 +1,97 @@
+{
+  "shape": [
+    200,
+    3,
+    2
+  ],
+  "one_step_error": [
+    0.0,
+    0.0
+  ],
+  "reset_replay_exact": true,
+  "same_model_default_reset_exact": true,
+  "batch_scalar_max_error": 0.0,
+  "batch_final_error": 0.0,
+  "jit_unjit_error": 0.0,
+  "input_error": 2.220446049250313e-16,
+  "bounds_finite": true,
+  "independent_solver_max_errors_dt_0p05_0p025_0p0125": [
+    0.03441282343789315,
+    0.0172234154100806,
+    0.008610779537647217
+  ],
+  "native_sigmoid_parity_error": 2.220446049250313e-16,
+  "synthetic_AM": {
+    "R": 0.2999557358446922,
+    "analytic_expected_R": 0.3,
+    "MI": 0.032379534136493006,
+    "native_MI": 0.032389624591052005,
+    "linear_mixture_null_R": 2.4396735797186517e-06,
+    "surrogate_q95": 0.06682782634515037,
+    "p": 0.005,
+    "cycles": 64
+  },
+  "carrier_true_and_harmonic_negative_controls": {
+    "true_60_hz": {
+      "peak_count": 719,
+      "mean_cycle_hz": 60.00334280461306,
+      "dominant_hz": 60.0,
+      "interval_cv": 0.028305483041978816,
+      "fast_interval_fraction": 1.0,
+      "p2p": 2.0,
+      "autonomous_gamma_predicate": true
+    },
+    "beta_22_plus_gamma_harmonic": {
+      "peak_count": 527,
+      "mean_cycle_hz": 44.00200769616865,
+      "dominant_hz": 22.0,
+      "interval_cv": 0.019620030402235308,
+      "fast_interval_fraction": 1.0,
+      "p2p": 2.408327034445059,
+      "autonomous_gamma_predicate": false
+    }
+  },
+  "first_jit_end_to_end_s": 0.13751770099997884,
+  "status": "PASS"
+}
+{
+  "status": "PASS",
+  "replay": {
+    "production-02": {
+      "max_raw_errors": {
+        "t_s": 0.0,
+        "input_t_s": 0.0,
+        "E": 0.0,
+        "I": 0.0,
+        "P": 0.0,
+        "final_E": 0.0,
+        "final_I": 0.0,
+        "depths_flat": 0.0,
+        "gains_flat": 0.0
+      },
+      "metric_rows_exact": 300,
+      "derived_arrays_exact": 18
+    },
+    "convergence-02": {
+      "max_raw_errors": {
+        "t_s": 0.0,
+        "input_t_s": 0.0,
+        "E": 0.0,
+        "I": 0.0,
+        "P": 0.0,
+        "final_E": 0.0,
+        "final_I": 0.0,
+        "depths_flat": 0.0,
+        "gains_flat": 0.0
+      },
+      "metric_rows_exact": 24,
+      "derived_arrays_exact": 18
+    }
+  },
+  "fixed_pair": {
+    "R_off": 0.0002716792129506114,
+    "R_on": 0.5016245027465862,
+    "E_carrier_hz": 43.52678571428571,
+    "I_carrier_hz": 43.52678571428571
+  }
+}

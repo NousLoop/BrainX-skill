@@ -1,0 +1,1835 @@
+https://brainx.chaobrain.com/braintools/apis/metric.html
+braintools.metric module — braintools
+document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+.pst-js-only { display: none !important; }
+const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"
+window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}
+DOCUMENTATION_OPTIONS.pagename = 'apis/metric';
+DOCUMENTATION_OPTIONS.search_as_you_type = false;
+BrainX
+Ecosystem
+Home
+Platform
+Full-Scale Simulation
+AI Compatibility
+Differentiable Optimization
+Powered by JAX
+Ecosystem
+Research
+Papers about BrainX
+Papers using BrainX
+Papers citing BrainX
+Documentation
+brainpy ↗
+brainspike
+braincell
+brainmass
+brainunit
+brainevent
+braintrace
+braintools
+brainstate
+BrainX skill
+Skip to main content
+Back to top
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Search
+Ctrl
++
+K
+Tutorials
+Neural Data Analysis
+Firing Rates and Population Synchrony
+Spike-Train Distances and Synchrony
+Local Field Potential Analysis
+The analysis toolbox: spikes, spectra and populations
+Cognitive Tasks
+Tutorial 1: Quickstart with
+braintools.cogtask
+Tutorial 2: Building custom tasks
+Tutorial 3: Variable-length trial sequences
+Synaptic Connectivity
+Tutorial 1: Basic Connectivity Patterns
+Tutorial 2: Spatial Connectivity
+Tutorial 3: Network Topologies
+Tutorial 4: Advanced Connectivity Patterns
+Tutorial 5: Composing Connectors and Multi-Compartment Connectivity
+Tutorial 6: Population Networks, Graph Measures, and Scale
+File Processing
+Save and Load Model States with
+msgpack
+Checkpointing
+Read and Write MATLAB Files with
+load_matfile
+and
+save_matfile
+Model Fitting
+Fitting models to data
+Initialization
+Basic Distributions
+Variance Scaling and Orthogonal Initialization
+Distance Profiles
+Composite and Distance-Modulated Initialization
+Input Current
+Introduction to
+braintools.input
+The Functional API
+The Composable API
+Custom Inputs and Reusable Pipelines
+Metric Function
+Classification Losses
+Regression Losses
+Listwise Ranking Loss
+Cosine Similarity: Aligned Pairs and Pairwise Matrices
+Optimization
+Gradient-Free Optimization with
+NevergradOptimizer
+Bounded Optimization with
+ScipyOptimizer
+Gradient-Based Optimizers: Getting Started
+Learning-Rate Schedules
+Advanced Optimizers
+Readout learning, regression and multi-start search
+Numerical Integration
+ODE Integration
+SDE Integration
+IMEX and Delay Equations
+Trajectories and adaptive integration
+Spike Data
+Spike trains: storage, encoding, and plotting
+Surrogate Gradients
+Surrogate Gradients: Basics
+Custom Surrogate Gradients
+Tuning Surrogate Hyperparameters
+Training Loop
+A training loop with
+braintools.trainer
+Visualization
+Visualizing Spiking Data
+Networks, Tuning and Dynamics
+Statistical Plots
+Evaluating Models and Decoders
+Interactive Figures
+Three-Dimensional Plots
+Styles, Palettes and Colormaps
+Animations
+Spike Encoding
+Spike Encoding
+Migrating to braintools 1.0
+API Reference
+Release Notes
+braintools
+module
+braintools.spike_bitwise_or
+braintools.spike_bitwise_and
+braintools.spike_bitwise_iand
+braintools.spike_bitwise_not
+braintools.spike_bitwise_xor
+braintools.spike_bitwise_ixor
+braintools.spike_bitwise
+braintools.analysis
+module
+firing_rate
+victor_purpura_distance
+van_rossum_distance
+spike_train_synchrony
+burst_synchrony_index
+phase_locking_value
+spike_time_tiling_coefficient
+correlation_index
+cross_correlation
+braintools.analysis.spike.isi
+braintools.analysis.spike.cv
+braintools.analysis.spike.cv2
+braintools.analysis.spike.lv
+braintools.analysis.spike.fano_factor
+braintools.analysis.spike.psth
+braintools.analysis.spike.spike_triggered_average
+braintools.analysis.spike.cross_correlogram
+braintools.analysis.spike.auto_correlogram
+braintools.analysis.spike.isi_distance
+braintools.analysis.spike.spike_distance
+power_spectral_density
+coherence_analysis
+phase_amplitude_coupling
+theta_gamma_coupling
+spectral_entropy
+lfp_phase_coherence
+braintools.analysis.spectral.spectrogram
+braintools.analysis.spectral.multitaper_psd
+braintools.analysis.spectral.morlet_transform
+braintools.analysis.spectral.bandpass
+braintools.analysis.spectral.analytic_signal
+braintools.analysis.spectral.band_power
+braintools.analysis.spectral.plv
+braintools.analysis.spectral.pli
+braintools.analysis.spectral.wpli
+unitary_LFP
+current_source_density
+voltage_fluctuation
+functional_connectivity
+functional_connectivity_dynamics
+braintools.analysis.population.pca
+braintools.analysis.population.participation_ratio
+braintools.analysis.population.cca
+braintools.analysis.population.rdm
+braintools.analysis.population.rsa
+braintools.analysis.population.decode
+braintools.analysis.population.mutual_information
+braintools.analysis.population.kuramoto_order_parameter
+braintools.analysis.population.granger_causality
+braintools.analysis.population.avalanches
+braintools.analysis.population.branching_ratio
+braintools.analysis.population.PCAResult
+braintools.analysis.population.CCAResult
+braintools.analysis.population.AvalancheResult
+matrix_correlation
+weighted_correlation
+braintools.analysis.stats.jitter_spikes
+braintools.analysis.stats.shuffle_isi
+braintools.analysis.stats.phase_randomize
+braintools.analysis.stats.bootstrap_ci
+braintools.analysis.graph.degree_distribution
+braintools.analysis.graph.clustering_coefficient
+braintools.analysis.graph.characteristic_path_length
+braintools.analysis.graph.modularity
+braintools.analysis.graph.motif_counts
+braintools.analysis.graph.spectral_radius
+braintools.analysis.graph.small_world_index
+braintools.analysis.graph.DegreeDistribution
+braintools.analysis.graph.PathLengthResult
+braintools.analysis.graph.MotifCounts
+braintools.analysis.graph.SmallWorldResult
+braintools.cogtask
+module
+Task
+Context
+braintools.cogtask.create_task
+Phase
+DeclarativePhase
+Sequence
+Repeat
+Parallel
+Fixation
+Stimulus
+Delay
+Response
+Cue
+Blank
+Sample
+Test
+Recall
+Match
+Comparison
+VariableDuration
+braintools.cogtask.concat
+braintools.cogtask.execute_phase
+braintools.cogtask.execute_phase_packed
+braintools.cogtask.phase_tree_is_variable
+If
+Switch
+While
+Feature
+FeatureSet
+CircleFeature
+braintools.cogtask.is_feature
+braintools.cogtask.as_feature
+braintools.cogtask.one_hot
+braintools.cogtask.identity
+braintools.cogtask.circular
+braintools.cogtask.von_mises
+braintools.cogtask.cos_sin
+braintools.cogtask.scalar
+braintools.cogtask.gaussian
+braintools.cogtask.ctx_value
+braintools.cogtask.label
+braintools.cogtask.match_label
+braintools.cogtask.comparison_label
+PerceptualDecisionMaking
+PerceptualDecisionMakingDelayResponse
+ContextDecisionMaking
+SingleContextDecisionMaking
+PulseDecisionMaking
+MultiSensoryIntegration
+EconomicDecisionMaking
+DelayMatchSample
+DualDelayMatchSample
+DelayComparison
+DelayMatchCategory
+DelayPairedAssociation
+GoNoGo
+IntervalDiscrimination
+PostDecisionWager
+ReadySetGo
+DelayDirectionReproduction
+ImmediateDirectionReproduction
+DelayDirectionClassification
+ImmediateDirectionClassification
+OneTwoThreeGo
+HierarchicalReasoning
+ProbabilisticReasoning
+AntiReach
+Reaching1D
+EvidenceAccumulation
+TruncExp
+UniformDuration
+Transform
+TransformIT
+braintools.cogtask.initialize
+braintools.cogtask.initialize2
+braintools.cogtask.interval_of
+braintools.cogtask.period_to_arr
+braintools.cogtask.rate_to_prob
+braintools.cogtask.firing_rate
+braintools.conn
+module
+ConnectionResult
+Connectivity
+PointConnectivity
+MultiCompartmentConnectivity
+ScaledConnectivity
+CompositeConnectivity
+Random
+FixedProb
+AllToAll
+OneToOne
+FixedOutDegree
+FixedInDegree
+FixedTotalNum
+Population
+Projection
+Network
+DistanceDependent
+Gaussian
+Exponential
+Ring
+Grid2d
+RadialPatches
+ClusteredRandom
+SmallWorld
+ScaleFree
+Regular
+ModularRandom
+ModularGeneral
+HierarchicalRandom
+CorePeripheryRandom
+ExcitatoryInhibitory
+Conv2dKernel
+GaussianKernel
+GaborKernel
+DoGKernel
+MexicanHat
+SobelKernel
+LaplacianKernel
+CustomKernel
+braintools.conn.SOMA
+braintools.conn.BASAL_DENDRITE
+braintools.conn.APICAL_DENDRITE
+braintools.conn.AXON
+CompartmentSpecific
+AllToAllCompartments
+CustomCompartment
+SomaToDendrite
+AxonToSoma
+DendriteToSoma
+AxonToDendrite
+DendriteToDendrite
+ProximalTargeting
+DistalTargeting
+BranchSpecific
+MorphologyDistance
+DendriticTree
+BasalDendriteTargeting
+ApicalDendriteTargeting
+DendriticIntegration
+AxonalProjection
+AxonalBranching
+AxonalArborization
+TopographicProjection
+SynapticPlacement
+SynapticClustering
+braintools.file
+module
+load_matfile
+save_matfile
+msgpack_from_state_dict
+msgpack_to_state_dict
+msgpack_register_serialization
+msgpack_save
+msgpack_load
+AsyncManager
+AlreadyExistsError
+InvalidCheckpointPath
+save_hdf5
+load_hdf5
+save_nwb_units
+load_nwb_units
+save_nwb_timeseries
+load_nwb_timeseries
+to_neo
+from_neo
+braintools.fit
+module
+Term
+Objective
+Fitter
+FitResult
+sweep
+hessian_ci
+braintools.fit.HessianCI
+mse
+rmse
+mae
+correlation_loss
+fc_correlation_loss
+fc_rmse
+fcd_ks
+fcd_wasserstein
+ks_distance
+wasserstein_1d
+psd_log_distance
+rate_loss
+cv_loss
+van_rossum_loss
+braintools.init
+module
+Initialization
+braintools.init.param
+braintools.init.Compose
+Constant
+ZeroInit
+Uniform
+Normal
+LogNormal
+TruncatedNormal
+Gamma
+Exponential
+Beta
+Weibull
+VarianceScaling
+KaimingUniform
+KaimingNormal
+XavierUniform
+XavierNormal
+LecunUniform
+LecunNormal
+Orthogonal
+DeltaOrthogonal
+Identity
+Mixture
+Conditional
+Scaled
+Clipped
+DistanceModulated
+DistanceProfile
+GaussianProfile
+ExponentialProfile
+LinearProfile
+StepProfile
+PowerLawProfile
+MexicanHatProfile
+DoGProfile
+SigmoidProfile
+BimodalProfile
+LogisticProfile
+ComposedProfile
+ClipProfile
+ApplyProfile
+PipeProfile
+braintools.input
+module
+braintools.input.section
+braintools.input.constant
+braintools.input.step
+braintools.input.ramp
+braintools.input.spike
+braintools.input.gaussian_pulse
+braintools.input.exponential_decay
+braintools.input.double_exponential
+braintools.input.burst
+braintools.input.wiener_process
+braintools.input.ou_process
+braintools.input.poisson
+braintools.input.sinusoidal
+braintools.input.square
+braintools.input.triangular
+braintools.input.sawtooth
+braintools.input.chirp
+braintools.input.noisy_sinusoidal
+braintools.input.Input
+braintools.input.Composite
+braintools.input.ConstantValue
+braintools.input.Sequential
+braintools.input.TimeShifted
+braintools.input.Clipped
+braintools.input.Smoothed
+braintools.input.Repeated
+braintools.input.Transformed
+braintools.input.Section
+braintools.input.Constant
+braintools.input.Step
+braintools.input.Ramp
+braintools.input.Spike
+braintools.input.GaussianPulse
+braintools.input.ExponentialDecay
+braintools.input.DoubleExponential
+braintools.input.Burst
+braintools.input.WienerProcess
+braintools.input.OUProcess
+braintools.input.Poisson
+braintools.input.Sinusoidal
+braintools.input.Square
+braintools.input.Triangular
+braintools.input.Sawtooth
+braintools.input.Chirp
+braintools.input.NoisySinusoidal
+braintools.metric
+module
+sigmoid_binary_cross_entropy
+hinge_loss
+perceptron_loss
+softmax_cross_entropy
+softmax_cross_entropy_with_integer_labels
+multiclass_hinge_loss
+multiclass_perceptron_loss
+poly_loss_cross_entropy
+kl_divergence
+kl_divergence_with_log_targets
+convex_kl_divergence
+ctc_loss
+ctc_loss_with_forward_probs
+sigmoid_focal_loss
+nll_loss
+make_fenchel_young_loss
+ranking_softmax_loss
+squared_error
+absolute_error
+l1_loss
+L1Loss
+l2_loss
+l2_norm
+safe_norm
+huber_loss
+log_cosh
+cosine_similarity
+cosine_distance
+pairwise_cosine_similarity
+pairwise_cosine_distance
+smooth_labels
+braintools.optim
+module
+Optimizer
+OptaxOptimizer
+OptimState
+SGD
+Momentum
+MomentumNesterov
+Adam
+AdamW
+Adagrad
+Adadelta
+RMSprop
+Adamax
+Nadam
+RAdam
+Lamb
+Lars
+Lookahead
+Yogi
+LBFGS
+Rprop
+Adafactor
+AdaBelief
+Lion
+SM3
+Novograd
+Fromage
+SOFO
+SOFOScan
+LRScheduler
+StepLR
+MultiStepLR
+ConstantLR
+LinearLR
+ExponentialLR
+PolynomialLR
+ExponentialDecayLR
+CosineAnnealingLR
+CosineAnnealingWarmRestarts
+WarmupCosineSchedule
+CyclicLR
+OneCycleLR
+ReduceLROnPlateau
+WarmupScheduler
+PiecewiseConstantSchedule
+ChainedScheduler
+SequentialLR
+ScipyOptimizer
+NevergradOptimizer
+multistart_minimize
+multistart_init
+braintools.optim.MultiStartResult
+RLS
+FORCE
+LMS
+linear_regression
+ridge_regression
+lasso_regression
+elastic_net_regression
+braintools.optim.RegressionResult
+UniqueStateManager
+braintools.quad
+module
+odeint
+solve_ivp
+register_method
+get_method
+list_methods
+braintools.quad.ODESolution
+ode_euler_step
+ode_rk2_step
+ode_rk3_step
+ode_rk4_step
+ode_expeuler_step
+ode_midpoint_step
+ode_heun_step
+ode_rk4_38_step
+ode_rk45_step
+ode_rk23_step
+ode_dopri5_step
+ode_rk45_dopri_step
+ode_rkf45_step
+ode_ssprk33_step
+ode_dopri8_step
+ode_rk87_dopri_step
+ode_bs32_step
+ode_ralston2_step
+ode_ralston3_step
+imex_euler_step
+imex_ars222_step
+imex_cnab_step
+sde_euler_step
+sde_milstein_step
+sde_expeuler_step
+sde_heun_step
+sde_tamed_euler_step
+sde_implicit_euler_step
+sde_srk2_step
+sde_srk3_step
+sde_srk4_step
+dde_euler_step
+dde_heun_step
+dde_rk4_step
+dde_euler_pc_step
+dde_heun_pc_step
+braintools.spike
+module
+SpikeTrains
+LatencyEncoder
+RateEncoder
+PoissonEncoder
+PopulationEncoder
+BernoulliEncoder
+DeltaEncoder
+StepCurrentEncoder
+SpikeCountEncoder
+TemporalEncoder
+RankOrderEncoder
+braintools.spike.bitwise_or
+braintools.spike.bitwise_and
+braintools.spike.bitwise_iand
+braintools.spike.bitwise_not
+braintools.spike.bitwise_xor
+braintools.spike.bitwise_ixor
+braintools.spike.bitwise
+braintools.surrogate
+module
+braintools.surrogate.sigmoid
+braintools.surrogate.piecewise_quadratic
+braintools.surrogate.piecewise_exp
+braintools.surrogate.soft_sign
+braintools.surrogate.arctan
+braintools.surrogate.nonzero_sign_log
+braintools.surrogate.erf
+braintools.surrogate.piecewise_leaky_relu
+braintools.surrogate.squarewave_fourier_series
+braintools.surrogate.s2nn
+braintools.surrogate.q_pseudo_spike
+braintools.surrogate.leaky_relu
+braintools.surrogate.log_tailed_relu
+braintools.surrogate.relu_grad
+braintools.surrogate.gaussian_grad
+braintools.surrogate.inv_square_grad
+braintools.surrogate.multi_gaussian_grad
+braintools.surrogate.slayer_grad
+Surrogate
+Sigmoid
+PiecewiseQuadratic
+PiecewiseExp
+SoftSign
+Arctan
+NonzeroSignLog
+ERF
+PiecewiseLeakyRelu
+SquarewaveFourierSeries
+S2NN
+QPseudoSpike
+LeakyRelu
+LogTailedRelu
+ReluGrad
+GaussianGrad
+InvSquareGrad
+MultiGaussianGrad
+SlayerGrad
+braintools.trainer
+module
+LightningModule
+Trainer
+TrainerState
+TrainOutput
+EvalOutput
+Callback
+CallbackList
+ModelCheckpoint
+EarlyStopping
+LearningRateMonitor
+Timer
+RichProgressBar
+TQDMProgressBar
+LambdaCallback
+PrintCallback
+GradientClipCallback
+Logger
+CSVLogger
+TensorBoardLogger
+WandBLogger
+NeptuneLogger
+MLFlowLogger
+CompositeLogger
+DataLoader
+DistributedDataLoader
+Dataset
+ArrayDataset
+DictDataset
+IterableDataset
+Sampler
+RandomSampler
+SequentialSampler
+BatchSampler
+DistributedSampler
+braintools.trainer.create_distributed_batches
+Strategy
+SingleDeviceStrategy
+DataParallelStrategy
+ShardedDataParallelStrategy
+FullyShardedDataParallelStrategy
+AutoStrategy
+braintools.trainer.get_strategy
+braintools.trainer.all_reduce
+braintools.trainer.broadcast
+CheckpointManager
+braintools.trainer.save_checkpoint
+braintools.trainer.load_checkpoint
+braintools.trainer.find_checkpoint
+braintools.trainer.list_checkpoints
+ProgressBar
+SimpleProgressBar
+TQDMProgressBarWrapper
+RichProgressBarWrapper
+braintools.trainer.get_progress_bar
+braintools.tree
+module
+braintools.tree.scale
+braintools.tree.mul
+braintools.tree.shift
+braintools.tree.add
+braintools.tree.sub
+braintools.tree.dot
+braintools.tree.sum
+braintools.tree.squared_norm
+braintools.tree.concat
+braintools.tree.split
+braintools.tree.idx
+braintools.tree.expand
+braintools.tree.take
+braintools.tree.as_numpy
+braintools.visualize
+module
+spike_raster
+population_activity
+connectivity_matrix
+neural_trajectory
+spike_histogram
+isi_distribution
+firing_rate_map
+phase_portrait
+network_topology
+tuning_curve
+correlation_matrix
+distribution_plot
+qq_plot
+box_plot
+violin_plot
+scatter_matrix
+regression_plot
+residual_plot
+confusion_matrix
+roc_curve
+precision_recall_curve
+learning_curve
+interactive_spike_raster
+interactive_line_plot
+interactive_heatmap
+interactive_3d_scatter
+interactive_network
+interactive_histogram
+interactive_surface
+interactive_correlation_matrix
+dashboard_neural_activity
+neural_network_3d
+brain_surface_3d
+connectivity_3d
+trajectory_3d
+volume_rendering
+electrode_array_3d
+dendrite_tree_3d
+phase_space_3d
+line_plot
+raster_plot
+animate_1D
+animate_2D
+animator
+neural_style
+publication_style
+dark_style
+colorblind_friendly_style
+create_neural_colormap
+brain_colormaps
+apply_style
+get_color_palette
+set_default_colors
+get_figure
+remove_axis
+.rst
+.pdf
+System Settings
+Light
+Dark
+braintools.metric module
+Contents
+Classification Losses
+Fenchel-Young Loss
+Ranking Losses
+Regression Losses
+Pairwise Metrics
+Smoothing Losses
+braintools.metric
+module
+#
+Metrics and Loss Functions for Neural Networks.
+This module provides loss functions and metrics for training neural networks:
+classification, regression, ranking, pairwise similarity and label smoothing.
+The neural-activity measures that used to live here (spike-train metrics, LFP
+analysis and correlation/synchrony measures) moved to
+braintools.analysis
+in 0.4; see “Moved to braintools.analysis” below.
+Key Features:
+Classification Losses
+: Binary and multi-class cross-entropy, hinge loss, focal loss
+Regression Losses
+: MSE, MAE, Huber loss, cosine similarity
+Ranking Losses
+: Softmax ranking loss for learning to rank
+Pairwise Metrics
+: Cosine similarity for pairwise comparisons
+Quick Start - Classification:
+import
+jax.numpy
+as
+jnp
+from
+braintools.metric
+import
+softmax_cross_entropy
+,
+sigmoid_focal_loss
+# Multi-class classification
+logits
+=
+jnp
+.
+array
+([[
+2.0
+,
+1.0
+,
+0.1
+],
+[
+0.5
+,
+2.5
+,
+0.3
+]])
+labels
+=
+jnp
+.
+array
+([[
+1.0
+,
+0.0
+,
+0.0
+],
+[
+0.0
+,
+1.0
+,
+0.0
+]])
+loss
+=
+softmax_cross_entropy
+(
+logits
+,
+labels
+)
+# Binary classification with focal loss
+predictions
+=
+jnp
+.
+array
+([
+0.9
+,
+0.1
+,
+0.7
+])
+targets
+=
+jnp
+.
+array
+([
+1.0
+,
+0.0
+,
+1.0
+])
+focal_loss
+=
+sigmoid_focal_loss
+(
+predictions
+,
+targets
+)
+Quick Start - Regression:
+import
+jax.numpy
+as
+jnp
+from
+braintools.metric
+import
+squared_error
+,
+huber_loss
+predictions
+=
+jnp
+.
+array
+([
+1.5
+,
+2.3
+,
+3.1
+])
+targets
+=
+jnp
+.
+array
+([
+1.0
+,
+2.0
+,
+3.0
+])
+# Mean squared error
+mse
+=
+squared_error
+(
+predictions
+,
+targets
+)
+# Huber loss (robust to outliers)
+huber
+=
+huber_loss
+(
+predictions
+,
+targets
+,
+delta
+=
+1.0
+)
+Classification Losses:
+import
+jax.numpy
+as
+jnp
+from
+braintools.metric
+import
+(
+sigmoid_binary_cross_entropy
+,
+softmax_cross_entropy_with_integer_labels
+,
+hinge_loss
+,
+multiclass_hinge_loss
+,
+kl_divergence
+,
+sigmoid_focal_loss
+)
+# Binary cross-entropy
+logits
+=
+jnp
+.
+array
+([
+2.0
+,
+-
+1.0
+,
+0.5
+])
+labels
+=
+jnp
+.
+array
+([
+1.0
+,
+0.0
+,
+1.0
+])
+bce
+=
+sigmoid_binary_cross_entropy
+(
+logits
+,
+labels
+)
+# Multi-class with integer labels
+logits
+=
+jnp
+.
+array
+([[
+2.0
+,
+1.0
+,
+0.1
+],
+[
+0.5
+,
+2.5
+,
+0.3
+]])
+labels
+=
+jnp
+.
+array
+([
+0
+,
+1
+])
+# Class indices
+ce
+=
+softmax_cross_entropy_with_integer_labels
+(
+logits
+,
+labels
+)
+# Hinge loss for SVM-style classification
+predictions
+=
+jnp
+.
+array
+([
+0.9
+,
+-
+0.5
+,
+0.3
+])
+targets
+=
+jnp
+.
+array
+([
+1.0
+,
+-
+1.0
+,
+1.0
+])
+hinge
+=
+hinge_loss
+(
+predictions
+,
+targets
+)
+# KL divergence
+p
+=
+jnp
+.
+array
+([
+0.5
+,
+0.3
+,
+0.2
+])
+q
+=
+jnp
+.
+array
+([
+0.4
+,
+0.4
+,
+0.2
+])
+kl
+=
+kl_divergence
+(
+p
+,
+q
+)
+# Focal loss for imbalanced datasets
+predictions
+=
+jnp
+.
+array
+([
+0.9
+,
+0.1
+,
+0.6
+])
+targets
+=
+jnp
+.
+array
+([
+1.0
+,
+0.0
+,
+1.0
+])
+focal
+=
+sigmoid_focal_loss
+(
+predictions
+,
+targets
+,
+alpha
+=
+0.25
+,
+gamma
+=
+2.0
+)
+Regression Losses:
+import
+jax.numpy
+as
+jnp
+from
+braintools.metric
+import
+(
+squared_error
+,
+absolute_error
+,
+l1_loss
+,
+l2_loss
+,
+huber_loss
+,
+log_cosh
+,
+cosine_similarity
+,
+cosine_distance
+)
+predictions
+=
+jnp
+.
+array
+([
+1.5
+,
+2.3
+,
+3.1
+,
+4.2
+])
+targets
+=
+jnp
+.
+array
+([
+1.0
+,
+2.0
+,
+3.0
+,
+4.0
+])
+# Various regression losses
+mse
+=
+squared_error
+(
+predictions
+,
+targets
+)
+mae
+=
+absolute_error
+(
+predictions
+,
+targets
+)
+l1
+=
+l1_loss
+(
+predictions
+,
+targets
+)
+l2
+=
+l2_loss
+(
+predictions
+,
+targets
+)
+huber
+=
+huber_loss
+(
+predictions
+,
+targets
+,
+delta
+=
+1.0
+)
+log_cosh_loss
+=
+log_cosh
+(
+predictions
+,
+targets
+)
+# Cosine similarity/distance
+x
+=
+jnp
+.
+array
+([[
+1.0
+,
+2.0
+,
+3.0
+],
+[
+4.0
+,
+5.0
+,
+6.0
+]])
+y
+=
+jnp
+.
+array
+([[
+1.0
+,
+2.0
+,
+3.0
+],
+[
+7.0
+,
+8.0
+,
+9.0
+]])
+similarity
+=
+cosine_similarity
+(
+x
+,
+y
+)
+distance
+=
+cosine_distance
+(
+x
+,
+y
+)
+Advanced: Fenchel-Young Losses:
+import
+jax.numpy
+as
+jnp
+from
+jax.scipy.special
+import
+logsumexp
+from
+braintools.metric
+import
+make_fenchel_young_loss
+# ``max_fun`` is applied over the last axis via ``jnp.vectorize`` with
+# signature ``(n)->()``, so it must map a 1-D score vector to a scalar.
+# ``logsumexp`` recovers the softmax cross-entropy Fenchel-Young loss.
+loss_fn
+=
+make_fenchel_young_loss
+(
+max_fun
+=
+logsumexp
+)
+scores
+=
+jnp
+.
+array
+([[
+2.0
+,
+1.0
+,
+3.0
+],
+[
+1.5
+,
+2.5
+,
+1.0
+]])
+targets
+=
+jnp
+.
+array
+([[
+1.0
+,
+0.0
+,
+0.0
+],
+[
+0.0
+,
+1.0
+,
+0.0
+]])
+loss
+=
+loss_fn
+(
+scores
+,
+targets
+)
+Ranking Losses:
+import
+jax.numpy
+as
+jnp
+from
+braintools.metric
+import
+ranking_softmax_loss
+# Ranking loss for learning to rank
+scores
+=
+jnp
+.
+array
+([[
+2.0
+,
+1.0
+,
+3.0
+],
+[
+1.0
+,
+0.5
+,
+1.5
+]])
+labels
+=
+jnp
+.
+array
+([[
+1.0
+,
+0.0
+,
+0.0
+],
+[
+0.0
+,
+0.0
+,
+1.0
+]])
+loss
+=
+ranking_softmax_loss
+(
+scores
+,
+labels
+)
+Utilities:
+import
+jax.numpy
+as
+jnp
+from
+braintools.metric
+import
+smooth_labels
+# Label smoothing for regularization
+labels
+=
+jnp
+.
+array
+([[
+1.0
+,
+0.0
+,
+0.0
+],
+[
+0.0
+,
+1.0
+,
+0.0
+]])
+smoothed
+=
+smooth_labels
+(
+labels
+,
+alpha
+=
+0.1
+)
+Moved to braintools.analysis:
+The following names still resolve in
+braintools.metric
+but are deprecated
+aliases: calling one emits a
+BraintoolsDeprecationWarning
+, and they will be
+removed in 1.0. Use the new locations instead.
+braintools.analysis.spike
+:
+firing_rate
+,
+victor_purpura_distance
+,
+van_rossum_distance
+,
+spike_train_synchrony
+,
+burst_synchrony_index
+,
+phase_locking_value
+,
+spike_time_tiling_coefficient
+,
+correlation_index
+,
+cross_correlation
+braintools.analysis.spectral
+:
+power_spectral_density
+,
+coherence_analysis
+,
+phase_amplitude_coupling
+,
+theta_gamma_coupling
+,
+spectral_entropy
+,
+lfp_phase_coherence
+braintools.analysis.field
+:
+unitary_LFP
+,
+current_source_density
+braintools.analysis.population
+:
+voltage_fluctuation
+,
+functional_connectivity
+,
+functional_connectivity_dynamics
+braintools.analysis.stats
+:
+matrix_correlation
+,
+weighted_correlation
+raster_plot
+is deprecated as well;
+braintools.spike.SpikeTrains.from_dense
+replaces it.
+# Before (deprecated)
+from
+braintools.metric
+import
+firing_rate
+# After
+from
+braintools.analysis.spike
+import
+firing_rate
+Loss functions and metrics for training neural networks: classification,
+regression, ranking, pairwise similarity and label smoothing.
+Note
+Moved to
+braintools.analysis
+. In 0.4 the spike-train, LFP and
+correlation measures moved out of this module (see
+braintools.analysis module
+):
+firing_rate
+,
+victor_purpura_distance
+,
+van_rossum_distance
+,
+spike_train_synchrony
+,
+burst_synchrony_index
+,
+phase_locking_value
+,
+spike_time_tiling_coefficient
+,
+correlation_index
+and
+cross_correlation
+are in
+braintools.analysis.spike
+;
+power_spectral_density
+,
+coherence_analysis
+,
+phase_amplitude_coupling
+,
+theta_gamma_coupling
+,
+spectral_entropy
+and
+lfp_phase_coherence
+are in
+braintools.analysis.spectral
+;
+unitary_LFP
+and
+current_source_density
+are in
+braintools.analysis.field
+;
+voltage_fluctuation
+,
+functional_connectivity
+and
+functional_connectivity_dynamics
+are in
+braintools.analysis.population
+;
+matrix_correlation
+and
+weighted_correlation
+are in
+braintools.analysis.stats
+.
+The old
+braintools.metric.<name>
+names still work but emit a
+BraintoolsDeprecationWarning
+when called, and will be removed in 1.0.
+braintools.metric.raster_plot
+is deprecated as well; use
+braintools.spike.SpikeTrains.from_dense
+instead.
+Classification Losses
+#
+Objective functions for training classifiers on neural or behavioral labels.
+sigmoid_binary_cross_entropy
+Compute element-wise sigmoid cross entropy given logits and labels.
+hinge_loss
+Compute the hinge loss for binary classification.
+perceptron_loss
+Compute the binary perceptron loss.
+softmax_cross_entropy
+Compute the softmax cross entropy between logits and labels.
+softmax_cross_entropy_with_integer_labels
+Compute softmax cross entropy between logits and integer labels.
+multiclass_hinge_loss
+Compute multiclass hinge loss for classification.
+multiclass_perceptron_loss
+Compute multiclass perceptron loss for classification.
+poly_loss_cross_entropy
+Compute PolyLoss cross entropy between logits and labels.
+kl_divergence
+Compute the Kullback-Leibler divergence (relative entropy) loss.
+kl_divergence_with_log_targets
+Compute KL divergence when both predictions and targets are in log-space.
+convex_kl_divergence
+Compute a convex version of the Kullback-Leibler divergence loss.
+ctc_loss
+Compute Connectionist Temporal Classification (CTC) loss.
+ctc_loss_with_forward_probs
+Compute CTC loss and forward probabilities for sequence alignment.
+sigmoid_focal_loss
+Compute sigmoid focal loss for addressing class imbalance.
+nll_loss
+Compute negative log likelihood loss for classification.
+Fenchel-Young Loss
+#
+Generalized convex losses derived from Fenchel-Young duality for structured
+prediction problems.
+make_fenchel_young_loss
+Create a Fenchel-Young loss function from a max function.
+Ranking Losses
+#
+Losses for ordered prediction tasks including pairwise and list-wise ranking
+setups.
+ranking_softmax_loss
+Compute ranking softmax loss for learning-to-rank applications.
+Regression Losses
+#
+Continuous-valued error metrics for fitting neural or behavioral signals.
+squared_error
+Compute element-wise squared error between predictions and targets.
+absolute_error
+Compute element-wise absolute error between predictions and targets.
+l1_loss
+Measure the mean absolute error (MAE) between each element in the logits
+\(x\)
+and the targets
+\(y\)
+.
+L1Loss
+Creates a criterion that measures the mean absolute error (MAE) between each element in the input
+\(x\)
+and target
+\(y\)
+.
+l2_loss
+Calculate the L2 loss for a set of predictions.
+l2_norm
+Compute the L2 norm of the difference between predictions and targets.
+safe_norm
+Compute vector or matrix norm with gradient-safe lower bound.
+huber_loss
+Compute Huber loss combining L1 and L2 properties for robust regression.
+log_cosh
+Calculate the log-cosh loss for a set of predictions.
+cosine_similarity
+Compute cosine similarity between predicted and target vectors.
+cosine_distance
+Compute the cosine distance between targets and predictions.
+Pairwise Metrics
+#
+Pairwise distance and similarity matrices between sets of samples.
+pairwise_cosine_similarity
+Compute the pairwise cosine similarity matrix between samples in
+X
+and
+Y
+.
+pairwise_cosine_distance
+Compute the pairwise cosine distance matrix between samples in
+X
+and
+Y
+.
+Smoothing Losses
+#
+Regularizers that promote smooth trajectories or label distributions over time.
+smooth_labels
+Apply label smoothing regularization to one-hot encoded labels.
+{
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./apis"
+        },
+        predefinedOutput: true
+    }
+kernelName = 'python3'
+previous
+braintools.input.NoisySinusoidal
+next
+sigmoid_binary_cross_entropy
+Contents
+Classification Losses
+Fenchel-Young Loss
+Ranking Losses
+Regression Losses
+Pairwise Metrics
+Smoothing Losses
+By BrainTools Developers
+© Copyright 2024, braintools.
+Last updated on Oct 25, 2026.
+BrainX
+Ecosystem
+An
+open
+,
+differentiable
+ecosystem for brain simulation.
+            We build the
+foundations
+the next decade of computational neuroscience will run on.
+Modeling
+brainpy ↗
+brainspike
+braincell
+brainmass
+Infrastructure
+brainunit
+brainevent
+braintrace
+braintools
+Compilation
+brainstate
+Vibe coding
+BrainX skill
+Research
+Papers about BrainX
+Papers using BrainX
+Papers citing BrainX
+© 2026 BrainX Developers
+How to cite
+Digital Brain Laboratory ↗

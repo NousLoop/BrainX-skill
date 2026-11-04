@@ -1,0 +1,94 @@
+Review completed BrainX iteration 1.
+
+PROJECT_ROOT: /workspace/theta_gamma
+ACTIVE_COVERAGE: none
+
+SPECIFICATION:
+- /workspace/theta_gamma/NeuroSpecification.md
+
+LOOP_MEMORY:
+- /workspace/theta_gamma/brainmodeling-memory.md
+
+BRAINX_STUDY_RECORD:
+- /workspace/theta_gamma/brainx-study-record.md
+- /workspace/theta_gamma/API-gap.md
+
+IMPLEMENTATION:
+- /workspace/theta_gamma/model.py
+- /workspace/theta_gamma/analysis.py
+- /workspace/theta_gamma/experiment.py
+- /workspace/theta_gamma/launch.py
+- /workspace/theta_gamma/assess.py
+- /workspace/theta_gamma/figures.py
+
+TESTS:
+- /workspace/theta_gamma/verify.py
+- /workspace/theta_gamma/checks/verification.json
+- /workspace/theta_gamma/checks/verification.log
+- /workspace/theta_gamma/failure-log.md
+- /workspace/theta_gamma/checks/first-construction.log
+- /workspace/theta_gamma/checks/verification-failed-1.log
+- /workspace/theta_gamma/checks/verification-failed-2.log
+- /workspace/theta_gamma/checks/solver-diagnostic.log
+- /workspace/theta_gamma/checks/metric-diagnostic.log
+- /workspace/theta_gamma/checks/carrier-audit.json
+
+ACCELERATION_AND_PARITY:
+- /workspace/theta_gamma/acceleration.md
+- /workspace/theta_gamma/runs/production-01/metrics/runtime.json
+- /workspace/theta_gamma/runs/convergence-01/metrics/runtime.json
+
+EXPERIMENT_RUN:
+- /workspace/theta_gamma/runs/smoke-01/RUN_SPEC.md
+- /workspace/theta_gamma/runs/smoke-01/config.json
+- /workspace/theta_gamma/runs/smoke-01/environment.json
+- /workspace/theta_gamma/runs/smoke-01/source_hashes.json
+- /workspace/theta_gamma/runs/smoke-01/manifest.json
+- /workspace/theta_gamma/runs/smoke-01/run.log
+- /workspace/theta_gamma/runs/smoke-01/status.json
+- /workspace/theta_gamma/runs/smoke-01/exit_code
+- /workspace/theta_gamma/runs/smoke-01/raw/trajectories.npz
+- /workspace/theta_gamma/runs/production-01/RUN_SPEC.md
+- /workspace/theta_gamma/runs/production-01/config.json
+- /workspace/theta_gamma/runs/production-01/environment.json
+- /workspace/theta_gamma/runs/production-01/source_hashes.json
+- /workspace/theta_gamma/runs/production-01/manifest.json
+- /workspace/theta_gamma/runs/production-01/run.log
+- /workspace/theta_gamma/runs/production-01/status.json
+- /workspace/theta_gamma/runs/production-01/exit_code
+- /workspace/theta_gamma/runs/production-01/raw/trajectories.npz
+- /workspace/theta_gamma/runs/production-01/raw/derived.npz
+- /workspace/theta_gamma/runs/production-01/metrics/metrics.json
+- /workspace/theta_gamma/runs/production-01/metrics/metrics.csv
+- /workspace/theta_gamma/runs/convergence-01/RUN_SPEC.md
+- /workspace/theta_gamma/runs/convergence-01/config.json
+- /workspace/theta_gamma/runs/convergence-01/environment.json
+- /workspace/theta_gamma/runs/convergence-01/source_hashes.json
+- /workspace/theta_gamma/runs/convergence-01/manifest.json
+- /workspace/theta_gamma/runs/convergence-01/run.log
+- /workspace/theta_gamma/runs/convergence-01/status.json
+- /workspace/theta_gamma/runs/convergence-01/exit_code
+- /workspace/theta_gamma/runs/convergence-01/raw/trajectories.npz
+- /workspace/theta_gamma/runs/convergence-01/raw/derived.npz
+- /workspace/theta_gamma/runs/convergence-01/metrics/metrics.json
+- /workspace/theta_gamma/runs/convergence-01/metrics/metrics.csv
+
+RESULT_ASSESSMENT:
+- /workspace/theta_gamma/assessment.json
+- /workspace/theta_gamma/result-assessment.md
+- /workspace/theta_gamma/claim-evidence.md
+- /workspace/theta_gamma/report.md
+- /workspace/theta_gamma/FIGURE_MANIFEST.md
+- /workspace/theta_gamma/figures/diagnostic/traces.png
+- /workspace/theta_gamma/figures/diagnostic/nesting.png
+- /workspace/theta_gamma/figures/diagnostic/scan.png
+
+TRAINING_OR_FITTING_EVIDENCE:
+- none
+
+PRIOR_REVIEW_EVIDENCE:
+- none
+
+Read every listed artifact and review this iteration using the injected reviewer contract. Do not edit files. Return only the required Markdown report.
+
+Known scientific issue and proposed next action: despite passing the original gamma-band predicate, the autonomous E carrier is ~22 Hz and the 43.5 Hz gamma-band peak is harmonic. We explicitly report partially_supported and do not claim the requested gamma circuit is complete. All original evidence is retained. Proposed next iteration would halve both WC time constants and add a fundamental/cycle-rate carrier predicate, using the user's explicit delegation to choose and lock all settings without another approval. No revised model has been run. Assess the current evidence and required corrections independently.
