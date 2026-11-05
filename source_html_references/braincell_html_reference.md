@@ -2,6 +2,17 @@
 
 Purpose: choose the official BrainCell HTML page that directly supports a modeling concept, workflow, example, solver decision, or file-format task.
 
+## Table of contents
+
+- [Root](#root)
+- [Get Started](#get-started)
+- [Concepts](#concepts)
+- [Modeling Tutorials](#modeling-tutorials)
+- [Numerical Integration](#numerical-integration)
+- [Examples](#examples)
+- [File Formats and IO](#file-formats-and-io)
+- [API Reference](#api-reference)
+
 ## Root
 
 - [BrainCell Documentation](https://brainx.chaobrain.com/braincell/) — Main BrainCell landing page for biophysically detailed single- and multicompartment neuron modeling.

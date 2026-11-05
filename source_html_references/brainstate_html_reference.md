@@ -4,10 +4,22 @@ Purpose: choose the official BrainState HTML page that directly supports a state
 
 Generated class pages are grouped separately from narrative documentation. Start from a narrative page when learning a workflow; open a generated class page when an exact signature, attribute, or method must be checked.
 
+## Table of contents
+
+- [Root](#root)
+- [Getting Started](#getting-started)
+- [Core Tutorials](#core-tutorials)
+- [Transformation Tutorials](#transformation-tutorials)
+- [Brain Dynamics Tutorials](#brain-dynamics-tutorials)
+- [How-To Guides](#how-to-guides)
+- [Concepts](#concepts)
+- [Examples](#examples)
+- [Central API Reference Pages](#central-api-reference-pages)
+
 ## Root
 
 - [BrainState Documentation](https://brainx.chaobrain.com/brainstate/) — Main landing page for State-based programming, transformations, and neural-network modules.
-- [Release Notes](https://brainx.chaobrain.com/brainstate/changelog.html) — Version history and public API changes.
+- [Release notes](https://brainx.chaobrain.com/brainstate/changelog.html) — Version history and public API changes.
 
 ## Getting Started
 

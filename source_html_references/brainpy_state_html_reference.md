@@ -1,15 +1,25 @@
-# BrainPy-State Central Documentation Link Inventory
+# BrainPy-State Central Documentation Sitemap
+
+Purpose: choose the official BrainPy-State HTML page that directly supports a native or NEST-compatible model, tutorial, example, or API task.
+
 **Total sections:** 7
-**Total entries:** 58
+**Total entries:** 153
 
 ## Table of contents
 
-- [Root / overview](#root--overview) — 1 entry
-- [Get Started](#get-started) — 4 entries
-- [Core Concepts](#core-concepts) — 7 entries
-- [BrainPy-style Modeling](#brainpy-style-modeling) — 14 entries
-- [NEST-Compatible Models](#nest-compatible-models) — 14 entries
-- [API Category Pages](#api-category-pages) — 16 entries
+- [Root](#root)
+- [Get Started](#get-started)
+- [Core Concepts](#core-concepts)
+- [BrainPy-style Modeling](#brainpy-style-modeling)
+- [NEST-Compatible Models](#nest-compatible-models)
+- [API Category Pages](#api-category-pages)
+- [Example Gallery Pages](#example-gallery-pages)
+
+## Root
+
+- [BrainPy-State documentation](https://brainx.chaobrain.com/brainpy-state/) — Main landing page for state-based spiking models, NEST-compatible models, and training workflows.
+- [Release notes](https://brainx.chaobrain.com/brainpy-state/changelog.html) — Check release-specific changes before reusing a tutorial, example, or API page.
+
 ## Get Started
 
 > The beginner onboarding path: installation, first tour, and mental model.
@@ -18,8 +28,6 @@
 - [Installation](https://brainx.chaobrain.com/brainpy-state/get-started/installation.html) — Package installation options and setup guidance.
 - [5-minute tour](https://brainx.chaobrain.com/brainpy-state/get-started/5-minute-tour.html) — Fast walkthrough of the core API through a compact runnable example.
 - [The mental model](https://brainx.chaobrain.com/brainpy-state/get-started/mental-model.html) — Conceptual map for how state, modules, units, dynamics, and projections fit together.
-
----
 
 ## Core Concepts
 
@@ -32,8 +40,6 @@
 - [AlignPre / AlignPost — the keystone](https://brainx.chaobrain.com/brainpy-state/concepts/alignpre-alignpost.html) — Explains the projection/state-alignment design that keeps synaptic memory efficient.
 - [Differentiability](https://brainx.chaobrain.com/brainpy-state/concepts/differentiability.html) — Explains how spiking models remain compatible with JAX transforms and gradient-based learning.
 - [Online learning](https://brainx.chaobrain.com/brainpy-state/concepts/online-learning.html) — Explains learning rules that update during simulation rather than only through offline backpropagation.
-
----
 
 ## BrainPy-style Modeling
 
@@ -54,8 +60,6 @@
 - [How to add a trainable readout](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-readouts.html) — Adds readout layers for decoding spikes into trainable outputs.
 - [How to train through long rollouts without exhausting memory](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-long-rollouts-checkpoint.html) — Memory-management strategy for long simulation/training rollouts.
 
----
-
 ## NEST-Compatible Models
 
 > The compatibility path. This section matters if you want to port NEST/PyNEST-style models or understand how BrainPy-State maps NEST concepts into its own backend.
@@ -74,8 +78,6 @@
 - [STDP parity: where state lives and how spikes pair](https://brainx.chaobrain.com/brainpy-state/nest-style/divergences/stdp.html) — Deep dive on STDP state ownership and spike-pairing differences.
 - [Validation status](https://brainx.chaobrain.com/brainpy-state/nest-style/validation-status.html) — Per-model validation/parity status against NEST-style behavior.
 - [Integration categories](https://brainx.chaobrain.com/brainpy-state/nest-style/integration-categories.html) — Categorizes integration/numerical behavior across NEST-compatible models.
-
----
 
 ## API Category Pages
 
@@ -99,26 +101,24 @@
 - [NEST-Compatible Spatial Networks](https://brainx.chaobrain.com/brainpy-state/apis/nest-spatial.html) — Spatial layer, kernel, mask, and plotting APIs.
 - [NEST-Compatible Network Builder](https://brainx.chaobrain.com/brainpy-state/apis/nest-network.html) — Network, builder, simulator, projection, and connection-rule APIs.
 
----
-
 ## Example Gallery Pages
 
 > Keep the official gallery index pages, not every external script link. Use these when you need runnable examples after understanding the tutorial path.
 
 - [BrainPy-style example gallery](https://brainx.chaobrain.com/brainpy-state/examples/brainpy-gallery.html) — Gallery index for native BrainPy-style runnable examples, including balanced networks, oscillations, reproductions, and SNN training.
 
-## BrainPy-style examples
+### BrainPy-style examples
 
-### Balanced & E/I networks
+#### Balanced & E/I networks
 
-- brunel.py — **pending**: not found under `brainpy/BrainPy/examples/state/` after the brainpy.state move
+- `brunel.py` — **removed upstream**: no longer under `brainpy/BrainPy/examples/state/`; use the local `brunel_alpha.py` or `brunel_delta.py` for Brunel networks.
 - [103_COBA_2005.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/103_COBA_2005.py)
 - [104_CUBA_2005.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/104_CUBA_2005.py)
 - [104_CUBA_2005_version2.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/104_CUBA_2005_version2.py)
 - [102_EI_net_1996.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/102_EI_net_1996.py)
 - [106_COBA_HH_2007.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/106_COBA_HH_2007.py)
 
-### Oscillations & rhythms
+#### Oscillations & rhythms
 
 - [107_gamma_oscillation_1996.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/107_gamma_oscillation_1996.py)
 - [108_synfire_chains_199.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/108_synfire_chains_199.py)
@@ -129,12 +129,12 @@
 - [113_Susin_Destexhe_2021_gamma_oscillation_PING.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/113_Susin_Destexhe_2021_gamma_oscillation_PING.py)
 - [Susin_Destexhe_2021_gamma_oscillation.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/Susin_Destexhe_2021_gamma_oscillation.py)
 
-### Reproductions & large models
+#### Reproductions & large models
 
 - [203_cortical_model.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/203_cortical_model.py)
 - [204_joglekar_2018_propagation.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/204_joglekar_2018_propagation.py)
 
-### Training spiking networks
+#### Training spiking networks
 
 - [200_surrogate_grad_lif.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/200_surrogate_grad_lif.py)
 - [201_surrogate_grad_lif_fashion_mnist.py](https://github.com/brainpy/BrainPy/blob/main/examples/state/201_surrogate_grad_lif_fashion_mnist.py)
@@ -142,11 +142,11 @@
 
 - [NEST-compatible example gallery](https://brainx.chaobrain.com/brainpy-state/examples/nest-gallery.html) — Gallery index for NEST-compatible runnable examples and PyNEST-style ports.
 
-## NEST-compatible examples
+### NEST-compatible examples
 
 > Upstream `chaobrain/brainpy.state` `examples/nest_like/` links are retired (404). Use the [NEST-compatible example gallery](https://brainx.chaobrain.com/brainpy-state/examples/nest-gallery.html) for the official catalog, and `skills/package-skills/brainpy-state/references/nest-compatible/scripts/` for vendored runnable scripts (marked **local** below). Filenames are kept as a selection index only.
 
-### First steps: single & two neurons
+#### First steps: single & two neurons
 
 - `one_neuron.py`
 - `one_neuron_with_noise.py`
@@ -159,7 +159,7 @@
 - `hh_psc_alpha.py`
 - `hh_phaseplane.py`
 
-### Neuron models
+#### Neuron models
 
 - `aeif_cond_beta_multisynapse.py`
 - `brette_gerstner_fig_2c.py`
@@ -174,7 +174,7 @@
 - `receptors_and_current.py`
 - `wang_decision_making.py`
 
-### Balanced & Brunel networks
+#### Balanced & Brunel networks
 
 - `brunel_alpha.py` — **local:** `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_alpha.py`
 - `brunel_delta.py` — **local:** `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_delta.py`
@@ -186,7 +186,7 @@
 - `sensitivity_to_perturbation.py`
 - `artificial_synchrony.py`
 
-### Devices: generators, recorders & detectors
+#### Devices: generators, recorders & detectors
 
 - `multimeter_file.py`
 - `recording_demo.py`
@@ -200,7 +200,7 @@
 - `cross_check_mip_corrdet.py`
 - `CampbellSiegert.py`
 
-### Plasticity: STP, STDP & dendritic rules
+#### Plasticity: STP, STDP & dendritic rules
 
 - `evaluate_tsodyks2_synapse.py` — **local:** `skills/package-skills/brainpy-state/references/nest-compatible/scripts/evaluate_tsodyks2_synapse.py`
 - `evaluate_quantal_stp_synapse.py`
@@ -210,12 +210,12 @@
 - `clopath_synapse_small_network.py`
 - `urbanczik_synapse_example.py`
 
-### Gap junctions
+#### Gap junctions
 
 - `gap_junctions_two_neurons.py`
 - `gap_junctions_inhibitory_network.py`
 
-### Astrocytes & tripartite networks
+#### Astrocytes & tripartite networks
 
 - `astrocyte_single.py`
 - `astrocyte_interaction.py`
@@ -223,14 +223,14 @@
 - `astrocyte_brunel_bernoulli.py`
 - `astrocyte_brunel_fixed_indegree.py`
 
-### Rate models & mean-field
+#### Rate models & mean-field
 
 - `lin_rate_ipn_network.py`
 - `rate_neuron_dm.py`
 - `gif_pop_psc_exp.py`
 - `gif_population.py`
 
-### Spatially-structured networks
+#### Spatially-structured networks
 
 - `spatial_grid_iaf.py`
 - `spatial_gaussex.py` — **local:** `skills/package-skills/brainpy-state/references/nest-compatible/scripts/spatial_gaussex.py`
@@ -239,12 +239,12 @@
 - `spatial_csa.py`
 - `csa_example.py`
 
-### Connectivity & introspection
+#### Connectivity & introspection
 
 - `synapsecollection.py` — **local:** `skills/package-skills/brainpy-state/references/nest-compatible/scripts/synapsecollection.py`
 - `plot_weight_matrices.py`
 
-### Applications: learning & large networks
+#### Applications: learning & large networks
 
 - `pong.py`
 - `pong_networks.py`
