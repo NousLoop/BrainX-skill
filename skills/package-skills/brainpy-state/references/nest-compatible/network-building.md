@@ -1,18 +1,20 @@
 # Network building
 
-Use this reference when the canonical `Simulator` workflow needs lifecycle control, `NodeView` composition, `SimulationResult`, `SynapseCollection`, projection or connection-rule lookup, declarative `Network`/`Builder` APIs, or spatially structured populations and connectivity.
+Use this reference when the canonical `Simulator` workflow needs lifecycle control, `NodeView` composition, `SimulationResult`, `SynapseCollection`, connection-rule or concrete-projection lookup, or spatially structured populations and connectivity.
 
 ## Network construction
 
-Use these APIs to choose the declarative or imperative network surface and create its populations, devices, and connections.
+Use these APIs to create the network's populations, devices, and connections.
 
 | API | Use when | Important result |
 |---|---|---|
 | `brainspike.Simulator(*, dt)` | Use for the NEST-flavored create/connect/run workflow. | Owns the graph, timestep, rollout State, recording, and result construction. |
-| `brainspike.network.Network(*args, **kwargs)` | Use when subclassing the lower-level network base and registering populations, projections, and devices as attributes. | `update()` walks immediate children in projection-first, then dynamics order. |
-| `brainspike.network.Builder(*args, **kwargs)` | Use for the imperative variant of `Network`. | `add()` registers named modules and `connect()` registers projections. |
 | `sim.create(model_cls, size=1, *, params=None, positions=None, **kw)` | Use to instantiate a population or device. | Returns a `NodeView`; spatial `positions` attach coordinates. |
 | `sim.connect(pre, post, *, rule=brainspike.all_to_all, weight=None, delay=None, comm="dense", receptor_type=None, synapse=None, vt=None, allow_autapses=True, allow_multapses=True, seed=None)` | Use to create a projection, attach a source, or register a recorder. | Returns a projection handle, a list for multi-segment fan-out, or `None` for taps/injectors. |
+
+BrainSpikes `0.2.0` exposes no public `network.Network` or `network.Builder`
+base. Build the network through one `Simulator`; do not subclass a network
+container from older `brainpy.state` examples.
 
 ## Simulation execution
 
@@ -55,23 +57,19 @@ Pass rule objects to `Simulator.connect()`; let the rule select edges and the sy
 
 Use `seed` to reproduce one BrainPy-State realization, `allow_autapses` and `allow_multapses` to control self and repeated edges, and `comm="sparse"` for memory-light event communication.
 
-## Projection-class lookup
+## Concrete projection lookup
 
-For standard construction, pass a rule or synapse spec to `Simulator.connect()` and inspect the returned handle. Use the classes below when reading API behavior or extending the network layer.
+For standard construction, pass a rule or synapse spec to `Simulator.connect()` and inspect the returned handle. Use the classes below only when reading the event-transmission layer directly.
 
 | Projection class | Represents |
 |---|---|
-| `brainspike.network.OneToOneProj(*args, **kwargs)` | Edge `(i, i)` for every paired index. |
-| `brainspike.network.AllToAllProj(*args, **kwargs)` | Full all-to-all connectivity. |
-| `brainspike.network.PairwiseBernoulliProj(*args, **kwargs)` | Independent Bernoulli sampling for every source-target pair. |
-| `brainspike.network.SymmetricPairwiseBernoulliProj(*args, **kwargs)` | Symmetric Bernoulli connectivity where an edge implies its reverse. |
-| `brainspike.network.FixedIndegreeProj(*args, **kwargs)` | Exactly `k` incoming edges per postsynaptic neuron. |
-| `brainspike.network.FixedOutdegreeProj(*args, **kwargs)` | Exactly `k` outgoing edges per presynaptic neuron. |
-| `brainspike.network.FixedTotalNumberProj(*args, **kwargs)` | Exactly `n` edges over the full source-target grid. |
-| `brainspike.network.PairwisePoissonProj(*args, **kwargs)` | A Poisson-distributed edge multiplicity for each source-target pair. |
 | `brainspike.network.EventProjection(*args, **kwargs)` | Delayed, weighted static event transmission. |
 | `brainspike.network.EventPlasticProj(*args, **kwargs)` | Event-driven plastic transmission. |
 | `brainspike.network.VoltageCoupledPlasticProj(*args, **kwargs)` | Plasticity coupled to postsynaptic voltage State. |
+
+BrainSpikes `0.2.0` does not provide fixed-connectivity classes such as
+`AllToAllProj` or `FixedIndegreeProj`. Express those patterns with the rule
+helpers above, which select the edges before edge transmission.
 
 ## Canonical sparse E/I construction
 

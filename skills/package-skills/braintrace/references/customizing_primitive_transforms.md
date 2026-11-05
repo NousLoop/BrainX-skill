@@ -154,27 +154,9 @@ assert not fast_path.applicable(
 
 ## Exactness validation
 
-Validate both the forward transform and its online gradient. The development oracle compares a sequence gradient from the online algorithm with the BPTT gradient for the same model factory and loss.
+Validate both the forward transform and its online gradient. Compute the reference gradient with BrainState BPTT on a fresh model from the same factory: reset State, sum one loss per step, and differentiate the sequence total once with `brainstate.transform.grad`. Compare it with `learner.etrace_grad(..., reduction="sum")` from an identically initialized model and input.
 
-```python
-from braintrace._algorithm.oracle import (
-    assert_param_gradients_close,
-    bptt_param_gradients,
-    online_param_gradients,
-)
-
-bptt = bptt_param_gradients(model_factory, inputs)
-online = online_param_gradients(
-    model_factory,
-    inputs,
-    algo_factory=lambda model: braintrace.D_RTRL(
-        model, vjp_method="multi-step"
-    ),
-)
-assert_param_gradients_close(online, bptt, atol=1e-4)
-```
-
-Use the private oracle for development tests, not as an application API. Choose a reduced model whose recurrent Jacobian lies in the estimator's documented exactness regime; a general D-RTRL model is not automatically BPTT-equivalent.
+Use this comparison only in development tests, not as an application API. Choose a reduced model whose recurrent Jacobian lies in the estimator's documented exactness regime; a general D-RTRL model is not automatically BPTT-equivalent.
 
 Check these failures explicitly:
 

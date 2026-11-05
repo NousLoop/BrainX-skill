@@ -9,7 +9,7 @@ description: Use for point-neuron modeling, from individual neurons to spiking n
 
 Use this skill for the native `brainpy.state` modeling path: compose point neurons, synapses, communication operators, synaptic outputs, projections, inputs, plasticity, and readouts into simulations or trainable spiking neural networks.
 
-Route NEST-compatible work in BrainX `2026.10.25` to the BrainSpikes workflow in `references/nest-compatible/nest-workflow.md`. Route online-learning execution to BrainTrace.
+Route NEST-compatible work in BrainX `2026.10.25` to the BrainSpikes workflow in `references/nest-compatible/nest-workflow.md`. Enable 64-bit JAX before constructing `brainspike.Simulator`; without it the default `poisson_generator` window raises `OverflowError`. Route online-learning execution to BrainTrace.
 
 Open `references/brainPy(legacy)/brainpy legacy workflow.md` only when the workspace already contains legacy `brainpy` code, contains no BrainUnit quantities, unit-aware APIs, and when the user explicitly asks to preserve old BrainPy. Use native BrainPy-State for new project is HIGHLY RECOMMENDED; use BrainPy-State with BrainCell for all cellular modeling.
 

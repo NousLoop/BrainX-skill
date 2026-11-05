@@ -8,6 +8,12 @@ The examples target BrainSpikes `0.2.0` (import `brainspike`), bundled with
 BrainX `2026.10.25`. Use the original skill snapshot for experiments frozen
 on the older `brainpy.state` NEST API.
 
+Enable 64-bit JAX before creating a `Simulator`, for example
+`jax.config.update("jax_enable_x64", True)` or
+`brainstate.environ.set(precision=64)`. With 32-bit JAX, the default
+`poisson_generator` stop sentinel overflows its int64 comparison and simulation
+fails during tracing. The bundled NEST-compatible scripts set this at import.
+
 Canonical path:
 
 `create Simulator -> create nodes and devices -> connect sources, populations, and recorders -> simulate -> read SimulationResult`
