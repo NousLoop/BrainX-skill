@@ -2,6 +2,10 @@
 
 Purpose: choose direct BrainEvent tutorial, how-to, API-category, and custom-kernel HTML pages without routing through broad index pages.
 
+Use the [release notes](https://brainx.chaobrain.com/brainevent/reference/changelog.html)
+to check operator renames, removed representations, and backend changes for
+the installed BrainEvent version.
+
 ## Table of contents
 
 - [Getting Started](#getting-started)

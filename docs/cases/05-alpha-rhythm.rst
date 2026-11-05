@@ -3,6 +3,11 @@ Alpha rhythm
 
 This experiment constructs an interpretable cortical population rhythm and measures what changes when inhibition is weakened. The evidence combines time-domain traces, spectra, alpha-band power, and sensitivity to initial conditions.
 
+The downloadable script preserves the original experiment and uses the old
+``braintools.metric.power_spectral_density`` path. In BrainTools 0.4, use
+`braintools.analysis.spectral.power_spectral_density <https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.power_spectral_density.html>`__
+for new analysis.
+
 Prompt
 ------
 

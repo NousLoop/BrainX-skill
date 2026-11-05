@@ -160,7 +160,7 @@ Open `parameter-transforms-regularizers-catalog.md` to select classical, structu
 Official sources:
 
 - https://brainx.chaobrain.com/brainstate/tutorials/core/05_parameters_transforms_regularization.html
-- https://brainx.chaobrain.com/brainstate/apis/nn/regularization.html
+- https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html#standard-regularizations
 - https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.ChainedReg.html
 
 ## Fixed values with `nn.Const`
@@ -208,6 +208,6 @@ Official sources:
 - https://brainx.chaobrain.com/brainstate/tutorials/core/05_parameters_transforms_regularization.html
 - https://brainx.chaobrain.com/brainstate/how_to/constrain_and_regularize_parameters.html
 - https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html
-- https://brainx.chaobrain.com/brainstate/apis/nn/regularization.html
+- https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html#standard-regularizations
 - https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Param.html
 - https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Const.html

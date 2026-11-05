@@ -5,6 +5,8 @@ Purpose: choose the official BrainTools API page that directly supports cognitiv
 ## Main Namespace
 
 - [`braintools` Module](https://brainx.chaobrain.com/braintools/apis/braintools.html) - Main public API hub for the BrainTools utility modules.
+- [Release notes](https://brainx.chaobrain.com/braintools/apis/changelog.html) — Check the release that introduced an API or changed its behavior.
+- [Migration guide](https://brainx.chaobrain.com/braintools/migration.html) — Find replacements for deprecated imports and arguments.
 
 ## Cognitive Tasks and Connectivity
 
@@ -23,12 +25,12 @@ Purpose: choose the official BrainTools API page that directly supports cognitiv
 
 ## Training, Fitting, and Analysis
 
-- [`braintools.metric` Module](https://brainx.chaobrain.com/braintools/apis/metric.html) - Provides machine-learning losses and neuroscience metrics for spike trains, field potentials, correlations, and pairwise comparisons.
+- [`braintools.metric` Module](https://brainx.chaobrain.com/braintools/apis/metric.html) - Provides classification, regression, structured and ranking losses, plus pairwise vector comparisons.
 - [`braintools.optim` Module](https://brainx.chaobrain.com/braintools/apis/optim.html) - Provides gradient-based and black-box optimizers, learning-rate schedulers, clipping, and weight-decay utilities.
 - [`braintools.surrogate` Module](https://brainx.chaobrain.com/braintools/apis/surrogate.html) - Supplies functional and class-based surrogate gradients for differentiating through discrete spike events.
 - [`braintools.trainer` Module](https://brainx.chaobrain.com/braintools/apis/trainer.html) - Orchestrates JAX and BrainState training, validation, testing, prediction, callbacks, logging, data loading, distribution, and checkpointing.
 - [`braintools.fit` Module](https://brainx.chaobrain.com/braintools/apis/fit.html) - Fits brain models to data.
-- [`braintools.analysis` Module](https://brainx.chaobrain.com/braintools/apis/analysis.html) - Provides neuroscience data-analysis utilities.
+- [`braintools.analysis` Module](https://brainx.chaobrain.com/braintools/apis/analysis.html) - Owns spike-train, spectral, field, population, and statistical analysis. Use it in BrainTools 0.4 in place of deprecated analysis aliases under `braintools.metric`.
 
 ## Persistence, Trees, and Visualization
 

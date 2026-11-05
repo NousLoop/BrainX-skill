@@ -84,8 +84,8 @@ The image is part of the frozen execution conditions, so build it once, tag it
 with a date, and reuse that tag for every compared run:
 
 ```bash
-BRAINX_RELEASE=2026.7.9 CODEX_VERSION=0.166.0 \
-BRAINX_EVAL_IMAGE=brainx-eval:2026-10-30 \
+BRAINX_RELEASE=2026.10.25 BRAINX_PYTHON_VERSION=3.12 CODEX_VERSION=0.166.0 \
+BRAINX_EVAL_IMAGE=brainx-eval:2026.10.25-py312 \
   bash brainx-display-cases/windows-docker/build-eval-image.sh
 ```
 

@@ -86,6 +86,7 @@
 - [BrainPy-style Neurons](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-neurons.html) — Native point-neuron model APIs.
 - [BrainPy-style Synapses](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synapses.html) — Native synaptic dynamics APIs.
 - [BrainPy-style Projections](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-projections.html) — Projection and communication APIs.
+- [AlignPostProj API](https://brainpy.readthedocs.io/apis/generated/brainpy.state.AlignPostProj.html) — See the `delay` parameter for input shape, interpolation, and buffer initialization. This live reference replaces the unavailable BrainX-hosted generated page for this class.
 - [BrainPy-style Synaptic Outputs](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synouts.html) — Current/conductance output transformation APIs.
 - [BrainPy-style Plasticity](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-plasticity.html) — Short-term plasticity and depression APIs.
 - [BrainPy-style Readouts](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-readouts.html) — Readout/decoder APIs for spiking activity.

@@ -508,7 +508,7 @@ brainstate/
 
 | Nested child | Need | Crafting source |
 |---|---|---|
-| `skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md` | Exact transform signatures plus transform and regularizer selection by domain or modeling intent | [parameter-container API](https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html), [regularization API](https://brainx.chaobrain.com/brainstate/apis/nn/regularization.html), parameters tutorial, constraint how-to |
+| `skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md` | Exact transform signatures plus transform and regularizer selection by domain or modeling intent | [parameter-container API](https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html), [regularization API](https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html#standard-regularizations), parameters tutorial, constraint how-to |
 
 #### Script References
 
@@ -672,7 +672,7 @@ braincell/
 | `skills/package-skills/braincell/references/area-scaled-hh-pattern.md` | Density-to-total conversion for capacitance, conductance, current, and cell area | The current skill's density-versus-total P0 rule and the existing extracted area-scaled pattern |
 | `skills/package-skills/braincell/references/braincell-custom-ion-channel-authoring.md` | Custom channel/ion extension after built-ins are exhausted | [Ions and channels concept](https://brainx.chaobrain.com/braincell/concepts/ions_channels.html), [channel tutorial](https://brainx.chaobrain.com/braincell/tutorials/channel.html), [extending BrainCell](https://brainx.chaobrain.com/braincell/developer/extending.html) |
 | `skills/package-skills/braincell/references/braintools/input-current.md` | Unit-aware current sections, pulses, waveforms, and stochastic cellular stimulation | [Input-current API](https://brainx.chaobrain.com/braintools/apis/input.html) |
-| `skills/package-skills/braincell/references/braintools/metric.md` | Standard waveform losses and neuroscience metrics for cellular fitting and trace evaluation | [Metric API](https://brainx.chaobrain.com/braintools/apis/metric.html) |
+| `skills/package-skills/braincell/references/braintools/metric.md` | Standard waveform losses and neuroscience metrics for cellular fitting and trace evaluation | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
 | `skills/package-skills/braincell/references/braintools/optimizer.md` | Gradient optimizers plus standalone SciPy and Nevergrad fitting boundaries | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html) and optimization tutorials |
 | `skills/package-skills/braincell/references/channel-library.md` | Built-in channel families, dependencies, selection, and the built-in-versus-custom boundary | [Ions and channels concept](https://brainx.chaobrain.com/braincell/concepts/ions_channels.html), [channel tutorial](https://brainx.chaobrain.com/braincell/tutorials/channel.html), [channel API](https://brainx.chaobrain.com/braincell/apis/braincell.channel.html), [channel ablation](https://brainx.chaobrain.com/braincell/examples/channel_ablation.html), and [adaptation example](https://brainx.chaobrain.com/braincell/examples/spike_frequency_adaptation.html) |
 | `skills/package-skills/braincell/references/ion-library.md` | Built-in ions, fixed/InitNernst/dynamic choices, concentration dynamics, and `MixIons` | [Ions and channels concept](https://brainx.chaobrain.com/braincell/concepts/ions_channels.html), [ion tutorial](https://brainx.chaobrain.com/braincell/tutorials/ion.html), and [ion API](https://brainx.chaobrain.com/braincell/apis/braincell.ion.html) |
@@ -788,7 +788,7 @@ All five required Markdown references are skill-local and already exist. Applica
 |---|---|---|
 | `skills/package-skills/brainevent/references/sparse-formats.md` | CSR/CSC storage, conversion, and selection; reference-only coordinate edge-list import with `coo2csr()`; and the official two-layer sparse spiking-network practice | [Sparse matrices tutorial](https://brainx.chaobrain.com/brainevent/tutorials/data-structures/02_sparse_matrices.html), [sparse-data API](https://brainx.chaobrain.com/brainevent/reference/apis/sparsedata.html), [utilities API](https://brainx.chaobrain.com/brainevent/reference/apis/utilities.html) |
 | `skills/package-skills/brainevent/references/connectivity-variants.md` | JITC distributions/orientations, current and deprecated fixed fan-in/out APIs, format choice, and the official large JITC and cortical fixed-degree applications | [JIT connectivity](https://brainx.chaobrain.com/brainevent/tutorials/data-structures/03_jit_connectivity.html), [fixed connections](https://brainx.chaobrain.com/brainevent/tutorials/data-structures/04_fixed_connections.html), [format guide](https://brainx.chaobrain.com/brainevent/how-to/data-structures/choosing-a-sparse-format.html), [sparse-data API](https://brainx.chaobrain.com/brainevent/reference/apis/sparsedata.html), [utilities API](https://brainx.chaobrain.com/brainevent/reference/apis/utilities.html) |
-| `skills/package-skills/brainevent/references/synaptic-plasticity.md` | Pre/post event updates, CSR/dense routing, STDP overlay, and the official adaptive self-learning network | [Plasticity tutorial](https://brainx.chaobrain.com/brainevent/tutorials/data-structures/05_synaptic_plasticity.html), [plasticity how-to](https://brainx.chaobrain.com/brainevent/how-to/data-structures/synaptic-plasticity.html), [operations API](https://brainx.chaobrain.com/brainevent/reference/apis/operations.html) |
+| `skills/package-skills/brainevent/references/synaptic-plasticity.md` | Pre/post event updates, CSR/dense routing, STDP overlay, and the official adaptive self-learning network | [Plasticity tutorial](https://brainx.chaobrain.com/brainevent/tutorials/events/synaptic-plasticity.html), [plasticity how-to](https://brainx.chaobrain.com/brainevent/how-to/data-structures/synaptic-plasticity.html), [operations API](https://brainx.chaobrain.com/brainevent/reference/apis/operations.html) |
 | `skills/package-skills/brainevent/references/custom-operators-cpu.md` | Select and implement Numba CPU or raw C++ operators; define CPU registration and transformation rules; use the CPU argument ABI, compiler, cache, diagnostics, and verification workflows | [installation](https://brainx.chaobrain.com/brainevent/getting-started/installation.html), [Numba CPU](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/01_numba.html), [C++](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/04_cpp.html), [operator API](https://brainx.chaobrain.com/brainevent/reference/apis/operator.html), [`arg_spec`](https://brainx.chaobrain.com/brainevent/reference/kernels/arg-spec.html), [C++ API](https://brainx.chaobrain.com/brainevent/reference/kernels/cpp-api.html), [caching](https://brainx.chaobrain.com/brainevent/reference/kernels/caching.html) |
 | `skills/package-skills/brainevent/references/custom-operators-gpu.md` | Select and implement Numba CUDA, Warp, raw CUDA, Pallas, Triton, or multi-backend GPU operators; define stream and GPU ABI rules; use compiler controls, cache, diagnostics, and verification workflows | [installation](https://brainx.chaobrain.com/brainevent/getting-started/installation.html), [Numba CUDA](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/02_numba_cuda.html), [Warp](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/03_warp.html), [CUDA](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/05_cuda.html), [operator API](https://brainx.chaobrain.com/brainevent/reference/apis/operator.html), [`arg_spec`](https://brainx.chaobrain.com/brainevent/reference/kernels/arg-spec.html), [C++ API](https://brainx.chaobrain.com/brainevent/reference/kernels/cpp-api.html), [compiler options](https://brainx.chaobrain.com/brainevent/reference/kernels/compiler-options.html), [caching](https://brainx.chaobrain.com/brainevent/reference/kernels/caching.html) |
 
@@ -901,14 +901,14 @@ Route them through four workflow categories:
 | `skills/package-skills/brainmass/references/fitting-with-objectives-api.md` | Simulator, Network, Fitter/FitResult, objective functions, and backend boundaries | [Orchestration API](https://brainx.chaobrain.com/brainmass/reference/orchestration.html), [gradient fitting](https://brainx.chaobrain.com/brainmass/tutorials/06_fitting_with_gradients.html), [gradient-free fitting](https://brainx.chaobrain.com/brainmass/tutorials/07_gradient_free_fitting.html), [custom objective](https://brainx.chaobrain.com/brainmass/howto/custom_objective.html) |
 | `skills/package-skills/brainmass/references/datasets-api.md` | Dataset registration/loading, Connectome, Signal, and task containers | [Datasets API](https://brainx.chaobrain.com/brainmass/reference/datasets.html) |
 | `skills/package-skills/brainmass/references/visualization-analysis-api.md` | Plotting, FC/FCD, and spectral analysis | [Visualization API](https://brainx.chaobrain.com/brainmass/reference/viz.html), [analysis how-to](https://brainx.chaobrain.com/brainmass/howto/analyze_results.html) |
-| `skills/package-skills/brainmass/references/batch-transform-acceleration.md` | JIT, transformed loops, `scan`, `vmap`, checkpointing, batched initial conditions, and sweeps | [BrainMass batch and accelerate](https://brainx.chaobrain.com/brainmass/howto/batch_and_accelerate.html), with [BrainTrace batching](https://brainx.chaobrain.com/braintrace/tutorials/batching.html) only for the vmap-per-sample comparison already used by the skill |
+| `skills/package-skills/brainmass/references/batch-transform-acceleration.md` | JIT, transformed loops, `scan`, `vmap`, checkpointing, batched initial conditions, and sweeps | [BrainMass batch and accelerate](https://brainx.chaobrain.com/brainmass/howto/batch_and_accelerate.html), with [BrainTrace release notes on per-sample vmap](https://brainx.chaobrain.com/braintrace/changelog.html) only for the vmap-per-sample comparison already used by the skill |
 | `skills/package-skills/brainmass/references/horn-task-training.md` | HORN components, task datasets, direct optimizer loops, and held-out metrics | [HORN API](https://brainx.chaobrain.com/brainmass/reference/horn.html), [task-training tutorial](https://brainx.chaobrain.com/brainmass/tutorials/08_training_on_tasks.html), [HORN case study](https://brainx.chaobrain.com/brainmass/gallery/case_studies/horn_cognitive_task.html) |
 | `skills/package-skills/brainmass/references/parameter-sweeps-and-regime-analysis.md` | Regime exploration and sensitivity analysis distinct from fitting | [Parameter-sweeps how-to](https://brainx.chaobrain.com/brainmass/howto/parameter_sweeps.html) |
 | `skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md` | Constrained or regularized fitted and directly trained parameters | BrainState parameter-model, constraint, regularization, and generated API sources mirrored by the owning BrainState reference |
 | `skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md` | Exact transform and regularizer selection after the parent parameter workflow | BrainState transform and regularization APIs and implementations mirrored by the owning BrainState reference |
 | `skills/package-skills/brainmass/references/braintools/cogtask.md` | Phase-structured cognitive trials for direct HORN training | [Cognitive-task API](https://brainx.chaobrain.com/braintools/apis/cogtask.html) |
 | `skills/package-skills/brainmass/references/braintools/data-preprocessing.md` | Optional encoding of experimental or task inputs before custom training | [Encoder API](https://brainx.chaobrain.com/braintools/apis/braintools.html) |
-| `skills/package-skills/brainmass/references/braintools/metric.md` | HORN losses and held-out metrics or fitting statistics outside `brainmass.objectives` | [Metric API](https://brainx.chaobrain.com/braintools/apis/metric.html) |
+| `skills/package-skills/brainmass/references/braintools/metric.md` | HORN losses and held-out metrics or fitting statistics outside `brainmass.objectives` | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
 | `skills/package-skills/brainmass/references/braintools/optimizer.md` | Optimizers, learning-rate schedules, standalone search wrappers, and update lifecycle | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [optimization tutorials](https://brainx.chaobrain.com/braintools/optim/index.html) |
 | `skills/package-skills/brainmass/references/braintools/parameter-initializer.md` | Model, fitting, HORN, and distance-modulated parameter initialization | [Initializer API](https://brainx.chaobrain.com/braintools/apis/init.html) |
 | `skills/package-skills/brainmass/references/braintools/surrogate.md` | Custom hard-threshold or spiking training paths; not canonical HORN or `Fitter` | [Surrogate-gradient API](https://brainx.chaobrain.com/braintools/apis/surrogate.html) |
@@ -1037,19 +1037,23 @@ brainpy-state/references/
 |---|---|---|
 | `skills/package-skills/brainpy-state/references/array-creation.md` | Construct specialized unit-aware current ranges, grids, filled arrays, template-shaped arrays, matrix patterns, index arrays, or tree-shaped arrays | [Array Creation](https://brainunit.readthedocs.io/unit_operations/array_creation.html), with array constructors from the [brainunit.math API](https://brainunit.readthedocs.io/apis/brainunit.math.html) |
 | `skills/package-skills/brainpy-state/references/component-selection.md` | Select native neurons, inputs, synapses, synaptic outputs, projection semantics, short-term plasticity, and readouts before constructing the Module graph | [Neuron API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-neurons.html), [neuron-selection how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-choose-neuron.html), [input API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-inputs.html), [synapse API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synapses.html), [synaptic-output API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synouts.html), [COBA/CUBA how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-coba-cuba-synapses.html), [projection API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-projections.html), [alignment concept](https://brainx.chaobrain.com/brainpy-state/concepts/alignpre-alignpost.html), [plasticity API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-plasticity.html), [short-term-plasticity how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-short-term-plasticity.html), [readout API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-readouts.html), [readout how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-readouts.html), [delays how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-delays.html) |
-| `skills/package-skills/brainpy-state/references/braintools/connectivity.md` | Select named spatial, topological, biological E/I, kernel, or compartment-aware topology before choosing BrainEvent storage, and preserve edge order in the `ConnectionResult` handoff | [Connectivity API](https://brainx.chaobrain.com/braintools/apis/conn.html), [BrainEvent `coo2csr`](https://brainx.chaobrain.com/brainevent/apis/generated/brainevent.coo2csr.html), [BrainEvent `CSR`](https://brainx.chaobrain.com/brainevent/apis/generated/brainevent.CSR.html) |
+| `skills/package-skills/brainpy-state/references/braintools/connectivity.md` | Select named spatial, topological, biological E/I, kernel, or compartment-aware topology before choosing BrainEvent storage, and preserve edge order in the `ConnectionResult` handoff | [Connectivity API](https://brainx.chaobrain.com/braintools/apis/conn.html), [BrainEvent sparse formats and `coo2csr`](https://brainx.chaobrain.com/brainevent/explanation/sparse-formats.html) |
 | `skills/package-skills/brainpy-state/references/braintools/data-preprocessing.md` | Select spike encoders and preprocess continuous values, events, or temporal features into time-major training inputs | [Braintools API](https://brainx.chaobrain.com/braintools/apis/braintools.html) |
 | `skills/package-skills/brainpy-state/references/braintools/input-current.md` | Generate unit-aware current sections, pulses, waveforms, stochastic processes, and composed stimulation protocols, then pass the time-major current into a BrainPy-State transformed rollout | [Input-current API](https://brainx.chaobrain.com/braintools/apis/input.html), [BrainState `for_loop`](https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.for_loop.html) |
-| `skills/package-skills/brainpy-state/references/braintools/metric.md` | Select a training loss or evaluation metric and validate input orientation, units, labels, and reduction | [Metric API](https://brainx.chaobrain.com/braintools/apis/metric.html) |
+| `skills/package-skills/brainpy-state/references/braintools/metric.md` | Select a training loss or evaluation metric and validate input orientation, units, labels, and reduction | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
 | `skills/package-skills/brainpy-state/references/braintools/optimizer.md` | Select gradient optimizers, learning-rate schedules, Optax bridges, and standalone search wrappers | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [optimization tutorials](https://brainx.chaobrain.com/braintools/optim/index.html) |
 | `skills/package-skills/brainpy-state/references/braintools/parameter-initializer.md` | Select unit-aware distribution, variance-scaling, orthogonal, composite, or distance-modulated parameter initialization | [Initializer API](https://brainx.chaobrain.com/braintools/apis/init.html) |
 | `skills/package-skills/brainpy-state/references/braintools/surrogate.md` | Select functional, reusable, or custom surrogate gradients and validate their backward signal | [Surrogate-gradient API](https://brainx.chaobrain.com/braintools/apis/surrogate.html) |
 | `skills/package-skills/brainpy-state/references/braintools/brainstate-control-flow-patterns.md` | Select State-aware loops, explicit carry, transformed branches, and checkpointed long-rollout BPTT | [Control Flow](https://brainx.chaobrain.com/brainstate/tutorials/transformations/05_control_flow.html), [checkpointing how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-long-rollouts-checkpoint.html) |
-| `skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md` | BrainPy projection delay integration through direct `delay=` or delayed prefetch; route general buffers and manual delayed State to BrainState | [BrainPy delays how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-delays.html), [AlignPost projection API](https://brainx.chaobrain.com/brainpy-state/apis/generated/brainpy.state.AlignPostProj.html), [BrainState delay protocol](https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/02_synaptic_delays.html) |
+| `skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md` | BrainPy projection delay integration through direct `delay=` or delayed prefetch; route general buffers and manual delayed State to BrainState | [BrainPy delays how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-delays.html), [AlignPost projection API](https://brainpy.readthedocs.io/apis/generated/brainpy.state.AlignPostProj.html), [BrainState delay protocol](https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/02_synaptic_delays.html) |
 | `skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md` | Maintain existing legacy `brainpy` only when it contains no BrainUnit, unit-aware, or BrainTrace code and the user explicitly requests old BrainPy; exclude new code and cellular modeling | User-provided legacy BrainPy HTML sources mirrored under `skills/package-skills/brainpy-state/references/brainPy(legacy)/` |
 
 
 ##### NEST-compatible nested branch
+
+For BrainX `2026.10.25`, use BrainSpikes `0.2.0` via `import brainspike`.
+The NEST workflow and bundled scripts use that API. Preserve the original
+snapshot when reproducing older evaluations that used `brainpy.state`.
 
 | Nested lookup area | Need | Crafting sources | Disposition |
 |---|---|---|---|
@@ -1073,7 +1077,7 @@ Native scripts:
 - `skills/package-skills/brainpy-state/references/scripts/201_surrogate_grad_lif_fashion_mnist.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/201_surrogate_grad_lif_fashion_mnist.py) — real-data SNN training; training branch.
 - `skills/package-skills/brainpy-state/references/scripts/training-snn.py` — [source](https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/05_training_an_snn.html) — compact SNN training; training branch.
 
-NEST-compatible local scripts (vendored under `references/nest-compatible/scripts/`; upstream `chaobrain/brainpy.state` `examples/nest_like/` retired — catalog: [NEST-compatible example gallery](https://brainx.chaobrain.com/brainpy-state/examples/nest-gallery.html)):
+NEST-compatible local scripts (under `references/nest-compatible/scripts/`; see the [BrainSpikes example gallery](https://brainx.chaobrain.com/brainspike/examples/nest-gallery.html) for the official catalog):
 
 - `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_alpha.py` — local — alpha-synapse Brunel network.
 - `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_delta.py` — local — delta-synapse voltage-weight semantics.
@@ -1136,12 +1140,12 @@ Keep level 1 complete in the root skill. Explain ETP only enough to predict comp
 2. Compile once with built-in `D_RTRL` and a representative step.
 3. Inspect `learner.report` and `learner.show_graph()` before training.
 4. Register parameters and an optimizer; reset both model and eligibility State at sequence boundaries.
-5. Differentiate exactly one learner call per step, use `brainstate.transform.scan()` to accumulate gradients, then update parameters once per sequence.
+5. Accumulate online gradients with `etrace_grad`, calling the learner once per step loss. Update parameters once per sequence. Use `etrace_evolve` for evaluation.
 6. Verify loss, parameter changes, State shapes, and graph reuse.
 
 Keep this workflow inline. The current `skills/package-skills/braintrace/` draft has no `scripts/` directory, so do not restore the obsolete external-example inventory from the previous plan.
 
-Ground it in the BrainTrace `v0.2.4` [pp-prop examples](https://github.com/chaobrain/braintrace/tree/v0.2.4/examples/pp_prop), [D-RTRL examples](https://github.com/chaobrain/braintrace/tree/v0.2.4/examples/drtrl), [algorithms API source](https://github.com/chaobrain/braintrace/blob/v0.2.4/docs/apis/algorithms.rst), and [compiler API source](https://github.com/chaobrain/braintrace/blob/v0.2.4/docs/apis/compiler.rst). Treat live BrainTrace `0.2.5` documentation as newer-release material, not as the contract for BrainX `v2026.7.9`.
+Target BrainTrace `0.2.8` in BrainX `2026.10.25`. Check the [tagged release](https://github.com/chaobrain/braintrace/tree/v0.2.8) for exact APIs and use the [BrainTrace quickstart](https://brainx.chaobrain.com/braintrace/quickstart/quickstart.html) for the sequence-driver pattern.
 
 #### Reference routing
 
@@ -1151,10 +1155,10 @@ Route model construction through prebuilt layers, built-in ETP operations, and c
 |---|---|---|---|
 | `skills/package-skills/braintrace/references/pre-built-braintrace-layer.md` | Selecting or composing the default model | BrainTrace layer families and BrainState-owned supporting layers | [layers API](https://brainx.chaobrain.com/braintrace/apis/nn.html), [layers tutorial](https://brainx.chaobrain.com/braintrace/tutorials/neural_network_layers.html) |
 | `skills/package-skills/braintrace/references/ETP operators.md` | Prebuilt layers cannot express a required custom layer or model | Built-in ETP operations, dispatch, units, transforms, and trace participation | [concepts API](https://brainx.chaobrain.com/braintrace/apis/concepts.html), [operators tutorial](https://brainx.chaobrain.com/braintrace/tutorials/five_primitive_functions.html) |
-| `skills/package-skills/braintrace/references/Drtrl.md` | Using or validating canonical D-RTRL | Recurrence, scan accumulation, resets, memory, and BPTT boundary | [BrainTrace `v0.2.4` D-RTRL examples](https://github.com/chaobrain/braintrace/tree/v0.2.4/examples/drtrl), [algorithms API source](https://github.com/chaobrain/braintrace/blob/v0.2.4/docs/apis/algorithms.rst) |
-| `skills/package-skills/braintrace/references/pp_pprop workflow.md` | D-RTRL trace memory is unsuitable or an SNN needs factorized traces | `pp_prop`, SNN integration, masked sequence training, and memory validation | [BrainTrace `v0.2.4` pp-prop tutorial](https://github.com/chaobrain/braintrace/blob/v0.2.4/docs/tutorials/pp_prop.md), [pp-prop examples](https://github.com/chaobrain/braintrace/tree/v0.2.4/examples/pp_prop) |
-| `skills/package-skills/braintrace/references/algorithm selection.md` | Choosing beyond D-RTRL | Public `0.2.4` estimators, guarantees, and constructor options | [BrainTrace `v0.2.4` algorithms API source](https://github.com/chaobrain/braintrace/blob/v0.2.4/docs/apis/algorithms.rst), [public API](https://github.com/chaobrain/braintrace/blob/v0.2.4/braintrace/__init__.py) |
-| `skills/package-skills/braintrace/references/batching.md` | Adding batch axes or multi-step wrappers | Mapping ownership, batched compilation, mapped resets, and data wrappers | [BrainTrace `v0.2.4` compile-mode tests](https://github.com/chaobrain/braintrace/blob/v0.2.4/examples/tests/test_compile_modes.py), [batching examples](https://github.com/chaobrain/braintrace/tree/v0.2.4/examples/pp_prop) |
+| `skills/package-skills/braintrace/references/Drtrl.md` | Using or validating canonical D-RTRL | Recurrence, sequence gradients, resets, memory, and BPTT boundary | [D-RTRL tutorial](https://brainx.chaobrain.com/braintrace/tutorials/drtrl.html), [algorithms API](https://brainx.chaobrain.com/braintrace/apis/algorithms.html) |
+| `skills/package-skills/braintrace/references/pp_pprop workflow.md` | D-RTRL trace memory is unsuitable or an SNN needs factorized traces | `pp_prop`, SNN integration, masked sequence training, and memory validation | [pp-prop tutorial](https://brainx.chaobrain.com/braintrace/tutorials/pp_prop.html), [SNN online learning](https://brainx.chaobrain.com/braintrace/tutorials/snn_online_learning.html) |
+| `skills/package-skills/braintrace/references/algorithm selection.md` | Choosing beyond D-RTRL | Public estimators, guarantees, and constructor options | [Algorithms API](https://brainx.chaobrain.com/braintrace/apis/algorithms.html) |
+| `skills/package-skills/braintrace/references/batching.md` | Adding batch axes or multi-step wrappers | Mapping ownership, batched compilation, mapped resets, and data wrappers | [Batching strategies](https://brainx.chaobrain.com/braintrace/advanced/batching.html) |
 | `skills/package-skills/braintrace/references/custom ETP primitives.md` | Built-in ETP operations cannot express the computation | Primitive registration, ETP rules, compiler integration, and validation | [custom ETP primitives](https://brainx.chaobrain.com/braintrace/advanced/etp_primitives.html) |
 | `skills/package-skills/braintrace/references/customizing_primitive_transforms.md` | Reparameterizing a weight or adding transform hooks | Trace attachment, chain-rule placement, units, and fast-path gating | [parameter transforms](https://brainx.chaobrain.com/braintrace/advanced/customizing_primitive_transforms.html) |
 | `skills/package-skills/braintrace/references/custom algorithms.md` | Built-in algorithms cannot express the research method | Algorithm bases, trace lifecycle, solve hooks, and inspection | [custom algorithms](https://brainx.chaobrain.com/braintrace/advanced/custom_algorithms.html), [algorithms API](https://brainx.chaobrain.com/braintrace/apis/algorithms.html) |
@@ -1170,7 +1174,7 @@ Open `compiler_internal.md` only after `learner.report` and `learner.graph` cann
 - The compiler runs inside the training loop or receives an example input with the wrong batch/feature shape.
 - Mapping is applied twice or bypassed through a mapped learner's `.module`.
 - Only recurrent State or only eligibility State is reset between independent sequences.
-- The step gradient calls the learner more than once, the optimizer updates inside the temporal scan despite a sequence-level schedule, or the code uses sequence-driver APIs introduced after BrainTrace `0.2.4`.
+- The step loss calls the learner more than once or updates the optimizer before sequence gradient accumulation completes.
 - D-RTRL or pp-prop is claimed to equal BPTT outside the estimator's documented mathematical regime and without a reduced-oracle check.
 - New code uses the historical `ES_D_RTRL` name instead of `pp_prop`.
 - Activation, normalization, or pooling layers are imported through deprecated `braintrace.nn` forwarding instead of their owning package.
@@ -1492,6 +1496,23 @@ No nested Markdown layer is declared.
 
 ---
 
+### brainx-doc-sync
+
+Keep this development skill under `.agents/skills/brainx-doc-sync/`. The
+installer and evaluation snapshot use the separate distribution tree in
+`skills/`.
+
+Use this authoring skill to maintain BrainX documentation against a declared
+release. Inventory maintained Markdown with the read-only link auditor, then
+verify destination identity and version-specific claims against official
+sources before editing. Validate affected runtime examples in the target
+environment and sync shared BrainTools references from their authoring source.
+
+Keep link status, claim support, and runtime evidence separate. Keep the root
+workflow compact and route evidence handling and refinement handoff to its
+local references. Run this skill outside the frozen evaluator; it does not
+select a new release, upgrade an environment, or modify archived cases.
+
 ## Refinement evaluation
 
 Current evaluations and nested reviews use the `magpie-local` provider:
@@ -1524,17 +1545,18 @@ original case prompts; approved scientific variants require a separate prompt,
 an explicit byte count and SHA-256, and a descriptive non-checkpoint run name.
 See `how-to-refine-skill.md` for setup and execution.
 
-## Benchmark Documents
+## Evaluation cases
 
-- [BrainCell benchmark](benchmark.md)
-- [BrainPy benchmark](benchmarkbrainpy.md)
-- [BrainMass benchmark](benchmark-brainmass.md)
+Use the [maintained case documentation](docs/cases/) for experiment prompts
+and results. Use the [refinement guide](how-to-refine-skill.md) to reproduce
+the evaluation workflow.
 
 ## Braintools References
 
 Use `braintools-references/` as the authoring source for shared Braintools
-knowledge. Copy only the needed files into each consumer skill's
-`references/braintools/` tree so every installed skill remains self-contained.
+knowledge. Sync only the API facts and examples each consumer needs into its
+`references/braintools/` tree. Keep installed skills self-contained and keep
+the full shared release and migration notes in the authoring source.
 
 | Canonical reference | Consumers | Need | Crafting sources |
 |---|---|---|---|
@@ -1543,6 +1565,6 @@ knowledge. Copy only the needed files into each consumer skill's
 | `braintools-references/braintools-data-preprocessing.md` | BrainMass, BrainPy | Convert experimental or task inputs with latency, rate, Poisson, population, Bernoulli, delta, step-current, spike-count, temporal, or rank-order encoders and related spike operations | [Encoder API](https://brainx.chaobrain.com/braintools/apis/braintools.html) |
 | `braintools-references/braintools-input-current.md` | BrainCell, BrainPy | Generate and compose unit-aware stimulation currents, pulses, waveforms, and stochastic processes, then pass time-major current arrays into transformed rollouts | [Input-current API](https://brainx.chaobrain.com/braintools/apis/input.html), [BrainState `for_loop`](https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.for_loop.html) |
 | `braintools-references/braintools-parameter-initializer.md` | BrainMass, BrainPy | Select and compose reusable state, parameter, weight, and distance-modulated connectivity initializers | [Initializer API](https://brainx.chaobrain.com/braintools/apis/init.html) |
-| `braintools-references/braintools-metric.md` | BrainCell, BrainMass, BrainPy, BrainTrace | Select losses and evaluation metrics for fitting, task training, simulation analysis, and online learning, including classification, regression, ranking, spike-train, synchronization, LFP, and connectivity metrics | [Metric API](https://brainx.chaobrain.com/braintools/apis/metric.html) |
+| `braintools-references/braintools-metric.md` | BrainCell, BrainMass, BrainPy, BrainTrace | Select losses and evaluation metrics for fitting, task training, simulation analysis, and online learning, including classification, regression, ranking, spike-train, synchronization, LFP, and connectivity metrics | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
 | `braintools-references/braintools-optimizer.md` | BrainCell, BrainMass, BrainPy, BrainTrace | Select optimizers, learning-rate schedules, Optax bridges, and SciPy or Nevergrad wrappers for training, fitting, and online parameter updates | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [optimization tutorials](https://brainx.chaobrain.com/braintools/optim/index.html) |
 | `braintools-references/braintools-surrogate.md` | BrainMass, BrainPy | Select functional or object-style surrogate gradients and tune their shape parameters for differentiable workflows containing non-differentiable spike functions | [Surrogate-gradient API](https://brainx.chaobrain.com/braintools/apis/surrogate.html) |

@@ -16,6 +16,8 @@ Use this matrix for the second release-selection case: the target environment al
 
 | BrainX release           | JAX                 | BrainUnit | BrainState | BrainEvent | BrainTools | BrainTrace / BrainScale | BrainCell | BrainPy | BrainPy-State | BrainMass | PINNx           | Optax     |
 | ------------------------ | ------------------- | --------- | ---------- | ---------- | ---------- | ----------------------- | --------- | ------- | ------------- | --------- | --------------- | --------- |
+| `v2026.10.25`            | `>=0.9.0, <=0.12.0.1` | `0.6.0` | `0.6.0` | `0.3.0` | `0.4.0` | BrainTrace `0.2.8` | `0.2.0` | `2.9.0` | **Not bundled** | `0.1.1` | **Not bundled** | `>=0.2.8` |
+| `v2026.8.18`             | `>=0.8.0, <=0.11.1` | `0.5.2` | `0.5.4` | `0.2.1` | `0.3.0` | BrainTrace `0.2.6` | `0.1.0` | `2.8.2` | `0.1.0` | `0.1.1` | **Not bundled** | `>=0.2.8` |
 | `v2026.7.9`              | `>=0.8.0, <=0.10.2` | `0.5.1`   | `0.5.2`    | `0.1.2`    | `0.3.0`    | BrainTrace `0.2.4`      | `0.1.0`   | `2.8.1` | `0.1.0`       | `0.1.1`   | **Not bundled** | `>=0.2.8` |
 | `v2026.6.29`             | `>=0.8.0, <=0.10.2` | `0.5.1`   | `0.5.2`    | `0.1.1`    | `0.3.0`    | BrainTrace `0.2.2`      | `0.1.0`   | `2.8.0` | `0.1.0`       | `0.1.1`   | **Removed**     | —         |
 | `v2026.6.19`             | `>=0.8.0, <=0.10.2` | `0.5.1`   | `0.5.1`    | `0.1.1`    | `0.3.0`    | BrainTrace `0.2.1`      | `0.1.0`   | `2.8.0` | `0.1.0`       | `0.1.1`   | `0.0.3`         | —         |
@@ -36,6 +38,9 @@ Use this matrix for the second release-selection case: the target environment al
 | `v2025.9.15`             | `>=0.4.35, <0.8.0`  | `0.1.1`   | `0.1.10`   | `0.0.4`    | `0.0.11`   | BrainScale `0.0.10`     | `0.0.4`   | —       | —             | `0.0.3`   | —               | —         |
 
 ## Installation rule
+
+BrainX `2026.10.25` requires Python 3.12 or newer and bundles BrainSpikes
+`0.2.0`. BrainPy `2.9.0` provides `brainpy.state` directly.
 
 Treat each row as one declared BrainX package set.
 
