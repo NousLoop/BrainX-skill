@@ -71,6 +71,12 @@ BrainSpikes `0.2.0` does not provide fixed-connectivity classes such as
 `AllToAllProj` or `FixedIndegreeProj`. Express those patterns with the rule
 helpers above, which select the edges before edge transmission.
 
+| Older `brainpy.state` class | BrainSpikes `0.2.0` route |
+|---|---|
+| `AllToAllProj`, `OneToOneProj`, `PairwiseBernoulliProj`, `FixedIndegreeProj`, `FixedTotalNumberProj` | Use the matching rule helper in the table above. |
+| `Network`, `Builder` | Use `Simulator.create()` and `Simulator.connect()`; no public network-container base is exported. |
+| `SymmetricPairwiseBernoulliProj`, `FixedOutdegreeProj`, `PairwisePoissonProj` | No public rule constructor; verify a supported formulation before porting. |
+
 ## Canonical sparse E/I construction
 
 Use `NodeView` algebra and a seeded fixed-indegree rule to express Brunel-style wiring without materializing a dense edge list.
