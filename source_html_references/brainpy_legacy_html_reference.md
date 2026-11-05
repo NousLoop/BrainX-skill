@@ -1,6 +1,8 @@
 # BrainPy Central Documentation Sitemap
 
-Purpose: choose the official BrainPy HTML page that directly supports installation, core concepts, model building, simulation, training, analysis, numerical tooling, troubleshooting, or an exact module-level API task.
+Use this inventory for BrainPy's classic `DynamicalSystem` and
+`BrainPyObject` workflows. For state-based models and the NEST-compatible
+path, open the [BrainPy state and BrainSpikes inventory](brainpy_state_html_reference.md).
 
 ## Root
 
@@ -113,4 +115,4 @@ Generated class and function pages are intentionally omitted. Use one central AP
 - [`brainpy.optim` Module](https://brainpy.readthedocs.io/apis/optim.html) - Gradient-based optimizers and learning-rate schedulers.
 - [`brainpy.running` Module](https://brainpy.readthedocs.io/apis/running.html) - Vectorized, parallel, process-pool, and CPU-parallel simulation helpers.
 - [`brainpy.mixin` Module](https://brainpy.readthedocs.io/apis/mixin.html) - Shared mixins and protocols for parameter descriptions, containers, tree nodes, and aligned postsynaptic behavior.
-- [`brainpy.state` Module](https://brainx.chaobrain.com/brainpy-state/apis/index.html) - State-based, differentiable spiking-network APIs exposed through `brainpy.state`.
+- [`brainpy.state` module](https://brainpy.readthedocs.io/apis/state.html) — Current state-based API. Check the [BrainPy 2.9 release notes](https://brainpy.readthedocs.io/changelog.html#version-2-9-0) for the package migration.

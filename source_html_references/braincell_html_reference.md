@@ -5,6 +5,7 @@ Purpose: choose the official BrainCell HTML page that directly supports a modeli
 ## Root
 
 - [BrainCell Documentation](https://brainx.chaobrain.com/braincell/) — Main BrainCell landing page for biophysically detailed single- and multicompartment neuron modeling.
+- [Release notes](https://brainx.chaobrain.com/braincell/apis/changelog.html) — Check when a cellular model, solver, or public API changed before applying a live example to a pinned release.
 
 ## Get Started
 

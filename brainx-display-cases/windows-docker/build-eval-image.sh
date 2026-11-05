@@ -7,8 +7,8 @@
 #   bash brainx-display-cases/windows-docker/build-eval-image.sh
 #
 # For a reproducible evaluation, pin the release and the CLI:
-#   BRAINX_RELEASE=2026.7.9 CODEX_VERSION=0.166.0 \
-#     BRAINX_EVAL_IMAGE=brainx-eval:2026-10-30 \
+#   BRAINX_RELEASE=2026.10.25 BRAINX_PYTHON_VERSION=3.12 CODEX_VERSION=0.166.0 \
+#     BRAINX_EVAL_IMAGE=brainx-eval:2026.10.25-py312 \
 #     bash brainx-display-cases/windows-docker/build-eval-image.sh
 #
 # Run from Git Bash on Windows; the build context is an empty directory.
@@ -22,6 +22,8 @@ export MSYS_NO_PATHCONV=1
 export MSYS2_ARG_CONV_EXCL='*'
 
 here=$(cd "$(dirname "$0")" && pwd -P)
+# Preserve an explicit build tag so the local run configuration cannot overwrite it.
+requested_image="${BRAINX_EVAL_IMAGE:-}"
 if test -f "$here/brainx-eval.env"; then
   if test -n "$(LC_ALL=C tr -cd '\r' < "$here/brainx-eval.env")"; then
     echo "Save $here/brainx-eval.env with LF line endings before running Bash" >&2
@@ -31,7 +33,7 @@ if test -f "$here/brainx-eval.env"; then
   . "$here/brainx-eval.env"
   set +a
 fi
-image="${BRAINX_EVAL_IMAGE:-brainx-eval:latest}"
+image="${requested_image:-${BRAINX_EVAL_IMAGE:-brainx-eval:latest}}"
 
 command -v docker >/dev/null 2>&1 || {
   echo "Docker is required to build the evaluation image" >&2

@@ -87,6 +87,8 @@ Generated class pages are grouped separately from narrative documentation. Start
 - [Core `brainstate` Module](https://brainx.chaobrain.com/brainstate/apis/brainstate.html) — State classes, collections, tracing, hooks, and State-related errors.
 - [`brainstate.graph` Module](https://brainx.chaobrain.com/brainstate/apis/graph.html) — Graph nodes, traversal, split/merge operations, graph definitions, edges, and references.
 - [`brainstate.nn` Module](https://brainx.chaobrain.com/brainstate/apis/nn/index.html) — Modules, parameter containers, regularizers, layers, dynamics, delays, and metrics.
+- [Parameter containers and regularization](https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html) — Find the exact parameter, transform, and regularizer class pages.
+- [Mapping transformations](https://brainx.chaobrain.com/brainstate/apis/transform/mapping.html) — Find state-aware mapping APIs and their batching contracts.
 - [`brainstate.transform` Module](https://brainx.chaobrain.com/brainstate/apis/transform/index.html) — Gradients, JIT, mapping, control flow, checks, tracing, and IR tooling.
 - [`brainstate.interop` Module](https://brainx.chaobrain.com/brainstate/apis/interop.html) — Flax and Equinox conversion APIs and interoperability errors.
 - [`brainstate.random` Module](https://brainx.chaobrain.com/brainstate/apis/random.html) — Random State, key management, sampling, and probability distributions.

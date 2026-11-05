@@ -428,6 +428,6 @@ Use `einrearrange()` and `einrepeat()` through `array-mechanics.md` when element
 
 - https://brainunit.readthedocs.io/apis/brainunit.math.html
 - https://brainunit.readthedocs.io/unit_operations/einstein_operations.html
-- Generated Level A pages under `https://brainunit.readthedocs.io/apis/generated/brainunit.math.<function>.html`
+- Use the module index above to open the generated page for a specific function.
 - https://brainunit.readthedocs.io/apis/generated/brainunit.math.einreduce.html
 - https://brainunit.readthedocs.io/apis/generated/brainunit.math.einsum.html

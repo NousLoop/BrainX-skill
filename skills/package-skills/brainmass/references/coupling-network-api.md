@@ -249,7 +249,7 @@ If retrieval occurs before insertion, the buffer still ends at the previous simu
 
 ## Application script
 
-Open `scripts/resting-state-meg-whole-brain-pipeline.py` when the task needs the complete connectome-to-network-to-MEG-to-functional-connectivity workflow.
+Open `scripts/resting-state-meg-whole-brain-pipeline.py` when the task needs the complete connectome-to-network-to-MEG-to-functional-connectivity workflow. The script requires BrainTools 0.4.0 or newer.
 
 ## Diagnose network failures
 

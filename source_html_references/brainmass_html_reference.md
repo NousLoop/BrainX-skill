@@ -3,6 +3,7 @@
 ## Root
 
 - [brainmass documentation](https://brainx.chaobrain.com/brainmass/) — Main BrainMass landing page; introduces the package, installation, features, and learning paths.
+- [Release notes](https://brainx.chaobrain.com/brainmass/changelog.html) — Check release-specific changes before reusing simulation or fitting examples.
 
 ## Get Started
 
