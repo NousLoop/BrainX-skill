@@ -1,13 +1,10 @@
-# BrainEvent HTML Reference
+# BrainEvent Central Documentation Sitemap
 
 Purpose: choose direct BrainEvent tutorial, how-to, API-category, and custom-kernel HTML pages without routing through broad index pages.
 
-Use the [release notes](https://brainx.chaobrain.com/brainevent/reference/changelog.html)
-to check operator renames, removed representations, and backend changes for
-the installed BrainEvent version.
-
 ## Table of contents
 
+- [Root](#root)
 - [Getting Started](#getting-started)
 - [Tutorials — Data structures & operators](#tutorials--data-structures--operators)
 - [Tutorials — Custom operators](#tutorials--custom-operators)
@@ -16,6 +13,11 @@ the installed BrainEvent version.
 - [Explanation](#explanation)
 - [Reference — Python API category subpages](#reference--python-api-category-subpages)
 - [Reference — Custom kernel reference pages](#reference--custom-kernel-reference-pages)
+
+## Root
+
+- [BrainEvent documentation](https://brainx.chaobrain.com/brainevent/) — Main landing page for event-driven computation with `BinaryArray`, sparse and fixed connectivity, and custom kernels.
+- [Release notes](https://brainx.chaobrain.com/brainevent/reference/changelog.html) — Check operator renames, removed representations, and backend changes for the installed BrainEvent version.
 
 ## Getting Started
 

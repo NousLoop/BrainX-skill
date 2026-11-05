@@ -2,9 +2,22 @@
 
 Purpose: choose the official BrainTrace HTML page that directly supports an online-learning concept, model-building workflow, algorithm decision, compiler diagnostic, batching strategy, example, or API question.
 
+## Table of contents
+
+- [Root](#root)
+- [Get Started](#get-started)
+- [Online Training Tutorials](#online-training-tutorials)
+- [Algorithm Tutorials](#algorithm-tutorials)
+- [Model-Building Tutorials](#model-building-tutorials)
+- [Compiler and Runtime Tutorials](#compiler-and-runtime-tutorials)
+- [Advanced Guides](#advanced-guides)
+- [Examples](#examples)
+- [Central API Reference Pages](#central-api-reference-pages)
+
 ## Root
 
 - [BrainTrace Documentation](https://brainx.chaobrain.com/braintrace/) — Main BrainTrace landing page for eligibility-trace online learning in stateful recurrent and spiking neural networks.
+- [Release notes](https://brainx.chaobrain.com/braintrace/changelog.html) — Records BrainTrace releases, additions, fixes, and compatibility changes.
 
 ## Get Started
 
@@ -57,7 +70,6 @@ Purpose: choose the official BrainTrace HTML page that directly supports an onli
 
 ## Central API Reference Pages
 
-- [Release Notes](https://brainx.chaobrain.com/braintrace/changelog.html) — Records BrainTrace releases, additions, fixes, and compatibility changes.
 - [ETP Operators & Core Types](https://brainx.chaobrain.com/braintrace/apis/concepts.html) — Documents public ETP operators, sequence-data wrappers, eligibility-trace state, gradient helpers, and compiler error types.
 - [Compiler, Executor & Diagnostics](https://brainx.chaobrain.com/braintrace/apis/compiler.html) — Documents graph compilation, hidden groups, parameter-operation relations, perturbations, executors, diagnostics, and compilation reports.
 - [Online-Learning Algorithms](https://brainx.chaobrain.com/braintrace/apis/algorithms.html) — Documents `braintrace.compile()`, sequence drivers, algorithm configuration, estimator base classes, and the built-in online-learning algorithms.

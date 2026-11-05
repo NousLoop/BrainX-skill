@@ -1,7 +1,21 @@
-# BrainUnit documentation links
+# BrainUnit Central Documentation Sitemap
 
 Use the guides for unit conventions and transformations. Open the API
 reference for the exact signature, return unit, or backend requirement.
+
+## Table of contents
+
+- [Root](#root)
+- [Getting started](#getting-started)
+- [Physical units](#physical-units)
+- [Unit-aware operations](#unit-aware-operations)
+- [Advanced guides](#advanced-guides)
+- [API reference](#api-reference)
+
+## Root
+
+- [BrainUnit documentation](https://brainx.chaobrain.com/brainunit/) — Main landing page for physical units, quantities, conversions, and unit-aware computation.
+- [Release notes](https://brainx.chaobrain.com/brainunit/apis/changelog.html) — Records BrainUnit releases, additions, fixes, and compatibility changes.
 
 ## Getting started
 
@@ -42,9 +56,8 @@ reference for the exact signature, return unit, or backend requirement.
 - [Unit-Aware Computation with CustomArray](https://brainx.chaobrain.com/brainunit/advanced_tutorials/custom_array.html) — Integrates custom array containers with BrainUnit operations.
 - [FAQs](https://brainx.chaobrain.com/brainunit/FAQs.html) — Answers common questions about units, conversions, compatibility, and JAX behavior.
 
-## API reference and releases
+## API reference
 
-- [Release Notes](https://brainx.chaobrain.com/brainunit/apis/changelog.html) — Records BrainUnit releases, additions, fixes, and compatibility changes.
 - [brainunit Module](https://brainx.chaobrain.com/brainunit/apis/brainunit.html) — Documents the main namespace containing core units, quantities, dimensions, and validation utilities.
 - [Quantity API](https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.Quantity.html) — Documents the core class representing numerical values associated with units.
 - [Unit API](https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.Unit.html) — Documents the class representing a physical unit, scale, dimension, and optional offset.
