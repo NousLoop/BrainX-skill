@@ -384,7 +384,7 @@ A rewrite is not done until these are addressed:
 
 ## When not to transform
 
-Be realistic. A transform may not help when:
+Keep a known-correct non-transformed path when a transform offers little benefit. This can happen when:
 
 - the workload is tiny and compile overhead dominates;
 - the hot path is already a large fused `jnp`/XLA operation;
