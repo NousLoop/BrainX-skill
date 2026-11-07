@@ -39,15 +39,18 @@ Select every row supported by the user's task. A single-scale task opens one mod
 
 | The task explicitly represents | Open |
 |---|---|
-| Point neurons, synapses, or point-neuron spiking networks | BrainPy-State |
+| Point neurons, their synapses, or point-neuron spiking networks | BrainPy-State |
 | Ions, channels, compartments, or cellular morphology | BrainCell |
 | Aggregate neural populations, local circuits, brain regions, or whole-brain dynamics | BrainMass |
-| Detailed cells connected into a spiking network | BrainCell + BrainPy-State |
+| Detailed cells connected through spatially placed synapses | BrainCell |
+| Detailed cells coupled to point neurons | BrainCell + BrainPy-State |
 | Point-neuron spiking networks coupled to aggregate regional dynamics | BrainPy-State + BrainMass |
 | Cellular mechanisms coupled to aggregate neural-mass dynamics | BrainCell + BrainMass |
 | Cellular biophysics, point-neuron networks, and aggregate population dynamics interacting in one workflow | BrainCell + BrainPy-State + BrainMass |
 
 Keep the implementation at the selected scale. Do not introduce aggregate population-rate State into a point-neuron model, or point neurons into an aggregate model, merely to simplify execution. When both mechanisms are scientifically represented, treat the task as multiscale and open both owning skills.
+
+When represented scales exchange signals, open `brainx-modeling-loop` → `references/multiscale-coupling.md` for exchanged observables, units, axes, clocks, and causal order.
 
 ## Write BrainX-native code
 

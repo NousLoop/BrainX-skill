@@ -40,7 +40,8 @@ Use this matrix for the second release-selection case: the target environment al
 ## Installation rule
 
 BrainX `2026.10.25` requires Python 3.12 or newer and bundles BrainSpikes
-`0.2.0`. BrainPy `2.9.0` provides `brainpy.state` directly.
+`0.2.0`. The BrainSpikes distribution is `brainspikes`. Import it as
+`brainspike`. BrainPy `2.9.0` provides `brainpy.state` directly.
 
 Treat each row as one declared BrainX package set.
 

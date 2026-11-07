@@ -94,7 +94,7 @@ Read `brainmodeling-memory.md` first and choose exactly one entry case:
 | Entry case | Condition | Start position |
 |---|---|---|
 | `fresh-new` | No memory or prior loop work must be preserved | Step 0, with a draft `report.md` |
-| `resume` | Memory or any prior loop artifact exists | First unfinished action in the recorded step |
+| `resume` | Memory or any prior loop artifact exists | Verified `Resume at` target |
 
 Missing or inconsistent checkpoint data is recovered inside `resume`; it does not
 create a third entry case. If a locked specification exists without `report.md`,
@@ -108,6 +108,7 @@ Keep the complete append-only memory contract in this `Get started` section:
 ## Checkpoint
 - Iteration: <integer>
 - Step: 0 | 1 | 2 | 3 | 4 | 5 | 6
+- Resume at: <iteration>/<step> | complete
 
 ### Artifacts
 - `<path or stable identifier>`: <contents and status>
@@ -124,10 +125,11 @@ Keep the complete append-only memory contract in this `Get started` section:
 
 Create only the title at `fresh-new`, then append one checkpoint after every
 step, including a blocked step, beginning with iteration 1, step 0. Treat `Iteration` and `Step`
-as checkpoint metadata and the two subsections as checkpoint content. Never
-overwrite an earlier checkpoint; append corrections and state what they
-supersede. On `resume`, read checkpoints in order, verify the latest artifact
-pointers, and continue after the latest valid checkpoint.
+as the recorded work and `Resume at` as the next action. Never overwrite an
+earlier checkpoint. Append corrections as a new checkpoint with the same
+iteration and step and state which earlier record it supersedes. On `resume`,
+verify the latest artifact pointers and follow the resume target. Infer the
+target from milestones for older checkpoint blocks.
 
 #### Fixed workflow
 
@@ -135,11 +137,11 @@ pointers, and continue after the latest valid checkpoint.
 |---|---|---|
 | 0 | Inspect the researcher request and data, run the mandatory dependent clarification gate, write and obtain approval for the short `NeuroSpecification.md`, then resolve or explicitly skip the optional literature gate | Locked `Researcher request`, `Inspected data contract`, and `Acceptance boundary`, with no unanswered consequential choice and reconciled with any required literature evidence; initialize `report.md` as `draft`; a blocked gate remains at step 0 |
 | Optional gate | Invoke `bio-neuro-lit` only when an unknown, unverified, controversial, ambiguous, or recency-sensitive scientific premise could change the model, experiment, validation, or claims | Essential evidence appended to memory; specification relocked after researcher approval when evidence changes it |
-| 1 | Invoke `brainx-general-guard`, select the represented scales, and study every relevant modeling skill, routed reference, API, and canonical script deeply; after refusal, map findings and restudy every affected route | Initial or iteration-specific BrainX study record and grounded implementation design |
+| 1 | Invoke `brainx-general-guard`, select the represented scales, and study the relevant modeling skills, references, APIs, and scripts. Use `references/multiscale-coupling.md` for exchange units, axes, clocks, and causal order when scales exchange signals. After refusal, map findings and restudy every affected route | Initial or iteration-specific BrainX study record and grounded implementation design |
 | 2 | Implement the BrainX model, preprocessing, protocol, controls, metrics, tests, and active training/fitting coverage | BrainX-native model and experiment code |
 | 3 | Open `brainx-acceleration`, improve the workload, and prove scientific parity | Accelerated code or an explicit unchanged decision |
 | 4 | Open `references/run-experiment.md`, then `references/monitor-experiment.md` | Inspectable experiment artifacts |
-| 5 | Start a fresh Codex MCP review; use its injected `mcp-servers/codex/system-prompt.md` contract | `REFUSE`, `PASS`, or `BLOCKED` plus preserved review output and `threadId` when available |
+| 5 | Start a fresh Codex MCP review and use its injected `mcp-servers/codex/system-prompt.md` contract | A new checkpoint with the outcome and resume target, plus any returned review output and `threadId` |
 | 6 | Hand review-passed evidence to `brainx-visualization` and finalize the report | Final `report.md`, inspected figures, `FIGURE_MANIFEST.md`, and completed memory |
 
 The optional literature gate follows the initial NeuroSpecification and remains inside step 0 rather than creating a new checkpoint number. Trigger it for unknown mechanisms, unsupported scientific premises, competing explanations, evidence-dependent design choices, ambiguous reproduction targets, or recency-sensitive claims. Skip it for fixed canonical mechanisms and uncertainty limited to BrainX APIs, implementation, optimization, debugging, or data-driven fitting. Literature evidence may require a researcher-approved specification revision before step 1.
@@ -151,12 +153,13 @@ Keep its document lifecycle (`draft`, `blocked`, `final`), scientific outcome
 separate. Before a refused or blocked transition, run diagnostic closure: update
 the report and, when numeric or event data exist, render a diagnostic figure and
 `FIGURE_MANIFEST.md`; when no plot-worthy data exist, record the missing
-prerequisite explicitly in both files. A diagnostic report is provisional and
-does not imply scientific acceptance. Step 5 `REFUSE` then increments the
-iteration, returns to step 1, writes a new iteration-specific study record, and
-repeats steps 1-5. Step 5 `BLOCKED` preserves the current step and pauses with
-the diagnostic report. Step 5 `PASS` advances to step 6, which uses only final
-figures linked to review-passed evidence.
+prerequisite explicitly in both files. Mark diagnostic results provisional and
+record their artifacts in the new
+checkpoint for the finished or paused step. On `REFUSE`, step 5 records the
+reviewed iteration and sets `Resume at` to step 1 of the next iteration.
+`BLOCKED` keeps the resume target at the current iteration's step 5 and records
+the blocker and available evidence. `PASS` sets the resume target to step 6,
+which uses final figures linked to review-passed evidence.
 
 #### Optional training and fitting coverage
 
@@ -177,6 +180,7 @@ brainx-modeling-loop/references/
 ├── mechanism-comparison.md
 ├── training-workflow.md
 ├── parameter-fitting-workflow.md
+├── multiscale-coupling.md
 │   └── parameter-fitting-workflow/
 │       └── scripts/fitting_hh_neuron.py
 ├── run-experiment.md
@@ -552,16 +556,16 @@ Location: Direct skill script.
 
 #### Purpose
 
-- Boundary: own biologically detailed conductance-based or Hodgkin-Huxley cell modeling at the ion, channel, single-compartment, and multicompartment morphology scales.
+- Boundary: own biologically detailed conductance-based or Hodgkin-Huxley modeling from channels and single cells to networks with spatially placed synapses.
 - Activate when cellular biophysics is explicitly represented. Activate alone for cell studies or with BrainPy-State and/or BrainMass when cellular mechanisms participate in a multiscale model.
-- Primary path: choose `SingleCompartment` or `Cell` → declare mechanisms and geometry → initialize → simulate → validate voltage, spikes, or probe traces.
+- Primary path: choose `SingleCompartment` or `Cell` → declare mechanisms and geometry → initialize → simulate → validate voltage, spikes, or recorded observables.
 - Advanced branches: area scaling, mixed-ion adaptation, channel/ion libraries, solver catalog, and detailed multicompartment morphology.
 
 #### Essential Concepts
 
 - `SingleCompartment` versus morphology-based `Cell`
 - braincell.SingleCompartment collapses the morphology and discretization layers — there is exactly one compartment — and exposes ions and channels added imperatively in __init__.
-- braincell.Cell uses the full declaration-to-runtime pipeline: wrap a Morphology, discretize it into CVs, paint density mechanisms onto regions, place point mechanisms at locsets, initialize, and run for probe traces.
+- braincell.Cell uses the full declaration-to-runtime pipeline: wrap a Morphology, discretize it into CVs, paint density mechanisms onto regions, place point mechanisms at locsets, declare named recordings, initialize, and run for samples.
 
 ```text
 Direct model declaration
@@ -619,9 +623,8 @@ Updated states and spike detection
 - Ion&channels, Match each channel's `root_type`
 - Choose Fixed ions when reversal potential is constant
 #### Simulation techniques
-- must look at brainpy skill when dealing with network of cells
-- must use brainstate.environ.context() to define the simulation environment
-- must use brainstate.transform.for_loop(step, times) for timestamped steps
+- Use `braincell.Network` for detailed cells connected through spatially placed synapses. Open BrainPy-State too when a point-neuron population is explicitly represented.
+- For an explicit timestamped rollout, set the simulation environment with `brainstate.environ.context()` and run `brainstate.transform.for_loop(step, times)`.
 - Brainunit math functions that help with array: u.math.arange u.math.squeeze(), recommend to use
 - When to use `MixIons`
 - Solver choice.
@@ -652,6 +655,7 @@ braincell/
 │   ├── cv-policy-reference.md
 │   ├── filter-function-library.md
 │   ├── morphology-io-loading-validation.md
+│   ├── network-workflow.md
 │   ├── probe-reference.md
 │   └── topology-building-and-visualization.md
 └── scripts/
@@ -677,7 +681,8 @@ braincell/
 | `skills/package-skills/braincell/references/channel-library.md` | Built-in channel families, dependencies, selection, and the built-in-versus-custom boundary | [Ions and channels concept](https://brainx.chaobrain.com/braincell/concepts/ions_channels.html), [channel tutorial](https://brainx.chaobrain.com/braincell/tutorials/channel.html), [channel API](https://brainx.chaobrain.com/braincell/apis/braincell.channel.html), [channel ablation](https://brainx.chaobrain.com/braincell/examples/channel_ablation.html), and [adaptation example](https://brainx.chaobrain.com/braincell/examples/spike_frequency_adaptation.html) |
 | `skills/package-skills/braincell/references/ion-library.md` | Built-in ions, fixed/InitNernst/dynamic choices, concentration dynamics, and `MixIons` | [Ions and channels concept](https://brainx.chaobrain.com/braincell/concepts/ions_channels.html), [ion tutorial](https://brainx.chaobrain.com/braincell/tutorials/ion.html), and [ion API](https://brainx.chaobrain.com/braincell/apis/braincell.ion.html) |
 | `skills/package-skills/braincell/references/mixions-for-adaptation.md` | Adaptation, controlled AHP ablation, quiet-baseline checks, parameter provenance, rebound, dynamic calcium, and `MixIons(k, ca)` composition | [Adaptation](https://brainx.chaobrain.com/braincell/examples/spike_frequency_adaptation.html), [channel ablation](https://brainx.chaobrain.com/braincell/examples/channel_ablation.html), [F-I curve](https://brainx.chaobrain.com/braincell/examples/fi_curve.html), [T-current rebound](https://brainx.chaobrain.com/braincell/examples/t_current_rebound.html), and [thalamic neurons](https://brainx.chaobrain.com/braincell/examples/thalamic_neurons.html) |
-| `skills/package-skills/braincell/references/multicompartment/multicompartment-cell-workflow.md` | Complete advanced morphology path and exclusive selector for CV, filter, probe, topology, IO, and manual-construction references | [Cell tutorial](https://brainx.chaobrain.com/braincell/tutorials/cell.html) |
+| `skills/package-skills/braincell/references/multicompartment/multicompartment-cell-workflow.md` | Complete advanced morphology path and exclusive selector for CV, filter, recording, topology, IO, and manual-construction references | [Cell tutorial](https://brainx.chaobrain.com/braincell/tutorials/cell.html) |
+| `skills/package-skills/braincell/references/multicompartment/network-workflow.md` | Named populations, spatial synapse connections, event sources, and network results | [BrainCell 0.2.0 Network API](https://github.com/chaobrain/braincell/blob/v0.2.0/docs/design/network/current/api.md) |
 | `skills/package-skills/braincell/references/solver-library-with-effects.md` | Integrator names, cable/composite solvers, speed/accuracy guidance, and numerical effects | [Integration concept](https://brainx.chaobrain.com/braincell/concepts/integration.html), [integration API](https://brainx.chaobrain.com/braincell/apis/integration.html), [solver guide](https://brainx.chaobrain.com/braincell/integration/solvers.html), [advanced integration](https://brainx.chaobrain.com/braincell/integration/advanced.html), and [integration-methods example](https://brainx.chaobrain.com/braincell/examples/integration_methods.html) |
 
 ##### Multicompartment-exclusive references
@@ -688,9 +693,9 @@ Open these only from `skills/package-skills/braincell/references/multicompartmen
 |---|---|---|
 | `skills/package-skills/braincell/references/multicompartment/braincell-manual-morphology-construction.md` | Manual topology creation before `Cell` construction | [Morphology concept](https://brainx.chaobrain.com/braincell/concepts/morphology.html), [morphology tutorial](https://brainx.chaobrain.com/braincell/tutorials/morphology.html), and [Cell tutorial](https://brainx.chaobrain.com/braincell/tutorials/cell.html) |
 | `skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md` | CV policy selection, discretization effects, resolution, and cost | [Discretization concept](https://brainx.chaobrain.com/braincell/concepts/discretization.html) and [Cell tutorial](https://brainx.chaobrain.com/braincell/tutorials/cell.html) |
-| `skills/package-skills/braincell/references/multicompartment/filter-function-library.md` | Region and locset selection for mechanisms, probes, and clamps | [Filter tutorial](https://brainx.chaobrain.com/braincell/tutorials/filter.html) and [filter API](https://brainx.chaobrain.com/braincell/apis/filter.html) |
+| `skills/package-skills/braincell/references/multicompartment/filter-function-library.md` | Region and locset selection for mechanisms, recordings, and clamps | [Filter tutorial](https://brainx.chaobrain.com/braincell/tutorials/filter.html) and [filter API](https://brainx.chaobrain.com/braincell/apis/filter.html) |
 | `skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md` | SWC, ASC, NeuroML2, NeuroMorpho, validation, checkpoints, and post-load checks | [IO overview](https://brainx.chaobrain.com/braincell/file_formats/overview.html), [SWC](https://brainx.chaobrain.com/braincell/file_formats/swc.html), [ASC](https://brainx.chaobrain.com/braincell/file_formats/asc.html), [NeuroML2](https://brainx.chaobrain.com/braincell/file_formats/neuroml2.html), [NeuroMorpho](https://brainx.chaobrain.com/braincell/file_formats/neuromorpho.html), [checkpointing](https://brainx.chaobrain.com/braincell/file_formats/checkpointing.html), and [morphology concept](https://brainx.chaobrain.com/braincell/concepts/morphology.html) |
-| `skills/package-skills/braincell/references/multicompartment/probe-reference.md` | State, mechanism, current, and trace probes plus missing-trace checks | [Mechanisms tutorial](https://brainx.chaobrain.com/braincell/tutorials/mech.html) |
+| `skills/package-skills/braincell/references/multicompartment/probe-reference.md` | Named voltage, mechanism and current recordings, sampling schedules, result schemas, and legacy probes | [BrainCell 0.2.0 recording API](https://github.com/chaobrain/braincell/blob/v0.2.0/docs/design/network/current/recording.md) |
 | `skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md` | NodeTree, CV/branch/node views, placement verification, and visualization | [Visualization tutorial](https://brainx.chaobrain.com/braincell/tutorials/vis.html) and [filter tutorial](https://brainx.chaobrain.com/braincell/tutorials/filter.html) |
 
 #### Script References
@@ -717,8 +722,8 @@ Open these only from `skills/package-skills/braincell/references/multicompartmen
 - Custom channel authored before checking built-ins.
 - Multicompartment leaf opened before the workflow reference.
 - `paint` and `place` semantics reversed.
-- CV policy, locset, probe key, or topology selected blindly.
-- Network construction incorrectly kept in BrainCell instead of BrainPy.
+- CV policy, locset, recording name, or topology selected blindly.
+- Point-neuron networks routed to detailed Cell mechanisms, or spatial synapses reduced to point-neuron projections.
 
 ---
 
@@ -948,8 +953,8 @@ Route them through four workflow categories:
 #### Purpose
 
 - Boundary: individual point-neuron models and point-neuron-based spiking neural networks.
-- Activate when neurons are explicitly represented as point units or connected into a spiking network. Activate alone for point-neuron studies or with BrainCell and/or BrainMass when point-neuron dynamics participate in a multiscale model.
-- Route to legacy BrainPy only when an existing codebase already uses legacy `brainpy`, contains no BrainUnit, unit-aware, or BrainTrace code, and the user explicitly asks to preserve old BrainPy. Route new point-neuron code to native BrainPy-State and all cellular modeling to BrainPy-State with BrainCell.
+- Activate when the model explicitly represents point neurons, their synapses, or a point-neuron spiking network. Add BrainCell or BrainMass when the model also represents their scales.
+- Route to legacy BrainPy only when an existing codebase already uses legacy `brainpy`, contains no BrainUnit, unit-aware, or BrainTrace code, and the user explicitly asks to preserve old BrainPy. Route new point-neuron code to native BrainPy-State. Use BrainCell for detailed cells and networks with spatial synapse placement.
 - Primary path: choose native versus NEST-compatible path, or confirm the strict legacy-maintenance gate → select components → initialize → run transformed rollout → monitor/train → validate.
 - branches: component catalogs, custom models, training, Braintools, gallery scripts, NEST compatibility, and gated legacy maintenance.
 
@@ -1339,6 +1344,8 @@ Do not duplicate these package-specific workflows inside `skills/brainx-visualiz
 #### Purpose and boundary
 
 - Open first for every BrainX modeling, simulation, training, review, debugging, or optimization task.
+When represented scales exchange signals, open `brainx-modeling-loop` → `references/multiscale-coupling.md` for exchanged observables, units, axes, clocks, and causal order.
+
 - When the request is an end-to-end project (new or changed model, mechanism comparison, simulation or fitting study, experiment-derived prediction, or scientific result report), open `brainx-modeling-loop` immediately after this guard and complete its step-0 clarification gate before opening package-specific skills. Use this guard alone for focused package or API work whose model design is already fixed.
 - Identify every modeling scale explicitly represented, then open only the package skills that own those scales. Keep the guard active as the cross-cutting implementation layer.
 - Follow: classify represented scales → check only whether required packages are present → study the owning package skills and task-relevant example scripts → reconcile examples with the current root workflow → choose owning-package orchestration → compose absolutely simple code → transform only custom stateful execution → validate scientific behavior.
@@ -1347,10 +1354,11 @@ Do not duplicate these package-specific workflows inside `skills/brainx-visualiz
 
 | The task explicitly represents | Open |
 |---|---|
-| Point neurons, synapses, or point-neuron spiking networks | BrainPy-State |
+| Point neurons, their synapses, or point-neuron spiking networks | BrainPy-State |
 | Ions, channels, compartments, or cellular morphology | BrainCell |
 | Aggregate neural populations, local circuits, brain regions, or whole-brain dynamics | BrainMass |
-| Detailed cells connected into a spiking network | BrainCell + BrainPy-State |
+| Detailed cells connected through spatially placed synapses | BrainCell |
+| Detailed cells coupled to point neurons | BrainCell + BrainPy-State |
 | Point-neuron spiking networks coupled to aggregate regional dynamics | BrainPy-State + BrainMass |
 | Cellular mechanisms coupled to aggregate neural-mass dynamics | BrainCell + BrainMass |
 | Cellular biophysics, point-neuron networks, and aggregate population dynamics interacting in one workflow | BrainCell + BrainPy-State + BrainMass |
