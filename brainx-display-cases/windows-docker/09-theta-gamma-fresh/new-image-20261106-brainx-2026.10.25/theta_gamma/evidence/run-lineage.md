@@ -1,0 +1,7 @@
+# Preserved run lineage
+
+- smoke-01: CPU mechanics, 4 parameter conditions × 3 lanes, finite outputs, completed.
+- calibration-01: completed 18 unmodulated candidates; 8 eligible; deterministic rule chose P0=1.6 and absolute recurrent gain=1.2, gamma peak 29.5 Hz. Selection frozen before any modulation run.
+- production-01: completed with valid finite dynamics and a provisional positive display-case signature. Retained in full. The first surrogate implementation randomized cycle phase origins, an approximation to within-cycle envelope rotation when phase grids are not exactly uniform cycles (6 Hz at 1 kHz yields 166/167 samples). It is superseded for acceptance, not concealed.
+- production-02: same scientific settings, waveform, initial States, observation seeds, thresholds and display cases. Surrogate code corrected to exact integer circular rotations of the *original envelope samples* within each cycle; FFT circular correlation computes all sums and is tested against direct np.roll with error <3e−17. This changes implementation fidelity, not the intended metric or selection rule. Full run repeated under a new immutable source/config snapshot; no new calibration or outcome tuning. Both outputs remain available to reviewers.
+- tests-attempt1/2: development test harness unit/shape conversion errors. tests-attempt3/4: failed analytic equation test that exposed cross-weight API directions. Corrected mapping passes. No failed attempt was relabeled a scientific negative.

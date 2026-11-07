@@ -1,0 +1,10 @@
+{
+  "verdict": "PASS",
+  "scientific_outcome": "SUPPORTED",
+  "run_id": "production-02",
+  "iteration": 1,
+  "threadId": "01a1ae86-d767-74a2-9de3-9206de1fc7d0",
+  "review_path": "reviews/iteration-1.md",
+  "review_sha256": "8fe99727c7154b6c9805c24711108fcd15d40a931ce6182ae176b5ef5c1223b7",
+  "accepted_scope": "Locked illustrative forward-simulation; no biological/empirical EEG/unique-mechanism claim"
+}

@@ -1,0 +1,92 @@
+Review completed BrainX iteration 1.
+
+PROJECT_ROOT: /workspace/theta_gamma
+ACTIVE_COVERAGE: none
+
+SPECIFICATION:
+- /workspace/theta_gamma/NeuroSpecification.md
+
+LOOP_MEMORY:
+- /workspace/theta_gamma/brainmodeling-memory.md
+
+BRAINX_STUDY_RECORD:
+- /workspace/theta_gamma/brainx-study-record.md
+- /workspace/theta_gamma/evidence/api-gap.md
+- /workspace/theta_gamma/evidence/api-direction-discrepancy.md
+
+IMPLEMENTATION:
+- /workspace/theta_gamma/model.py
+- /workspace/theta_gamma/analysis.py
+- /workspace/theta_gamma/experiment.py
+- /workspace/theta_gamma/launch.py
+- /workspace/theta_gamma/assess_results.py
+- /workspace/theta_gamma/plot_results.py
+
+TESTS:
+- /workspace/theta_gamma/test_checks.py
+- /workspace/theta_gamma/evidence/tests.json
+- /workspace/theta_gamma/evidence/test.log
+- /workspace/theta_gamma/evidence/tests-attempt1.log
+- /workspace/theta_gamma/evidence/tests-attempt2.log
+- /workspace/theta_gamma/evidence/tests-attempt3.log
+- /workspace/theta_gamma/evidence/tests-attempt4.log
+- /workspace/theta_gamma/evidence/assessment-attempt1.log
+- /workspace/theta_gamma/evidence/assessment.log
+- /workspace/theta_gamma/evidence/integrity.json
+
+ACCELERATION_AND_PARITY:
+- /workspace/theta_gamma/evidence/acceleration.md
+- /workspace/theta_gamma/runs/production-02/metrics/resources.json
+- /workspace/theta_gamma/runs/production-02/metrics/convergence.npz
+- /workspace/theta_gamma/runs/production-02/raw/refinement.npz
+- /workspace/theta_gamma/runs/production-02/metrics/refinement.npz
+
+EXPERIMENT_RUN:
+- /workspace/theta_gamma/runs/production-02/RUN_SPEC.md
+- /workspace/theta_gamma/runs/production-02/config.json
+- /workspace/theta_gamma/runs/production-02/environment.json
+- /workspace/theta_gamma/runs/production-02/provenance.json
+- /workspace/theta_gamma/runs/production-02/command.txt
+- /workspace/theta_gamma/runs/production-02/run.log
+- /workspace/theta_gamma/runs/production-02/status.json
+- /workspace/theta_gamma/runs/production-02/artifact_manifest.json
+- /workspace/theta_gamma/runs/production-02/raw/trajectories.npz
+- /workspace/theta_gamma/runs/production-02/raw/observations.npz
+- /workspace/theta_gamma/runs/production-02/metrics/analysis.npz
+- /workspace/theta_gamma/runs/production-02/metrics/decision.npz
+- /workspace/theta_gamma/runs/production-02/metrics/summary.json
+- /workspace/theta_gamma/runs/calibration-01/config.json
+- /workspace/theta_gamma/runs/calibration-01/provenance.json
+- /workspace/theta_gamma/runs/calibration-01/run.log
+- /workspace/theta_gamma/runs/calibration-01/artifact_manifest.json
+- /workspace/theta_gamma/runs/calibration-01/raw/calibration.npz
+- /workspace/theta_gamma/runs/calibration-01/metrics/calibration.npz
+- /workspace/theta_gamma/runs/calibration-01/selection.json
+- /workspace/theta_gamma/runs/smoke-01/RUN_SPEC.md
+- /workspace/theta_gamma/runs/smoke-01/run.log
+- /workspace/theta_gamma/runs/smoke-01/metrics/smoke.json
+- /workspace/theta_gamma/runs/production-01/provenance.json
+- /workspace/theta_gamma/runs/production-01/metrics/summary.json
+- /workspace/theta_gamma/runs/production-01/raw/trajectories.npz
+- /workspace/theta_gamma/runs/production-01/metrics/analysis.npz
+- /workspace/theta_gamma/evidence/run-lineage.md
+
+RESULT_ASSESSMENT:
+- /workspace/theta_gamma/evidence/result-assessment.md
+- /workspace/theta_gamma/evidence/sweep.csv
+- /workspace/theta_gamma/evidence/R_map_lane0.csv
+- /workspace/theta_gamma/report.md
+- /workspace/theta_gamma/FIGURE_MANIFEST.md
+- /workspace/theta_gamma/evidence/figure-range-correction.md
+- /workspace/theta_gamma/figures/diagnostic_traces.png
+- /workspace/theta_gamma/figures/diagnostic_phase_and_spectra.png
+- /workspace/theta_gamma/figures/diagnostic_parameter_sweep.png
+- /workspace/theta_gamma/figures/diagnostic_plotted_values.npz
+
+TRAINING_OR_FITTING_EVIDENCE:
+- none
+
+PRIOR_REVIEW_EVIDENCE:
+- none
+
+Read every listed artifact and review this iteration using the injected reviewer contract. Do not edit files. Return only the required Markdown report.

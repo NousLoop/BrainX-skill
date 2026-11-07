@@ -1,0 +1,47 @@
+{
+  "stage": "smoke",
+  "calibration_drives": [
+    0.8,
+    1.2,
+    1.6,
+    2.0,
+    2.4,
+    2.8
+  ],
+  "calibration_gains": [
+    0.8,
+    1.0,
+    1.2
+  ],
+  "depths": [
+    0.0,
+    0.6
+  ],
+  "relative_gains": [
+    0.8,
+    1.0
+  ],
+  "duration_s": 0.2,
+  "burn_s": 0.0,
+  "initial": [
+    [
+      0.1,
+      0.1
+    ],
+    [
+      0.12,
+      0.08
+    ],
+    [
+      0.08,
+      0.12
+    ]
+  ],
+  "observation_seeds": [
+    11,
+    23,
+    37
+  ],
+  "drive": 1.2,
+  "base_gain": 1.0
+}

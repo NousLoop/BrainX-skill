@@ -1,0 +1,21 @@
+{
+  "exact_final_diagnostic_numeric_parity": true,
+  "pdf_structure": {
+    "final_parameter_sweep.pdf": {
+      "valid_pdf_structure": true,
+      "bytes": 36824,
+      "sha256": "086d86693c97be4baf1ba6f560252b0ff99018d8c80f73d52e6bee9e90660d55"
+    },
+    "final_phase_and_spectra.pdf": {
+      "valid_pdf_structure": true,
+      "bytes": 35404,
+      "sha256": "0f68dc168a91751874a9eee34336aecf08d4779a083f340c051eef0db619c1b2"
+    },
+    "final_traces.pdf": {
+      "valid_pdf_structure": true,
+      "bytes": 72908,
+      "sha256": "56ef17f51703c1bb2693c97c36375a13b704c492166921056003ab99b5859b7e"
+    }
+  },
+  "png_visual_inspection": "All three final PNGs inspected; axes, units, conditions, legends and color limits match saved source values; no clipped results."
+}

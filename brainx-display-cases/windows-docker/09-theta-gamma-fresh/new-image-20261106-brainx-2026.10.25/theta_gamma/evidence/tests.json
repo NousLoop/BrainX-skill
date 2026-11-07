@@ -1,0 +1,38 @@
+{
+  "equations_per_ms": {
+    "actual": [
+      0.032335390008393146,
+      -0.0028485292457671157
+    ],
+    "expected": [
+      0.03233539000839314,
+      -0.0028485292457671157
+    ]
+  },
+  "one_step_derivative_witness_per_ms": [
+    0.03233644737643537,
+    -0.00284830103544631
+  ],
+  "state_shape_reset_time": {
+    "shape": [
+      20,
+      2,
+      2
+    ],
+    "first_post_update_s": 0.0001,
+    "reset_exact": true
+  },
+  "native_scalar_and_jit_parity": true,
+  "metric_controls": {
+    "AM_expected_R": 0.3,
+    "AM_measured_R": 0.2999976683390799,
+    "constant_R": 8.232029955273521e-07,
+    "null95": 0.06459688870470022,
+    "filter_max_error_vs_scipy": 1.149080830487037e-14,
+    "cycles": 60
+  },
+  "global_shift_invariance": true,
+  "surrogate_exact_rotation_max_error": 2.7755575615628914e-17,
+  "paired_observation_contract": true,
+  "PASS": true
+}

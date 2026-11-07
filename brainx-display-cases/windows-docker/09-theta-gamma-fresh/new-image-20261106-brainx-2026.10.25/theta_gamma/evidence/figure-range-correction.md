@@ -1,0 +1,3 @@
+# Figure range correction
+
+The preproduction plotting source fixed the R map at [0,0.5] and ΔR at [−0.5,0.5]. The first diagnostic render clipped the largest samples (R≈0.62), so the display was corrected to full mathematical ranges [0,1] and [−1,1]. This is an explicitly disclosed post-binding display correction; all original first renders are retained in figures/first-render. No condition, threshold, displayed scientific case, numerical value, normalization or conclusion was changed. The source-value NPZ and full raw results retain every value. The locked specification's preference for frozen limits does not justify concealing out-of-range values.

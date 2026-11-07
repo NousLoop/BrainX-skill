@@ -1,0 +1,5 @@
+# Cross-population constructor direction discrepancy
+
+Before any scientific run, the equation test at E=.12, I=.08, P=1.2 detected that constructor keywords wEI and wIE have opposite effects to the current public API narrative in this installed environment. The uncorrected derivatives per ms were (0.019391183241013535, −0.005476133917270622); the locked scientific equations require (0.03233539000839314, −0.0028485292457671157). The observed values equal precisely the documented equations with the two cross weights exchanged.
+
+The compatibility adapter passes constructor wIE=12g and wEI=15g; the *scientific* weights remain I→E=12g and E→I=15g. It is covered by independent analytic derivative tests and later one-step checks. No installed source, docstrings, signatures or object internals were inspected. Original equation test failure remains in tests-attempt4.log (tests-attempt3.log was the same failed check before diagnostic values were added). This discrepancy is part of environment provenance and must be revalidated when porting.
