@@ -112,7 +112,7 @@ Every step must call the learner exactly once, including masked cue and delay st
 
 Use `etrace_grad` for a sequence with per-step masks, outputs, or a single accumulated gradient update.
 
-Open `Drtrl.md` or `pp_pprop workflow.md` for estimator-specific training. Open `skills/package-skills/brainstate/references/collective_model_operations.md` when an explicit mapped lifecycle is unavoidable.
+Open `Drtrl.md` or `pp_pprop workflow.md` for estimator-specific training. Open `brainstate` → `references/collective_model_operations.md` when an explicit mapped lifecycle is unavoidable.
 
 ## Sources
 

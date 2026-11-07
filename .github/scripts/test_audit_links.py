@@ -51,6 +51,58 @@ class AuditLinksTest(unittest.TestCase):
             'absent': 'missing_candidate',
         })
 
+    def test_skill_routes_follow_published_roots(self):
+        with TemporaryDirectory() as directory:
+            nested = Path(directory).resolve() / 'nested'
+            nested.mkdir()
+            root = nested / '..'
+            (root / 'manifest.json').write_text('{"skills":["workflow","model"]}', encoding='utf-8')
+            workflow = root / 'skills/workflow'
+            model = root / 'skills/package-skills/model'
+            (workflow / 'references').mkdir(parents=True)
+            (model / 'references').mkdir(parents=True)
+            (workflow / 'SKILL.md').touch()
+            (model / 'SKILL.md').touch()
+            (model / 'references/input.md').touch()
+            page = workflow / 'references/start.md'
+            page.write_text(
+                '`model` → `references/input.md`\n'
+                '`model` → `references/absent.md`\n'
+                '`references/start.md`\n'
+                '`model` → `SKILL.md`\n'
+                '`unknown` → `SKILL.md`\n'
+                '`skills/package-skills/model/SKILL.md`\n'
+                '`model` →\n'
+                '  `references/input.md`\n'
+                '`unknown`\n'
+                '  -> `SKILL.md`\n'
+                '\n'
+                'Diagram label: `unknown` →\n'
+                '\n'
+                '`references/start.md` is a local route.\n'
+                '```markdown\n'
+                '`unknown` → `SKILL.md`\n'
+                '`skills/package-skills/model/SKILL.md`\n'
+                '```\n'
+                '~~~text\n'
+                '`unknown` -> `SKILL.md`\n'
+                '~~~\n'
+                '`model` → `references/after-fence.md`\n',
+                encoding='utf-8',
+            )
+            self.assertEqual(AUDIT['missing_skill_routes'](root, [page]), [
+                {'file': 'skills/workflow/references/start.md', 'line': 2,
+                 'skill': 'model', 'target': 'references/absent.md'},
+                {'file': 'skills/workflow/references/start.md', 'line': 5,
+                 'skill': 'unknown', 'target': 'SKILL.md'},
+                {'file': 'skills/workflow/references/start.md', 'line': 6,
+                 'skill': 'workflow', 'target': 'skills/package-skills/model/SKILL.md'},
+                {'file': 'skills/workflow/references/start.md', 'line': 10,
+                 'skill': 'unknown', 'target': 'SKILL.md'},
+                {'file': 'skills/workflow/references/start.md', 'line': 22,
+                 'skill': 'model', 'target': 'references/after-fence.md'},
+            ])
+
 
 if __name__ == '__main__':
     unittest.main()

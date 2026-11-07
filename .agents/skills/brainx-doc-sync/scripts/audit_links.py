@@ -28,6 +28,13 @@ URL = re.compile(r'''https?://[^\s<>`"'|]+''')
 INLINE_LINK = re.compile(
     r'(?<!!)\[[^\]\n]*\]\(\s*(?:<([^>\n]+)>|((?:[^\s()<>]|\([^\s()]*\))+))(?=[\s)])'
 )
+SOFT_WRAP = r'[ \t]*(?:\n[ \t]*)?'
+SKILL_ROUTE = re.compile(
+    r'`(?P<checkout>skills/(?:package-skills/)?[^/`\r\n]+/[^`\r\n]+\.(?:md|py|sh))`'
+    rf'|(?:`(?P<skill>[a-z][a-z0-9-]*)`{SOFT_WRAP}(?:→|->){SOFT_WRAP})?'
+    r'`(?P<target>(?:references/|scripts/)[^`\r\n]+\.(?:md|py|sh)|SKILL\.md)`'
+)
+FENCE = re.compile(r'^ {0,3}(`{3,}|~{3,})(.*)$')
 MAX_HTML_BYTES = 2 * 1024 * 1024
 
 
@@ -66,22 +73,28 @@ def inventory(root, files):
     return refs, skipped
 
 
+def markdown_prose_lines(text):
+    """Blank fenced code lines while preserving source line numbers."""
+    fenced = None
+    for line in text.splitlines(keepends=True):
+        fence = FENCE.match(line)
+        if fence:
+            marker, rest = fence.groups()
+            if fenced is None:
+                fenced = marker
+            elif marker.startswith(fenced) and not rest.strip():
+                fenced = None
+        if fence or fenced is not None:
+            yield '\n' if line.endswith('\n') else ''
+        else:
+            yield line
+
+
 def missing_local_targets(root, files):
     missing = []
     for path in files:
-        fenced = None
-        for line, text in enumerate(path.read_text(encoding='utf-8-sig').splitlines(), 1):
-            fence = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$', text)
-            if fence:
-                marker, rest = fence.groups()
-                if fenced is None:
-                    fenced = marker
-                    continue
-                if marker.startswith(fenced) and not rest.strip():
-                    fenced = None
-                    continue
-            if fenced is not None:
-                continue
+        lines = markdown_prose_lines(path.read_text(encoding='utf-8-sig'))
+        for line, text in enumerate(lines, 1):
             prose = re.sub(r'(`+).*?\1', '', text)
             for match in INLINE_LINK.finditer(prose):
                 target = match[1] or match[2]
@@ -98,6 +111,32 @@ def missing_local_targets(root, files):
                                         'line': line, 'target': parts.path})
                 except (OSError, ValueError, RuntimeError):
                     continue
+    return missing
+
+
+def missing_skill_routes(root, files):
+    """Resolve backtick routes against the skill roots used by the installer."""
+    names = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))['skills']
+    skills = {p.parent.name: p.parent for p in (root / 'skills').rglob('SKILL.md')
+              if p.parent.name in names}
+    missing = []
+    for path in files:
+        owner = next((parent for parent in path.parents if parent in skills.values()), None)
+        if owner is None or path.name == 'THIRD_PARTY_NOTICES.md':
+            continue
+        text = ''.join(markdown_prose_lines(path.read_text(encoding='utf-8-sig')))
+        file = path.relative_to(root).as_posix()
+        for match in SKILL_ROUTE.finditer(text):
+            name = match['skill'] or owner.name
+            group = 'checkout' if match['checkout'] else 'target'
+            target = match[group]
+            if group == 'target' and name in skills:
+                base = skills[name].resolve()
+                resolved = (base / target).resolve()
+                if resolved.is_relative_to(base) and resolved.is_file():
+                    continue
+            line = text.count('\n', 0, match.start(group)) + 1
+            missing.append({'file': file, 'line': line, 'skill': name, 'target': target})
     return missing
 
 
@@ -227,6 +266,7 @@ def main():
                       'urls_probed': len(selected), 'skipped_url_occurrences': len(skipped),
                       'skipped_locations': skipped,
                       'missing_local_targets': missing_local_targets(root, files),
+                      'missing_skill_routes': missing_skill_routes(root, files),
                       'entries': entries}, indent=2, ensure_ascii=True))
 
 

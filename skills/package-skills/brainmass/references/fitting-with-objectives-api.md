@@ -93,9 +93,9 @@ For scientific use, make `predict` return the observation space that matches the
 
 Gradient-free backends need a finite box for every fitted parameter. Derive it from a finite parameter transform such as `SigmoidT(low, high)` or pass `search_space={name: (low, high)}`.
 
-Open `scripts/gradient-free-fitting.py` for the complete shared-objective workflow with Nevergrad differential evolution and SciPy Nelder-Mead. Do not implement gradient-free fitting as only a `backend=` substitution because bounds and optimizer arguments also change.
+Open `references/scripts/gradient-free-fitting.py` for the complete shared-objective workflow with Nevergrad differential evolution and SciPy Nelder-Mead. Do not implement gradient-free fitting as only a `backend=` substitution because bounds and optimizer arguments also change.
 
-Open `scripts/eeg-fitting-with-gradients.py` when the task needs a complete Jansen-Rit workflow that constructs a phase-invariant EEG target, fits the connectivity parameter with gradients, and compares the recovered trace.
+Open `references/scripts/eeg-fitting-with-gradients.py` when the task needs a complete Jansen-Rit workflow that constructs a phase-invariant EEG target, fits the connectivity parameter with gradients, and compares the recovered trace.
 
 Open `brainstate/parameter-constraints-regularization.md` when a fitted
 parameter needs a valid-domain transform, penalty, or modeling prior; that

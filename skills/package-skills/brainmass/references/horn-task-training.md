@@ -166,7 +166,7 @@ for epoch in range(n_epoch):
 
 Validate that chance-level accuracy, label balance, loss reduction, and held-out improvement are all consistent with the task. A final accuracy alone does not reveal leakage or class imbalance.
 
-Open `scripts/horn-cognitive-task-training.py` when the task needs the complete delayed-match dataset, HORN network, compiled training loop, held-out evaluation, and learning curves.
+Open `references/scripts/horn-cognitive-task-training.py` when the task needs the complete delayed-match dataset, HORN network, compiled training loop, held-out evaluation, and learning curves.
 
 ## Choose task-training variations
 
