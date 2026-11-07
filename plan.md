@@ -17,6 +17,8 @@ This ensures two advantage: first, it avoids the agent from opening useless cont
 
 
 
+Use skill-root-relative paths inside published Markdown. For a cross-skill route, name the installed skill and then the path inside its root, such as `brainstate` → `references/simulation-environment.md`. Keep checkout paths in authoring documentation.
+
 ## 1. Primary Skill List
 
 ```text
@@ -81,7 +83,7 @@ Use this workflow after `brainx-general-guard` for any end-to-end modeling proje
 
 #### Scientific design and researcher interaction
 
-Run a mandatory clarification gate in step 0 after inspecting the request, repository, supplied data, and referenced specifications. Build the decision frontier of unanswered choices that could change the model, data interpretation, reproducibility, validation, or acceptance boundary. Ask one dependent question at a time, include why it matters and a recommended answer, and wait in the current conversation when the researcher has not fixed or delegated a consequential choice. Treat `choose for me` or an explicit default confirmation as delegation; treat `I don't know` as unresolved. Do not open step-1 skills, implement, run experiments, or lock the specification while the frontier is non-empty. Record pending questions in a draft `NeuroSpecification.md` and a blocked step-0 checkpoint; advance only after explicit answers, delegation, and specification approval. A proposed default never silently closes a consequential question.
+Run a mandatory clarification gate in step 0 after inspecting the request, repository, supplied data, and referenced specifications. Build the decision frontier of unanswered choices that could change the model, data interpretation, reproducibility, validation, or acceptance boundary. Ask one dependent question at a time, include why it matters and a recommended answer, and wait in the current conversation when the researcher has not fixed or delegated a consequential choice. Treat `choose for me` or an explicit default confirmation as delegation; treat `I don't know` as unresolved. Do not open step-1 skills, implement, run experiments, or lock the specification while the frontier is non-empty. Record pending questions in a draft `NeuroSpecification.md` and a blocked step-0 checkpoint; advance once every consequential choice is resolved or delegated and the researcher has authorized proceeding with the specification. A proposed default never silently closes a consequential question.
 
 Base clarification on unresolved decisions in the request and supplied artifacts: ask about consequential computational settings when a model or method is specified, and experimental facts when only phenomena are described. Apply both approaches to mixed requests. Preserve user-fixed choices, honor explicit delegation, and distinguish proposed defaults from confirmed settings.
 
@@ -178,9 +180,9 @@ step-1 refusal restudy, not standalone stages:
 ```text
 brainx-modeling-loop/references/
 ├── mechanism-comparison.md
+├── multiscale-coupling.md
 ├── training-workflow.md
 ├── parameter-fitting-workflow.md
-├── multiscale-coupling.md
 │   └── parameter-fitting-workflow/
 │       └── scripts/fitting_hh_neuron.py
 ├── run-experiment.md
@@ -481,7 +483,7 @@ brainstate/
 ├── brainstate-control-flow-patterns.md [shared]
 ├── randomness-and-reproducibility.md
 ├── brainstate-transformed-diagnostics.md
-└── braintools/optimizers.md [shared]
+└── braintools-optimizer-reference.md [BrainState training lifecycle]
 ```
 
 ##### First-layer references
@@ -504,6 +506,7 @@ brainstate/
 | `skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md` | State axes, ensembles, sweeps, stochastic vmap, `in_states`, and `out_states` | [Vectorization](https://brainx.chaobrain.com/brainstate/tutorials/transformations/03_vectorization.html), [Randomness](https://brainx.chaobrain.com/brainstate/tutorials/core/08_randomness.html) |
 | `skills/package-skills/brainstate/references/brainstate/brainstate-control-flow-patterns.md` | Transform-safe loops, scans, branches, checkpointed control flow, and memory-efficient training through long rollouts | [Control Flow](https://brainx.chaobrain.com/brainstate/tutorials/transformations/05_control_flow.html), [long-rollout checkpoint training](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-long-rollouts-checkpoint.html) |
 | `skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md` | Runtime checks, transformed debugging, NaN/Inf checks, callbacks, traced values, and recurring failure diagnosis | [Error Handling and Checks](https://brainx.chaobrain.com/brainstate/tutorials/transformations/06_error_handling_and_checks.html), [Debugging](https://brainx.chaobrain.com/brainstate/tutorials/transformations/07_debugging.html) |
+| `skills/package-skills/brainstate/references/braintools-optimizer-reference.md` | Choose an optimizer or scheduler, register trainable State, and preserve optimizer State across steps and checkpoints | [BrainTools optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [BrainState training tutorial](https://brainx.chaobrain.com/brainstate/tutorials/core/07_training_and_metrics.html) |
 | `skills/brainx-acceleration/SKILL.md` | Performance, batching, sweeps, memory, GPU, and multi-device work | The acceleration skill plus the transform sources it conditionally opens |
 
 ##### Nested parameter
@@ -1217,42 +1220,18 @@ Open `compiler_internal.md` only after `learner.report` and `learner.graph` cann
 
 Canonical compositions: `jit(scan(step))`, `jit(vmap(run_trial))`, batched-State time scans, mapped ensembles, compiled `grad(loss_over_batch)`, and checkpointed long sequences.
 
-#### Reference Routing
+#### Reference routing
 
-```text
-brainx-acceleration/
-├── brainstate/
-│   ├── brainstate-control-flow-patterns.md
-│   ├── transformation-jit-expansion.md
-│   ├── transformation-vmap-expansion.md
-│   └── transformation-grad-expansion.md
-└── brainstate-randomness-reproducibility/
-    └── randomness-and-reproducibility.md
-        └── advanced-randomness.md
-```
+Keep diagnosis, the canonical rewrite sequence, and parity gates in the acceleration root. Put the detailed audit checklist and axis-specific patterns in `skills/brainx-acceleration/references/audit-and-rewrite-patterns.md`. Keep exact transform and randomness semantics in their owning BrainState references.
 
-- `skills/package-skills/brainstate/SKILL.md` is a required upstream route before nontrivial State-aware rewrites.
-
-This skill owns duplicated local transform and randomness references for the exact semantics it audits.
-
-##### First-layer routes
-
-| Route | Open when | Crafting source |
-|---|---|---|
-| `skills/package-skills/brainstate/SKILL.md` | Any nontrivial state-aware rewrite | Owning BrainState skill |
-| `skills/brainx-acceleration/references/brainstate/transformation-jit-expansion.md` | JIT boundaries, static args, recompilation, or benchmarking | JIT and Transformation Essentials sources |
-| `skills/brainx-acceleration/references/brainstate/transformation-vmap-expansion.md` | Batch, trial, ensemble, State-axis, or RNG mapping | Vectorization and Randomness sources |
-| `skills/brainx-acceleration/references/brainstate/transformation-grad-expansion.md` | Finite-difference replacement, training gradients, or ParamState differentiation | Autodiff, Training, and Parameters sources |
-| `skills/brainx-acceleration/references/brainstate/brainstate-control-flow-patterns.md` | Time/recurrent loops, scan/for-loop/while-loop, or checkpointing | Control Flow source |
-| `skills/brainx-acceleration/references/brainstate-randomness-reproducibility/randomness-and-reproducibility.md` | Seed/key restoration or independent mapped randomness | Randomness corpus |
-
-##### Nested randomness
-
-The acceleration skill and its transform references route only to the local randomness parent. That parent alone selects:
-
-| Nested child | Open when | Crafting source |
-|---|---|---|
-| `skills/brainx-acceleration/references/brainstate-randomness-reproducibility/advanced-randomness.md` | Advanced stream, mapped-key, or restoration behavior | Same randomness corpus |
+| Route | Open when |
+|---|---|
+| `brainstate` → `SKILL.md` | Before a nontrivial State-aware rewrite. |
+| `brainstate` → `references/brainstate/transformation-jit-expansion.md` | JIT boundaries, static arguments, recompilation, or benchmarking. |
+| `brainstate` → `references/brainstate/transformation-vmap-expansion.md` | Batch, trial, ensemble, State-axis, or RNG mapping. |
+| `brainstate` → `references/brainstate/transformation-grad-expansion.md` | Parameter gradients or finite-difference replacement. |
+| `brainstate` → `references/brainstate/brainstate-control-flow-patterns.md` | Time loops, transformed branches, or checkpointing. |
+| `brainstate` → `references/brainstate/randomness-and-reproducibility.md` | Independent random streams, key restoration, or replay. |
 
 ---
 
@@ -1344,8 +1323,6 @@ Do not duplicate these package-specific workflows inside `skills/brainx-visualiz
 #### Purpose and boundary
 
 - Open first for every BrainX modeling, simulation, training, review, debugging, or optimization task.
-When represented scales exchange signals, open `brainx-modeling-loop` → `references/multiscale-coupling.md` for exchanged observables, units, axes, clocks, and causal order.
-
 - When the request is an end-to-end project (new or changed model, mechanism comparison, simulation or fitting study, experiment-derived prediction, or scientific result report), open `brainx-modeling-loop` immediately after this guard and complete its step-0 clarification gate before opening package-specific skills. Use this guard alone for focused package or API work whose model design is already fixed.
 - Identify every modeling scale explicitly represented, then open only the package skills that own those scales. Keep the guard active as the cross-cutting implementation layer.
 - Follow: classify represented scales → check only whether required packages are present → study the owning package skills and task-relevant example scripts → reconcile examples with the current root workflow → choose owning-package orchestration → compose absolutely simple code → transform only custom stateful execution → validate scientific behavior.
@@ -1366,6 +1343,8 @@ When represented scales exchange signals, open `brainx-modeling-loop` → `refer
 Use the finest explicitly modeled unit to distinguish adjacent scales: point neurons select BrainPy-State, explicit cellular mechanisms select BrainCell, and aggregate population variables select BrainMass.
 
 Keep the implementation at the selected scale. Do not introduce aggregate population-rate State into a point-neuron model, or point neurons into an aggregate model, merely to simplify execution. When both mechanisms are scientifically represented, treat the task as multiscale and open both owning skills.
+
+When represented scales exchange signals, open `brainx-modeling-loop` → `references/multiscale-coupling.md` for exchanged observables, units, axes, clocks, and causal order.
 
 #### Installed-package inspection boundary
 
@@ -1443,7 +1422,7 @@ Before a generic library replaces a BrainTools-owned operation, require an API-g
 - Meta-package extras: CPU, CUDA 12/13, TPU.
 - Existing environment-manager preservation.
 - Mandatory human approval for installation.
-- Python and JAX version match
+- Match the Python interpreter and JAX constraints to the selected release. BrainX 2026.10.25 requires Python 3.12 or newer. Historical releases retain their own Python floors.
 
 #### Canonical Workflow Scripts Included in the Skill
 

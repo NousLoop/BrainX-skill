@@ -1,6 +1,6 @@
 # BrainState constrained and regularized parameters
 
-Use this reference after `skills/package-skills/brainstate/SKILL.md` has selected
+Use this reference after `brainstate` → `SKILL.md` has selected
 `brainstate.nn.Param` for a value that needs a valid-domain transform, a
 regularization penalty, a modeling prior, or fixed parameter-like storage. It
 owns the operational workflow and common patterns. Open
@@ -20,7 +20,7 @@ Keep `brainstate.nn` parameter transforms separate from execution transforms suc
 
 ## Parameter contract
 
-A `ParamState` is a bare trainable array. `brainstate.nn.Param` layers two orthogonal concerns on top of it: a constraint transform and a regularization term.
+A `ParamState` holds a trainable array or PyTree. `brainstate.nn.Param` layers two orthogonal concerns on top of it: a constraint transform and a regularization term.
 
 - `param.val` is the underlying `ParamState`; optimizers update its unconstrained array.
 - `param.value()` applies the forward transform and returns the constrained model-space value. With the default `IdentityT`, constrained and unconstrained values coincide.
@@ -44,6 +44,7 @@ This workflow keeps optimizer targets in unconstrained `ParamState`s, reads tran
 import brainstate
 from brainstate import nn
 import brainunit as u
+import braintools
 import jax.numpy as jnp
 
 
@@ -68,6 +69,8 @@ class ConstrainedLinear(nn.Module):
 
 model = ConstrainedLinear(4, 2)
 params = model.states(brainstate.ParamState)
+optimizer = braintools.optim.SGD(lr=0.1)
+optimizer.register_trainable_weights(params)
 x = brainstate.random.randn(16, 4)
 y = brainstate.random.randn(16, 2)
 
@@ -84,8 +87,7 @@ def train_step():
         params,
         return_value=True,
     )()
-    for key in params:
-        params[key].value -= 0.1 * grads[key]
+    optimizer.update(grads)
     return loss
 ```
 

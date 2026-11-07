@@ -1,6 +1,6 @@
 # Brainstate randomness and reproducibility
 
-Use this reference after `skills/package-skills/brainstate/SKILL.md` for advanced randomness. It covers independent streams, stochastic transforms, key control, parallel keys, replay, and checkpointing.
+Use this reference after `SKILL.md` for advanced randomness. It covers independent streams, stochastic transforms, key control, parallel keys, replay, and checkpointing.
 
 The root skill owns `brainstate.random.DEFAULT` and ordinary seeding. This reference owns advanced stream and key control.
 

@@ -31,6 +31,12 @@ page. A missing candidate can still require manual verification for a
 client-rendered page or a redirect that changes the fragment. Exit code zero
 means the scan completed.
 
+Review `missing_skill_routes` for backtick paths in published skill Markdown.
+Use skill-root-relative `references/...` and `scripts/...` within a skill.
+Prefix a cross-skill path with the owning skill name and an arrow. Keep wrapped
+routes in one paragraph. The check uses manifest skill roots, skips fenced code,
+flags checkout-only paths, and reports the target line.
+
 ## Record one claim with its evidence
 
 For each substantive edit, record the file and claim, target release, official

@@ -27,7 +27,7 @@ Use this minimum report header as soon as the project starts, then expand it as 
 - Next action: <exact loop step>
 ```
 
-Use `skills/brainx-visualization/SKILL.md` in `diagnostic` mode for unaccepted or incomplete evidence when inspectable data exist. Produce at least one diagnostic figure and `FIGURE_MANIFEST.md` for a reportable run with numeric or event data. When no plot-worthy data exist, record `Figure status: unavailable` and the exact missing artifact or failed prerequisite in both `report.md` and `FIGURE_MANIFEST.md`; never fabricate a result figure. Use `final` mode only after a step-5 `PASS` and link each final figure beside its explanation in `report.md`.
+Use diagnostic closure before returning with unaccepted or incomplete work. Enter final visualization only after a step-5 `PASS`.
 
 ## Get started
 
@@ -109,7 +109,7 @@ Apply this gate before opening step-1 package skills. **Hard stop:** if the fron
 
 Ask one question at a time, ordered by dependency: settle a parent choice before asking decisions that depend on it. Each question must use the researcher's terminology and state why the answer changes the model or the interpretation. Give a recommended answer when a defensible default exists, show the relevant alternatives, and allow the researcher to say `choose for me`, `use the recommended default`, or `I don't know`. Treat the first two replies as explicit delegation or confirmation and record the resulting choice. Treat `I don't know` as unresolved: do not guess or advance; offer a small exploratory branch only when the researcher authorizes it. If a question can be answered by reading the repository or data, inspect them instead of asking.
 
-Write or update `NeuroSpecification.md` as `Status: draft` while the frontier is non-empty. Record each pending decision, the question asked, and any proposed default under `Open decisions and handling`; set `Researcher approval: pending`. After all consequential choices are answered, explicitly delegated, or confirmed, show the resulting specification and ask for approval to lock it unless the researcher already gave an unambiguous lock/continue instruction. Only then set `Status: locked`, record the approval evidence, create or update `report.md` with `Status: draft`, and proceed to the optional literature gate. If the researcher has not replied, end the turn at this gate and preserve the pending state; do not advance on silence or a guessed default.
+Draft `NeuroSpecification.md` even when no consequential choice is open. Record each pending decision, question, and proposed default under `Open decisions and handling`, with `Researcher approval: pending`. Lock only after every consequential choice is resolved or explicitly delegated and the researcher authorizes proceeding with the specification. Use existing authorization when it covers the specification. Otherwise show the draft, ask for approval, and preserve the pending state until the researcher responds. Once authorized, set `Status: locked`, record the approval evidence, update `report.md` with `Report status: draft`, and evaluate the literature gate.
 
 Use a compact prompt shape:
 
@@ -375,7 +375,7 @@ Run this closure before returning with unaccepted or incomplete evidence, includ
 
 ## Step 6: Visualize and explain the accepted result
 
-Open `skills/brainx-visualization/SKILL.md` with the review-passed specification, code, run artifacts, results, and accepted scope.
+Open `brainx-visualization` → `SKILL.md` with the review-passed specification, code, run artifacts, results, and accepted scope.
 
 Finalize the existing `report.md` and set `Report status: final`. Preserve the evidence-backed `Scientific outcome` separately. Answer the original research question using the accepted results, distinguish experimental evidence, assumptions, model-derived conclusions, and predictions, and state the remaining limitations. For mechanism comparisons, explain which mechanisms remain compatible and which measurement could distinguish them.
 

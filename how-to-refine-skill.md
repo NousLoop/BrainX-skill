@@ -478,6 +478,10 @@ against the relevant API Reference page indexed by `source_html_references/`.
 Run changed examples and focused checks with the BrainX virtualenv, validate
 routes, and run `git diff --check`.
 
+For documentation smoke checks, run `python .github/scripts/check_skill_examples.py -v`
+with the selected BrainX release. The topology check also requires NetworkX.
+Keep these checks separate from numbered agent evaluations.
+
 ## 6. Run the exact prompt again
 
 Leave `run1/` absent until archival. Set `run_name="run1"`, install the refined
