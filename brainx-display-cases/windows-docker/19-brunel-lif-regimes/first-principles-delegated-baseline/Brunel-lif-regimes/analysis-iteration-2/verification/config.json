@@ -1,0 +1,39 @@
+{
+  "parent_run": "locked-baseline-v2",
+  "mode": "read-only spectral capability verification",
+  "dt_ms": 0.1,
+  "nperseg": 10000,
+  "noverlap": 5000,
+  "primary_window": "periodic Hann",
+  "primary_detrend": "constant per segment",
+  "native_window": "fixed symmetric Hann",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "cases": 16,
+  "no_simulation": true,
+  "no_threshold_changes": true,
+  "input_sha256": {
+    "spectral_api_check.py": "9efe013ff10407c68e856ecee2fb9206fa9f7c0749d1774e66606179645f6523",
+    "NeuroSpecification.md": "20c7419c9ddce8492febff55ce50920bae77d710fdbcce440cca17d4d58f7271",
+    "runs/locked-baseline-v2/metrics.json": "85ae2b6ee2aec8947f9b44282b5eee9e7fe5a918d333156d02d8035700c70277",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-0.npz": "60b14919ee05f43a94f42802fa9eaf5d752d56ea531f88c9d032fbc429789f3d",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-1.npz": "bee4c9ebc0f62fb464f56e193a0d7b7c489040f2737fbce3ad5c5dc129ecb290",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-2.npz": "baa068f3b6da2f00685ce9c1fb0b295727b2cc5df6d0e1646c916618b59f5bda",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-3.npz": "3a8ad1ba66cae7130964de5335f4451ce8ce4fddc2e8acb1506e155a2e122930",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-0.npz": "0a9d7befaab8c4c0716ea5b55c0a7aafbad9f2d84791fc6e0d9bd18aed513323",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-1.npz": "a5a466e1bc484da5a4d42d4af5c9761f86af826a089a60176ad42d3e923c30ff",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-2.npz": "f9821ce0d26a753248e8fc2a440abee16aaa51e45aab2352dda03ee58930b89c",
+    "runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-3.npz": "fb182626a655cb3d060b96345a2fec85caac648b8b73e1dd47826c0ef0b0117b",
+    "runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-0.npz": "3978f707837ea3401b0f5dd38551387a0577415d7d93ad1ab75e8dc9824f72d0",
+    "runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-1.npz": "77b4495f96642deb91236e30a120cbe99f26886cbc17a687acf4e83b4bfc8af4",
+    "runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-2.npz": "91c5e72e9cc871367cbd06d6a8326b294cc351310c43314075407502f997bd42",
+    "runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-3.npz": "f0881be9d5dbca693f9b4b9d57db4c80a7c13e390cdab80896984d45a1de63a0",
+    "runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-0.npz": "960ae965b98ff4e1a12a464ad31660c776e768c9f577e214e05015eb241016b8",
+    "runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-1.npz": "20f9b4103b41b522515aba2e8b9bb9c3cc302acb9b8078a1bf0e9439edae602c",
+    "runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-2.npz": "de3b625aeea1d838b39250c7970d5e2843f6eb178eb7273afb882670d0b065b0",
+    "runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-3.npz": "b97372dff3e68e01b423ef6f1434bd45ce56a6a97feed8d944be102a0b495e89"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "ne": 10000,
+  "ni": 2500,
+  "steps": 500,
+  "dt_ms": 0.1,
+  "graph_checks": [
+    {
+      "source_offset": 0,
+      "source_size": 10000,
+      "degree": 1000,
+      "edges": 12500000,
+      "unique": true,
+      "no_autapse": true,
+      "exact_indegree": true
+    },
+    {
+      "source_offset": 10000,
+      "source_size": 2500,
+      "degree": 250,
+      "edges": 3125000,
+      "unique": true,
+      "no_autapse": true,
+      "exact_indegree": true
+    }
+  ],
+  "cold_seconds": 2.9795163329999923,
+  "warm_seconds": 1.7347265200005495,
+  "spikes": 208350,
+  "exact_replay": true,
+  "finite": true,
+  "estimate_4000ms_seconds": 138.77812160004396
+}

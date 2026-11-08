@@ -1,0 +1,13 @@
+{
+  "verdict": "PASS",
+  "scientific_outcome": "PARTIALLY_SUPPORTED",
+  "run_dir": "/workspace/runs/iteration-2",
+  "review_file": "reviews/iteration-2.md",
+  "review_sha256": "880ebf77f61dad13ad23429204a74d46949775e9dbbc4dec445f68eb897f735f",
+  "threadId": "01a1ba0c-b2b2-72f3-a630-94c4a387dbde",
+  "scope": "Unchanged full-size model and all 16 production runs from baseline-v1; corrected physical-unit BrainTools spectral analysis in iteration-2, fixture preservation and all parity evidence; exact frozen decisions retained.",
+  "manifest_sha256": "efb09af48db12c78255ebe56f35418ff79425865f85e357ee10152eedb20cba1",
+  "model_sha256": "a2c7b9b1dc5000670fb2d0f03d7debdb6c3ba2c673cfa23e30d770531e284e9c",
+  "analysis_sha256": "63b6d409f5e0b64949a858031f5c156224a19d3e9984b70eb2845393c0ff8a9a",
+  "specification_sha256": "0de19a9eb0343026c316c417ef1599449ad658aa7972cc86e51e87b4584ee530"
+}

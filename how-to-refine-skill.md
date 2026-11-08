@@ -37,6 +37,14 @@ writes into an empty disposable workspace containing no case history.
 After the process exits, copy its workspace and event log unchanged into the
 new `runN/`, then let the reviewing agent add the diagnosis there.
 
+On Windows, container-absolute symlinks may not resolve through host `cp`.
+Use the launcher's Linux archiver: preserve regular-file bytes and exact link
+definitions in `.harness-archive/`, and distinguish materialized Windows views
+from canonical link objects. Reconstruct the declared tree in Linux before
+replay. If only archival fails, retain the evaluator receipt and failed copy,
+recover without another model call, and record the separate launcher and
+recovery statuses; do not repair scientific files or conceal the interruption.
+
 Numbered runs are refinement checkpoints, not repeated samples of one skill
 snapshot. Follow this order without skipping or reordering steps:
 

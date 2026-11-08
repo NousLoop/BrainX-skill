@@ -1,0 +1,10 @@
+{
+  "pass_": true,
+  "figures": 5,
+  "plotted_array_keys": 77,
+  "exact_diagnostic_data_parity": true,
+  "figure_hashes_match": true,
+  "accepted_run": "runs/iteration-2",
+  "visual_inspection": "All five final PNGs inspected: nonblank, legible, unclipped; same fixed time/sample and scientific arrays as reviewed diagnostics.",
+  "local_report_evidence_links_exist": true
+}

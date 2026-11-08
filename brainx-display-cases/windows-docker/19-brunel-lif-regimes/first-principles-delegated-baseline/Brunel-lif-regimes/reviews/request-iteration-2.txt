@@ -1,0 +1,177 @@
+Review completed BrainX iteration 2.
+
+PROJECT_ROOT: /workspace/Brunel-lif-regimes
+ACTIVE_COVERAGE: none
+
+RESEARCHER RESTRICTION (applies equally to this independent review): This is a first-principles exploration using only the user-supplied equations and parameters. Do not search for or consult papers, scientific example scripts, existing scientific model implementations, open-source scientific code, installed BrainX source code, or a remembered target protocol. Installed skill instructions and public API contract documentation may be used ONLY for library mechanics, not scientific example solutions. Derive scientific judgments from the supplied data, locked specification, equations and actual archived evidence. All unspecified model, protocol, numerical and decision-rule choices were explicitly delegated by the researcher, who authorized locking and executing without another approval. No four-label success is required: unsupported/inconclusive requested labels are valid outcomes.
+
+Original simulation scope (unchanged): 12 full-size primary runs (three graph seeds) and four predeclared half-dt checks; all 16 complete. Primary requested outcomes: supported / inconclusive / unsupported / inconclusive. Numerical regularity sensitivity is explicitly reported, not hidden. The initial parent execution failed during second-condition compilation; its unfavorable evidence is preserved below. Eager public-operator initialization fixes that execution error, with exact first full-run trajectory parity. Root checks.py adds a target-voltage arrival assertion beyond the immutable pre-launch test snapshot; scientific simulation code is unchanged. Proposed next action is final figure release and reporting only if review passes.
+
+SPECIFICATION:
+- /workspace/Brunel-lif-regimes/NeuroSpecification.md
+- /workspace/Brunel-lif-regimes/specification.sha256
+- /workspace/Brunel-lif-regimes/first-principles.md
+
+LOOP_MEMORY:
+- /workspace/Brunel-lif-regimes/brainmodeling-memory.md
+
+BRAINX_STUDY_RECORD:
+- /workspace/Brunel-lif-regimes/brainx-study-record.md
+
+IMPLEMENTATION:
+- /workspace/Brunel-lif-regimes/model.py
+- /workspace/Brunel-lif-regimes/experiment.py
+- /workspace/Brunel-lif-regimes/plot_results.py
+- /workspace/Brunel-lif-regimes/audit_results.py
+- /workspace/Brunel-lif-regimes/write_report.py
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/code/model.py
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/code/experiment.py
+
+TESTS:
+- /workspace/Brunel-lif-regimes/checks.py
+- /workspace/Brunel-lif-regimes/checks.json
+- /workspace/Brunel-lif-regimes/checks-final.log
+- /workspace/Brunel-lif-regimes/analysis_checks.py
+- /workspace/Brunel-lif-regimes/analysis_checks.json
+- /workspace/Brunel-lif-regimes/analysis_checks.log
+- /workspace/Brunel-lif-regimes/checks.log
+- /workspace/Brunel-lif-regimes/checks-attempt-2.log
+- /workspace/Brunel-lif-regimes/checks-attempt-3.log
+- /workspace/Brunel-lif-regimes/checks-attempt-4.log
+- /workspace/Brunel-lif-regimes/checks-attempt-5.log
+- /workspace/Brunel-lif-regimes/checks-attempt-6.log
+- /workspace/Brunel-lif-regimes/checks-attempt-7.log
+- /workspace/Brunel-lif-regimes/checks-attempt-8.log
+
+ACCELERATION_AND_PARITY:
+- /workspace/Brunel-lif-regimes/acceleration.md
+- /workspace/Brunel-lif-regimes/acceleration.json
+- /workspace/Brunel-lif-regimes/corrected_execution_parity.json
+- /workspace/Brunel-lif-regimes/smoke/result.json
+- /workspace/Brunel-lif-regimes/smoke/raw.npz
+- /workspace/Brunel-lif-regimes/smoke-dynamic/result.json
+- /workspace/Brunel-lif-regimes/smoke-dynamic/raw.npz
+
+EXPERIMENT_RUN:
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/RUN_SPEC.md
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/config.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/environment.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/command.txt
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/run.log
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/exit_code
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/status.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/graph_checks.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/sample_neurons.npy
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics.csv
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/assessment.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw_audit.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/numerical_sensitivity.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/artifact_manifest.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.05_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.05_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.05_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.05_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-11_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-29_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-29_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-29_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-29_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-47_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-47_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-47_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/raw/seed-47_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.05_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-11_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-29_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/metrics/seed-47_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/graphs/seed-11.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/graphs/seed-29.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/graphs/seed-47.npz
+- /workspace/Brunel-lif-regimes/runs/locked-baseline/run.log
+- /workspace/Brunel-lif-regimes/runs/locked-baseline/exit_code
+- /workspace/Brunel-lif-regimes/runs/locked-baseline/status.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline/metrics.json
+- /workspace/Brunel-lif-regimes/runs/locked-baseline/raw/seed-11_dt-0.1_condition-0.npz
+
+RESULT_ASSESSMENT:
+- /workspace/Brunel-lif-regimes/result-assessment.md
+- /workspace/Brunel-lif-regimes/report.md
+- /workspace/Brunel-lif-regimes/FIGURE_MANIFEST.md
+- /workspace/Brunel-lif-regimes/diagnostic-figures/source_checks.json
+- /workspace/Brunel-lif-regimes/diagnostic-figures/ei_rates.png
+- /workspace/Brunel-lif-regimes/diagnostic-figures/four_conditions.png
+- /workspace/Brunel-lif-regimes/diagnostic-figures/global_rate_spectrum.png
+- /workspace/Brunel-lif-regimes/diagnostic-figures/isi_cv.png
+- /workspace/Brunel-lif-regimes/diagnostic-figures/step_halving.png
+
+TRAINING_OR_FITTING_EVIDENCE:
+- none
+
+PRIOR_REVIEW_EVIDENCE:
+- /workspace/Brunel-lif-regimes/reviews/iteration-1.md
+
+
+ITERATION_2_CORRECTION_AND_EVIDENCE:
+BX-001 is addressed by using BrainTools spectrogram with periodic Hann and constant segment detrending, then averaging the documented segment axis. The initial direct power_spectral_density capability probe found real differences; an attempted general API-gap rationale was superseded after the routed spectrogram API was checked. Unfavorable probes and the preliminary rationale are preserved. Current experiment.assess uses analysis_spectrum.py; SciPy remains only in the immutable original execution snapshot and explicit parity reference checks. All 16 raw simulations stay unchanged. The final figures read native BrainTools spectra through --spectra analysis-iteration-2/braintools-final.
+All full PSD arrays and P/Q/peaks/labels match the original frozen estimator within tight numerical tolerances; all peak frequencies and per-run labels exactly match. The offline analysis alone uses float64, matching the original NumPy/SciPy host precision; archived neural State stays float32. No specification or scientific estimator changed.
+The prior review independently validated all raw scientific results and requested this narrow API correction; please preserve that accepted scientific scope while assessing the fresh complete iteration. If importing BrainTools requires a Matplotlib cache, a preexisting font cache is available at /workspace/Brunel-lif-regimes/reviewer-mpl-cache; set MPLCONFIGDIR to it before importing. Do not modify scientific artifacts. The researcher no-reference restriction above remains mandatory.
+- /workspace/Brunel-lif-regimes/brainx-study-record-iteration-2.md
+- /workspace/Brunel-lif-regimes/BrainTools-spectral-api-gap.md
+- /workspace/Brunel-lif-regimes/BrainTools-spectral-api-gap-preliminary.md
+- /workspace/Brunel-lif-regimes/analysis_spectrum.py
+- /workspace/Brunel-lif-regimes/recompute_spectra.py
+- /workspace/Brunel-lif-regimes/spectral_api_check.py
+- /workspace/Brunel-lif-regimes/analysis_checks-native.log
+- /workspace/Brunel-lif-regimes/analysis_checks-scipy.json
+- /workspace/Brunel-lif-regimes/api-docs/power_spectral_density.txt
+- /workspace/Brunel-lif-regimes/api-docs/spectrogram.txt
+- /workspace/Brunel-lif-regimes/api-docs/analysis-index.txt
+- /workspace/Brunel-lif-regimes/api-docs/band_power.txt
+- /workspace/Brunel-lif-regimes/api-docs/multitaper_psd.txt
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/verification/RUN_SPEC.md
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/verification/config.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/verification/spectral_api_check.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/verification/PSD_comparison.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/RUN_SPEC.md
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/config.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/command.txt
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/run.log
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/exit_code
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/parity.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/assessment.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/manifest.json
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.05_condition-0.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.05_condition-1.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.05_condition-2.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.05_condition-3.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-11_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-29_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-29_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-29_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-29_dt-0.1_condition-3.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-47_dt-0.1_condition-0.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-47_dt-0.1_condition-1.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-47_dt-0.1_condition-2.npz
+- /workspace/Brunel-lif-regimes/analysis-iteration-2/braintools-final/metrics/seed-47_dt-0.1_condition-3.npz
+
+Read every listed artifact and review this iteration using the injected reviewer contract, while honoring the researcher restriction above. Do not edit files. Return only the required Markdown report.

@@ -1,0 +1,44 @@
+test_braincell_network (__main__.SkillExamples.test_braincell_network) ... ok
+test_braincell_recording (__main__.SkillExamples.test_braincell_recording) ... ok
+test_braincell_sampling_schedule (__main__.SkillExamples.test_braincell_sampling_schedule) ... ok
+test_braincell_topology (__main__.SkillExamples.test_braincell_topology) ... ERROR
+test_brainstate_environment (__main__.SkillExamples.test_brainstate_environment) ... ok
+test_brainstate_training (__main__.SkillExamples.test_brainstate_training) ... ok
+
+======================================================================
+ERROR: test_braincell_topology (__main__.SkillExamples.test_braincell_topology)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/brainx-venv/lib/python3.12/site-packages/braincell/vis/point_topology.py", line 743, in _require_networkx
+    import networkx as nx
+ModuleNotFoundError: No module named 'networkx'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/source/.github/scripts/check_skill_examples.py", line 75, in test_braincell_topology
+    run_examples(path, {})
+  File "/source/.github/scripts/check_skill_examples.py", line 35, in run_examples
+    exec(compile("\n" * preceding_lines + block[1], str(path), "exec"), scope)
+  File "/source/skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md", line 70, in <module>
+    vis.plot_cell_topology(
+  File "/brainx-venv/lib/python3.12/site-packages/braincell/vis/cell_topology.py", line 220, in plot_cell_topology
+    return _plot_branch_level(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/braincell/vis/cell_topology.py", line 457, in _plot_branch_level
+    return _plot_discrete_topology_graph(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/braincell/vis/point_topology.py", line 293, in _plot_discrete_topology_graph
+    graph = _build_topology_graph(node_ids=node_ids, edges=edges)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/braincell/vis/point_topology.py", line 502, in _build_topology_graph
+    nx = _require_networkx()
+         ^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/braincell/vis/point_topology.py", line 745, in _require_networkx
+    raise ImportError(
+ImportError: Topology plotting requires networkx. Install braincell[vis] or add networkx manually.
+
+----------------------------------------------------------------------
+Ran 6 tests in 8.231s
+
+FAILED (errors=1)

@@ -1,0 +1,22 @@
+[
+  {
+    "check": "components",
+    "exit_code": 0,
+    "elapsed_seconds": 8.061916840999402
+  },
+  {
+    "check": "analysis",
+    "exit_code": 0,
+    "elapsed_seconds": 2.6975233720004326
+  },
+  {
+    "check": "raw-audit",
+    "exit_code": 0,
+    "elapsed_seconds": 3.9043182270006582
+  },
+  {
+    "check": "spectra",
+    "exit_code": 0,
+    "elapsed_seconds": 3.2243211019995215
+  }
+]

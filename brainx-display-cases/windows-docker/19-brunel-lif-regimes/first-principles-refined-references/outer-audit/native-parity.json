@@ -1,0 +1,12 @@
+{
+  "compared_runs": 16,
+  "all_saved_arrays_match": true,
+  "decisions": [
+    "supported",
+    "supported",
+    "unsupported",
+    "inconclusive"
+  ],
+  "canonical_links_restored": true,
+  "network": "none"
+}

@@ -1,0 +1,4594 @@
+{
+  "checked_at": "2026-11-08T06:28:50.900210+00:00",
+  "files_scanned": 150,
+  "urls_found": 286,
+  "urls_probed": 0,
+  "skipped_url_occurrences": 0,
+  "skipped_locations": [],
+  "missing_local_targets": [],
+  "missing_skill_routes": [],
+  "entries": [
+    {
+      "url": "https://brainpy.readthedocs.io/apis/analysis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/analysis.md",
+          "line": 147,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.dyn.neurons.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/built-in dynamic neuron model.md",
+          "line": 149,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.dyn.outs.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/synpase properties.md",
+          "line": 157,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.dyn.plasticity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/synpase properties.md",
+          "line": 158,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.dyn.projections.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/synaptic projections.md",
+          "line": 147,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.dyn.synapses.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/synpase properties.md",
+          "line": 156,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/trainer library.md",
+          "line": 89,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.delayvars.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/delays.md",
+          "line": 105,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.environment.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/brainpy math environment setting.md",
+          "line": 123,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/array creation and mechanics.md",
+          "line": 220,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.jitconn.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/connecting neurons.md",
+          "line": 175,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.oo_transform.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/object oriented transformations and control flows.md",
+          "line": 182,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.pre_syn_post.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/route activity through connectivity.md",
+          "line": 102,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.sharding.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/Multi-device array sharding.md",
+          "line": 110,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/brainpy.math.surrogate.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/surrogate gradients.md",
+          "line": 104,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/connect.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/connecting neurons.md",
+          "line": 173,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/dnn.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/prebuilt neural network layers.md",
+          "line": 186,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/generated/brainpy.state.AlignPostProj.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 20,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 152,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/generated/brainpy.state.CurrentProj.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 28,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 153,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/initialize.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/parameter initializers.md",
+          "line": 107,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/inputs.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/Input generation.md",
+          "line": 110,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/integrators.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/integrators.md",
+          "line": 178,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/losses.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/loss library.md",
+          "line": 126,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/optim.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/optimizers.md",
+          "line": 165,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/apis/running.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/Parallel experiment execution.md",
+          "line": 136,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/core_concept/brainpy_transform_concept.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md",
+          "line": 372,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/quickstart/analysis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md",
+          "line": 373,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/quickstart/simulation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md",
+          "line": 368,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/quickstart/training.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md",
+          "line": 370,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/trainingworkflows.md",
+          "line": 251,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_analysis/decision_making_model.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/analysis.md",
+          "line": 150,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_analysis/highdim_analysis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/analysis.md",
+          "line": 149,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_analysis/lowdim_analysis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/analysis.md",
+          "line": 148,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_building/customize_neuron_models.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/customize neuron and synpase.md",
+          "line": 285,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_building/how_to_customze_a_synapse.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/customize neuron and synpase.md",
+          "line": 286,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_building/kinetic_synapse_models.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/synpase properties.md",
+          "line": 159,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_building/overview_of_dynamic_model.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/built-in dynamic neuron model.md",
+          "line": 150,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_building/phenon_synapse_models.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/synaptic projections.md",
+          "line": 146,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_math/Dedicated_Operators.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/connecting neurons.md",
+          "line": 174,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_math/Numpy_like_Operations.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/array creation and mechanics.md",
+          "line": 221,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_math/control_flows.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/object oriented transformations and control flows.md",
+          "line": 183,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_math/einops_in_brainpy.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/array creation and mechanics.md",
+          "line": 222,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_math/variables.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md",
+          "line": 371,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_simulation/monitor_per_multiple_steps.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/Parallel experiment execution.md",
+          "line": 135,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_simulation/parallel_for_parameter_exploration.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/More about simulation.md",
+          "line": 161,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/Multi-device array sharding.md",
+          "line": 111,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_simulation/simulation_dsrunner.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md",
+          "line": 369,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/More about simulation.md",
+          "line": 160,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_toolbox/inputs.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/infrastructure/Input generation.md",
+          "line": 111,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_toolbox/optimizers.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/optimizers.md",
+          "line": 166,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_training/bp_training.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/trainingworkflows.md",
+          "line": 253,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainpy.readthedocs.io/tutorial_training/online_training.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brainPy(legacy)/training/trainingworkflows.md",
+          "line": 252,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/advanced_tutorials/combining_and_defining.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/unit-structure-and-definition.md",
+          "line": 140,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/apis/brainunit.math.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/array-mechanics/functional-structural-api.md",
+          "line": 89,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainunit/references/array-mechanics.md",
+          "line": 164,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainunit/references/math-function-library.md",
+          "line": 429,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/apis/generated/brainunit.Quantity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/quantity-inspection-and-conversion.md",
+          "line": 104,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/apis/generated/brainunit.Unit.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/unit-structure-and-definition.md",
+          "line": 139,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/apis/generated/brainunit.math.einreduce.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/math-function-library.md",
+          "line": 432,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/apis/generated/brainunit.math.einsum.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/math-function-library.md",
+          "line": 433,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/physical_units/conversion.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/quantity-inspection-and-conversion.md",
+          "line": 103,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainunit.readthedocs.io/unit_operations/einstein_operations.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/array-mechanics.md",
+          "line": 165,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainunit/references/math-function-library.md",
+          "line": 430,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/braincell.channel.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/channel-library.md",
+          "line": 83,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/braincell.ion.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/ion-library.md",
+          "line": 87,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/filter.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/filter-function-library.md",
+          "line": 154,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.Branch.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/braincell-manual-morphology-construction.md",
+          "line": 179,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.CVPerBranch.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 129,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.CVPolicy.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 128,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.CVPolicyByTypeRule.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 132,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.Cell.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md",
+          "line": 272,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.CompositeByTypePolicy.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 133,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.DLambda.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 131,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.MaxCVLen.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 130,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/generated/braincell.Morphology.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/braincell-manual-morphology-construction.md",
+          "line": 180,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/integration.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/solver-library-with-effects.md",
+          "line": 185,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/apis/vis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md",
+          "line": 267,
+          "fragment": "cell-topology-plots"
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/concepts/discretization.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 126,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/concepts/integration.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/solver-library-with-effects.md",
+          "line": 184,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/concepts/ions_channels.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braincell-custom-ion-channel-authoring.md",
+          "line": 270,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/channel-library.md",
+          "line": 81,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/ion-library.md",
+          "line": 85,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/concepts/morphology.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/braincell-manual-morphology-construction.md",
+          "line": 176,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 135,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md",
+          "line": 271,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/concepts/regions_locsets.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/filter-function-library.md",
+          "line": 152,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/developer/extending.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braincell-custom-ion-channel-authoring.md",
+          "line": 273,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/examples/channel_ablation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/channel-library.md",
+          "line": 84,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/examples/integration_methods.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/solver-library-with-effects.md",
+          "line": 188,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/examples/spike_frequency_adaptation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/channel-library.md",
+          "line": 85,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/file_formats/asc.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 131,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/file_formats/checkpointing.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 134,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/file_formats/neuroml2.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 132,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/file_formats/neuromorpho.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 133,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/file_formats/overview.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 129,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/file_formats/swc.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/morphology-io-loading-validation.md",
+          "line": 130,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/integration/advanced.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/solver-library-with-effects.md",
+          "line": 187,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/integration/solvers.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/solver-library-with-effects.md",
+          "line": 186,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/tutorials/cell.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/braincell-manual-morphology-construction.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/cv-policy-reference.md",
+          "line": 127,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/tutorials/channel.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braincell-custom-ion-channel-authoring.md",
+          "line": 271,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/channel-library.md",
+          "line": 82,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/tutorials/filter.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/filter-function-library.md",
+          "line": 153,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md",
+          "line": 270,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/tutorials/ion.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braincell-custom-ion-channel-authoring.md",
+          "line": 272,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/ion-library.md",
+          "line": 86,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/tutorials/morphology.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/braincell-manual-morphology-construction.md",
+          "line": 177,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braincell/tutorials/vis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md",
+          "line": 269,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/getting-started/installation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 298,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 460,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/how-to/data-structures/choosing-a-sparse-format.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/connectivity-variants.md",
+          "line": 310,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/how-to/data-structures/synaptic-plasticity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/synaptic-plasticity.md",
+          "line": 129,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/apis/operations.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/synaptic-plasticity.md",
+          "line": 113,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/apis/operator.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 301,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 464,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/apis/sparsedata.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/connectivity-variants.md",
+          "line": 311,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/sparse-formats.md",
+          "line": 181,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/apis/utilities.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/connectivity-variants.md",
+          "line": 312,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/sparse-formats.md",
+          "line": 182,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/kernels/arg-spec.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 302,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 465,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/kernels/caching.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 304,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 468,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/kernels/compiler-options.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 467,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/reference/kernels/cpp-api.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 303,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 466,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/01_numba.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 299,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/02_numba_cuda.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 461,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/03_warp.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 462,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/04_cpp.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-cpu.md",
+          "line": 300,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/05_cuda.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/custom-operators-gpu.md",
+          "line": 463,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/data-structures/02_sparse_matrices.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/sparse-formats.md",
+          "line": 180,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/data-structures/03_jit_connectivity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/connectivity-variants.md",
+          "line": 308,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/data-structures/04_fixed_connections.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/connectivity-variants.md",
+          "line": 309,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainevent/tutorials/events/synaptic-plasticity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainevent/references/synaptic-plasticity.md",
+          "line": 128,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/concepts/coupling_and_delays.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/coupling-network-api.md",
+          "line": 267,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/gallery/case_studies/horn_cognitive_task.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/horn-task-training.md",
+          "line": 199,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/howto/analyze_results.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/visualization-analysis-api.md",
+          "line": 134,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/howto/batch_and_accelerate.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/batch-transform-acceleration.md",
+          "line": 177,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/howto/choose_a_model.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/modellibrary.md",
+          "line": 195,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/howto/custom_coupling.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/coupling-network-api.md",
+          "line": 268,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/howto/custom_objective.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/fitting-with-objectives-api.md",
+          "line": 146,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/howto/parameter_sweeps.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/parameter-sweeps-and-regime-analysis.md",
+          "line": 188,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/coupling.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/coupling-network-api.md",
+          "line": 265,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/datasets.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/datasets-api.md",
+          "line": 72,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/forward.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/forward-observation-api.md",
+          "line": 129,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/generated/brainmass.Simulator.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/simulator-input-monitor-api.md",
+          "line": 100,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/generated/brainmass.WongWangStep.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/modellibrary.md",
+          "line": 193,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/horn.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/horn-task-training.md",
+          "line": 197,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/models.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/modellibrary.md",
+          "line": 192,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/noise.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/noiseprocesses.md",
+          "line": 120,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/observation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/forward-observation-api.md",
+          "line": 130,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/orchestration.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/fitting-with-objectives-api.md",
+          "line": 143,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/simulator-input-monitor-api.md",
+          "line": 99,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/utilities.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/modellibrary.md",
+          "line": 194,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/reference/viz.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/visualization-analysis-api.md",
+          "line": 133,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/tutorials/03_noise.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/noiseprocesses.md",
+          "line": 121,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/tutorials/04_building_a_network.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/coupling-network-api.md",
+          "line": 266,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/tutorials/05_forward_models.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/forward-observation-api.md",
+          "line": 131,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/tutorials/06_fitting_with_gradients.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/parameter-fitting-workflow.md",
+          "line": 271,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/fitting-with-objectives-api.md",
+          "line": 144,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/tutorials/07_gradient_free_fitting.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/parameter-fitting-workflow.md",
+          "line": 272,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/fitting-with-objectives-api.md",
+          "line": 145,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainmass/tutorials/08_training_on_tasks.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/horn-task-training.md",
+          "line": 198,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-inputs.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 287,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-neurons.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 283,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-plasticity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 286,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-projections.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/projection-patterns.md",
+          "line": 127,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-readouts.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 288,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synapses.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 284,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synouts.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 285,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-choose-neuron.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 280,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-coba-cuba-synapses.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 281,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-delays.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 151,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/projection-patterns.md",
+          "line": 126,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-short-term-plasticity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/component-selection.md",
+          "line": 282,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/projection-patterns.md",
+          "line": 125,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-long-rollouts-checkpoint.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/brainstate-control-flow-patterns.md",
+          "line": 213,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/brainstate-control-flow-patterns.md",
+          "line": 334,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-control-flow-patterns.md",
+          "line": 221,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-control-flow-patterns.md",
+          "line": 342,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/tutorials/02-synapse-and-projection.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/projection-patterns.md",
+          "line": 124,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/brainpy-style/tutorials/04-train-an-snn.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/parameter-fitting-workflow.md",
+          "line": 270,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/concepts/alignpre-alignpost.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/projection-patterns.md",
+          "line": 123,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainpy-state/concepts/model-anatomy.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/projection-patterns.md",
+          "line": 122,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/apis/nest-devices.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/devices.md",
+          "line": 157,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/apis/nest-network.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 162,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/network-building.md",
+          "line": 266,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/apis/nest-neurons.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/model-library.md",
+          "line": 200,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/apis/nest-plasticity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/synapse-and-connectivity.md",
+          "line": 152,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/apis/nest-spatial.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/network-building.md",
+          "line": 267,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/apis/nest-synapses.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/synapse-and-connectivity.md",
+          "line": 151,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/connectivity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 159,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/synapse-and-connectivity.md",
+          "line": 153,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/devices.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/devices.md",
+          "line": 156,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 160,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/divergences/index.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/divergence-and-parity.md",
+          "line": 112,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 163,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/divergences/stdp.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/divergence-and-parity.md",
+          "line": 114,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 165,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/integration-categories.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/integration-categories.md",
+          "line": 41,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 166,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/models.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/model-library.md",
+          "line": 199,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 158,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/spatial.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/network-building.md",
+          "line": 268,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/tutorials/03-connect-network.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 161,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/network-building.md",
+          "line": 265,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainspike/nest-style/validation-status.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/divergence-and-parity.md",
+          "line": 113,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/nest-compatible/nest-workflow.md",
+          "line": 164,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/environ.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/simulation-environment.md",
+          "line": 8,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.ChainedReg.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 167,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 105,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 166,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 105,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Const.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 193,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 216,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 192,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 215,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Param.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 215,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 214,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Regularization.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 104,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 104,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Transform.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 21,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 21,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.exp_euler_step.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/simulation-environment.md",
+          "line": 9,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.vmap_reset_all_states.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 91,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.random.RandomState.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md",
+          "line": 30,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.vmap.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 191,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.vmap2.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 191,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 204,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/graph.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 14,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 112,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 173,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 216,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/interop.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 17,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 93,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 303,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/activation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-activation-library.md",
+          "line": 115,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/conv.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-layer-library.md",
+          "line": 139,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/dropout.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-layer-library.md",
+          "line": 143,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/linear.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-layer-library.md",
+          "line": 138,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/normalization.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-layer-library.md",
+          "line": 140,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/padding.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-layer-library.md",
+          "line": 142,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/parameters.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 166,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 213,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 214,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 20,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 86,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 103,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 127,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 149,
+          "fragment": "prior-distribution-based-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 165,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 166,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 165,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 212,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 213,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 20,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 86,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 103,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 127,
+          "fragment": "standard-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 149,
+          "fragment": "prior-distribution-based-regularizations"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 165,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 166,
+          "fragment": "standard-regularizations"
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/nn/pooling.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/libraries/prebuilt-layer-library.md",
+          "line": 141,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/random.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md",
+          "line": 133,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/concepts/the_parameter_model.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 36,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 210,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 35,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 209,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/concepts/time_and_environment.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/run-experiment.md",
+          "line": 7,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/simulation-environment.md",
+          "line": 7,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/collective_operations.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 7,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 21,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 50,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 72,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 89,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 112,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 148,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 181,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/collective_model_operations.md",
+          "line": 187,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/constrain_and_regularize_parameters.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 38,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 100,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 134,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 192,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 212,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 85,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 168,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 37,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 99,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 133,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 191,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 211,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 85,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 168,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/custom_states_and_mixins.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/extension_mechanisms.md",
+          "line": 18,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/filter_and_organize_states.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 5,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 20,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 47,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 74,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 107,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 139,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state_collections_and_utilities.md",
+          "line": 193,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/inspect_and_edit_state_graph.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 77,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 143,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 174,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/interoperate_with_flax_equinox.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 38,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 60,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 109,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 135,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 161,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 188,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 304,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/migrate_from_pytorch.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 207,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 224,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 243,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 272,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/model-interop-and-migration.md",
+          "line": 305,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/how_to/state_hooks.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/extension_mechanisms.md",
+          "line": 170,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/02_synaptic_delays.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 147,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md",
+          "line": 154,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/core/03_common_layers.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/size-inference-variations.md",
+          "line": 79,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/size-inference-variations.md",
+          "line": 125,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/size-inference-variations.md",
+          "line": 169,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/size-inference-variations.md",
+          "line": 218,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/size-inference-variations.md",
+          "line": 241,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/core/05_parameters_transforms_regularization.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 37,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 99,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 165,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-constraints-regularization.md",
+          "line": 211,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 84,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 167,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 36,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 98,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 164,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-constraints-regularization.md",
+          "line": 210,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 84,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 167,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 11,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 403,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 462,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/core/06_transformations_essentials.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 8,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 129,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/core/07_training_and_metrics.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 10,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 445,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 461,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/braintools-optimizer-reference.md",
+          "line": 16,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/core/08_randomness.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md",
+          "line": 132,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 10,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 237,
+          "fragment": "setting-seeds"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 275,
+          "fragment": "advanced-key-management"
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/transformations/01_jit_and_compilation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 7,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 33,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 70,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 99,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-jit-expansion.md",
+          "line": 137,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 111,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/state-graph-operations.md",
+          "line": 142,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/transformations/02_autodiff.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 9,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 29,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 57,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 116,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 142,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 185,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 206,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 247,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 253,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 279,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 329,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 352,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 393,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-grad-expansion.md",
+          "line": 460,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/transformations/03_vectorization.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 9,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 42,
+          "fragment": "the-in-axes-parameter"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 60,
+          "fragment": "the-out-axes-parameter"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 74,
+          "fragment": "the-axis-size-parameter"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 88,
+          "fragment": "the-axis-name-parameter"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 106,
+          "fragment": "state-aware-parameters-state-in-axes-and-state-out-axes"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 107,
+          "fragment": "state-axis-inference"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 202,
+          "fragment": "the-unexpected-out-state-mapping-parameter"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 236,
+          "fragment": "automatic-key-splitting-for-randomstate"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 256,
+          "fragment": "controlling-random-keys-using-jax-s-random-api"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 281,
+          "fragment": "nested-vmap2"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 298,
+          "fragment": "combining-with-other-transforms"
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/transformation-vmap-expansion.md",
+          "line": 324,
+          "fragment": "direct-use-of-statefulmapping"
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/transformations/05_control_flow.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/brainstate-control-flow-patterns.md",
+          "line": 22,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/brainstate-control-flow-patterns.md",
+          "line": 333,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-control-flow-patterns.md",
+          "line": 22,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-control-flow-patterns.md",
+          "line": 341,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/transformations/06_error_handling_and_checks.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 22,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 72,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 93,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 110,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 179,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/transformations/07_debugging.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 24,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 140,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 162,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 175,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/brainstate-transformed-diagnostics.md",
+          "line": 180,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/analysis.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 173,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/visualization-analysis-api.md",
+          "line": 132,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 173,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/cogtask.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/cogtask.md",
+          "line": 190,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/conn.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/connectivity.md",
+          "line": 206,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/fit.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 175,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 180,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 175,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.spectrogram.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 151,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 156,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 151,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.spike.SpikeTrains.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 130,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 135,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 130,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.visualize.spike_raster.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 132,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 137,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 132,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/init.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/parameter-initializer.md",
+          "line": 187,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/parameter-initializer.md",
+          "line": 183,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/input.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/input-current.md",
+          "line": 200,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/input-current.md",
+          "line": 199,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/metric.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 183,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 178,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/optim.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/optimizer.md",
+          "line": 174,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/optimizer.md",
+          "line": 182,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/optimizer.md",
+          "line": 174,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/braintools-optimizer-reference.md",
+          "line": 15,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/spike.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/data-preprocessing.md",
+          "line": 91,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/data-preprocessing.md",
+          "line": 87,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/surrogate.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/surrogate.md",
+          "line": 151,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/surrogate.md",
+          "line": 147,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/optim/01_nevergrad_optimizer.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/optimizer.md",
+          "line": 175,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/optimizer.md",
+          "line": 183,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/optimizer.md",
+          "line": 175,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/optim/02_scipy_optimizer.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/optimizer.md",
+          "line": 176,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/optimizer.md",
+          "line": 184,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/optimizer.md",
+          "line": 176,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/optim/03_optax_getting_started.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/optimizer.md",
+          "line": 177,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/optimizer.md",
+          "line": 185,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/optimizer.md",
+          "line": 177,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/optim/04_learning_rate_scheduling.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/optimizer.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/optimizer.md",
+          "line": 186,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/optimizer.md",
+          "line": 178,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/optim/05_advanced_optimizers.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/braintools/optimizer.md",
+          "line": 179,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/optimizer.md",
+          "line": 187,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/optimizer.md",
+          "line": 179,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/01_neural_data_visualization.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/neural-data-visualization.md",
+          "line": 139,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/02_advanced_neural_plots.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/neural-data-visualization.md",
+          "line": 140,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/03_statistical_visualization.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/statistical-and-model-visualization.md",
+          "line": 132,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/04_model_evaluation_plots.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/statistical-and-model-visualization.md",
+          "line": 133,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/05_interactive_visualization.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/interactive-and-visualization-styling.md",
+          "line": 153,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/06_3d_visualization.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/neural-data-visualization.md",
+          "line": 141,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/07_styling_and_themes.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/interactive-and-visualization-styling.md",
+          "line": 154,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/visualize/08_animation_and_dynamics.html",
+      "references": [
+        {
+          "file": "skills/brainx-visualization/references/interactive-and-visualization-styling.md",
+          "line": 155,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/advanced/batching.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/batching.md",
+          "line": 119,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/advanced/compiler_internals.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/compiler_internal.md",
+          "line": 161,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/advanced/custom_algorithms.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/custom algorithms.md",
+          "line": 202,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/advanced/customizing_primitive_transforms.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/customizing_primitive_transforms.md",
+          "line": 202,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/advanced/etp_primitives.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/custom ETP primitives.md",
+          "line": 200,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/apis/algorithms.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/algorithm selection.md",
+          "line": 59,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braintrace/references/batching.md",
+          "line": 120,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braintrace/references/custom algorithms.md",
+          "line": 203,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braintrace/references/Drtrl.md",
+          "line": 116,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/apis/compiler.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/compiler_internal.md",
+          "line": 162,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/apis/concepts.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/ETP operators.md",
+          "line": 183,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/apis/nn.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/pre-built-braintrace-layer.md",
+          "line": 144,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/tutorials/drtrl.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/Drtrl.md",
+          "line": 115,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/tutorials/five_primitive_functions.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/ETP operators.md",
+          "line": 184,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/tutorials/neural_network_layers.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/pre-built-braintrace-layer.md",
+          "line": 145,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/tutorials/pp_prop.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/pp_pprop workflow.md",
+          "line": 162,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintrace/tutorials/snn_online_learning.html",
+      "references": [
+        {
+          "file": "skills/package-skills/braintrace/references/pp_pprop workflow.md",
+          "line": 163,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/_modules/saiunit/typing.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 204,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/brainunit.math.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/array-creation.md",
+          "line": 158,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainunit/references/array-creation.md",
+          "line": 158,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/brainunit.typing.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 196,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.Quantity.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/array-mechanics.md",
+          "line": 163,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.DimensionLike.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 202,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.PhysicalType.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 197,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.QuantityLike.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 200,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.UnitLike.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 201,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.is_physical_type.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 198,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.quantity_type.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 199,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/apis/generated/brainunit.typing.validate_units.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 203,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/physical_units/constants.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/physical-constant-library.md",
+          "line": 58,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/physical_units/standard_units.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/prefix-library.md",
+          "line": 116,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainunit/unit_operations/array_creation.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainpy-state/references/array-creation.md",
+          "line": 157,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainunit/references/array-creation.md",
+          "line": 157,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/summ/CHANGELOG.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/run-experiment.md",
+          "line": 6,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/summ/install.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/run-experiment.md",
+          "line": 5,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://docs.jax.dev/en/latest/gpu_memory_allocation.html",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/run-experiment.md",
+          "line": 8,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/blob/main/examples/single_compartment/SC01_fitting_a_hh_neuron.py",
+      "references": [
+        {
+          "file": "skills/brainx-modeling-loop/references/parameter-fitting-workflow.md",
+          "line": 269,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/blob/v0.2.0/docs/design/network/current/api.md",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/network-workflow.md",
+          "line": 47,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/blob/v0.2.0/docs/design/network/current/connections.md",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/network-workflow.md",
+          "line": 48,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/blob/v0.2.0/docs/design/network/current/recording.md",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/probe-reference.md",
+          "line": 39,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/blob/v0.2.0/examples/cell/recording.ipynb",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/probe-reference.md",
+          "line": 40,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/releases/tag/v0.2.0",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/topology-building-and-visualization.md",
+          "line": 268,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braincell/tree/v0.2.0/examples/network",
+      "references": [
+        {
+          "file": "skills/package-skills/braincell/references/multicompartment/network-workflow.md",
+          "line": 49,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/brainstate/blob/main/brainstate/nn/_param.py",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 169,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 169,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/brainstate/blob/main/brainstate/nn/_regularization.py",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 106,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 171,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 106,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 171,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/brainstate/blob/main/brainstate/nn/_transform.py",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 22,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 87,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 170,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 22,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 87,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/parameter-transforms-regularizers-catalog.md",
+          "line": 170,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/braintools/releases/tag/v0.4.0",
+      "references": [
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/data-preprocessing.md",
+          "line": 90,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/data-preprocessing.md",
+          "line": 86,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/saiunit/blob/main/brainunit/brainunit/typing.py",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 205,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://github.com/chaobrain/saiunit/blob/main/saiunit/_typing.py",
+      "references": [
+        {
+          "file": "skills/package-skills/brainunit/references/typing-and-runtime-validation.md",
+          "line": 206,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    },
+    {
+      "url": "https://pypi.org/pypi/BrainX/2026.10.25/json",
+      "references": [
+        {
+          "file": "skills/brainx-install/references/compatibility-and-release-matching.md",
+          "line": 46,
+          "fragment": ""
+        }
+      ],
+      "status": "not_checked",
+      "reason": "inventory_only"
+    }
+  ]
+}

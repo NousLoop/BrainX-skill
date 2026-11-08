@@ -1,0 +1,76 @@
+{
+  "threshold_source_Hz": 10.0,
+  "analytic_exponential_leak": true,
+  "refractory_spike_steps": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "mean_external_drive_period": {
+    "measured_ms": 10.0,
+    "analytic_ms": 10.109302162163289,
+    "tolerance_ms": 0.2
+  },
+  "delay": {
+    "emission_steps": [
+      0,
+      30
+    ],
+    "arrival_steps": [
+      15,
+      45
+    ],
+    "jump_mV": [
+      0.10000000149011612,
+      -0.5
+    ],
+    "target_voltage_onset_steps": [
+      15,
+      45
+    ]
+  },
+  "poisson": {
+    "mean": 4.003361225128174,
+    "variance": 3.9959399700164795,
+    "mean_pair_correlation": -0.00022098587857694144,
+    "max_count": 17
+  },
+  "tiny_graph": [
+    {
+      "source_size": 16,
+      "degree": 5,
+      "edges": 120,
+      "duplicates": 0,
+      "autapses": 0,
+      "all_indegrees_exact": true
+    },
+    {
+      "source_size": 8,
+      "degree": 3,
+      "edges": 72,
+      "duplicates": 0,
+      "autapses": 0,
+      "all_indegrees_exact": true
+    }
+  ],
+  "compilation_parity": {
+    "exact_spikes": true,
+    "final_voltage": true,
+    "refractory": true,
+    "seeded_replay": true,
+    "second_condition_compile": true,
+    "baseline_boundary_rng_key": [
+      1432964242,
+      2048820030
+    ],
+    "compiled_boundary_rng_key": [
+      1432964242,
+      2048820030
+    ],
+    "rng_boundary_keys_equal": true,
+    "baseline_seconds": 0.7244690980005544,
+    "compile_seconds": 0.25302961299985327,
+    "warm_seconds": 0.06595184600064385
+  }
+}

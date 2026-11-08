@@ -14,3 +14,11 @@ brainx-display-cases/**/continuation-prompt-*.md -text
 # verbatim reviews, logs and prompt receipts, on Windows checkouts.
 brainx-display-cases/windows-docker/00-live-model-probe/** -text whitespace=cr-at-eol
 brainx-display-cases/windows-docker/09-theta-gamma-fresh/** -text whitespace=cr-at-eol
+brainx-display-cases/windows-docker/19-brunel-lif-regimes/** -text whitespace=cr-at-eol
+# Captured API text keeps the source's trailing spaces as immutable evidence.
+brainx-display-cases/windows-docker/19-brunel-lif-regimes/**/api-docs/*.txt whitespace=cr-at-eol,-blank-at-eol
+brainx-display-cases/windows-docker/19-brunel-lif-regimes/**/outer-audit/refinement-contracts/*.txt whitespace=cr-at-eol,-blank-at-eol
+# Preserve original runtime tracebacks without whitespace normalization.
+brainx-display-cases/windows-docker/19-brunel-lif-regimes/**/runs/**/run.log whitespace=cr-at-eol,-blank-at-eol
+brainx-display-cases/windows-docker/archive-workspace.py text eol=lf
+brainx-display-cases/windows-docker/test-archive-workspace.py text eol=lf

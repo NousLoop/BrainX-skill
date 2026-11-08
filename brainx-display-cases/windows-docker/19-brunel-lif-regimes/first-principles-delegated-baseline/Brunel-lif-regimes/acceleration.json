@@ -1,0 +1,9 @@
+{
+  "parity": {
+    "spikes_packed": true,
+    "final_V_mV": true
+  },
+  "dynamic_seconds": 3.5078171579998525,
+  "static_seconds": 1.313395020999451,
+  "speedup": 2.6708013217002433
+}

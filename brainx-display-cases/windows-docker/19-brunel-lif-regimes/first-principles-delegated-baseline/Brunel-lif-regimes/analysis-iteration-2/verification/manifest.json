@@ -1,0 +1,42 @@
+[
+  {
+    "path": "PSD_comparison.npz",
+    "bytes": 2197783,
+    "sha256": "a43935888946f83ce5e60c318967b8546cbbc3e00e7b24c262c8e826b346c0f3"
+  },
+  {
+    "path": "RUN_SPEC.md",
+    "bytes": 874,
+    "sha256": "df883061242a8954cf2f6f1fe7b9bba8b8017dbfd0ff5a0ac615994e4325291e"
+  },
+  {
+    "path": "command.txt",
+    "bytes": 148,
+    "sha256": "378762831c901ab41e37eb41622e8f29e7825595462ccebe7e3e75bbabe59ce7"
+  },
+  {
+    "path": "config.json",
+    "bytes": 2932,
+    "sha256": "b730c842c463ead26e9c93493506089f7db84da4ee11000d734fc77dd5f79fa0"
+  },
+  {
+    "path": "exit_code",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  {
+    "path": "run.log",
+    "bytes": 10932,
+    "sha256": "88fcd8cd8145938a7f2994396fdf78d26b0d72da16c0e59a2fddb62aa36e3f70"
+  },
+  {
+    "path": "spectral_api_check.json",
+    "bytes": 10931,
+    "sha256": "dabe11d77e64246e3c5df614d2877f61bc25d53944fedc3015bbeffdd9507067"
+  },
+  {
+    "path": "spectral_api_check.py",
+    "bytes": 6106,
+    "sha256": "9efe013ff10407c68e856ecee2fb9206fa9f7c0749d1774e66606179645f6523"
+  }
+]

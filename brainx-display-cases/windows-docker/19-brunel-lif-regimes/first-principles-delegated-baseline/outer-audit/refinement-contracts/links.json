@@ -1,0 +1,219 @@
+{
+  "checked_at": "2026-11-08T06:27:07.036969+00:00",
+  "files_scanned": 5,
+  "urls_found": 9,
+  "urls_probed": 9,
+  "skipped_url_occurrences": 0,
+  "skipped_locations": [],
+  "missing_local_targets": [],
+  "missing_skill_routes": [],
+  "entries": [
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.random.RandomState.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md",
+          "line": 30,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.random.RandomState.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/apis/random.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md",
+          "line": 133,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/brainstate/apis/random.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/brainstate/tutorials/core/08_randomness.html",
+      "references": [
+        {
+          "file": "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md",
+          "line": 132,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/brainstate/tutorials/core/08_randomness.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/analysis.html",
+      "references": [
+        {
+          "file": "braintools-references/braintools-metric.md",
+          "line": 173,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 173,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 173,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/braintools/apis/analysis.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/fit.html",
+      "references": [
+        {
+          "file": "braintools-references/braintools-metric.md",
+          "line": 175,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 175,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 180,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 175,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/braintools/apis/fit.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.spectrogram.html",
+      "references": [
+        {
+          "file": "braintools-references/braintools-metric.md",
+          "line": 151,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 151,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 156,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 151,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.spectrogram.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.spike.SpikeTrains.html",
+      "references": [
+        {
+          "file": "braintools-references/braintools-metric.md",
+          "line": 130,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        },
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 130,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 135,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 130,
+          "fragment": "braintools.spike.SpikeTrains.from_dense"
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.spike.SpikeTrains.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.visualize.spike_raster.html",
+      "references": [
+        {
+          "file": "braintools-references/braintools-metric.md",
+          "line": 132,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 132,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 137,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 132,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.visualize.spike_raster.html"
+    },
+    {
+      "url": "https://brainx.chaobrain.com/braintools/apis/metric.html",
+      "references": [
+        {
+          "file": "braintools-references/braintools-metric.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/braincell/references/braintools/metric.md",
+          "line": 178,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainmass/references/braintools/metric.md",
+          "line": 183,
+          "fragment": ""
+        },
+        {
+          "file": "skills/package-skills/brainpy-state/references/braintools/metric.md",
+          "line": 178,
+          "fragment": ""
+        }
+      ],
+      "status": "reachable",
+      "http_status": 200,
+      "final_url": "https://brainx.chaobrain.com/braintools/apis/metric.html"
+    }
+  ]
+}

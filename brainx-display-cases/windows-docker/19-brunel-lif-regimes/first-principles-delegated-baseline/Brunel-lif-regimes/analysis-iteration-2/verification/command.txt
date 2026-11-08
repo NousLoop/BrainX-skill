@@ -1,0 +1,1 @@
+MPLBACKEND=Agg JAX_PLATFORMS=cpu OPENBLAS_NUM_THREADS=1 /brainx-venv/bin/python -u spectral_api_check.py --output analysis-iteration-2/verification

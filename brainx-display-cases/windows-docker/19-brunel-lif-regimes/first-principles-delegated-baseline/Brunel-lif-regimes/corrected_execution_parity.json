@@ -1,0 +1,7 @@
+{
+  "spikes_packed": true,
+  "burn_in_spikes_packed": true,
+  "final_V_mV": true,
+  "final_last_spike_step": true,
+  "final_rng_key": true
+}

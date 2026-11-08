@@ -1,0 +1,23 @@
+{
+  "executed_command_url_targets": [
+    "https://brainpy.readthedocs.io/apis/generated/brainpy.state.DeltaProj.html",
+    "https://brainpy.readthedocs.io/apis/generated/brainpy.state.Dynamics.html",
+    "https://brainpy.readthedocs.io/apis/generated/brainpy.state.{name}.html",
+    "https://brainstate.readthedocs.io/apis/generated/brainstate.random.poisson.html",
+    "https://brainx.chaobrain.com/",
+    "https://brainx.chaobrain.com/brainpy-state/apis/generated/brainpy.state.DeltaProj.html",
+    "https://brainx.chaobrain.com/brainpy-state/apis/generated/brainpy.state.Dynamics.html",
+    "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.random.poisson.html",
+    "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.jit.html",
+    "https://brainx.chaobrain.com/braintools/apis/analysis.html",
+    "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.power_spectral_density.html",
+    "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.{name}.html"
+  ],
+  "mcp_tools": [
+    [
+      "codex",
+      "codex"
+    ]
+  ],
+  "scope": "Main-agent executed commands only; reviewer restriction is preserved in its request and verdict. No historical implementation or output was mounted."
+}

@@ -1,0 +1,24 @@
+{
+  "original_prompt_match": true,
+  "approved_prompt_archive_match": true,
+  "manifests": [
+    {
+      "manifest": "runs\\locked-baseline-v2\\artifact_manifest.json",
+      "entries": 72,
+      "mismatches": []
+    },
+    {
+      "manifest": "analysis-iteration-2\\braintools-final\\manifest.json",
+      "entries": 27,
+      "mismatches": []
+    },
+    {
+      "manifest": "analysis-iteration-2\\verification\\manifest.json",
+      "entries": 8,
+      "mismatches": []
+    }
+  ],
+  "credential_pattern_matches": [],
+  "project_files": 239,
+  "project_bytes": 197704623
+}

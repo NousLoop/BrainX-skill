@@ -1,0 +1,52 @@
+{
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "conditions": [
+    [
+      3.0,
+      2.0
+    ],
+    [
+      6.0,
+      4.0
+    ],
+    [
+      5.0,
+      2.0
+    ],
+    [
+      4.5,
+      0.9
+    ]
+  ],
+  "ne": 10000,
+  "ni": 2500,
+  "ce": 1000,
+  "ci": 250,
+  "cext": 1000,
+  "tau_ms": 20.0,
+  "refractory_ms": 2.0,
+  "threshold_mV": 20.0,
+  "reset_mV": 10.0,
+  "JE_mV": 0.1,
+  "delay_ms": 1.5,
+  "dt_ms": 0.1,
+  "control_dt_ms": 0.05,
+  "control_seed": 101,
+  "duration_ms": 4000.0,
+  "burn_ms": 1000.0,
+  "sample_seed": 20261108,
+  "raster_sample_size": 50,
+  "display_seed": 101,
+  "display_ms": [
+    3500.0,
+    4000.0
+  ],
+  "backend": "cpu",
+  "precision": "float32",
+  "max_worker_processes": 3,
+  "run_level": "production+fixed-seed-replication+numerical-controls"
+}

@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/model.py", line 135, in rollout
+    brainstate.nn.init_all_states(self)
+  File "/workspace/Brunel-lif-regimes/model.py", line 55, in init_state
+    self.V = brainstate.HiddenState(self.initial_voltage)
+jax._src.source_info_util.JaxStackTraceBeforeTransformation: brainstate._error.TraceContextError: This HiddenState was created inside a traced function (e.g. under brainstate.transform.jit/grad/vmap), so its value was a tracer that died when tracing finished. Reading it here is invalid.
+How to fix: create the state before entering the transformed function (e.g. initialize the model outside of jit), or use brainstate.transform.vmap_new_states for batched state creation. Assigning a concrete value to `.value` makes this state usable again.
+
+The preceding stack trace is the source of the JAX operation that, once transformed by JAX, triggered the following exception.
+
+--------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/checks.py", line 130, in <module>
+    run_checks('checks.json')
+  File "/workspace/Brunel-lif-regimes/checks.py", line 104, in run_checks
+    compiled.pop.V.value.to_decimal(u.mV), atol=1e-6)
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/brainstate/_state.py", line 509, in value
+    self._check_invalidated()
+  File "/brainx-venv/lib/python3.12/site-packages/brainstate/_state.py", line 613, in _check_invalidated
+    self.raise_error_with_source_info(
+  File "/brainx-venv/lib/python3.12/site-packages/brainstate/_state.py", line 704, in raise_error_with_source_info
+    raise error
+brainstate._error.TraceContextError: This HiddenState was created inside a traced function (e.g. under brainstate.transform.jit/grad/vmap), so its value was a tracer that died when tracing finished. Reading it here is invalid.
+How to fix: create the state before entering the transformed function (e.g. initialize the model outside of jit), or use brainstate.transform.vmap_new_states for batched state creation. Assigning a concrete value to `.value` makes this state usable again.

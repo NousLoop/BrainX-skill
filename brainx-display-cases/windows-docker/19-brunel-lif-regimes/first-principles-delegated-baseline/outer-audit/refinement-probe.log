@@ -1,0 +1,15 @@
+{
+  "positional_constructor": true,
+  "seed_or_key_constructor": true,
+  "seed_keyword_rejected": true,
+  "independent_streams": true,
+  "reseed_replay": true,
+  "compiled_stream_replay": true,
+  "segment_axis_shape": [
+    129,
+    31
+  ],
+  "quantity_psd_conversion": true,
+  "welch_parity": true,
+  "maximum_psd_abs_error": 1.3877787807814457e-17
+}

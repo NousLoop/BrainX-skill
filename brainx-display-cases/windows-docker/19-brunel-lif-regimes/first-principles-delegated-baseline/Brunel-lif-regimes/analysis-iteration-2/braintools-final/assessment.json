@@ -1,0 +1,70 @@
+[
+  {
+    "condition": 0,
+    "requested": "synchronous regular",
+    "outcome": "supported",
+    "primary_labels": [
+      "synchronous regular",
+      "synchronous regular",
+      "synchronous regular"
+    ],
+    "fine_label": "synchronous regular",
+    "primary_dominant_Hz": [
+      667.0,
+      667.0,
+      667.0
+    ],
+    "fine_dominant_Hz": 667.0
+  },
+  {
+    "condition": 1,
+    "requested": "fast synchronous irregular",
+    "outcome": "inconclusive",
+    "primary_labels": [
+      "inconclusive",
+      "fast synchronous irregular",
+      "fast synchronous irregular"
+    ],
+    "fine_label": "fast synchronous irregular",
+    "primary_dominant_Hz": [
+      181.0,
+      183.0,
+      181.0
+    ],
+    "fine_dominant_Hz": 181.0
+  },
+  {
+    "condition": 2,
+    "requested": "asynchronous irregular",
+    "outcome": "unsupported",
+    "primary_labels": [
+      "synchronous regular",
+      "synchronous regular",
+      "synchronous regular"
+    ],
+    "fine_label": "synchronous regular",
+    "primary_dominant_Hz": [
+      138.0,
+      142.0,
+      137.0
+    ],
+    "fine_dominant_Hz": 136.0
+  },
+  {
+    "condition": 3,
+    "requested": "slow synchronous irregular",
+    "outcome": "inconclusive",
+    "primary_labels": [
+      "inconclusive",
+      "inconclusive",
+      "inconclusive"
+    ],
+    "fine_label": "inconclusive",
+    "primary_dominant_Hz": [
+      22.0,
+      22.0,
+      23.0
+    ],
+    "fine_dominant_Hz": 23.0
+  }
+]

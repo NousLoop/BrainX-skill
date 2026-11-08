@@ -1,0 +1,8 @@
+REPLAY diagnostic 215 [1432964242, 2048820030] previous key [1432964242, 2048820030]
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/checks.py", line 130, in <module>
+    run_checks('checks.json')
+  File "/workspace/Brunel-lif-regimes/checks.py", line 116, in run_checks
+    assert np.array_equal(b, replay)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

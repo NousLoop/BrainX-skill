@@ -1,0 +1,1 @@
+{'pass_': True, 'mean': 1.99975, 'variance': 2.0039686875, 'temporal_lag1_correlation': -0.0004837306358009477, 'min_per_neuron_temporal_sd': 1.3529730226430965, 'rng_state_advanced': True, 'steps': 2000, 'targets': 128, 'transform': 'brainstate.transform.jit(brainstate.transform.for_loop)', 'purpose': 'exclude accidentally frozen Poisson draws over time; input-law check only'}

@@ -1,0 +1,5 @@
+{"wall_time": 1794120690.8511348, "event": "group_done", "seed": 101, "dt_ms": 0.1, "exit_code": 0}
+{"wall_time": 1794120691.1190388, "event": "group_done", "seed": 303, "dt_ms": 0.1, "exit_code": 0}
+{"wall_time": 1794120692.2724826, "event": "group_done", "seed": 202, "dt_ms": 0.1, "exit_code": 0}
+{"wall_time": 1794121580.7233863, "event": "group_done", "seed": 101, "dt_ms": 0.05, "exit_code": 0}
+{"wall_time": 1794121580.8032272, "event": "complete", "elapsed_seconds": 1435.3824467658997}

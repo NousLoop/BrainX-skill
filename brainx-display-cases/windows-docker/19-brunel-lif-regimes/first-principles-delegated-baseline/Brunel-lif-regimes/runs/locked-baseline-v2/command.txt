@@ -1,0 +1,1 @@
+JAX_PLATFORMS=cpu OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 /brainx-venv/bin/python -u /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/code/experiment.py --config /workspace/Brunel-lif-regimes/runs/locked-baseline-v2/config.json

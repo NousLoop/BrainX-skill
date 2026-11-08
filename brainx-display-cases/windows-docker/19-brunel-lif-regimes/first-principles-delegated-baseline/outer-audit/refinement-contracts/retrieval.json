@@ -1,0 +1,47 @@
+[
+  {
+    "name": "randomstate",
+    "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.random.RandomState.html",
+    "status": 200,
+    "excerpt": " RandomState # class brainstate.random. RandomState ( seed_or_key = None ) # RandomState that track the random generator state. bernoulli ( p , size = None , key = None , check_val"
+  },
+  {
+    "name": "spectrogram",
+    "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.spectrogram.html",
+    "status": 200,
+    "excerpt": " braintools.analysis.spectral.spectrogram # braintools.analysis.spectral. spectrogram ( x , dt , nperseg , noverlap = None , window = 'hann' , detrend = 'constant' ) # Compute the "
+  },
+  {
+    "name": "psd",
+    "url": "https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.power_spectral_density.html",
+    "status": 200,
+    "excerpt": " power_spectral_density # class braintools.analysis.spectral. power_spectral_density ( lfp , dt , nperseg = None , noverlap = None , freq_range = None ) # Estimate the one-sided po"
+  },
+  {
+    "name": "dynamics",
+    "url": "https://brainx.chaobrain.com/brainpy-state/apis/generated/brainpy.state.Dynamics.html",
+    "status": 200,
+    "excerpt": " Dynamics # class brainspike. Dynamics ( * args , ** kwargs ) # add_current_input ( key , inp , label = None ) [source] # Add a current input function or array to the dynamics mode"
+  },
+  {
+    "name": "delta",
+    "url": "https://brainx.chaobrain.com/brainpy-state/apis/generated/brainpy.state.DeltaProj.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "lifref",
+    "url": "https://brainx.chaobrain.com/brainpy-state/apis/generated/brainpy.state.LIFRef.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "csr",
+    "url": "https://brainx.chaobrain.com/brainevent/reference/generated/brainevent.CSR.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "delay",
+    "url": "https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.nn.Delay.html",
+    "status": 200,
+    "excerpt": " Delay # class brainstate.nn. Delay ( target_info , time = None , init = None , entries = None , interpolation = None , take_aware_unit = False , update_every = None , delay_method"
+  }
+]

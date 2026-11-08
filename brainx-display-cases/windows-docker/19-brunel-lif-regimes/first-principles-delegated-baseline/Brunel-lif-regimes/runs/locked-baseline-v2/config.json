@@ -1,0 +1,64 @@
+{
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "dt_by_seed": {
+    "11": [
+      0.1,
+      0.05
+    ],
+    "29": [
+      0.1
+    ],
+    "47": [
+      0.1
+    ]
+  },
+  "duration_ms": 4000,
+  "burn_in_ms": 1000,
+  "conditions": [
+    [
+      3,
+      2
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      4.5,
+      0.9
+    ]
+  ],
+  "expected": [
+    "synchronous regular",
+    "fast synchronous irregular",
+    "asynchronous irregular",
+    "slow synchronous irregular"
+  ],
+  "NE": 10000,
+  "NI": 2500,
+  "CE": 1000,
+  "CI": 250,
+  "Cext": 1000,
+  "tau_m_ms": 20,
+  "t_ref_ms": 2,
+  "threshold_mV": 20,
+  "reset_mV": 10,
+  "JE_mV": 0.1,
+  "delay_ms": 1.5,
+  "backend": "cpu",
+  "precision": "float32",
+  "figure_seed": 11,
+  "figure_window_ms": [
+    1000,
+    1500
+  ],
+  "sample_seed": 20261108
+}

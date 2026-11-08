@@ -1,0 +1,130 @@
+[
+  {
+    "name": "seed-11_dt-0.1_condition-0",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.1_condition-1",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.1_condition-2",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.1_condition-3",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 49,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.05_condition-0",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.05_condition-1",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.05_condition-2",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-11_dt-0.05_condition-3",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-29_dt-0.1_condition-0",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-29_dt-0.1_condition-1",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-29_dt-0.1_condition-2",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-29_dt-0.1_condition-3",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-47_dt-0.1_condition-0",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-47_dt-0.1_condition-1",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-47_dt-0.1_condition-2",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 50,
+    "padding_zero": true
+  },
+  {
+    "name": "seed-47_dt-0.1_condition-3",
+    "count_match": true,
+    "sample_CV_match": true,
+    "sample_neurons": 50,
+    "sample_eligible": 49,
+    "padding_zero": true
+  }
+]

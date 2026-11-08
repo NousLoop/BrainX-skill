@@ -1,0 +1,32 @@
+{
+  "backend": "cpu",
+  "devices": [
+    "cpu:0"
+  ],
+  "graph_checks": [
+    {
+      "source_size": 10000,
+      "degree": 1000,
+      "edges": 12500000,
+      "duplicates": 0,
+      "autapses": 0,
+      "all_indegrees_exact": true
+    },
+    {
+      "source_size": 2500,
+      "degree": 250,
+      "edges": 3125000,
+      "duplicates": 0,
+      "autapses": 0,
+      "all_indegrees_exact": true
+    }
+  ],
+  "compile_seconds": 0.8221224659992004,
+  "warm_100ms_seconds": 0.94373689799977,
+  "total_seconds": 3.1661964519998946,
+  "shape": [
+    1000,
+    1563
+  ],
+  "finite": true
+}

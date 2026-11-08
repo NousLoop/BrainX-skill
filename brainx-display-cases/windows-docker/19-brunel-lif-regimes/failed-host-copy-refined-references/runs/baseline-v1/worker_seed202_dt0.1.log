@@ -1,0 +1,9 @@
+{"wall_time": 1794120161.6008832, "event": "worker_ready", "seed": 202, "dt_ms": 0.1, "backend": "cpu", "cpu_affinity": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}
+{"wall_time": 1794120161.9052553, "event": "begin", "run": "condition0_seed202_dt0.1"}
+{"wall_time": 1794120311.5600786, "event": "saved", "run": "condition0_seed202_dt0.1", "simulation_seconds": 147.54402138399928, "E_Hz": 333.33136666666667, "I_Hz": 333.3324, "CV": 0.0, "S": 0.1421565983696218, "peak_Hz": 333.0, "outcome": "supported"}
+{"wall_time": 1794120311.5734904, "event": "begin", "run": "condition1_seed202_dt0.1"}
+{"wall_time": 1794120449.6018567, "event": "saved", "run": "condition1_seed202_dt0.1", "simulation_seconds": 135.34218106000117, "E_Hz": 59.427, "I_Hz": 59.4232, "CV": 0.7834975682978491, "S": 0.15668184569287408, "peak_Hz": 183.0, "outcome": "supported"}
+{"wall_time": 1794120449.612094, "event": "begin", "run": "condition2_seed202_dt0.1"}
+{"wall_time": 1794120574.630767, "event": "saved", "run": "condition2_seed202_dt0.1", "simulation_seconds": 122.4939710510007, "E_Hz": 37.95146666666667, "I_Hz": 37.91146666666666, "CV": 0.40750339630377086, "S": 0.27563026379097266, "peak_Hz": 135.0, "outcome": "unsupported"}
+{"wall_time": 1794120574.638225, "event": "begin", "run": "condition3_seed202_dt0.1"}
+{"wall_time": 1794120690.904819, "event": "saved", "run": "condition3_seed202_dt0.1", "simulation_seconds": 114.49225404800018, "E_Hz": 5.489233333333334, "I_Hz": 5.505866666666667, "CV": 0.6160692230781408, "S": 1.4744506921364404, "peak_Hz": 19.0, "outcome": "inconclusive"}

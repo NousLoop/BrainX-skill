@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/checks.py", line 116, in <module>
+    run_checks('checks.json')
+  File "/workspace/Brunel-lif-regimes/checks.py", line 106, in run_checks
+    assert np.array_equal(baseline.drive.rng.value, compiled.drive.rng.value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

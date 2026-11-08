@@ -1,0 +1,7 @@
+{
+  "spike_raster_contract": "PASS",
+  "events": 831,
+  "sample_size": 50,
+  "source": "checks/full_size_smoke.npz",
+  "scientific_status": "pre-production smoke only"
+}

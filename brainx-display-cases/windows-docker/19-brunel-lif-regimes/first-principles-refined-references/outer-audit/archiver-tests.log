@@ -1,0 +1,8 @@
+test_bytes_and_relative_absolute_directory_links (__main__.ArchiveTests.test_bytes_and_relative_absolute_directory_links) ... ok
+test_destination_and_reserved_path_guards (__main__.ArchiveTests.test_destination_and_reserved_path_guards) ... ok
+test_external_broken_and_cyclic_links_do_not_escape (__main__.ArchiveTests.test_external_broken_and_cyclic_links_do_not_escape) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.014s
+
+OK

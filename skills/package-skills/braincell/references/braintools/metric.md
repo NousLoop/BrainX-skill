@@ -138,12 +138,22 @@ to draw a raster.
 |---|---|
 | `field.unitary_LFP(times, spikes, spike_type, ...)` | Construct unitary LFP contributions from spikes. Supply times in milliseconds and choose `'exc'` or `'inh'`. |
 | `spectral.power_spectral_density(lfp, dt, nperseg=None, noverlap=None, freq_range=None)` | Return one-sided Welch frequencies in Hz and PSD for `(time,)` or `(time, channels)` input. |
+| `spectral.spectrogram(x, dt, nperseg, noverlap=None, window='hann', detrend='constant')` | Use when segment spectra or explicit window/detrending controls are required; returns frequencies, segment centers and PSD shaped `(frequency, segment, ...)`. |
 | `spectral.coherence_analysis(lfp1, lfp2, dt, ...)` | Return frequency-resolved magnitude-squared coherence. |
 | `spectral.phase_amplitude_coupling(lfp, dt, phase_freq_range, amplitude_freq_range, ...)` | Return Tort modulation index plus phase-bin details. |
 | `spectral.theta_gamma_coupling(lfp, dt)` | Return theta-gamma coupling using standard bands. |
 | `field.current_source_density(lfp_laminar, electrode_spacing, conductivity=1.0, axis=-1)` | Estimate laminar CSD using electrode spacing. Set `axis` explicitly when electrodes are not on the last axis. |
 | `spectral.spectral_entropy(lfp, dt, ...)` | Return normalized spectral entropy. |
 | `spectral.lfp_phase_coherence(lfp_signals, dt, freq_band=(8, 12))` | Compute pairwise phase coherence across channels. |
+
+Use `power_spectral_density` when its estimator defaults match the protocol.
+For a fixed Welch estimator requiring explicit window and detrending controls,
+use [`spectral.spectrogram`](https://brainx.chaobrain.com/braintools/apis/generated/braintools.analysis.spectral.spectrogram.html)
+and take `u.math.mean(segment_psd, axis=1)` over segments. Set `noverlap`
+explicitly: its default is `nperseg // 8`, not 50%. `window='hann'` selects
+a periodic Hann window; `detrend='constant'` removes each segment's mean.
+For a Quantity signal with unit `U`, the segment PSD and its mean retain
+`U**2 / Hz`. Preserve the frozen estimator when comparing implementations.
 
 `power_spectral_density(..., freq_range=...)` uses boolean-mask indexing and
 therefore has a data-dependent output length; that path is not JIT-compatible.

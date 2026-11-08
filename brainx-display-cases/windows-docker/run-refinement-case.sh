@@ -39,7 +39,8 @@ if test "${BRAINX_FROZEN_HARNESS:-0}" != 1; then
   if command -v cygpath >/dev/null 2>&1; then freeze_tmp_root=$(cygpath -u "$freeze_tmp_root"); fi
   frozen=$(mktemp -d "$freeze_tmp_root/brainx-harness.XXXXXX")
   cp "$0" "$frozen/run-refinement-case.sh"
-  cp "$here/smoke-test-reviewer.py" "$here/seccomp-reviewer.json" "$frozen/"
+  cp "$here/smoke-test-reviewer.py" "$here/seccomp-reviewer.json" \
+    "$here/archive-workspace.py" "$frozen/"
   export BRAINX_FROZEN_HARNESS=1
   exec bash "$frozen/run-refinement-case.sh" "$@"
 fi
@@ -116,6 +117,10 @@ test ! -e "$run_dir" || {
 }
 
 case "$case_name" in
+  19-brunel-lif-regimes)
+    expected_prompt_bytes="1396"
+    expected_prompt_sha256="4337e728b893ac7a4bf1aa648e8d37b52a656004de20e89c395f275b69f986bf"
+    ;;
   00-live-model-probe)
     expected_prompt_bytes="631"
     expected_prompt_sha256="fd275a8fb32bb8070afe7187bc12254273bb7089eec58f91faee2e20080697ac"
@@ -451,12 +456,7 @@ docker_run_isolated codex exec \
 agent_status=${PIPESTATUS[0]}
 set -e
 
-mkdir "$run_dir"
-cp -R "$workspace/." "$run_dir/"
-cp "$prompt_file" "$run_dir/harness-prompt.md"
-cp "$stage/codex-events.jsonl" "$run_dir/"
-cp "$stage/codex-stderr.log" "$run_dir/"
-test ! -f "$output_dir/agent-final.md" || cp "$output_dir/agent-final.md" "$run_dir/"
+# Preserve the evaluator receipt even if later archival fails.
 skill_snapshot_final_sha256=$(skill_tree_sha256 "$isolated_codex_home/skills")
 skill_snapshot_unchanged=false
 test "$skill_snapshot_final_sha256" = "$skill_snapshot_sha256" \
@@ -485,8 +485,26 @@ test "$skill_snapshot_final_sha256" = "$skill_snapshot_sha256" \
   printf 'eval_image_digest=%s\n' "$eval_image_digest"
   printf 'eval_platform=%s\n' "$eval_platform"
   printf 'docker_version=%s\n' "$(docker --version)"
+  printf 'archive_format=regular-files-plus-symlink-tar-v1\n'
+  printf 'archive_status=pending\n'
   printf 'exit_code=%s\n' "$agent_status"
-} > "$run_dir/harness-metadata.txt"
+} > "$stage/harness-metadata.txt"
+
+mkdir "$run_dir"
+# Resolve container-absolute symlinks where /workspace still means the original
+# workspace. Preserve their exact definitions beside a Windows-readable view.
+docker run --rm --network none \
+  -v "$(docker_path "$workspace"):/workspace:ro" \
+  -v "$(docker_path "$run_dir"):/archive:rw" \
+  -v "$(docker_path "$here/archive-workspace.py"):/checks/archive-workspace.py:ro" \
+  "$eval_image_digest" "$venv_in_image/bin/python" \
+  /checks/archive-workspace.py /workspace /archive
+cp "$prompt_file" "$run_dir/harness-prompt.md"
+cp "$stage/codex-events.jsonl" "$run_dir/"
+cp "$stage/codex-stderr.log" "$run_dir/"
+test ! -f "$output_dir/agent-final.md" || cp "$output_dir/agent-final.md" "$run_dir/"
+sed 's/^archive_status=pending$/archive_status=complete/' \
+  "$stage/harness-metadata.txt" > "$run_dir/harness-metadata.txt"
 
 printf 'Disposable workspace retained at: %s\n' "$stage"
 if test "$skill_snapshot_unchanged" != true; then

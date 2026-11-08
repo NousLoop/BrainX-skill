@@ -1,0 +1,65 @@
+{
+  "condition": 0,
+  "g": 3.0,
+  "eta": 2.0,
+  "seed": 101,
+  "dt_ms": 0.05,
+  "analysis_s": 3.0,
+  "E_rate_Hz": 333.3299,
+  "I_rate_Hz": 333.32933333333335,
+  "global_rate_Hz": 333.3297866666667,
+  "synchrony_S": 0.1417474449559907,
+  "synchrony_category": "synchronous",
+  "half_synchrony_S": [
+    0.1417085319012627,
+    0.14178634690097738
+  ],
+  "half_rates_Hz": [
+    [
+      333.3288,
+      333.3296
+    ],
+    [
+      333.331,
+      333.3290666666667
+    ]
+  ],
+  "E_I_fractional_drift": [
+    6.600067980748769e-06,
+    1.6000192002835177e-06
+  ],
+  "stationary": true,
+  "CV_median": 0.0,
+  "E_CV_median": 0.0,
+  "I_CV_median": 0.0,
+  "CV_eligible_fraction": 1.0,
+  "E_CV_eligible_fraction": 1.0,
+  "I_CV_eligible_fraction": 1.0,
+  "regularity": "regular",
+  "dominant_frequency_Hz": 333.0,
+  "peak_background_ratio": 75109765.11115341,
+  "peak_concentration": 0.9996714865599117,
+  "oscillation_supported": true,
+  "requested": "SR",
+  "required_predicates": [
+    "stationary",
+    "synchronous",
+    "regular"
+  ],
+  "predicates": {
+    "stationary": true,
+    "synchronous": true,
+    "asynchronous": false,
+    "regular": true,
+    "irregular": false,
+    "oscillatory": true,
+    "fast": true,
+    "slow": false
+  },
+  "failed_predicates": [],
+  "measured_regime": "SR",
+  "baseline_outcome": "supported",
+  "min_postburn_ISI_ms": 2.1,
+  "max_neuron_rate_Hz": 333.3333333333333,
+  "raw_file": "runs/baseline-v1/raw/condition0_seed101_dt0.05.npz"
+}

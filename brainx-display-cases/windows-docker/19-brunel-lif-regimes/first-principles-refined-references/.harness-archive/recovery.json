@@ -1,0 +1,26 @@
+{
+  "original_launcher_exit_code": 1,
+  "evaluator_exit_code": 0,
+  "evaluator_evidence": {
+    "time": "1794123399",
+    "id": "1cc8c1d39a614567eac41544cf2c15ae6891003072446a171f6aeaed3a10e9f3",
+    "exitCode": "0",
+    "execDuration": "4007",
+    "image": "sha256:845d4814bf308a3fd0f99d9090df922bc809782470954d7bac5284226952d897",
+    "name": "sleepy_bose"
+  },
+  "archive_recovery_exit_code": 0,
+  "source_workspace_retained": "C:\\Users\\guojiayang\\AppData\\Local\\Temp\\brainx-skill-eval.TLGE8U\\workspace",
+  "method": "Linux container with read-only source; original regular file bytes plus exact symlink tar; safe links materialized for Windows reading",
+  "symlinks": [
+    "runs/iteration-2/graphs",
+    "runs/iteration-2/raw"
+  ],
+  "scientific_files_repaired": false,
+  "new_model_calls": 0,
+  "config_sha256_matches_baseline": true,
+  "frozen_skill_tree_matches_refined_checkout": true,
+  "frozen_harness_hash": "9e0cd11ecdb86c300dbe8538ab818274f6a5fce9300f95df30e02ea988996ba7",
+  "original_partial_copy": "../failed-host-copy-refined-references/",
+  "frozen_launcher_evidence": "original-launcher.sh copied byte-exact from /tmp/brainx-harness.EwuZze (2026-11-08 14:29:25 +08:00)"
+}

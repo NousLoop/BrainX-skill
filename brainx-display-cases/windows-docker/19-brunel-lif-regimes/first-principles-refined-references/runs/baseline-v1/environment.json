@@ -1,0 +1,62 @@
+{
+  "python": "/brainx-venv/bin/python",
+  "python_version": "3.12.16 (main, Nov  5 2026, 07:58:20) [GCC 14.2.0]",
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "cpu_count": 32,
+  "backend": "cpu",
+  "devices": [
+    "cpu:0"
+  ],
+  "packages": {
+    "braintools": "0.4.0",
+    "tzdata": "2026.6",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1",
+    "brainpy": "2.9.0",
+    "opt_einsum": "3.4.0",
+    "msgpack": "1.2.4",
+    "llvmlite": "0.50.0",
+    "kiwisolver": "1.5.1",
+    "typing_extensions": "4.16.0",
+    "braincell": "0.2.0",
+    "tqdm": "4.70.1",
+    "ml_dtypes": "0.6.0",
+    "saiunit": "0.6.0",
+    "array-api-compat": "1.16.0",
+    "optax": "0.2.8",
+    "pillow": "13.0.0",
+    "fonttools": "4.68.0",
+    "brainspikes": "0.2.0",
+    "brainstate": "0.6.0",
+    "braintrace": "0.2.8",
+    "absl-py": "2.5.1",
+    "contourpy": "1.4.0",
+    "brainmass": "0.1.1",
+    "brainunit": "0.6.0",
+    "pip": "26.3",
+    "jaxlib": "0.12.0.1",
+    "packaging": "26.3",
+    "numba": "0.68.1",
+    "numpy": "2.5.4",
+    "BrainX": "2026.10.25",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "4.0.0",
+    "jax": "0.12.0.1",
+    "cycler": "0.12.1",
+    "brainevent": "0.3.0"
+  },
+  "environment": {
+    "JAX_PLATFORMS": "cpu"
+  },
+  "code_sha256": {
+    "model.py": "a2c7b9b1dc5000670fb2d0f03d7debdb6c3ba2c673cfa23e30d770531e284e9c",
+    "analysis.py": "30f386ad57d6fd0bd1cced5f314d43dc232db266007261b7b10408e5488b605d",
+    "experiment.py": "6036f2970e50e86dc8f68a356ff4e6380624dbede1caaabd5127780dbd6dce62",
+    "checks.py": "77fa3451128e6b3920e23687c5cd9236c263d0f4a0de0d6d901c749cf93a9829",
+    "NeuroSpecification.md": "0de19a9eb0343026c316c417ef1599449ad658aa7972cc86e51e87b4584ee530",
+    "brainx-study-record.md": "b03d51e7e8795313ebccd241c59a78a724fbc3b6ac722dd6155648adba9e4292"
+  },
+  "config_sha256": "0cb8e0a7ba85708401a27fbae955b86eed655b7ef4b37eeefd691e6fd6548124",
+  "scientific_sources": "task text only; no papers, scientific examples, existing model code or remembered protocols"
+}

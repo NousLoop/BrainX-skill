@@ -1,0 +1,20 @@
+{
+  "delivery_files": 222,
+  "delivery_mismatches": [],
+  "canonical_regular_files": 232,
+  "canonical_mismatches": [],
+  "symlink_definitions": [
+    {
+      "path": "runs/iteration-2/graphs",
+      "type": "symlink",
+      "target": "/workspace/runs/baseline-v1/graphs",
+      "materialized_view": true
+    },
+    {
+      "path": "runs/iteration-2/raw",
+      "type": "symlink",
+      "target": "/workspace/runs/baseline-v1/raw",
+      "materialized_view": true
+    }
+  ]
+}

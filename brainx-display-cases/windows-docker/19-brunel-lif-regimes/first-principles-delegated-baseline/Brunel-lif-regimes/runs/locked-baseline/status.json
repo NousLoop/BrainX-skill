@@ -1,0 +1,6 @@
+{
+  "status": "failed-deterministic",
+  "completed": 1,
+  "reason": "BrainEvent sparse workspace retained a tracer on second static-condition compilation",
+  "successor_run": "locked-baseline-v2"
+}

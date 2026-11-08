@@ -1,0 +1,22 @@
+{
+  "target_release": "BrainX 2026.10.25 / BrainState 0.6.0 / BrainTools 0.4.0",
+  "focused_probe": "PASS",
+  "documentation_smoke_frozen_image": "5 passed, topology missing optional networkx",
+  "documentation_smoke_disposable_overlay": "6 passed with networkx==3.5 under /tmp/validation-deps; image unchanged; Graphviz fallback warnings retained",
+  "routes": "0 missing local targets; 0 missing skill routes",
+  "link_auditor_linux": "4 tests PASS",
+  "link_auditor_windows": "1 existing path-related failure; no auditor code changed",
+  "changed_files_sha256": {
+    "skills/package-skills/brainstate/references/brainstate/randomness-and-reproducibility.md": "8371f6abc8ff023b212892f53c3ce636ede09aaf3c5c6f2d03baece5386e3a6e",
+    "braintools-references/braintools-metric.md": "a1b2fe1cd00b7d37fa22f49c4ad0929e8219dd1aa54dda9492212b41b018f006",
+    "skills/package-skills/braincell/references/braintools/metric.md": "a1b2fe1cd00b7d37fa22f49c4ad0929e8219dd1aa54dda9492212b41b018f006",
+    "skills/package-skills/brainpy-state/references/braintools/metric.md": "a1b2fe1cd00b7d37fa22f49c4ad0929e8219dd1aa54dda9492212b41b018f006",
+    "skills/package-skills/brainmass/references/braintools/metric.md": "13cf6b1c2633529d30ad56f1985d9c314d9144e37d70357d6e56db2cbf8991c4"
+  },
+  "general_guard_changed": false,
+  "design_changed": false,
+  "new_evaluation": "first-principles-refined-references",
+  "prompt_bytes": 2865,
+  "prompt_sha256": "7999c16fb9fff3c857f426d45fd65a1e16ecdb24a06508689b7ba5ee16a83b29",
+  "workspace_seed": "none"
+}

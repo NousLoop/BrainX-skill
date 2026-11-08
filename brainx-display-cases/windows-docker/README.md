@@ -34,6 +34,7 @@ version, image tag or reviewer transport starts a new baseline.
 ## Layout
 
 The Windows Docker harness lives in this directory: `run-refinement-case.sh`,
+`archive-workspace.py`,
 `build-eval-image.sh`, `Dockerfile`,
 `magpie-models-shim.py` + `codex-model-catalog-0.166.json`, `seccomp-reviewer.*`,
 `smoke-test-*.py`, `minimal-eval-config.toml`, and `brainx-eval.env(.example)`.
@@ -55,6 +56,21 @@ descriptive non-`runN` folder. Never compare them as unchanged-prompt
 refinement checkpoints.
 
 ## Rules that matter here
+
+The launcher archives inside Linux after the evaluator exits. Regular files
+keep their exact bytes. `.harness-archive/manifest.json` records the original
+tree and `.harness-archive/symlinks.tar` preserves exact link definitions;
+in-workspace links also receive Windows-readable materialized views. Those
+views are not the original link objects. For canonical replay, copy only the
+manifest's original file/directory entries into an empty Linux workspace and
+restore its declared links at the original `/workspace` mount. Never follow
+external, broken, or cyclic links to collect additional inputs.
+
+The evaluator receipt is written to the retained staging directory before
+archival. If archival fails after a completed evaluator, preserve that receipt
+and failure, recover from the retained workspace without another model call,
+and record evaluator, launcher and recovery exit codes separately. Do not
+silently label a recovery as an uninterrupted launch.
 
 - `exit_code` is mechanical evidence only. A run is scientifically accepted only
   when an independent review verdict is recorded.
@@ -97,6 +113,11 @@ Local regression checks (no real Docker/model calls in the launcher tests):
 python brainx-display-cases/windows-docker/test-run-refinement-case.py
 python brainx-display-cases/windows-docker/test-magpie-models-shim.py
 ```
+
+Run `test-archive-workspace.py -v` with the image's Python in a Linux container,
+mounting this harness directory read-only at `/checks`. It checks actual POSIX
+relative/absolute links, byte preservation, external/broken/cyclic links and
+source/destination guards; Windows symlink privileges are not required.
 
 ### Failure modes seen on this machine, and their fixes
 

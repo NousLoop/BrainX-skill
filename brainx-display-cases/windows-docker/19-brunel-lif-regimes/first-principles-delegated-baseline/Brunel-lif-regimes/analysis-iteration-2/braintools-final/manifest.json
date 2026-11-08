@@ -1,0 +1,137 @@
+[
+  {
+    "path": "RUN_SPEC.md",
+    "bytes": 946,
+    "sha256": "8c9fc3327553422cbf9ad1fb413b8c72a5cd1bbe5d160d59dd1d2405a77d9c0d"
+  },
+  {
+    "path": "analysis_spectrum.py",
+    "bytes": 738,
+    "sha256": "0e88dd501fca5e54b45d8a3584a14c88af1414f6ef31b0f1b8306b1d0a20d0d4"
+  },
+  {
+    "path": "assessment.json",
+    "bytes": 1445,
+    "sha256": "b9b71df18328f807ad8ad7771ae18d5537d40d86161edf932ce4eec015b17e5c"
+  },
+  {
+    "path": "command.txt",
+    "bytes": 104,
+    "sha256": "39d7be6e8396fa14bedf558370529906e2c8c6319da1ce3aefaf5eaffd91ce75"
+  },
+  {
+    "path": "config.json",
+    "bytes": 3001,
+    "sha256": "6f41bb1ace2481dae74e3ca7922f55e8685a04aaa7ad8ea6d7c2ee4d87b561f1"
+  },
+  {
+    "path": "exit_code",
+    "bytes": 2,
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  {
+    "path": "experiment.py",
+    "bytes": 10826,
+    "sha256": "d63143cb49afc1bcfe44874a3ec9793d0c6f9a6f1b8d5201e248669147525fcb"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.05_condition-0.npz",
+    "bytes": 46097,
+    "sha256": "8c5a637c4db50afb65c3b2f00dcc8a1b34cdf8f4d0ecfaf0423f13abca328a3c"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.05_condition-1.npz",
+    "bytes": 45618,
+    "sha256": "65f74104c69661de769eb07e68c9691d24721b159daa293f98355e21586f18f6"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.05_condition-2.npz",
+    "bytes": 45630,
+    "sha256": "6fb5eeace9c0a9340259d259975e79b1daa48c70829fdecb615adc26d9290b8b"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.05_condition-3.npz",
+    "bytes": 45603,
+    "sha256": "e2e4ac304054e4ed3d3a1189db025c5562f449058a9a436974a8737b579cdd06"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.1_condition-0.npz",
+    "bytes": 46118,
+    "sha256": "931aa8171507f330fa206e1504b927aad140dfb05e6ff2c311c9f9ad4c55374c"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.1_condition-1.npz",
+    "bytes": 45615,
+    "sha256": "9e8b1ff1497765cf876377596f8f77af12fa7e4036e7176ae0111aa56a2e340d"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.1_condition-2.npz",
+    "bytes": 45599,
+    "sha256": "9e8190999dfd84d2ee836029e763ac67b0f8094fb78143eef619c2f05ced8760"
+  },
+  {
+    "path": "metrics/seed-11_dt-0.1_condition-3.npz",
+    "bytes": 45563,
+    "sha256": "f44d7d2e506993b97ab0861e49445c9b92ae58db33b454856e604c0e6ec02a4c"
+  },
+  {
+    "path": "metrics/seed-29_dt-0.1_condition-0.npz",
+    "bytes": 46059,
+    "sha256": "321c51af6dd78ed37d347efb25f6c47fc2671f6ef266662908bb07a8560e4bfb"
+  },
+  {
+    "path": "metrics/seed-29_dt-0.1_condition-1.npz",
+    "bytes": 45615,
+    "sha256": "8f246e8b725a800aac20b11d53d7dbf0fd103bb83edc6b3fb76cfbb97e279013"
+  },
+  {
+    "path": "metrics/seed-29_dt-0.1_condition-2.npz",
+    "bytes": 45604,
+    "sha256": "c721730642876956cc533a985e8cc96eeae8798634e26414586daddfa2af0fa1"
+  },
+  {
+    "path": "metrics/seed-29_dt-0.1_condition-3.npz",
+    "bytes": 45607,
+    "sha256": "8eaa76bf96fbc4811aa31fcd5a7cbca17f566ee005c6009d76419cef3fb65552"
+  },
+  {
+    "path": "metrics/seed-47_dt-0.1_condition-0.npz",
+    "bytes": 46077,
+    "sha256": "9a43d81ae7fafc30367b3366f350785e18f7f16d5f3bef0c25358775acc0b620"
+  },
+  {
+    "path": "metrics/seed-47_dt-0.1_condition-1.npz",
+    "bytes": 45589,
+    "sha256": "5124f34478d9ad3f99ba46666c9e0f73e5d8f56f9305c87cd97e78db45ed65c3"
+  },
+  {
+    "path": "metrics/seed-47_dt-0.1_condition-2.npz",
+    "bytes": 45605,
+    "sha256": "fe1b6dd5dec004dd2cc497b01d094dcf5213a96698d17e89360698f13829b18d"
+  },
+  {
+    "path": "metrics/seed-47_dt-0.1_condition-3.npz",
+    "bytes": 45595,
+    "sha256": "e6523e15d271fa76357a77113d45c52c5edebceb326f4ba905f52a35edded0ce"
+  },
+  {
+    "path": "metrics.json",
+    "bytes": 17874,
+    "sha256": "2cec6204739b09d1500925f963d72c1ab68d7a31380f58eb05965033de106d47"
+  },
+  {
+    "path": "parity.json",
+    "bytes": 5423,
+    "sha256": "791083931cb140059b8ab5b4ee6d68228b3e098d9084c927f68002fbd1c475ce"
+  },
+  {
+    "path": "recompute_spectra.py",
+    "bytes": 2982,
+    "sha256": "f3417ec23830d446aa15f96b8f9c2f9e3db463cc16185c38831c3342a93e8f75"
+  },
+  {
+    "path": "run.log",
+    "bytes": 5424,
+    "sha256": "b4f00d3a6e91043f12fcb08e4e6243311c26e9f43bb8a2e33b2b9efa0a37e96a"
+  }
+]

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/checks.py", line 106, in <module>
+    run_checks('checks.json')
+  File "/workspace/Brunel-lif-regimes/checks.py", line 42, in run_checks
+    net = model.Network(graphs, jnp.zeros(2) * u.mV, 7, .1 * u.ms, ne=1, ni=1)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/brainstate/graph/_node.py", line 45, in __call__
+    node.__init__(*args, **kwargs)
+  File "/workspace/Brunel-lif-regimes/model.py", line 114, in __init__
+    self.drive = PoissonDrive(ne + ni, seed, dt)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/brainstate/graph/_node.py", line 45, in __call__
+    node.__init__(*args, **kwargs)
+  File "/workspace/Brunel-lif-regimes/model.py", line 81, in __init__
+    self.rng = brainstate.random.RandomState(seed=seed + 100_003)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RandomState.__init__() got an unexpected keyword argument 'seed'

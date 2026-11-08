@@ -1,0 +1,157 @@
+{
+  "all_16_PSDs_pass": true,
+  "all_labels_exact": true,
+  "all_peak_frequencies_exact": true,
+  "no_raw_or_model_changes": true,
+  "offline_precision": "float64",
+  "model_precision": "unchanged float32",
+  "execution_seconds": 0.6096120310003244,
+  "maximum_relative_P_error": 1.056488230233299e-12,
+  "maximum_absolute_Q_error": 1.1102230246251565e-16,
+  "results": [
+    {
+      "name": "seed-11_dt-0.1_condition-0",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.412514632510465e-13,
+      "absolute_Q_error": 4.2616345158731986e-21,
+      "PSD_max_absolute_error": 6.111804395914078e-10,
+      "PSD_relative_L2_error": 4.423923031104635e-15
+    },
+    {
+      "name": "seed-11_dt-0.1_condition-1",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.220446049250313e-16,
+      "absolute_Q_error": 1.734723475976807e-18,
+      "PSD_max_absolute_error": 7.958078640513122e-13,
+      "PSD_relative_L2_error": 4.5567986292262975e-15
+    },
+    {
+      "name": "seed-11_dt-0.1_condition-2",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 1.1102230246251565e-16,
+      "absolute_Q_error": 6.938893903907228e-18,
+      "PSD_max_absolute_error": 4.263256414560601e-14,
+      "PSD_relative_L2_error": 4.661020038133612e-15
+    },
+    {
+      "name": "seed-11_dt-0.1_condition-3",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 4.440892098500626e-16,
+      "absolute_Q_error": 5.551115123125783e-17,
+      "PSD_max_absolute_error": 2.042810365310288e-14,
+      "PSD_relative_L2_error": 4.6586595207835155e-15
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-0",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.440270208126094e-13,
+      "absolute_Q_error": 1.1249656330721176e-21,
+      "PSD_max_absolute_error": 7.275957614183426e-10,
+      "PSD_relative_L2_error": 4.582925648878463e-15
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-1",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 0.0,
+      "absolute_Q_error": 0.0,
+      "PSD_max_absolute_error": 1.1937117960769683e-12,
+      "PSD_relative_L2_error": 4.746001037030316e-15
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-2",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.220446049250313e-16,
+      "absolute_Q_error": 0.0,
+      "PSD_max_absolute_error": 4.973799150320701e-14,
+      "PSD_relative_L2_error": 4.591183287492374e-15
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-3",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 4.440892098500626e-16,
+      "absolute_Q_error": 0.0,
+      "PSD_max_absolute_error": 2.7533531010703882e-14,
+      "PSD_relative_L2_error": 4.715144661030317e-15
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-0",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 1.056488230233299e-12,
+      "absolute_Q_error": 1.8992066864217515e-20,
+      "PSD_max_absolute_error": 6.402842700481415e-10,
+      "PSD_relative_L2_error": 4.532880618023906e-15
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-1",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 3.3306690738754696e-16,
+      "absolute_Q_error": 8.673617379884035e-19,
+      "PSD_max_absolute_error": 7.673861546209082e-13,
+      "PSD_relative_L2_error": 4.678434503358395e-15
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-2",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.220446049250313e-16,
+      "absolute_Q_error": 1.3877787807814457e-17,
+      "PSD_max_absolute_error": 2.842170943040401e-14,
+      "PSD_relative_L2_error": 4.607595983078498e-15
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-3",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.220446049250313e-16,
+      "absolute_Q_error": 5.551115123125783e-17,
+      "PSD_max_absolute_error": 2.042810365310288e-14,
+      "PSD_relative_L2_error": 4.669067549291889e-15
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-0",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 9.348077867343818e-14,
+      "absolute_Q_error": 2.2406668432836414e-20,
+      "PSD_max_absolute_error": 6.984919309616089e-10,
+      "PSD_relative_L2_error": 4.5202905574177954e-15
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-1",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.220446049250313e-16,
+      "absolute_Q_error": 0.0,
+      "PSD_max_absolute_error": 6.536993168992922e-13,
+      "PSD_relative_L2_error": 4.5873953547488705e-15
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-2",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 0.0,
+      "absolute_Q_error": 3.469446951953614e-18,
+      "PSD_max_absolute_error": 3.907985046680551e-14,
+      "PSD_relative_L2_error": 4.591763847517784e-15
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-3",
+      "frequency_exact": true,
+      "label_exact": true,
+      "relative_P_error": 2.220446049250313e-16,
+      "absolute_Q_error": 1.1102230246251565e-16,
+      "PSD_max_absolute_error": 2.3092638912203256e-14,
+      "PSD_relative_L2_error": 4.620455388210102e-15
+    }
+  ]
+}

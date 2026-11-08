@@ -1,0 +1,25 @@
+Collecting networkx==3.5
+  Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 2.2 MB/s  0:00:00
+Installing collected packages: networkx
+Successfully installed networkx-3.5
+test_braincell_network (__main__.SkillExamples.test_braincell_network) ... ok
+test_braincell_recording (__main__.SkillExamples.test_braincell_recording) ... ok
+test_braincell_sampling_schedule (__main__.SkillExamples.test_braincell_sampling_schedule) ... ok
+test_braincell_topology (__main__.SkillExamples.test_braincell_topology) ... /brainx-venv/lib/python3.12/site-packages/braincell/vis/cell_topology.py:457: RuntimeWarning: Graphviz layout 'dot' is unavailable (requires pygraphviz http://pygraphviz.github.io/); falling back to 'kamada_kawai'.
+  return _plot_discrete_topology_graph(
+/brainx-venv/lib/python3.12/site-packages/braincell/vis/cell_topology.py:380: RuntimeWarning: Graphviz layout 'dot' is unavailable (requires pygraphviz http://pygraphviz.github.io/); falling back to 'kamada_kawai'.
+  return _plot_discrete_topology_graph(
+/brainx-venv/lib/python3.12/site-packages/braincell/vis/point_topology.py:204: RuntimeWarning: Graphviz layout 'dot' is unavailable (requires pygraphviz http://pygraphviz.github.io/); falling back to 'kamada_kawai'.
+  return _plot_discrete_topology_graph(
+/brainx-venv/lib/python3.12/site-packages/braincell/vis/point_topology.py:204: RuntimeWarning: Graphviz layout 'twopi' is unavailable (requires pygraphviz http://pygraphviz.github.io/); falling back to 'kamada_kawai'.
+  return _plot_discrete_topology_graph(
+ok
+test_brainstate_environment (__main__.SkillExamples.test_brainstate_environment) ... ok
+test_brainstate_training (__main__.SkillExamples.test_brainstate_training) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 9.123s
+
+OK

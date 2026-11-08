@@ -1,0 +1,27 @@
+[
+  {
+    "check": "components",
+    "exit_code": 0,
+    "elapsed_seconds": 16.62230384099894
+  },
+  {
+    "check": "temporal-input",
+    "exit_code": 0,
+    "elapsed_seconds": 2.8557867469990015
+  },
+  {
+    "check": "fixture",
+    "exit_code": 0,
+    "elapsed_seconds": 2.8845150910001394
+  },
+  {
+    "check": "raw-audit",
+    "exit_code": 0,
+    "elapsed_seconds": 5.185256914001002
+  },
+  {
+    "check": "spectral-reanalysis",
+    "exit_code": 0,
+    "elapsed_seconds": 30.16119298600097
+  }
+]

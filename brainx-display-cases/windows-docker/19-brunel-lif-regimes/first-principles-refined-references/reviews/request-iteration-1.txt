@@ -1,0 +1,145 @@
+Review completed BrainX iteration 1.
+
+PROJECT_ROOT: /workspace
+ACTIVE_COVERAGE: none
+
+SPECIFICATION:
+- /workspace/NeuroSpecification.md
+
+LOOP_MEMORY:
+- /workspace/brainmodeling-memory.md
+
+BRAINX_STUDY_RECORD:
+- /workspace/brainx-study-record.md
+
+IMPLEMENTATION:
+- /workspace/model.py
+- /workspace/analysis.py
+- /workspace/experiment.py
+- /workspace/plot_results.py
+- /workspace/write_report.py
+- /workspace/audit_evidence.py
+
+TESTS:
+- /workspace/checks.py
+- /workspace/check_temporal_input.py
+- /workspace/checks/components.json
+- /workspace/checks/temporal_poisson.json
+- /workspace/checks/metrics_fixture/test_result.json
+- /workspace/checks/metrics_fixture/raw.npz
+- /workspace/checks/plot_api.json
+- /workspace/checks/evidence_audit.json
+- /workspace/checks-launch.log
+- /workspace/checks-launch-attempt1.log
+- /workspace/checks-launch-attempt2.log
+
+ACCELERATION_AND_PARITY:
+- /workspace/acceleration.md
+- /workspace/checks/acceleration.json
+- /workspace/checks/worker_affinity_parity.json
+- /workspace/checks/full_size_smoke.npz
+
+EXPERIMENT_RUN:
+- /workspace/runs/baseline-v1/RUN_SPEC.md
+- /workspace/runs/baseline-v1/config.json
+- /workspace/runs/baseline-v1/environment.json
+- /workspace/runs/baseline-v1/command.txt
+- /workspace/runs/baseline-v1/status.json
+- /workspace/runs/baseline-v1/exit_code
+- /workspace/runs/baseline-v1/run.log
+- /workspace/runs/baseline-v1/manifest.json
+- /workspace/runs/baseline-v1/metrics_summary.csv
+- /workspace/runs/baseline-v1/population_rates.npz
+- /workspace/runs/baseline-v1/sample_neuron_ids.npy
+- /workspace/runs/baseline-v1/code/NeuroSpecification.md
+- /workspace/runs/baseline-v1/code/analysis.py
+- /workspace/runs/baseline-v1/code/brainx-study-record.md
+- /workspace/runs/baseline-v1/code/checks.py
+- /workspace/runs/baseline-v1/code/experiment.py
+- /workspace/runs/baseline-v1/code/model.py
+- /workspace/runs/baseline-v1/raw/condition0_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/raw/condition0_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition0_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition0_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition1_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/raw/condition1_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition1_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition1_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition2_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/raw/condition2_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition2_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition2_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition3_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/raw/condition3_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition3_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/raw/condition3_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/graphs/seed101.json
+- /workspace/runs/baseline-v1/graphs/seed101.npz
+- /workspace/runs/baseline-v1/graphs/seed202.json
+- /workspace/runs/baseline-v1/graphs/seed202.npz
+- /workspace/runs/baseline-v1/graphs/seed303.json
+- /workspace/runs/baseline-v1/graphs/seed303.npz
+- /workspace/runs/baseline-v1/metrics/condition0_seed101_dt0.05.json
+- /workspace/runs/baseline-v1/metrics/condition0_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/metrics/condition0_seed101_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition0_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition0_seed202_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition0_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition0_seed303_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition0_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition1_seed101_dt0.05.json
+- /workspace/runs/baseline-v1/metrics/condition1_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/metrics/condition1_seed101_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition1_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition1_seed202_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition1_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition1_seed303_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition1_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition2_seed101_dt0.05.json
+- /workspace/runs/baseline-v1/metrics/condition2_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/metrics/condition2_seed101_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition2_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition2_seed202_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition2_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition2_seed303_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition2_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition3_seed101_dt0.05.json
+- /workspace/runs/baseline-v1/metrics/condition3_seed101_dt0.05.npz
+- /workspace/runs/baseline-v1/metrics/condition3_seed101_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition3_seed101_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition3_seed202_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition3_seed202_dt0.1.npz
+- /workspace/runs/baseline-v1/metrics/condition3_seed303_dt0.1.json
+- /workspace/runs/baseline-v1/metrics/condition3_seed303_dt0.1.npz
+- /workspace/runs/baseline-v1/group_seed101_dt0.05.log
+- /workspace/runs/baseline-v1/group_seed101_dt0.1.log
+- /workspace/runs/baseline-v1/group_seed202_dt0.1.log
+- /workspace/runs/baseline-v1/group_seed303_dt0.1.log
+- /workspace/runs/baseline-v1/worker_seed101_dt0.05.log
+- /workspace/runs/baseline-v1/worker_seed101_dt0.1.log
+- /workspace/runs/baseline-v1/worker_seed202_dt0.1.log
+- /workspace/runs/baseline-v1/worker_seed303_dt0.1.log
+
+RESULT_ASSESSMENT:
+- /workspace/runs/baseline-v1/assessment.json
+- /workspace/runs/baseline-v1/assessment.md
+- /workspace/report.md
+- /workspace/RAW_EVIDENCE.md
+- /workspace/FIGURE_CONTRACT.md
+- /workspace/FIGURE_MANIFEST.md
+- /workspace/figures/diagnostic/figure_data.npz
+- /workspace/figures/diagnostic/manifest.json
+- /workspace/figures/diagnostic/ei_rates.png
+- /workspace/figures/diagnostic/four_conditions.png
+- /workspace/figures/diagnostic/global_rate_spectra.png
+- /workspace/figures/diagnostic/isi_cv.png
+- /workspace/figures/diagnostic/regime_tests.png
+
+TRAINING_OR_FITTING_EVIDENCE: none
+PRIOR_REVIEW_EVIDENCE: none
+
+RESEARCHER SOURCE RESTRICTION (applies to this independent review too): This is a new first-principles exploration using only the task-supplied data. Do not search for, consult, or reconstruct papers, scientific example scripts, external existing scientific model implementations, open-source scientific solutions or remembered Brunel protocols. Installed BrainX skill instructions and public API contract documentation may be consulted ONLY for library mechanics. Do read the newly created project implementation and evidence listed above. Do not follow any skill routing to scientific example scripts. Do not force the four requested regime labels: unsupported/inconclusive outcomes are authorized, and frozen rules/parameters must not be tuned to results. The researcher explicitly delegated all unspecified decisions and authorized locking/proceeding without another clarification or approval.
+
+PROPOSED NEXT ACTION: only if PASS, export final figures using the exact accepted evidence and finalize report; preserve unfavorable/uncertain labels. The current diagnostic plots are unaccepted pending your verdict.
+
+Read every listed artifact and review this iteration using the injected reviewer contract. Do not edit files. Return only the required Markdown report.

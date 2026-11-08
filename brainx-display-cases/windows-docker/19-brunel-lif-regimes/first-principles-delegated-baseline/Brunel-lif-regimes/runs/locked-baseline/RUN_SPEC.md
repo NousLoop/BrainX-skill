@@ -1,0 +1,9 @@
+# Immutable full-size production and replication run
+
+Run ID: locked-baseline. New, forward-simulation, CPU, float32. No input data beyond the user prompt. Existing BrainX environment; no installations. Code and specification identities are in environment.json. config.json is immutable and the entry point consumes it; supplied model constants are asserted in the source.
+
+The exact command is command.txt. Seeds 11,29,47 have separate graphs/initialization/drive streams and are paired across conditions. Seed 11 additionally uses dt=0.05 ms. Twelve primary and four sensitivity runs are required. Each rollout is one compiled BrainState for_loop, with complete neural/delay State reset and explicit RNG reseeding after compilation and before every condition. No mid-rollout continuation is used.
+
+Expected: exact saved graphs, graph checks, lossless bit-packed spikes for burn-in and observation, final voltage/refractory/RNG diagnostics, E/I counts, per-neuron counts and ISI CV/eligibility, Welch spectra, JSON/CSV metrics, frozen assessments, status and log, later PNG figures and manifest. Padded packbits bits outside the 12500 neurons are excluded from decoding.
+
+Resources: based on smoke/result.json, estimated linear scale from the warm full-size 100 ms smoke. Primary rollouts contain 40000 steps; fine rollouts 80000. Estimated working memory under 4 GB and saved evidence under 3 GB. Stop only on nonfinite values, count/refractory inconsistency, out-of-memory/disk failure or process failure; no stopping for unfavorable scientific outcomes. No unchanged retries for deterministic failures. Preserve all failures in distinct paths. No paid compute. Expected scientific non-claims are in the locked specification.

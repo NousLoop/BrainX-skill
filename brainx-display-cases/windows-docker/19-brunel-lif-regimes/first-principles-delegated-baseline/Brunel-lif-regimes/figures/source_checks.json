@@ -1,0 +1,38 @@
+[
+  {
+    "condition": 0,
+    "display_spike_count": 8329,
+    "raster_events": 8329,
+    "samples": 50,
+    "rate_mean_in_display": 333.03808000000004,
+    "full_window_mean": 333.33112000000006,
+    "raw_rate_plot_exact": true
+  },
+  {
+    "condition": 1,
+    "display_spike_count": 1440,
+    "raster_events": 1440,
+    "samples": 50,
+    "rate_mean_in_display": 59.16064,
+    "full_window_mean": 59.33208,
+    "raw_rate_plot_exact": true
+  },
+  {
+    "condition": 2,
+    "display_spike_count": 924,
+    "raster_events": 924,
+    "samples": 50,
+    "rate_mean_in_display": 37.76112,
+    "full_window_mean": 37.963946666666665,
+    "raw_rate_plot_exact": true
+  },
+  {
+    "condition": 3,
+    "display_spike_count": 136,
+    "raster_events": 136,
+    "samples": 50,
+    "rate_mean_in_display": 5.66512,
+    "full_window_mean": 5.683280000000001,
+    "raw_rate_plot_exact": true
+  }
+]

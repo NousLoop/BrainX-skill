@@ -1,0 +1,240 @@
+{
+  "timestamp_UTC": "2026-11-08T06:14:31.260947+00:00",
+  "review": "PASS",
+  "scientific_outcome": "partially_supported",
+  "simulation_runs": 16,
+  "specification_sha256": "20c7419c9ddce8492febff55ce50920bae77d710fdbcce440cca17d4d58f7271",
+  "specification_unchanged": true,
+  "simulation_model_matches_immutable_snapshot": true,
+  "native_spectral_parity": true,
+  "all_report_links_exist": true,
+  "main_figure_source_checks": [
+    {
+      "condition": 0,
+      "display_spike_count": 8329,
+      "raster_events": 8329,
+      "samples": 50,
+      "rate_mean_in_display": 333.03808000000004,
+      "full_window_mean": 333.33112000000006,
+      "raw_rate_plot_exact": true
+    },
+    {
+      "condition": 1,
+      "display_spike_count": 1440,
+      "raster_events": 1440,
+      "samples": 50,
+      "rate_mean_in_display": 59.16064,
+      "full_window_mean": 59.33208,
+      "raw_rate_plot_exact": true
+    },
+    {
+      "condition": 2,
+      "display_spike_count": 924,
+      "raster_events": 924,
+      "samples": 50,
+      "rate_mean_in_display": 37.76112,
+      "full_window_mean": 37.963946666666665,
+      "raw_rate_plot_exact": true
+    },
+    {
+      "condition": 3,
+      "display_spike_count": 136,
+      "raster_events": 136,
+      "samples": 50,
+      "rate_mean_in_display": 5.66512,
+      "full_window_mean": 5.683280000000001,
+      "raw_rate_plot_exact": true
+    }
+  ],
+  "all_16_summary_source_checks": [
+    {
+      "name": "seed-11_dt-0.1_condition-0",
+      "E_Hz": 333.3310666666667,
+      "I_Hz": 333.33133333333336,
+      "median_ISI_CV": 0.0,
+      "dominant_Hz": 667.0
+    },
+    {
+      "name": "seed-11_dt-0.1_condition-1",
+      "E_Hz": 59.31863333333334,
+      "I_Hz": 59.385866666666665,
+      "median_ISI_CV": 0.7979494107453626,
+      "dominant_Hz": 181.0
+    },
+    {
+      "name": "seed-11_dt-0.1_condition-2",
+      "E_Hz": 37.96866666666667,
+      "I_Hz": 37.94506666666667,
+      "median_ISI_CV": 0.4111438195598913,
+      "dominant_Hz": 138.0
+    },
+    {
+      "name": "seed-11_dt-0.1_condition-3",
+      "E_Hz": 5.6837333333333335,
+      "I_Hz": 5.681466666666666,
+      "median_ISI_CV": 0.6550450781057222,
+      "dominant_Hz": 22.0
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-0",
+      "E_Hz": 333.3299333333333,
+      "I_Hz": 333.3290666666667,
+      "median_ISI_CV": 0.0,
+      "dominant_Hz": 667.0
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-1",
+      "E_Hz": 60.603166666666674,
+      "I_Hz": 60.714933333333335,
+      "median_ISI_CV": 0.9278923814914479,
+      "dominant_Hz": 181.0
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-2",
+      "E_Hz": 38.2279,
+      "I_Hz": 38.17586666666667,
+      "median_ISI_CV": 0.41316034863667156,
+      "dominant_Hz": 136.0
+    },
+    {
+      "name": "seed-11_dt-0.05_condition-3",
+      "E_Hz": 5.9075999999999995,
+      "I_Hz": 5.872,
+      "median_ISI_CV": 0.6472834578106219,
+      "dominant_Hz": 23.0
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-0",
+      "E_Hz": 333.33160000000004,
+      "I_Hz": 333.33213333333333,
+      "median_ISI_CV": 0.0,
+      "dominant_Hz": 667.0
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-1",
+      "E_Hz": 59.36076666666667,
+      "I_Hz": 59.44413333333333,
+      "median_ISI_CV": 0.8045011140732219,
+      "dominant_Hz": 183.0
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-2",
+      "E_Hz": 37.9917,
+      "I_Hz": 37.93853333333333,
+      "median_ISI_CV": 0.4088765601463884,
+      "dominant_Hz": 142.0
+    },
+    {
+      "name": "seed-29_dt-0.1_condition-3",
+      "E_Hz": 5.552366666666667,
+      "I_Hz": 5.560133333333333,
+      "median_ISI_CV": 0.6484398634080163,
+      "dominant_Hz": 22.0
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-0",
+      "E_Hz": 333.3313,
+      "I_Hz": 333.3314666666667,
+      "median_ISI_CV": 0.0,
+      "dominant_Hz": 667.0
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-1",
+      "E_Hz": 59.34063333333333,
+      "I_Hz": 59.43613333333334,
+      "median_ISI_CV": 0.8041181465465063,
+      "dominant_Hz": 181.0
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-2",
+      "E_Hz": 38.1682,
+      "I_Hz": 38.07853333333333,
+      "median_ISI_CV": 0.4091874373167847,
+      "dominant_Hz": 137.0
+    },
+    {
+      "name": "seed-47_dt-0.1_condition-3",
+      "E_Hz": 5.5314000000000005,
+      "I_Hz": 5.545333333333333,
+      "median_ISI_CV": 0.6608749059282333,
+      "dominant_Hz": 23.0
+    }
+  ],
+  "images": {
+    "four_conditions.png": {
+      "path": "/workspace/Brunel-lif-regimes/figures/four_conditions.png",
+      "sha256": "0b2fe5ec0597fe5d434af1121c7152af08ff3436b61535d51496c75c56e8ccf7",
+      "pixels": [
+        3080,
+        2200
+      ],
+      "format": "PNG",
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "bytes": 615350,
+      "visual_inspection": "PASS: nonblank, legible labels and units, no clipping or overlap; source patterns agree with accepted metrics"
+    },
+    "ei_rates.png": {
+      "path": "/workspace/Brunel-lif-regimes/figures/ei_rates.png",
+      "sha256": "263d70e79a379d62fe275fc95cd7670bca8bba878b6eb10186d024cb6b723a27",
+      "pixels": [
+        2420,
+        924
+      ],
+      "format": "PNG",
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "bytes": 137342,
+      "visual_inspection": "PASS: nonblank, legible labels and units, no clipping or overlap; source patterns agree with accepted metrics"
+    },
+    "isi_cv.png": {
+      "path": "/workspace/Brunel-lif-regimes/figures/isi_cv.png",
+      "sha256": "79e99e367a3f74f2f743ff0a908506eb89cf0e10f1e36ce1c13beafb924406d1",
+      "pixels": [
+        3300,
+        836
+      ],
+      "format": "PNG",
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "bytes": 195943,
+      "visual_inspection": "PASS: nonblank, legible labels and units, no clipping or overlap; source patterns agree with accepted metrics"
+    },
+    "global_rate_spectrum.png": {
+      "path": "/workspace/Brunel-lif-regimes/figures/global_rate_spectrum.png",
+      "sha256": "3495244515b9d950ceb90867cb59822ce0733a1bb77cb2715aab35d8f891cf8d",
+      "pixels": [
+        2420,
+        1540
+      ],
+      "format": "PNG",
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "bytes": 612635,
+      "visual_inspection": "PASS: nonblank, legible labels and units, no clipping or overlap; source patterns agree with accepted metrics"
+    },
+    "step_halving.png": {
+      "path": "/workspace/Brunel-lif-regimes/figures/step_halving.png",
+      "sha256": "4e05daca7c8e26d18bf7ba3e4fa71aed68921beacd7debc323bcb998ff53dc4e",
+      "pixels": [
+        2420,
+        1540
+      ],
+      "format": "PNG",
+      "dpi": [
+        219.9894,
+        219.9894
+      ],
+      "bytes": 727287,
+      "visual_inspection": "PASS: nonblank, legible labels and units, no clipping or overlap; source patterns agree with accepted metrics"
+    }
+  }
+}

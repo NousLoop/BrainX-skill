@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/workspace/figures/diagnostic/four_conditions.png",
+    "sha256": "c1d3cc9f2ee11d10d356611dcb7dc5110b16263e7099eb1daf5a3c25283b6b6d",
+    "bytes": 358928,
+    "mode": "diagnostic",
+    "description": "Global rate (0.1-ms bins; independent rate scales) and fixed 50-neuron raster | seed 101",
+    "dpi": 200
+  },
+  {
+    "path": "/workspace/figures/diagnostic/ei_rates.png",
+    "sha256": "1d5661428a8f37f7b6525f9a3478882b25843b452d83699c643367134165dcd0",
+    "bytes": 111592,
+    "mode": "diagnostic",
+    "description": "E/I rates | all three seeds and numerical control | analysis 1000\u20134000 ms",
+    "dpi": 200
+  },
+  {
+    "path": "/workspace/figures/diagnostic/isi_cv.png",
+    "sha256": "06c6f9fa6f5e42e2070b37e8a7d68a86ba5f677869e932a1964939f17e1b34cc",
+    "bytes": 107267,
+    "mode": "diagnostic",
+    "description": "ISI CV | all eligible neurons across three seeds | dotted 0.50 / dashed 0.70 cutoffs",
+    "dpi": 200
+  },
+  {
+    "path": "/workspace/figures/diagnostic/global_rate_spectra.png",
+    "sha256": "97c1e3d909f7f7fefc46acfa39ea6e385830aec387b22ee215e42b985322d360",
+    "bytes": 534558,
+    "mode": "diagnostic",
+    "description": "Global-rate spectra | Welch 1-s Hann windows, 50% overlap | maxima need not imply oscillations",
+    "dpi": 200
+  },
+  {
+    "path": "/workspace/figures/diagnostic/regime_tests.png",
+    "sha256": "8fa71aa51001cfc17b873fdfecbafb78beb4c08037aba9b352769aeea7d17340",
+    "bytes": 579067,
+    "mode": "diagnostic",
+    "description": "Frozen regime predicates | dots: full windows; synchrony crosses: halves | dashed: fixed thresholds",
+    "dpi": 200
+  }
+]

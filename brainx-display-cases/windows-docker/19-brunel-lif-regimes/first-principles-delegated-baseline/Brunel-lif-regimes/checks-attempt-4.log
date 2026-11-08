@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/checks.py", line 125, in <module>
+    run_checks('checks.json')
+  File "/workspace/Brunel-lif-regimes/checks.py", line 106, in run_checks
+    baseline_key = np.asarray(baseline.drive.rng.value).tolist()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/brainx-venv/lib/python3.12/site-packages/jax/_src/random/prng.py", line 335, in __array__
+    raise TypeError("JAX array with PRNGKey dtype cannot be converted to a NumPy array."
+TypeError: JAX array with PRNGKey dtype cannot be converted to a NumPy array. Use jax.random.key_data(arr) if you wish to extract the underlying integer array.

@@ -1,0 +1,243 @@
+{
+  "graphs": {
+    "seed101": {
+      "sha256": "2bfae5f98c49bdbd8b1520baae59f10b4da9d24bf0ea61c5b04092743d0a91d5",
+      "checks": [
+        {
+          "source": "e",
+          "degree": 1000,
+          "edges": 12500000,
+          "exact_indegree": true,
+          "no_autapses": true,
+          "no_duplicates": true
+        },
+        {
+          "source": "i",
+          "degree": 250,
+          "edges": 3125000,
+          "exact_indegree": true,
+          "no_autapses": true,
+          "no_duplicates": true
+        }
+      ]
+    },
+    "seed202": {
+      "sha256": "cbf5f8729a2b0ce34d94789210d0bf31ce776bc109514c18354830ecc2e16d3c",
+      "checks": [
+        {
+          "source": "e",
+          "degree": 1000,
+          "edges": 12500000,
+          "exact_indegree": true,
+          "no_autapses": true,
+          "no_duplicates": true
+        },
+        {
+          "source": "i",
+          "degree": 250,
+          "edges": 3125000,
+          "exact_indegree": true,
+          "no_autapses": true,
+          "no_duplicates": true
+        }
+      ]
+    },
+    "seed303": {
+      "sha256": "1210f048f6e6fe325b430b89df96d4b8db784ef2acb3e04f99cc687cc789b41f",
+      "checks": [
+        {
+          "source": "e",
+          "degree": 1000,
+          "edges": 12500000,
+          "exact_indegree": true,
+          "no_autapses": true,
+          "no_duplicates": true
+        },
+        {
+          "source": "i",
+          "degree": 250,
+          "edges": 3125000,
+          "exact_indegree": true,
+          "no_autapses": true,
+          "no_duplicates": true
+        }
+      ]
+    }
+  },
+  "runs": {
+    "condition0_seed101_dt0.05": {
+      "sha256": "997197ac3826d7c00c4cf18d9805f7d928fad4cd9cd717510c5eb686a3306aa2",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 16663453,
+      "dt_ms": 0.05
+    },
+    "condition0_seed101_dt0.1": {
+      "sha256": "34f08153c09fd509c9f8bb2468e640e906e24cc6e2aba4d82868893fad716d7b",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 16664028,
+      "dt_ms": 0.1
+    },
+    "condition0_seed202_dt0.1": {
+      "sha256": "95778c2f0134cfbd3198ee7f80647b842c50bfaa1b3e97484aea08f6984d0fca",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 16663721,
+      "dt_ms": 0.1
+    },
+    "condition0_seed303_dt0.1": {
+      "sha256": "fc66d72e98d916efc432563c1188f8f6322d4bf1de6311b4e42df8e10e51dbd2",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 16660469,
+      "dt_ms": 0.1
+    },
+    "condition1_seed101_dt0.05": {
+      "sha256": "662ebcf54ffe144f10c6d592b8043116da7c5eae97aa4fd4b21b0ca8167573b9",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 3024536,
+      "dt_ms": 0.05
+    },
+    "condition1_seed101_dt0.1": {
+      "sha256": "6a087294e130ed5eb694e20eb38cabeb1f147f1273250978d8dcdbbf8f25f05f",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 2960462,
+      "dt_ms": 0.1
+    },
+    "condition1_seed202_dt0.1": {
+      "sha256": "0dcdb7ff85cce7d3dec812c919ee0763b2a098ec77ba16809e67a59845703181",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 2970592,
+      "dt_ms": 0.1
+    },
+    "condition1_seed303_dt0.1": {
+      "sha256": "e8777b9b043c5451ea0254da9f2a3cbbedaeeabcd62552456d5f778bc4ccaf92",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 2971232,
+      "dt_ms": 0.1
+    },
+    "condition2_seed101_dt0.05": {
+      "sha256": "74bd149da328e820716b42bf0dadc898ef21021bc4a272059c82eb8e94f5f871",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 1898084,
+      "dt_ms": 0.05
+    },
+    "condition2_seed101_dt0.1": {
+      "sha256": "7f6af1ae5a5e355830b0af75002e70633dd1106b2b05747605916a11f2ac7e9a",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 1894401,
+      "dt_ms": 0.1
+    },
+    "condition2_seed202_dt0.1": {
+      "sha256": "9d8aa5c9cd4f7bda147b4c9d5d586d12c80a3b81f527b82699405c6a09438e37",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 1896754,
+      "dt_ms": 0.1
+    },
+    "condition2_seed303_dt0.1": {
+      "sha256": "34bcc2cf2756d34753b6a20aa054645d9296d75e71f3b8dda4c27338dd6aed76",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 1891807,
+      "dt_ms": 0.1
+    },
+    "condition3_seed101_dt0.05": {
+      "sha256": "fd7df203a3bd8cd619b45621f531df5df274cfa97636732127dd00b04b699975",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 278191,
+      "dt_ms": 0.05
+    },
+    "condition3_seed101_dt0.1": {
+      "sha256": "ab70e61cf71bf0585a41b221a83e42efe7975d305e484af21041d87fe07437bf",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 275549,
+      "dt_ms": 0.1
+    },
+    "condition3_seed202_dt0.1": {
+      "sha256": "1cd598d487406b193f7567de81eaf229c24d3716bd86a7d8141b0f9a4db92b74",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 276994,
+      "dt_ms": 0.1
+    },
+    "condition3_seed303_dt0.1": {
+      "sha256": "9f200b6e99873112850f37375438019b4c76697984b4a4a0d3fdf93b393e329c",
+      "per_bin_E_I_counts_exact": true,
+      "rate_normalization_exact": true,
+      "finite_final_voltage": true,
+      "refractory_bound_pass": true,
+      "graph_hash_exact": true,
+      "spikes": 284125,
+      "dt_ms": 0.1
+    }
+  },
+  "matched_rng_policy": {
+    "101": {
+      "matched_key_consumption_across_conditions": true
+    },
+    "202": {
+      "matched_key_consumption_across_conditions": true
+    },
+    "303": {
+      "matched_key_consumption_across_conditions": true
+    }
+  },
+  "immutable_snapshot_verified": true,
+  "completed_raw_files": 16,
+  "full_experiment_complete": true
+}

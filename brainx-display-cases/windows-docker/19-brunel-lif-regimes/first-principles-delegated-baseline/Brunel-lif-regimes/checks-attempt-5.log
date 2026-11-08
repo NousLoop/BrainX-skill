@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/Brunel-lif-regimes/checks.py", line 126, in <module>
+    run_checks('checks.json')
+  File "/workspace/Brunel-lif-regimes/checks.py", line 112, in run_checks
+    assert np.array_equal(b, replay)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

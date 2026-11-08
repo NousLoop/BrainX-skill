@@ -1,0 +1,593 @@
+{
+  "pass_": true,
+  "compared_runs": 16,
+  "all_raw_hashes_match_parent": true,
+  "unchanged_decisions": [
+    "supported",
+    "supported",
+    "unsupported",
+    "inconclusive"
+  ],
+  "unchanged_model_sha256": "a2c7b9b1dc5000670fb2d0f03d7debdb6c3ba2c673cfa23e30d770531e284e9c",
+  "original_model_sha256": "a2c7b9b1dc5000670fb2d0f03d7debdb6c3ba2c673cfa23e30d770531e284e9c",
+  "analysis_precision": "float64; Hz signal, Hz\u00b2/Hz PSD, dt=0.1 ms",
+  "elapsed_seconds": 27.528923437999765,
+  "comparisons": [
+    {
+      "run": "condition0_seed101_dt0.05",
+      "raw_sha256": "997197ac3826d7c00c4cf18d9805f7d928fad4cd9cd717510c5eb686a3306aa2",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 6.693881005048752e-10,
+          "relative_L2_error": 4.416218531481107e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 2.3283064365386963e-10,
+          "relative_L2_error": 2.4753991832861653e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 3.335352475000036
+    },
+    {
+      "run": "condition0_seed101_dt0.1",
+      "raw_sha256": "34f08153c09fd509c9f8bb2468e640e906e24cc6e2aba4d82868893fad716d7b",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 6.984919309616089e-10,
+          "relative_L2_error": 4.578783943478068e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 4.656612873077393e-10,
+          "relative_L2_error": 3.9636759417060275e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.2731068289995164
+    },
+    {
+      "run": "condition0_seed202_dt0.1",
+      "raw_sha256": "95778c2f0134cfbd3198ee7f80647b842c50bfaa1b3e97484aea08f6984d0fca",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 7.275957614183426e-10,
+          "relative_L2_error": 4.580802146940474e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 3.4924596548080444e-10,
+          "relative_L2_error": 3.801386166594884e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.5360080860009475
+    },
+    {
+      "run": "condition0_seed303_dt0.1",
+      "raw_sha256": "fc66d72e98d916efc432563c1188f8f6322d4bf1de6311b4e42df8e10e51dbd2",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 6.984919309616089e-10,
+          "relative_L2_error": 4.623689547961517e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 5.820766091346741e-10,
+          "relative_L2_error": 4.072878608578001e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.505731872999604
+    },
+    {
+      "run": "condition1_seed101_dt0.05",
+      "raw_sha256": "662ebcf54ffe144f10c6d592b8043116da7c5eae97aa4fd4b21b0ca8167573b9",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 1.4779288903810084e-12,
+          "relative_L2_error": 4.648314824518908e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.1368683772161603e-13,
+          "relative_L2_error": 1.7788005794541723e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 2.8276955359997373
+    },
+    {
+      "run": "condition1_seed101_dt0.1",
+      "raw_sha256": "6a087294e130ed5eb694e20eb38cabeb1f147f1273250978d8dcdbbf8f25f05f",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 7.389644451905042e-13,
+          "relative_L2_error": 4.5253333541465005e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.1368683772161603e-13,
+          "relative_L2_error": 2.904559731915193e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.2466813909995835
+    },
+    {
+      "run": "condition1_seed202_dt0.1",
+      "raw_sha256": "0dcdb7ff85cce7d3dec812c919ee0763b2a098ec77ba16809e67a59845703181",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 1.0516032489249483e-12,
+          "relative_L2_error": 4.561399495714777e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.7053025658242404e-13,
+          "relative_L2_error": 3.194254270087518e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.2911029049992067
+    },
+    {
+      "run": "condition1_seed303_dt0.1",
+      "raw_sha256": "e8777b9b043c5451ea0254da9f2a3cbbedaeeabcd62552456d5f778bc4ccaf92",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 9.379164112033322e-13,
+          "relative_L2_error": 4.681936986000283e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.7053025658242404e-13,
+          "relative_L2_error": 3.235057906910395e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.4417501600000833
+    },
+    {
+      "run": "condition2_seed101_dt0.05",
+      "raw_sha256": "74bd149da328e820716b42bf0dadc898ef21021bc4a272059c82eb8e94f5f871",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 4.263256414560601e-14,
+          "relative_L2_error": 4.632779693593895e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.2434497875801753e-14,
+          "relative_L2_error": 3.3377049704849833e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 2.987862160000077
+    },
+    {
+      "run": "condition2_seed101_dt0.1",
+      "raw_sha256": "7f6af1ae5a5e355830b0af75002e70633dd1106b2b05747605916a11f2ac7e9a",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 4.263256414560601e-14,
+          "relative_L2_error": 4.644302824747202e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 7.105427357601002e-15,
+          "relative_L2_error": 2.8001064809316066e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.2979700209998555
+    },
+    {
+      "run": "condition2_seed202_dt0.1",
+      "raw_sha256": "9d8aa5c9cd4f7bda147b4c9d5d586d12c80a3b81f527b82699405c6a09438e37",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 4.618527782440651e-14,
+          "relative_L2_error": 4.626780595039105e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.0658141036401503e-14,
+          "relative_L2_error": 3.225702930956989e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.3405736249987967
+    },
+    {
+      "run": "condition2_seed303_dt0.1",
+      "raw_sha256": "34bcc2cf2756d34753b6a20aa054645d9296d75e71f3b8dda4c27338dd6aed76",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 2.930988785010413e-14,
+          "relative_L2_error": 4.661202649624326e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 7.105427357601002e-15,
+          "relative_L2_error": 3.029138393952764e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.4569115009999223
+    },
+    {
+      "run": "condition3_seed101_dt0.05",
+      "raw_sha256": "fd7df203a3bd8cd619b45621f531df5df274cfa97636732127dd00b04b699975",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 1.5987211554602254e-14,
+          "relative_L2_error": 4.660369453108366e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 2.6645352591003757e-15,
+          "relative_L2_error": 2.6679403682203455e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 2.4527378029997635
+    },
+    {
+      "run": "condition3_seed101_dt0.1",
+      "raw_sha256": "ab70e61cf71bf0585a41b221a83e42efe7975d305e484af21041d87fe07437bf",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 1.4210854715202004e-14,
+          "relative_L2_error": 4.596691833372103e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.7763568394002505e-15,
+          "relative_L2_error": 2.3215047102092534e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.1361612109994894
+    },
+    {
+      "run": "condition3_seed202_dt0.1",
+      "raw_sha256": "1cd598d487406b193f7567de81eaf229c24d3716bd86a7d8141b0f9a4db92b74",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 1.4654943925052066e-14,
+          "relative_L2_error": 4.5869065085465735e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 1.7763568394002505e-15,
+          "relative_L2_error": 2.2457480610700155e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.165185203000874
+    },
+    {
+      "run": "condition3_seed303_dt0.1",
+      "raw_sha256": "9f200b6e99873112850f37375438019b4c76697984b4a4a0d3fdf93b393e329c",
+      "spectra": {
+        "welch_frequency_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "welch_PSD_Hz2_per_Hz": {
+          "shape": [
+            5001
+          ],
+          "max_absolute_error": 2.398081733190338e-14,
+          "relative_L2_error": 4.660886902472424e-15
+        },
+        "periodogram_frequency_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 0.0,
+          "relative_L2_error": 0.0
+        },
+        "periodogram_PSD_Hz2_per_Hz": {
+          "shape": [
+            15001
+          ],
+          "max_absolute_error": 3.552713678800501e-15,
+          "relative_L2_error": 2.586853914110298e-16
+        }
+      },
+      "all_metrics_and_predicates_preserved": true,
+      "seconds": 1.1756645969999227
+    }
+  ]
+}
