@@ -84,7 +84,7 @@ def loss_fn():
 def train_step():
     grads, loss = brainstate.transform.grad(
         loss_fn,
-        params,
+        grad_states=params,
         return_value=True,
     )()
     optimizer.update(grads)

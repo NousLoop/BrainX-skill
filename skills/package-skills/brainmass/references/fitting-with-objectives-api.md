@@ -97,13 +97,13 @@ Open `references/scripts/gradient-free-fitting.py` for the complete shared-objec
 
 Open `references/scripts/eeg-fitting-with-gradients.py` when the task needs a complete Jansen-Rit workflow that constructs a phase-invariant EEG target, fits the connectivity parameter with gradients, and compares the recovered trace.
 
-Open `brainstate/parameter-constraints-regularization.md` when a fitted
+Open `references/brainstate/parameter-constraints-regularization.md` when a fitted
 parameter needs a valid-domain transform, penalty, or modeling prior; that
 reference routes to the exhaustive transform and regularizer catalog. Open
-`braintools/parameter-initializer.md` when the starting value needs a reusable
-initialization policy. Open `braintools/metric.md` only when a custom statistic
+`references/braintools/parameter-initializer.md` when the starting value needs a reusable
+initialization policy. Open `references/braintools/metric.md` only when a custom statistic
 is not already owned by `brainmass.objectives`. Open
-`braintools/optimizer.md` when choosing a gradient optimizer, schedule, or
+`references/braintools/optimizer.md` when choosing a gradient optimizer, schedule, or
 standalone optimizer family beyond the canonical `Adam` example.
 
 ## Interpret `FitResult`
