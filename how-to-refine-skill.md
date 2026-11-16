@@ -26,16 +26,7 @@ brainx-display-cases/<environment>/<category>/<NN>-<case-name>/
 `<environment>` is `windows-docker` for active cases or `legacy-macos` for
 archived macOS-era cases. `<category>` is optional for new cases; the runner
 resolves a case by name, searching `windows-docker/` before `legacy-macos/`.
-Compare runs only within the same environment. Host isolation, Codex CLI
-version, reviewer transport, and image differ across environments. See the
-[Windows Docker setup](brainx-display-cases/windows-docker/README.md) and
-[macOS archive](brainx-display-cases/legacy-macos/README.md) for details.
-
-The macOS archive keeps cases 16 through 23 directly under `legacy-macos/`.
-Case 15 has entries there and under `paper-reproductions/`. When a case
-spans both environments, keep the same frozen `prompt.md` in each.
-
-The Docker harness
+Runs from different environments are never comparable. The Docker harness
 scripts themselves (`run-refinement-case.sh`, `build-eval-image.sh`,
 `Dockerfile`, the magpie shim, the seccomp profile and
 the smoke tests) live in `brainx-display-cases/windows-docker/`; the archived
