@@ -18,7 +18,7 @@ Treat workflow ownership separately from biological-scale ownership. This guard 
 | A new or changed model, mechanism comparison, simulation or fitting study, experiment-derived prediction, or scientific result report | Open `brainx-modeling-loop` immediately after this guard. Complete its step-0 clarification gate before opening package-specific modeling skills. |
 | A focused implementation, API, debugging, or optimization task with the model design and acceptance criteria already fixed | Continue with this guard and the package skill that owns the represented scale. |
 
-Do not route an end-to-end project directly from this guard to `brainmass`, `brainpy-state`, `braincell`, or other package skills. The modeling loop owns clarification, specification, literature gating, implementation order, review, and handoff; package skills own the selected biological scale after step 0.
+Do not route an end-to-end project directly from this guard to `brainmass`, `brainspike`, `braincell`, or other package skills. The modeling loop owns clarification, specification, literature gating, implementation order, review, and handoff; package skills own the selected biological scale after step 0.
 
 ## Check package presence without inspecting installed BrainX
 
@@ -39,14 +39,14 @@ Select every row supported by the user's task. A single-scale task opens one mod
 
 | The task explicitly represents | Open |
 |---|---|
-| Point neurons, their synapses, or point-neuron spiking networks | BrainPy-State |
+| Point neurons, their synapses, spiking networks, training, or point-neuron coupling | BrainSpike; check its migration boundary for workflows beyond the verified Simulator path |
 | Ions, channels, compartments, or cellular morphology | BrainCell |
 | Aggregate neural populations, local circuits, brain regions, or whole-brain dynamics | BrainMass |
 | Detailed cells connected through spatially placed synapses | BrainCell |
-| Detailed cells coupled to point neurons | BrainCell + BrainPy-State |
-| Point-neuron spiking networks coupled to aggregate regional dynamics | BrainPy-State + BrainMass |
+| Detailed cells coupled to point neurons | BrainCell + BrainSpike |
+| Point-neuron spiking networks coupled to aggregate regional dynamics | BrainSpike + BrainMass |
 | Cellular mechanisms coupled to aggregate neural-mass dynamics | BrainCell + BrainMass |
-| Cellular biophysics, point-neuron networks, and aggregate population dynamics interacting in one workflow | BrainCell + BrainPy-State + BrainMass |
+| Cellular biophysics, point-neuron networks, and aggregate population dynamics interacting in one workflow | BrainCell + BrainSpike + BrainMass |
 
 Keep the implementation at the selected scale. Do not introduce aggregate population-rate State into a point-neuron model, or point neurons into an aggregate model, merely to simplify execution. When both mechanisms are scientifically represented, treat the task as multiscale and open both owning skills.
 

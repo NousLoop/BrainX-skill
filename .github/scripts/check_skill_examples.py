@@ -36,6 +36,30 @@ def run_examples(path, scope, heading=None):
 
 
 class SkillExamples(unittest.TestCase):
+    def test_brainstate_delay_buffers(self):
+        run_examples(PACKAGES / "brainstate/references/brainstate/delay-buffers.md", {})
+
+    def test_brainspike_braintools_references(self):
+        import brainstate
+        brainstate.environ.set(precision=64)
+        folder = PACKAGES / "brainspike/references/braintools"
+        paths = sorted(folder.glob("*.md"))
+        self.assertEqual(len(paths), 7)
+        for path in paths:
+            with self.subTest(reference=path.name):
+                run_examples(path, {})
+
+    def test_brainspike_simulator(self):
+        import brainunit as u
+        import numpy as np
+
+        scope = {}
+        run_examples(PACKAGES / "brainspike/SKILL.md", scope)
+        self.assertEqual(scope["spikes"].shape, (1000, 100))
+        self.assertEqual(scope["voltage"].shape, (1000, 5))
+        self.assertTrue(np.isfinite(scope["voltage"].to_decimal(u.mV)).all())
+        self.assertGreater(np.asarray(scope["spikes"]).sum(), 0)
+
     def test_brainstate_training(self):
         import brainstate
         import jax.numpy as jnp

@@ -15,7 +15,7 @@ Follow this path:
 
 Use this workflow with BrainTrace `0.2.8`, bundled by BrainX `2026.10.25`.
 
-Route general `State`, `Module`, transformations, mapped lifecycle operations, and optimizers to BrainState. Route neuron and synapse dynamics to BrainPy-State or BrainCell. Use ordinary BrainState training when offline BPTT is acceptable.
+Route general `State`, `Module`, transformations, mapped lifecycle operations, and optimizers to BrainState. Route neuron and synapse dynamics to BrainSpike or BrainCell. Use ordinary BrainState training when offline BPTT is acceptable.
 
 ## Underlying principle of BrainTrace
 

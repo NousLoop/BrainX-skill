@@ -32,7 +32,7 @@ skills/
 │   ├── braincell/
 │   ├── brainevent/
 │   ├── brainmass/
-│   ├── brainpy-state/
+│   ├── brainspike/
 │   └── braintrace/
 ├── brainx-acceleration/
 ├── brainx-visualization/
@@ -275,7 +275,7 @@ for liveness, health, stop, retry, collection, and reporting decisions.
 ##### Purpose and boundary
 
 - Boundary: own inverse-problem design, gradient or derivative-free estimator selection, parameter recovery, identifiability, and predictive validation around a routed BrainX simulator.
-- Activate when observed data are used to estimate BrainCell, BrainPy-State, BrainMass, or multiscale model parameters.
+- Activate when observed data are used to estimate BrainCell, BrainSpike, BrainMass, or multiscale model parameters.
 - Use `references/parameter-fitting-workflow.md` as active coverage through `brainx-modeling-loop` steps 2-5 for `parameter-fitting` and the fitting part of `hybrid`.
 - Route model equations, construction, simulation, and observations to the selected package skills; route task-training discipline to the modeling loop's training reference.
 
@@ -560,7 +560,7 @@ Location: Direct skill script.
 #### Purpose
 
 - Boundary: own biologically detailed conductance-based or Hodgkin-Huxley modeling from channels and single cells to networks with spatially placed synapses.
-- Activate when cellular biophysics is explicitly represented. Activate alone for cell studies or with BrainPy-State and/or BrainMass when cellular mechanisms participate in a multiscale model.
+- Activate when cellular biophysics is explicitly represented. Activate alone for cell studies or with BrainSpike and/or BrainMass when cellular mechanisms participate in a multiscale model.
 - Primary path: choose `SingleCompartment` or `Cell` → declare mechanisms and geometry → initialize → simulate → validate voltage, spikes, or recorded observables.
 - Advanced branches: area scaling, mixed-ion adaptation, channel/ion libraries, solver catalog, and detailed multicompartment morphology.
 
@@ -626,7 +626,7 @@ Updated states and spike detection
 - Ion&channels, Match each channel's `root_type`
 - Choose Fixed ions when reversal potential is constant
 #### Simulation techniques
-- Use `braincell.Network` for detailed cells connected through spatially placed synapses. Open BrainPy-State too when a point-neuron population is explicitly represented.
+- Use `braincell.Network` for detailed cells connected through spatially placed synapses. Open BrainSpike too when a point-neuron population is explicitly represented.
 - For an explicit timestamped rollout, set the simulation environment with `brainstate.environ.context()` and run `brainstate.transform.for_loop(step, times)`.
 - Brainunit math functions that help with array: u.math.arange u.math.squeeze(), recommend to use
 - When to use `MixIons`
@@ -783,14 +783,10 @@ brainevent/
 ├── Fixed-Connection-extension.md
 ├── synaptic-plasticity-modeling.md
 ├── custom-operators-cpu.md
-├── custom-operators-gpu.md
-└── scripts/
-    ├── coba_ei_teaching.py
-    ├── 102_EI_net_1996.py
-    └── 204_joglekar_2018_propagation.py
+└── custom-operators-gpu.md
 ```
 
-All five required Markdown references are skill-local and already exist. Application-script selection and provenance live directly in the skill body.
+All five required Markdown references are skill-local and already exist. Use BrainSpike for complete point-neuron network examples.
 
 | Canonical reference | Need | Crafting source |
 |---|---|---|
@@ -799,12 +795,6 @@ All five required Markdown references are skill-local and already exist. Applica
 | `skills/package-skills/brainevent/references/synaptic-plasticity.md` | Pre/post event updates, CSR/dense routing, STDP overlay, and the official adaptive self-learning network | [Plasticity tutorial](https://brainx.chaobrain.com/brainevent/tutorials/events/synaptic-plasticity.html), [plasticity how-to](https://brainx.chaobrain.com/brainevent/how-to/data-structures/synaptic-plasticity.html), [operations API](https://brainx.chaobrain.com/brainevent/reference/apis/operations.html) |
 | `skills/package-skills/brainevent/references/custom-operators-cpu.md` | Select and implement Numba CPU or raw C++ operators; define CPU registration and transformation rules; use the CPU argument ABI, compiler, cache, diagnostics, and verification workflows | [installation](https://brainx.chaobrain.com/brainevent/getting-started/installation.html), [Numba CPU](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/01_numba.html), [C++](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/04_cpp.html), [operator API](https://brainx.chaobrain.com/brainevent/reference/apis/operator.html), [`arg_spec`](https://brainx.chaobrain.com/brainevent/reference/kernels/arg-spec.html), [C++ API](https://brainx.chaobrain.com/brainevent/reference/kernels/cpp-api.html), [caching](https://brainx.chaobrain.com/brainevent/reference/kernels/caching.html) |
 | `skills/package-skills/brainevent/references/custom-operators-gpu.md` | Select and implement Numba CUDA, Warp, raw CUDA, Pallas, Triton, or multi-backend GPU operators; define stream and GPU ABI rules; use compiler controls, cache, diagnostics, and verification workflows | [installation](https://brainx.chaobrain.com/brainevent/getting-started/installation.html), [Numba CUDA](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/02_numba_cuda.html), [Warp](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/03_warp.html), [CUDA](https://brainx.chaobrain.com/brainevent/tutorials/custom-operators/05_cuda.html), [operator API](https://brainx.chaobrain.com/brainevent/reference/apis/operator.html), [`arg_spec`](https://brainx.chaobrain.com/brainevent/reference/kernels/arg-spec.html), [C++ API](https://brainx.chaobrain.com/brainevent/reference/kernels/cpp-api.html), [compiler options](https://brainx.chaobrain.com/brainevent/reference/kernels/compiler-options.html), [caching](https://brainx.chaobrain.com/brainevent/reference/kernels/caching.html) |
-
-#### Script References
-
-- `references/scripts/coba_ei_teaching.py`; local shared teaching example; integrates efficient BrainEvent `BinaryArray` communication over interchangeable fixed-degree, CSR, and dense storage with BrainPy `LIFRef`, `Expon`, and `COBA` dynamics in one compiled BrainState loop.
-- `references/scripts/102_EI_net_1996.py`; [source](https://raw.githubusercontent.com/brainpy/BrainPy/main/examples/state/102_EI_net_1996.py); high-level E/I network; direct full-script reference.
-- `references/scripts/204_joglekar_2018_propagation.py`; [source](https://raw.githubusercontent.com/brainpy/BrainPy/main/examples/state/204_joglekar_2018_propagation.py); delayed spikes, JIT connectivity, and area mapping; connectivity-variants branch.
 
 #### Boundaries and Common Failures
 
@@ -824,7 +814,7 @@ All five required Markdown references are skill-local and already exist. Applica
 #### Purpose
 
 - Boundary: differentiable neural-mass modeling of aggregate population activity at the local-circuit, brain-region, multi-region, and whole-brain scales.
-- Activate when aggregate population dynamics are explicitly represented. Activate alone for mass-model studies or with BrainPy-State and/or BrainCell when aggregate dynamics participate in a multiscale model.
+- Activate when aggregate population dynamics are explicitly represented. Activate alone for mass-model studies or with BrainSpike and/or BrainCell when aggregate dynamics participate in a multiscale model.
 - Primary path: discover model → construct `*Step` → configure State/noise/units → simulate → observe → validate or fit.
 - Advanced branches: model catalog, noise, coupling/delays, observations, fitting backends, datasets, analysis, task training, sweeps.
 
@@ -951,169 +941,14 @@ Route them through four workflow categories:
 
 ---
 
-### brainpy
+### brainspike
 
-#### Purpose
+Use BrainSpike as the sole point-neuron skill, including routing for simulation, custom models, training, and multiscale point-neuron components. Keep the Simulator path in the root and route native custom dynamics, BPTT/pp-prop, and common-clock coupling to their verified references. Use `references/migration-boundary.md` for remaining Simulator, alignment, and multirate limits.
 
-- Boundary: individual point-neuron models and point-neuron-based spiking neural networks.
-- Activate when the model explicitly represents point neurons, their synapses, or a point-neuron spiking network. Add BrainCell or BrainMass when the model also represents their scales.
-- Route to legacy BrainPy only when an existing codebase already uses legacy `brainpy`, contains no BrainUnit, unit-aware, or BrainTrace code, and the user explicitly asks to preserve old BrainPy. Route new point-neuron code to native BrainPy-State. Use BrainCell for detailed cells and networks with spatial synapse placement.
-- Primary path: choose native versus NEST-compatible path, or confirm the strict legacy-maintenance gate → select components → initialize → run transformed rollout → monitor/train → validate.
-- branches: component catalogs, custom models, training, Braintools, gallery scripts, NEST compatibility, and gated legacy maintenance.
+Own model selection, synapses/connectivity, devices, spatial construction, parity, numerical categories, and seven network examples under `references/nest-compatible/`. Own perturbation validity under `references/perturbation-experiment-validity.md`.
 
-#### Essential Concepts
+Keep BrainSpike-specific initializer, encoding, surrogate, metric, optimizer, current, and topology guidance local. Keep unit-aware array creation in BrainUnit and generic State, control flow, and delay buffers in BrainState. Remove retired BrainPy-dependent examples and legacy skill references from the workspace; recover original sources from Git history when needed. Do not publish or route to an archive copy.
 
-- brain simulation and brain-inspired computing are the same computation, expressed once. The neurons, synapses, and projections you assemble to simulate a biophysical network are the exact objects you train with gradients and scale with linear-memory online learning.
-- Look at the brainstate skill for knowledge in Modules
-- State initialization and BrainUnit quantities.
-- Neuron and synapse anatomy.
-- Projection roles: `comm`, `syn`, `out`, `post`.
-- AlignPre versus AlignPost.
-- Projection-before-post update order.
-- Recurrent excitation, mutual inhibition, and spike-driven connectivity in a point-neuron model require explicit projections; scalar population-rate feedback belongs to BrainMass or an explicitly routed hybrid model.
-#### Simulation techniques
-- Random Sampling rand, randn, randint, is useful for parameter intialization , basic random seed knowledge.
-- Use the local Braintools preprocessing reference when experimental or continuous data must become spike inputs.
-- Use the local Braintools initializer reference for reusable, unit-aware parameter and State initialization policies.
-- Use the local Braintools input-current reference to generate direct time-major protocols once under `dt` and pass their samples through the transformed rollout.
-- must use brainstate.environ.context() to define the simulation environment
-- Use the local BrainState control-flow reference to choose `for_loop` or `scan`, transformed branches, and checkpointing.
-- Use the local BrainUnit array-creation reference for specialized unit-aware current arrays; use `u.math.mean()` when reducing current samples because it preserves the input current unit.
-
-### Training
-- Surrogate gradients and `ParamState` selection.
-- The first-level `braintools/` reference folder owns six variation choices: data preprocessing, parameter initialization, surrogate gradient, metric or loss, optimizer, and State-aware control flow.
-
-#### Canonical Workflow Scripts Included in the Skill
-
-1. Classify native BrainPy-State, NEST-compatible, or explicitly requested unitless legacy maintenance.
-2. Select neuron, synapse, output, projection, and optional readout.
-3. Construct the Module/network with units.
-4. Initialize all State.
-5. Execute time through BrainState control flow.
-6. Add loss/optimizer only for training.
-7. Validate projection order, State reset, output shapes, units, spikes, and gradients.
-
-Minimal inline scripts: single-neuron rollout and two-population synapse/projection workflow.
-Shared complete teaching script: `skills/package-skills/brainevent/references/scripts/coba_ei_teaching.py` shows how to retain BrainPy neuron and synapse dynamics while using BrainEvent for efficient event-driven communication over fixed-degree, CSR, or dense connectivity.
-
-#### Reference Routing
-
-```text
-brainpy-state/references/
-├── skills/package-skills/brainevent/SKILL.md [shared skill]
-├── skills/package-skills/brainevent/references/scripts/coba_ei_teaching.py [shared teaching script]
-├── array-creation.md
-├── component-selection.md
-├── projection-patterns.md
-├── brain-dynamics-delay-protocol.md
-├── braintools/
-│   ├── connectivity.md
-│   ├── data-preprocessing.md
-│   ├── input-current.md
-│   ├── metric.md
-│   ├── optimizer.md
-│   ├── parameter-initializer.md
-│   ├── surrogate.md
-│   └── brainstate-control-flow-patterns.md
-├── brainPy(legacy)/
-│   └── brainpy legacy workflow.md [only first-level legacy entry]
-├── nest-compatible/
-│   ├── nest-workflow.md
-│   ├── model-library.md
-│   ├── synapse-and-connectivity.md
-│   ├── devices.md
-│   ├── network-building.md
-│   ├── divergence-and-parity.md
-│   ├── integration-categories.md
-│   └── scripts/
-│       ├── brunel_alpha.py
-│       ├── brunel_delta.py
-│       ├── brette_et_al_2007.py
-│       ├── synapsecollection.py
-│       ├── evaluate_tsodyks2_synapse.py
-│       ├── clopath_synapse_spike_pairing.py
-│       └── spatial_gaussex.py
-└── scripts/
-    ├── 201_surrogate_grad_lif_fashion_mnist.py
-    └── training-snn.py
-```
-
-`brainpy legacy workflow.md` is the only first-level BrainPy-State reference in the legacy branch. Its internal routing owns every other Markdown under `brainPy(legacy)/`; those files remain second-level and must not be linked directly from `skills/package-skills/brainpy-state/SKILL.md`.
-
-| Canonical reference | Need | Crafting source |
-|---|---|---|
-| `skills/package-skills/brainpy-state/references/array-creation.md` | Construct specialized unit-aware current ranges, grids, filled arrays, template-shaped arrays, matrix patterns, index arrays, or tree-shaped arrays | [Array Creation](https://brainunit.readthedocs.io/unit_operations/array_creation.html), with array constructors from the [brainunit.math API](https://brainunit.readthedocs.io/apis/brainunit.math.html) |
-| `skills/package-skills/brainpy-state/references/component-selection.md` | Select native neurons, inputs, synapses, synaptic outputs, projection semantics, short-term plasticity, and readouts before constructing the Module graph | [Neuron API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-neurons.html), [neuron-selection how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-choose-neuron.html), [input API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-inputs.html), [synapse API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synapses.html), [synaptic-output API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-synouts.html), [COBA/CUBA how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-coba-cuba-synapses.html), [projection API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-projections.html), [alignment concept](https://brainx.chaobrain.com/brainpy-state/concepts/alignpre-alignpost.html), [plasticity API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-plasticity.html), [short-term-plasticity how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-short-term-plasticity.html), [readout API](https://brainx.chaobrain.com/brainpy-state/apis/brainpy-readouts.html), [readout how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-readouts.html), [delays how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-delays.html) |
-| `skills/package-skills/brainpy-state/references/braintools/connectivity.md` | Select named spatial, topological, biological E/I, kernel, or compartment-aware topology before choosing BrainEvent storage, and preserve edge order in the `ConnectionResult` handoff | [Connectivity API](https://brainx.chaobrain.com/braintools/apis/conn.html), [BrainEvent sparse formats and `coo2csr`](https://brainx.chaobrain.com/brainevent/explanation/sparse-formats.html) |
-| `skills/package-skills/brainpy-state/references/braintools/data-preprocessing.md` | Select spike encoders and preprocess continuous values, events, or temporal features into time-major training inputs | [Braintools API](https://brainx.chaobrain.com/braintools/apis/braintools.html) |
-| `skills/package-skills/brainpy-state/references/braintools/input-current.md` | Generate unit-aware current sections, pulses, waveforms, stochastic processes, and composed stimulation protocols, then pass the time-major current into a BrainPy-State transformed rollout | [Input-current API](https://brainx.chaobrain.com/braintools/apis/input.html), [BrainState `for_loop`](https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.for_loop.html) |
-| `skills/package-skills/brainpy-state/references/braintools/metric.md` | Select a training loss or evaluation metric and validate input orientation, units, labels, and reduction | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
-| `skills/package-skills/brainpy-state/references/braintools/optimizer.md` | Select gradient optimizers, learning-rate schedules, Optax bridges, and standalone search wrappers | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [optimization tutorials](https://brainx.chaobrain.com/braintools/optim/index.html) |
-| `skills/package-skills/brainpy-state/references/braintools/parameter-initializer.md` | Select unit-aware distribution, variance-scaling, orthogonal, composite, or distance-modulated parameter initialization | [Initializer API](https://brainx.chaobrain.com/braintools/apis/init.html) |
-| `skills/package-skills/brainpy-state/references/braintools/surrogate.md` | Select functional, reusable, or custom surrogate gradients and validate their backward signal | [Surrogate-gradient API](https://brainx.chaobrain.com/braintools/apis/surrogate.html) |
-| `skills/package-skills/brainpy-state/references/braintools/brainstate-control-flow-patterns.md` | Select State-aware loops, explicit carry, transformed branches, and checkpointed long-rollout BPTT | [Control Flow](https://brainx.chaobrain.com/brainstate/tutorials/transformations/05_control_flow.html), [checkpointing how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/train-long-rollouts-checkpoint.html) |
-| `skills/package-skills/brainpy-state/references/brain-dynamics-delay-protocol.md` | BrainPy projection delay integration through direct `delay=` or delayed prefetch; route general buffers and manual delayed State to BrainState | [BrainPy delays how-to](https://brainx.chaobrain.com/brainpy-state/brainpy-style/howto/sim-delays.html), [AlignPost projection API](https://brainpy.readthedocs.io/apis/generated/brainpy.state.AlignPostProj.html), [BrainState delay protocol](https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/02_synaptic_delays.html) |
-| `skills/package-skills/brainpy-state/references/brainPy(legacy)/brainpy legacy workflow.md` | Maintain existing legacy `brainpy` only when it contains no BrainUnit, unit-aware, or BrainTrace code and the user explicitly requests old BrainPy; exclude new code and cellular modeling | User-provided legacy BrainPy HTML sources mirrored under `skills/package-skills/brainpy-state/references/brainPy(legacy)/` |
-
-
-##### NEST-compatible nested branch
-
-For BrainX `2026.10.25`, use BrainSpikes `0.2.0` via `import brainspike`.
-The NEST workflow and bundled scripts use that API. Preserve the original
-snapshot when reproducing older evaluations that used `brainpy.state`.
-
-| Nested lookup area | Need | Crafting sources | Disposition |
-|---|---|---|---|
-| `references/nest-compatible/model-library.md` | Select NEST-compatible neurons and inspect neuron-model APIs | [Models](https://brainx.chaobrain.com/brainpy-state/nest-style/models.html), [neuron API](https://brainx.chaobrain.com/brainpy-state/apis/nest-neurons.html) | Route from `nest-workflow.md` as the model-selection reference |
-| `references/nest-compatible/synapse-and-connectivity.md` | Static/special synapses, plasticity, connection rules, synapse specs, and realized connectivity | [synapse API](https://brainx.chaobrain.com/brainpy-state/apis/nest-synapses.html), [plasticity API](https://brainx.chaobrain.com/brainpy-state/apis/nest-plasticity.html), [connectivity](https://brainx.chaobrain.com/brainpy-state/nest-style/connectivity.html) | Route from `nest-workflow.md` as the edge-behavior and connectivity reference |
-| `references/nest-compatible/devices.md` | Generators, recorders, detectors, source semantics, direction, and result readback | [devices guide](https://brainx.chaobrain.com/brainpy-state/nest-style/devices.html), [device API](https://brainx.chaobrain.com/brainpy-state/apis/nest-devices.html) | Route from `nest-workflow.md` as the device-selection reference |
-| `references/nest-compatible/network-building.md` | `Simulator`, `NodeView`, `SimulationResult`, `SynapseCollection`, projection/connection APIs, and spatial primitives | [network tutorial](https://brainx.chaobrain.com/brainpy-state/nest-style/tutorials/03-connect-network.html), [network API](https://brainx.chaobrain.com/brainpy-state/apis/nest-network.html), [spatial API](https://brainx.chaobrain.com/brainpy-state/apis/nest-spatial.html), [spatial guide](https://brainx.chaobrain.com/brainpy-state/nest-style/spatial.html) | Route from `nest-workflow.md` as the construction and spatial reference |
-| `references/nest-compatible/divergence-and-parity.md` | Porting differences, STDP parameter placement, recording/stochastic parity, validation, and NEST mismatches | [divergence index](https://brainx.chaobrain.com/brainpy-state/nest-style/divergences/index.html), [validation status](https://brainx.chaobrain.com/brainpy-state/nest-style/validation-status.html), [STDP divergence](https://brainx.chaobrain.com/brainpy-state/nest-style/divergences/stdp.html) | Route from `nest-workflow.md` as the porting and validation reference |
-| `references/nest-compatible/integration-categories.md` | Numerical and integration behavior by NEST-compatible model family | [integration categories](https://brainx.chaobrain.com/brainpy-state/nest-style/integration-categories.html) | Route from `nest-workflow.md` as the numerical-behavior reference |
-
-#### Script References
-
-Native scripts:
-
-- `skills/package-skills/brainevent/references/scripts/coba_ei_teaching.py` — local shared teaching example — efficient BrainEvent communication incorporated into a complete BrainPy COBA E/I network; projection branch.
-- `skills/package-skills/brainpy-state/references/scripts/103_COBA_2005.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/103_COBA_2005.py) — canonical E/I COBA network; projection branch.
-- `skills/package-skills/brainpy-state/references/scripts/106_COBA_HH_2007.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/106_COBA_HH_2007.py) — custom HH network; custom-model branch.
-- `skills/package-skills/brainpy-state/references/scripts/107_gamma_oscillation_1996.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/107_gamma_oscillation_1996.py) — custom neuron/synapse; custom-model branch.
-- `skills/package-skills/brainpy-state/references/scripts/109_fast_global_oscillation.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/109_fast_global_oscillation.py) — `DeltaProj` and delay; projection branch.
-- `skills/package-skills/brainpy-state/references/scripts/sound_localization.py` — local validated teaching example — mapped integer delay bank, coincidence detection, and BrainEvent fixed fan-out; projection and delay branch.
-- `skills/package-skills/brainpy-state/references/scripts/201_surrogate_grad_lif_fashion_mnist.py` — [source](https://github.com/brainpy/BrainPy/blob/main/examples/state/201_surrogate_grad_lif_fashion_mnist.py) — real-data SNN training; training branch.
-- `skills/package-skills/brainpy-state/references/scripts/training-snn.py` — [source](https://brainx.chaobrain.com/brainstate/tutorials/brain_dynamics/05_training_an_snn.html) — compact SNN training; training branch.
-
-NEST-compatible local scripts (under `references/nest-compatible/scripts/`; see the [BrainSpikes example gallery](https://brainx.chaobrain.com/brainspike/examples/nest-gallery.html) for the official catalog):
-
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_alpha.py` — local — alpha-synapse Brunel network.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brunel_delta.py` — local — delta-synapse voltage-weight semantics.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/brette_et_al_2007.py` — local — comparative network workflow.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/synapsecollection.py` — local — synapse inspection/manipulation.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/evaluate_tsodyks2_synapse.py` — local — short-term plasticity parity.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/clopath_synapse_spike_pairing.py` — local — plasticity protocol.
-- `skills/package-skills/brainpy-state/references/nest-compatible/scripts/spatial_gaussex.py` — local — spatial connectivity.
-
-Location for all NEST scripts: `references/nest-compatible/nest-workflow.md` full-script branch.
-
-#### Boundaries and Common Failures
-
-- Native and NEST APIs mixed.
-- State not initialized or reset.
-- Time advanced with a Python loop.
-- Projection applied after postsynaptic update.
-- Recurrent point-neuron connectivity replaced by hand-written aggregate population-rate feedback without routing BrainMass or declaring a hybrid model.
-- `comm`, `syn`, `out`, and `post` treated as one role.
-- AlignPost used for unsuitable nonlinear synapse dynamics.
-- Unitless membrane or synaptic values.
-- All State differentiated.
-- BrainEvent treated as a separate simulator.
-- Online-learning APIs expected from BrainPy instead of BrainTrace.
-- Legacy BrainPy selected without existing legacy code, a unit- and BrainTrace-free codebase, and an explicit user request, or selected for cellular modeling.
-- Placeholder `scan` block left without an official script source.
-
----
 
 ### braintrace
 
@@ -1123,7 +958,7 @@ Location for all NEST scripts: `references/nest-compatible/nest-workflow.md` ful
 - Treat online learning through eligibility traces as the mechanism for memory efficiency, not the primary routing goal.
 - Canonical path: compose prebuilt `braintrace.nn` layers → choose a built-in algorithm → compile and inspect → reset model and eligibility State → train → validate.
 - Escalate from prebuilt layers to built-in ETP operations, then to a custom ETP primitive, only as required.
-- Route general State, Module, transformation, and optimizer lifecycle to BrainState; route neuron and synapse dynamics to BrainPy-State or BrainCell; route offline BPTT without eligibility traces away from BrainTrace.
+- Route general State, Module, transformation, and optimizer lifecycle to BrainState; route neuron and synapse dynamics to BrainSpike or BrainCell; route offline BPTT without eligibility traces away from BrainTrace.
 
 #### Underlying mental model
 
@@ -1331,16 +1166,17 @@ Do not duplicate these package-specific workflows inside `skills/brainx-visualiz
 
 | The task explicitly represents | Open |
 |---|---|
-| Point neurons, their synapses, or point-neuron spiking networks | BrainPy-State |
+| NEST-compatible point-neuron network simulation | BrainSpike |
+| Native point-neuron composition, training, or multiscale coupling | BrainSpike |
 | Ions, channels, compartments, or cellular morphology | BrainCell |
 | Aggregate neural populations, local circuits, brain regions, or whole-brain dynamics | BrainMass |
 | Detailed cells connected through spatially placed synapses | BrainCell |
-| Detailed cells coupled to point neurons | BrainCell + BrainPy-State |
-| Point-neuron spiking networks coupled to aggregate regional dynamics | BrainPy-State + BrainMass |
+| Detailed cells coupled to point neurons | BrainCell + BrainSpike |
+| Point-neuron spiking networks coupled to aggregate regional dynamics | BrainSpike + BrainMass |
 | Cellular mechanisms coupled to aggregate neural-mass dynamics | BrainCell + BrainMass |
-| Cellular biophysics, point-neuron networks, and aggregate population dynamics interacting in one workflow | BrainCell + BrainPy-State + BrainMass |
+| Cellular biophysics, point-neuron networks, and aggregate population dynamics interacting in one workflow | BrainCell + BrainSpike + BrainMass |
 
-Use the finest explicitly modeled unit to distinguish adjacent scales: point neurons select BrainPy-State, explicit cellular mechanisms select BrainCell, and aggregate population variables select BrainMass.
+Use the finest explicitly modeled unit to distinguish adjacent scales: point-neuron tasks select BrainSpike and its migration boundary, explicit cellular mechanisms select BrainCell, and aggregate population variables select BrainMass.
 
 Keep the implementation at the selected scale. Do not introduce aggregate population-rate State into a point-neuron model, or point neurons into an aggregate model, merely to simplify execution. When both mechanisms are scientifically represented, treat the task as multiscale and open both owning skills.
 
@@ -1548,10 +1384,10 @@ the full shared release and migration notes in the authoring source.
 | Canonical reference | Consumers | Need | Crafting sources |
 |---|---|---|---|
 | `braintools-references/braintools-cogtask.md` | BrainMass | Build and generate cognitive-task trials for task-training workflows | [Cognitive-task API](https://brainx.chaobrain.com/braintools/apis/cogtask.html) |
-| `braintools-references/braintools-connectivity.md` | BrainPy | Select point-neuron or compartment-aware topology and produce aligned edge lists, weights, delays, and metadata | [Connectivity API](https://brainx.chaobrain.com/braintools/apis/conn.html) |
-| `braintools-references/braintools-data-preprocessing.md` | BrainMass, BrainPy | Convert experimental or task inputs with latency, rate, Poisson, population, Bernoulli, delta, step-current, spike-count, temporal, or rank-order encoders and related spike operations | [Encoder API](https://brainx.chaobrain.com/braintools/apis/braintools.html) |
-| `braintools-references/braintools-input-current.md` | BrainCell, BrainPy | Generate and compose unit-aware stimulation currents, pulses, waveforms, and stochastic processes, then pass time-major current arrays into transformed rollouts | [Input-current API](https://brainx.chaobrain.com/braintools/apis/input.html), [BrainState `for_loop`](https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.for_loop.html) |
-| `braintools-references/braintools-parameter-initializer.md` | BrainMass, BrainPy | Select and compose reusable state, parameter, weight, and distance-modulated connectivity initializers | [Initializer API](https://brainx.chaobrain.com/braintools/apis/init.html) |
-| `braintools-references/braintools-metric.md` | BrainCell, BrainMass, BrainPy, BrainTrace | Select losses and evaluation metrics for fitting, task training, simulation analysis, and online learning, including classification, regression, ranking, spike-train, synchronization, LFP, and connectivity metrics | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
-| `braintools-references/braintools-optimizer.md` | BrainCell, BrainMass, BrainPy, BrainTrace | Select optimizers, learning-rate schedules, Optax bridges, and SciPy or Nevergrad wrappers for training, fitting, and online parameter updates | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [optimization tutorials](https://brainx.chaobrain.com/braintools/optim/index.html) |
-| `braintools-references/braintools-surrogate.md` | BrainMass, BrainPy | Select functional or object-style surrogate gradients and tune their shape parameters for differentiable workflows containing non-differentiable spike functions | [Surrogate-gradient API](https://brainx.chaobrain.com/braintools/apis/surrogate.html) |
+| `braintools-references/braintools-connectivity.md` | BrainSpike | Select point-neuron or compartment-aware topology and produce aligned edge lists, weights, delays, and metadata | [Connectivity API](https://brainx.chaobrain.com/braintools/apis/conn.html) |
+| `braintools-references/braintools-data-preprocessing.md` | BrainMass, BrainSpike | Convert experimental or task inputs with latency, rate, Poisson, population, Bernoulli, delta, step-current, spike-count, temporal, or rank-order encoders and related spike operations | [Encoder API](https://brainx.chaobrain.com/braintools/apis/braintools.html) |
+| `braintools-references/braintools-input-current.md` | BrainCell, BrainSpike | Generate and compose unit-aware stimulation currents, pulses, waveforms, and stochastic processes, then pass time-major current arrays into transformed rollouts | [Input-current API](https://brainx.chaobrain.com/braintools/apis/input.html), [BrainState `for_loop`](https://brainx.chaobrain.com/brainstate/apis/generated/brainstate.transform.for_loop.html) |
+| `braintools-references/braintools-parameter-initializer.md` | BrainMass, BrainSpike | Select and compose reusable state, parameter, weight, and distance-modulated connectivity initializers | [Initializer API](https://brainx.chaobrain.com/braintools/apis/init.html) |
+| `braintools-references/braintools-metric.md` | BrainCell, BrainMass, BrainSpike, BrainTrace | Select losses and evaluation metrics for fitting, task training, simulation analysis, and online learning, including classification, regression, ranking, spike-train, synchronization, LFP, and connectivity metrics | [Loss API](https://brainx.chaobrain.com/braintools/apis/metric.html), [analysis API](https://brainx.chaobrain.com/braintools/apis/analysis.html) |
+| `braintools-references/braintools-optimizer.md` | BrainCell, BrainMass, BrainSpike, BrainTrace | Select optimizers, learning-rate schedules, Optax bridges, and SciPy or Nevergrad wrappers for training, fitting, and online parameter updates | [Optimization API](https://brainx.chaobrain.com/braintools/apis/optim.html), [optimization tutorials](https://brainx.chaobrain.com/braintools/optim/index.html) |
+| `braintools-references/braintools-surrogate.md` | BrainMass, BrainSpike | Select functional or object-style surrogate gradients and tune their shape parameters for differentiable workflows containing non-differentiable spike functions | [Surrogate-gradient API](https://brainx.chaobrain.com/braintools/apis/surrogate.html) |

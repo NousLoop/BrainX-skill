@@ -13,7 +13,7 @@ Canonical path:
 
 `classify State roles -> construct Modules -> register State and children -> initialize -> set the run environment -> transform the whole operation -> validate State and outputs`
 
-Open the routed reference for specialized variants; route specialized neuronal or network dynamics to the matching BrainCell or BrainPy-State skill.
+Open the routed reference for specialized variants; route specialized neuronal or network dynamics to the matching BrainCell or BrainSpike skill.
 
 ## Underlying principle of BrainState
 
@@ -388,6 +388,7 @@ The remaining nested reference has one inbound route:
 | `references/brainstate/transformation-jit-expansion.md` | Controlling State write-back, raw `jax.jit` boundaries, caching, or static specialization |
 | `references/brainstate/transformation-grad-expansion.md` | Controlling `argnums`, `grad_states`, gradient returns, higher-order transforms, or fitting overlays |
 | `references/brainstate/transformation-vmap-expansion.md` | Mapping or sharing State across batches, ensembles, or sweeps, including State axes and randomness |
+| `references/brainstate/delay-buffers.md` | Preserving explicit signal history, choosing write/read order, resetting named delay taps, or checking mapped-buffer State ownership |
 | `references/brainstate/brainstate-control-flow-patterns.md` | Choosing transform-safe loops, scans, branches, checkpointed control flow, or memory-efficient training through long rollouts |
 | `references/brainstate/brainstate-transformed-diagnostics.md` | Debugging runtime values or enforcing invariants inside transformed stateful code |
 
