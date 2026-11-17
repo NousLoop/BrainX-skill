@@ -20,6 +20,16 @@ Use the original skill snapshot and runtime to reproduce earlier evaluations.
 
 Use the [BrainSpike skill](skills/package-skills/brainspike/SKILL.md) for point-neuron models. Install the Python distribution as `brainspikes` and import `brainspike`. The BrainX release still includes BrainPy at runtime; earlier skill snapshots retain the BrainPy-State guidance.
 
+From the checkout, run the single-neuron CPU smoke test in an environment with
+the pinned BrainX release:
+
+```bash
+python skills/package-skills/brainspike/scripts/lif_smoke.py
+```
+
+The test checks that a 500 pA current drives the LIF neuron to fire and that
+100 ms of simulation produces a `(1000, 1)` spike recording.
+
 ## Install
 
 ```bash
