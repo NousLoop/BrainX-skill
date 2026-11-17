@@ -6,6 +6,10 @@ on:
       - ".agents/skills/brainx-doc-sync/**"
       - ".github/scripts/agent-skills-workflow.test.mjs"
       - ".github/scripts/check_skill_examples.py"
+      - ".github/scripts/test_brainspike_migration.py"
+      - ".github/scripts/test_brainspike_native_patterns.py"
+      - ".github/scripts/test_brainspike_boundaries.py"
+      - ".github/scripts/test_nest_simulator_training.py"
       - ".github/scripts/test_audit_links.py"
       - ".github/workflows/agent-skills-validation.yml"
       - "manifest.json"
@@ -16,6 +20,10 @@ on:
       - ".agents/skills/brainx-doc-sync/**"
       - ".github/scripts/agent-skills-workflow.test.mjs"
       - ".github/scripts/check_skill_examples.py"
+      - ".github/scripts/test_brainspike_migration.py"
+      - ".github/scripts/test_brainspike_native_patterns.py"
+      - ".github/scripts/test_brainspike_boundaries.py"
+      - ".github/scripts/test_nest_simulator_training.py"
       - ".github/scripts/test_audit_links.py"
       - ".github/workflows/agent-skills-validation.yml"
       - "manifest.json"
@@ -122,3 +130,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check 'BrainX[cpu]==2026.10.25' 'jax==0.12.0.1' 'networkx==3.7'
           python .github/scripts/check_skill_examples.py -v
+          python .github/scripts/test_brainspike_migration.py -v
+          python .github/scripts/test_brainspike_native_patterns.py -v
+          python .github/scripts/test_brainspike_boundaries.py -v
+          python .github/scripts/test_nest_simulator_training.py -v

@@ -17,6 +17,9 @@ make your coding agent understand the power of BrainX
 
 The current examples target BrainX `2026.10.25` with Python 3.12 or newer.
 Use the original skill snapshot and runtime to reproduce earlier evaluations.
+
+Use the [BrainSpike skill](skills/package-skills/brainspike/SKILL.md) for point-neuron models. Install the Python distribution as `brainspikes` and import `brainspike`. The BrainX release still includes BrainPy at runtime; earlier skill snapshots retain the BrainPy-State guidance.
+
 ## Install
 
 ```bash

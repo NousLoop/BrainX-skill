@@ -207,7 +207,7 @@ Study before implementing. Understand the selected BrainX abstractions, exact AP
 1. Open `brainx-general-guard` and identify every biological scale explicitly represented by `NeuroSpecification.md`.
 2. Read each selected modeling skill completely:
    - `braincell` for ions, channels, compartments, morphology, or detailed-cell networks with spatially placed synapses;
-   - `brainpy-state` for point neurons, their synapses, or point-neuron spiking networks;
+   - `brainspike` for all point-neuron tasks; check its migration boundary before custom dynamics, training, or multiscale coupling;
    - `brainmass` for aggregate populations, regions, or whole-brain dynamics.
 3. Open supporting package skills only when the model requires them:
    - `brainunit` for physical quantities and unit-aware boundaries;

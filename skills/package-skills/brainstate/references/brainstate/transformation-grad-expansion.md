@@ -2,7 +2,7 @@
 
 Use this reference after the BrainState skill's `SKILL.md` when a task needs gradient targets beyond the canonical training step, exact `return_value`/`has_aux` destructuring, state discovery in an arbitrary function, vector- or matrix-valued sensitivities, second derivatives, or an optimizer-integrated fitting step. The parameter reference owns the choice between `ParamState` and `nn.Param`.
 
-These three sources do not establish BrainCell solver, reset, or conductance-fitting semantics. Specialized dynamics belongs to the matching BrainCell or BrainPy-State skill; use this reference only for the source-supported autodiff contract around that computation.
+These three sources do not establish BrainCell solver, reset, or conductance-fitting semantics. Specialized dynamics belongs to the matching BrainCell or BrainSpike skill; use this reference only for the source-supported autodiff contract around that computation.
 
 Official sources:
 
@@ -453,7 +453,7 @@ Official source: https://brainx.chaobrain.com/brainstate/tutorials/core/07_train
 - Choose `jacrev` versus `jacfwd` from the documented input/output-size tradeoff, and remember that `jacobian` aliases `jacrev`.
 - Do not assume only `ParamState` can receive gradients; any explicit `State` can be a sensitivity target.
 - Do not assume an attached regularizer changes fitting unless its penalty is added to the scalar loss.
-- Do not infer BrainCell integration, reset, unit, or solver semantics from these sources; route specialized dynamics to the matching BrainCell or BrainPy-State skill.
+- Do not infer BrainCell integration, reset, unit, or solver semantics from these sources; route specialized dynamics to the matching BrainCell or BrainSpike skill.
 
 ## Mirror source urls
 

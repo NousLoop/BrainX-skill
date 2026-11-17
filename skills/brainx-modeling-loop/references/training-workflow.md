@@ -12,6 +12,8 @@ scientific model parameters against observations. In `hybrid`, keep the two
 objectives, trainable State collections, data partitions, checkpoints, and
 reported evidence distinct.
 
+For point-neuron training, open `brainspike` → `references/native-training.md` for the verified native BPTT or pp-prop path. For NEST continuous-voltage objectives, open `brainspike` → `references/simulator-training.md`; keep its host-side builder and hard-spike-loss limits distinct from native recurrent training.
+
 ## Underlying training principle
 
 Training reuses the scientific forward model: reset runtime State at the
@@ -260,11 +262,11 @@ training contract, gates, experiment discipline, and evidence.
 
 ### Choose Braintools training components
 
-| Decision | BrainPy-State route | BrainMass route |
+| Decision | BrainSpike route | BrainMass route |
 |---|---|---|
-| Loss or neuroscience metric | `brainpy-state` → `references/braintools/metric.md` | `brainmass` → `references/braintools/metric.md` |
-| Optimizer, scheduler, clipping, or update lifecycle | `brainpy-state` → `references/braintools/optimizer.md` | `brainmass` → `references/braintools/optimizer.md` |
-| Parameter initialization | `brainpy-state` → `references/braintools/parameter-initializer.md` | `brainmass` → `references/braintools/parameter-initializer.md` |
-| Input encoding | `brainpy-state` → `references/braintools/data-preprocessing.md` | `brainmass` → `references/braintools/data-preprocessing.md` |
-| Hard-spike backward derivative | `brainpy-state` → `references/braintools/surrogate.md` | `brainmass` → `references/braintools/surrogate.md` |
-| Phase-structured cognitive trials | Open the shared `brainmass` → `references/braintools/cogtask.md`, then preserve the BrainPy-State model's time-major input contract. | `brainmass` → `references/braintools/cogtask.md` |
+| Loss or neuroscience metric | `brainspike` → `references/braintools/metric.md` | `brainmass` → `references/braintools/metric.md` |
+| Optimizer, scheduler, clipping, or update lifecycle | `brainspike` → `references/braintools/optimizer.md` | `brainmass` → `references/braintools/optimizer.md` |
+| Parameter initialization | `brainspike` → `references/braintools/parameter-initializer.md` | `brainmass` → `references/braintools/parameter-initializer.md` |
+| Input encoding | `brainspike` → `references/braintools/data-preprocessing.md` | `brainmass` → `references/braintools/data-preprocessing.md` |
+| Hard-spike backward derivative | `brainspike` → `references/braintools/surrogate.md` | `brainmass` → `references/braintools/surrogate.md` |
+| Phase-structured cognitive trials | Open the shared `brainmass` → `references/braintools/cogtask.md`, then preserve the BrainSpike model's time-major input contract. | `brainmass` → `references/braintools/cogtask.md` |

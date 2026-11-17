@@ -1,6 +1,6 @@
 ---
 name: braincell
-description: Use for cell modeling with conductance-based or Hodgkin-Huxley ions, channels, compartments, or morphology. Use alone for cell studies or together with BrainPy-State and/or BrainMass when cellular mechanisms participate in a multiscale model.
+description: Use for cell modeling with conductance-based or Hodgkin-Huxley ions, channels, compartments, or morphology. Use alone for cell studies or together with BrainSpike and/or BrainMass when cellular mechanisms participate in a multiscale model.
 ---
 
 # BrainCell
@@ -13,7 +13,7 @@ Use BrainCell for cellular biophysics at either of its two supported spatial sca
 - Use `Cell` when soma, dendrite, axon, branch geometry, spatial channel distribution, or location-specific stimulation and recording affect the result.
 
 
-Use `braincell.Network` when events must reach synapses placed on detailed cells. Open `brainpy-state` → `SKILL.md` for point-neuron networks.
+Use `braincell.Network` when events must reach synapses placed on detailed cells. Open `brainspike` → `SKILL.md` for point-neuron networks.
 
 ## Underlying principle of BrainCell
 
